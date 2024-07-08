@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: increase-file-system-capacity.html 
+keywords: increase capacity, increase file system capacity, increase FSx capacity 
+summary: Aumente manualmente la capacidad de almacenamiento en SSD de un sistema de archivos FSx para ONTAP cuando la cantidad de capacidad de almacenamiento SSD utilizada supere un umbral que haya especificado. 
+---
+= Aumente la capacidad del sistema de archivos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Aumente manualmente la capacidad de almacenamiento en SSD de un sistema de archivos FSx para ONTAP cuando la cantidad de capacidad de almacenamiento SSD utilizada supere un umbral que haya especificado.
+
+También puede link:enable-auto-capacity-management.html["habilite la función de gestión automática de capacidad"] hacerlo de modo que Workload Factory gestiona la capacidad del sistema de archivos por usted.
+
+.Acerca de esta tarea
+El aumento de la capacidad del sistema de archivos afecta al IOPS de su sistema de archivos FSx para ONTAP.
+
+Cuando se utiliza automáticamente link:provision-iops.html["Aprovisione IOPS"] en el caso de un sistema de archivos, IOPS aumenta en 3 IOPS con cada aumento de 1 GiB de la capacidad de SSD. Por ejemplo, si aprovisiona 100 TiB (102.400 GiB) de capacidad SSD, las IOPS aumentarán en 300 TiB (307.200 GiB).
+
+Cuando se realiza link:provision-iops.html["Aprovisione IOPS"] manualmente, es posible que deba aumentar la asignación de IOPS para respaldar la mayor capacidad del sistema de archivos.
+
+Para ver los límites de capacidad de almacenamiento de SSD, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Cuotas"^] la documentación de AWS FSx para NetApp ONTAP.
+
+.Antes de empezar
+Para aumentar la capacidad de un sistema de archivos, primero debe link:enable-auto-capacity-management.html["deshabilite la gestión automática de la capacidad"].
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, haga clic en *Ir a Inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos para aumentar la capacidad.
+. Seleccione *gestionar*.
+. En Información, haga clic en el icono del lápiz junto a *Distribución de capacidad*. El icono del lápiz aparece junto a la flecha desplegable cuando el ratón pasa por encima de la fila *distribución de capacidad*.
+. En el cuadro de diálogo de tamaño de almacenamiento SSD, introduzca un número para *Provisioned Capacity*.
+. Seleccione la unidad de la capacidad aprovisionada.
+. Haga clic en *aplicar*.
+

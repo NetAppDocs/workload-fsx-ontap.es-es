@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: data-protection-overview.html 
+keywords: overview 
+summary:  
+---
+= Información general sobre la protección de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+FSX para ONTAP admite snapshots para crear imágenes puntuales de solo lectura de un volumen, backups de volúmenes para crear backups sin conexión con una prolongada retención de los volúmenes y replicación de volúmenes para crear reflejos asíncronos de tu volumen en distintas regiones.
+
+
+
+== Tipos de protección de datos
+
+La protección de datos de tus cargas de trabajo ayuda a garantizar que puedas recuperarte de cualquier pérdida de datos en cualquier momento. Obtenga más información sobre los tipos de protección de datos antes de seleccionar las funciones que utilizará.
+
+.Snapshot
+Una copia Snapshot crea una imagen de un momento específico de solo lectura de un volumen dentro del volumen de origen como copia Snapshot. Es posible usar la copia Snapshot para recuperar archivos individuales o para restaurar todo el contenido de un volumen. Las copias Snapshot son la base de todos los métodos de backup. La copia Snapshot que se crea en el volumen se usa para mantener el volumen replicado y el archivo de backup sincronizados con los cambios realizados en el volumen de origen.
+
+.Completos
+Puede crear backups de sus datos en el cloud para protegerlos y para su retención a largo plazo. Si es necesario, puede restaurar un volumen, una carpeta o archivos individuales desde la copia de seguridad en el mismo sistema de archivos de trabajo o diferente.
+
+.Replicación
+La replicación crea una copia secundaria de sus datos en otro sistema de archivos FSx para ONTAP y actualiza continuamente los datos secundarios. Los datos estarán actualizados y disponibles siempre que haga falta, como por ejemplo, la recuperación ante desastres.
+
+Puedes elegir crear volúmenes replicados en otro sistema de archivos FSx for ONTAP y archivos de backup en el cloud. O puede elegir simplemente crear volúmenes replicados o archivos de copia de seguridad - es su elección.
+
+
+
+== Prácticas recomendadas para proteger sus datos de cargas de trabajo
+
+FSX para ONTAP ofrece varias opciones de protección de datos que pueden combinarse para lograr los objetivos seleccionados de punto y tiempo de recuperación. Para obtener la mejor protección posible, se recomienda que se usen tanto snapshots de volúmenes como backups de volúmenes.
+
+Un objetivo de punto de recuperación (RPO) describe la frecuencia con la que se debe garantizar que sea la última copia de sus datos, que depende de la frecuencia con la que se realicen las copias. Un objetivo de tiempo de recuperación (RTO) define cuánto tiempo se tarda en restaurar los datos.
+
+
+
+== Proteger los datos de la carga de trabajo con snapshots
+
+Las snapshots son versiones virtuales puntuales de un volumen que se realizan de forma programada. Puede acceder a las instantáneas utilizando comandos estándar del sistema de archivos. Las snapshots ofrecen un objetivo de punto de recuperación de tan solo una hora. El objetivo de tiempo de recuperación depende de la cantidad de datos que se deben restaurar y está limitado principalmente por el límite de rendimiento del volumen. Las copias Snapshot también permiten a los usuarios restaurar ficheros y directorios específicos, lo que reduce aún más el objetivo de tiempo de recuperación. Las Snapshot solo consumen espacio adicional del volumen para los cambios que se han hecho en el volumen.
+
+
+
+== Proteger sus datos de carga de trabajo con backups
+
+Los backups de volúmenes proporcionan copias puntuales independientes del volumen. Pueden utilizarse para almacenar copias de seguridad antiguas y proporcionar la segunda copia necesaria de sus datos. Los programas de backup diarios, semanales y mensuales permiten alcanzar los objetivos de punto de recuperación desde un día. Los backups de volúmenes solo se pueden restaurar como un conjunto. La creación de un volumen a partir de un backup (RTO) puede tardar horas a muchos días, según el tamaño del backup.
+
+
+
+== Proteger sus datos de carga de trabajo con replicación de volumen
+
+La replicación de volúmenes crea una copia de los datos más recientes de un volumen que incluye todas sus instantáneas en una región diferente. Si no puede permitirse RTO de varias horas de una operación de restauración de volumen completo desde un backup de volumen, considere la posibilidad de realizar una replicación de volumen. Aunque la replicación de volúmenes garantiza que los datos recientes estén disponibles en una región diferente para que los pueda usar, es necesario ajustar los clientes para que los utilicen en la otra región.
+
+
+
+== Recomendaciones para proteger los datos de su carga de trabajo
+
+Tenga en cuenta las siguientes recomendaciones para proteger sus datos de carga de trabajo.
+
+* Uso de copias de seguridad de volúmenes junto con instantáneas: El uso de las dos funciones de forma conjunta garantiza la posibilidad de restaurar los archivos a partir de instantáneas y realizar restauraciones completas en caso de pérdida de volumen mediante copias de seguridad.
+* Defina una política de backup de volumen: Asegúrese de que la política de backup satisfaga los requisitos de su empresa en cuanto a antigüedad y frecuencia de backup. Recomendamos conservar un mínimo de dos backups diarios en cada volumen.
+* Definir una programación de Snapshot: Es menos probable que se utilicen copias Snapshot más antiguas para restaurar datos. Se recomienda definir una programación de snapshot que tenga en cuenta la disminución de los retornos de mantener las snapshots más antiguas frente al coste de la capacidad de snapshot adicional.
+

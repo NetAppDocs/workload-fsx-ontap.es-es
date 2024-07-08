@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: create-backup.html 
+keywords: create backup, volume backup, back up a volume 
+summary: Crear un backup manual de un volumen fuera de los backups programados regularmente. 
+---
+= Crear un backup manual de un volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Crear un backup manual de un volumen fuera de los backups programados regularmente.
+
+.Acerca de esta tarea
+Los backups de FSx para ONTAP se realizan por volumen, por lo que cada backup solo contiene los datos de un volumen concreto.
+
+Los backups de FSx para ONTAP son incrementales, lo que significa que solo los datos del volumen que han cambiado después de guardar el backup más reciente. De este modo, se minimiza el tiempo necesario para crear el backup y el almacenamiento necesario para el backup, lo que permite ahorrar costes de almacenamiento al no duplicar los datos.
+
+.Antes de empezar
+Para realizar backups de los volúmenes, tanto el volumen como el sistema de archivos deben tener suficiente capacidad de almacenamiento SSD disponible para almacenar la snapshot de backup. Al realizar una copia Snapshot de backup, la capacidad de almacenamiento adicional que consume la copia de Snapshot no puede provocar que el volumen supere el 98% de la utilización de almacenamiento de las unidades de estado sólido. Si esto sucede, la copia de seguridad fallará.
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*.
+. En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. En la pestaña *Volúmenes*, haz clic en el menú de tres puntos para que el volumen haga una copia de seguridad.
+. Seleccione *Acciones de protección de datos*, *FSX para copia de seguridad de ONTAP* y luego *Copia de seguridad manual*.
+. En el cuadro de diálogo Manual backup, escriba un nombre para el backup.
+. Haga clic en *Back up*.
+

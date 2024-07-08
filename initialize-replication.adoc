@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: initialize-replication.html 
+keywords: initialize replication, begin replication, start replication 
+summary: Inicialice una relación de replicación entre los volúmenes de origen y objetivo. 
+---
+= Inicializar una relación de replicación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Inicialice una relación de replicación entre los volúmenes de origen y objetivo.
+
+.Acerca de esta tarea
+La inicialización realiza una transferencia _baseline_: Realiza una instantánea del volumen de origen y, a continuación, transfiere la Snapshot y todos los bloques de datos a los que hace referencia al volumen de destino.
+
+.Antes de empezar
+Tenga en cuenta cuándo decide completar esta operación. La inicialización puede requerir mucho tiempo. Puede ser conveniente ejecutar la transferencia básica en horas de menor actividad.
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Relaciones de replicación*.
+. En la pestaña Relaciones de replicación, haga clic en el menú de tres puntos de la relación de replicación que desea inicializar.
+. Selecciona *Inicializar*.
+. En el cuadro de diálogo Inicializar relación, haga clic en *Inicializar*.
+

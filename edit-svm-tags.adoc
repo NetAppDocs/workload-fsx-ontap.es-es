@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: edit-svm-tags.html 
+keywords: edit storage vm tags, vm tags, svm tags 
+summary: Añada, actualice o quite etiquetas de máquinas virtuales de almacenamiento para una máquina virtual de almacenamiento en cualquier momento. 
+---
+= Editar las etiquetas de máquinas virtuales de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Las etiquetas pueden ayudarte a categorizar tus recursos. Puede agregar, editar y quitar etiquetas para una máquina virtual de almacenamiento en cualquier momento.
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con la VM de almacenamiento para actualizar y luego selecciona *Administrar*.
+. En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
+. En la pestaña Storage VMs, seleccione el menú de tres puntos de la máquina virtual de almacenamiento para editar etiquetas.
+. Seleccione *Editar etiquetas de VM de almacenamiento*.
+. En la página Edit storage VM tags, agregue, edite o elimine etiquetas.
++
+La cantidad máxima de etiquetas que se pueden aplicar a una máquina virtual de almacenamiento es 50.
+
+. Haga clic en *aplicar*.
+

@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: delete-replication.html 
+keywords: delete replication 
+summary: Elimine una relación de replicación según sea necesario. 
+---
+= Eliminar una relación de replicación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cuando se elimina una relación de replicación, se quita la relación de replicación entre el volumen de origen y el volumen objetivo. Después de eliminar la relación de replicación, ambos volúmenes siguen existiendo de forma independiente con los datos actuales que contienen.
+
+Al eliminar una relación de replicación, FSx para ONTAP también elimina las snapshots de replicación comunes del volumen de origen y del volumen de destino.
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Relaciones de replicación*.
+. En la pestaña Relaciones de replicación, haga clic en el menú de tres puntos de la relación de replicación que desea eliminar.
+. Seleccione *Eliminar*.
+. En el cuadro de diálogo Eliminar relación, haga clic en *Eliminar*.
+

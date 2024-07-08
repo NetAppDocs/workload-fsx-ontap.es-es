@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: quick-start.html 
+keywords: Amazon FSx for NetApp ONTAP, fsx, netapp, quick, get started, install, deploy, setup, launch, requirements, prerequisites, credentials, permissions, policy 
+summary: Puedes empezar a usar FSx para ONTAP en solo unos pasos. 
+---
+= Inicio rápido de Workload Factory para Amazon FSx para NetApp ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Con Workload Factory para Amazon FSx para NetApp ONTAP, puedes empezar inmediatamente en el modo _BASIC_.
+
+Si desea utilizar Workload Factory para crear un sistema de archivos, administrar recursos y mucho más, puede empezar con unos pocos pasos. En este caso, necesitas una cuenta de AWS para empezar.
+
+Siga estos pasos para comenzar.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Una"] Inicie sesión en Workload Factory
+[role="quick-margin-para"]
+Tendrá que link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Configure una cuenta con Workload Factory"^] y. link:https://console.workloads.netapp.com["inicie sesión"^]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"] Agregue credenciales y permisos
+[role="quick-margin-para"]
+Elija entre _BASIC_ y _AUTOMATIC_ link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modos de funcionamiento"^]
+
+[role="quick-margin-para"]
+Si elige operar en modo _BASIC_, no necesita ir más allá. Puedes empezar a utilizar Workload Factory para FSx para ONTAP para copiar muestras de código parcialmente completadas.
+
+[role="quick-margin-para"]
+Si opera en el modo _Automate_, necesitará link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["agregar credenciales a una cuenta manualmente"^] seleccionar capacidades de carga de trabajo, como bases de datos e IA, y crear las políticas de IAM para asegurarse de que tiene los permisos correctos para operar en el modo _Automate_.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"] Crear un sistema de archivos
+[role="quick-margin-para"]
+Creará un sistema de archivos FSx para empezar a gestionar el almacenamiento y los recursos de FSx para ONTAP en Workload Factory. En el link:https://console.workloads.netapp.com["Consola de Workload Factory"^], en Almacenamiento, haga clic en *Crear sistema de archivos*. link:create-file-system.html["Aprenda a crear un sistema de archivos"].
+
+[role="quick-margin-para"]
+También puedes empezar con la calculadora de ahorro de almacenamiento para comparar los costes de los entornos de almacenamiento de Amazon Elastic Block Store, Elastic File System y FSx para servidor de archivos de Windows con los de FSx para ONTAP. link:explore-savings.html["Descubra el ahorro con la calculadora de ahorro en almacenamiento."]
+
+.El futuro
+Con un sistema de archivos en tu inventario de almacenamiento, link:create-volume.html["cree volúmenes"]puedes gestionar tu sistema de archivos FSx para ONTAP y configurar la protección de datos de tus recursos.

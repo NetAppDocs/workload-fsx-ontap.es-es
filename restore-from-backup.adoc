@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: restore-from-backup.html 
+keywords: restore backup, new volume, volume restoration, backup 
+summary: Restaura un volumen a partir de un backup a cualquier sistema de archivos de FSx para ONTAP en tu cuenta de AWS. 
+---
+= Restaurar un volumen desde un backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Restaura un volumen a partir de un backup a cualquier sistema de archivos de FSx para ONTAP en tu cuenta de AWS.
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*.
+. En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. Desde la pestaña *Volúmenes*, haz clic en el menú de tres puntos para que el volumen se restaure desde una copia de seguridad.
+. Seleccione *Acciones de protección de datos*, *FSX para copia de seguridad de ONTAP* y luego *Restaurar desde una copia de seguridad*.
+. En el cuadro de diálogo Restore from a backup, proporcione lo siguiente:
++
+.. *Sistema de archivos de destino*: Seleccione el sistema de archivos de destino en el menú desplegable.
+.. *Target storage VM*: Seleccione la VM de almacenamiento de destino en el menú desplegable.
+.. *Nombre de la copia de seguridad*: Seleccione el nombre de la copia de seguridad en el menú desplegable.
+.. *Nombre del volumen restaurado*: Introduzca el nombre del volumen restaurado.
+
+
+. Haga clic en *Restaurar*.
+

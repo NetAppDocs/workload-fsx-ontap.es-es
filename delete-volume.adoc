@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: delete-volume.html 
+keywords: delete volume, volume deletion 
+summary: Puede eliminar un volumen en su sistema de archivos FSx para ONTAP en cualquier momento. Esta operación es irreversible. 
+---
+= Eliminar un volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede eliminar un volumen en su sistema de archivos FSx para ONTAP en cualquier momento. Esta operación es irreversible.
+
+.Antes de empezar
+Considere lo siguiente antes de eliminar un volumen:
+
+* Snapshots locales: Todas las snapshots asociadas con este sistema de archivos FSx para ONTAP se eliminarán de forma permanente.
+* FSX para backup de ONTAP: Permanecerán las copias de backup de FSx para ONTAP y aún podrás utilizarlas.
+* Relaciones de replicación: Se recomienda link:delete-replication.html["elimine las relaciones de replicación existentes"] para este volumen antes de eliminar el volumen para que no se mantengan relaciones rotas.
+
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con el volumen a eliminar y luego selecciona *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. En la ficha Volúmenes, seleccione el menú de tres puntos del volumen que desea eliminar.
+. Seleccione *Acciones básicas* y luego *Eliminar volumen*.
+. En el cuadro de diálogo Eliminar volumen, escriba «delete» para eliminar el volumen.
+. Haga clic en *Eliminar*.
+

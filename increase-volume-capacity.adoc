@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: increase-volume-capacity.html 
+keywords: increase capacity, volume capacity 
+summary: Aumente manualmente la capacidad del volumen de un volumen en cualquier momento. 
+---
+= Aumentar la capacidad del volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Aumente manualmente la capacidad del volumen de un volumen en cualquier momento.
+
+De manera opcional, puede link:edit-volume-autogrow.html["habilite la función crecimiento automático"] dejar que Workload Factory gestione la capacidad de volumen.
+
+.Acerca de esta tarea
+Para un LUN de iSCSI, esta operación aumenta el tamaño del LUN del host. Después de aumentar la capacidad, siga el procedimiento proporcionado por el sistema operativo del host para detectar el nuevo tamaño de la LUN y expandir el sistema de archivos de la LUN.
+
+.Antes de empezar
+Para aumentar la capacidad del volumen, debe link:manage-links.html["asocie un enlace"]. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, haga clic en *Asociar enlace* bajo *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con el volumen a actualizar y luego selecciona *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. En la pestaña Volumes, seleccione el menú de tres puntos del volumen para aumentar la capacidad.
+. Selecciona *Acciones básicas* y luego *Aumentar capacidad de volumen*.
+. En el cuadro de diálogo Aumentar capacidad del volumen, realice lo siguiente:
++
+.. Seleccione un tamaño más grande.
+.. Cambie la unidad si es necesario.
+
+
+. Haga clic en *aumentar*.
+

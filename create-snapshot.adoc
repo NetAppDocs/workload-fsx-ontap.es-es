@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: create-snapshot.html 
+keywords: create snapshot, snapshot 
+summary: Cree una snapshot manual de un volumen de FSx para ONTAP. Las copias Snapshot son versiones puntuales del contenido del volumen. 
+---
+= Cree una snapshot manual de un volumen de FSx para ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cree una snapshot manual de un volumen de FSx para ONTAP. Las copias Snapshot son versiones puntuales del contenido del volumen.
+
+Las Snapshot son recursos de volúmenes y son capturas instantáneas de los datos que solo consumen espacio para los datos modificados. Debido a que los datos cambian con el tiempo, las snapshots suelen consumir más espacio a medida que envejecen.
+
+FSX para volúmenes de ONTAP utiliza la copia puntual en escritura, de modo que cualquier archivo sin modificar en las copias snapshot no consuma ninguna capacidad del volumen.
+
+
+NOTE: Las copias Snapshot no son copias de sus datos. Si desea hacer copias de sus datos, considere la posibilidad de utilizar las funciones de replicación de volúmenes o backups de FSx para ONTAP.
+
+.Antes de empezar
+Debe link:manage-links.html["asocie un enlace"] crear una copia de Snapshot. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, haga clic en *Asociar enlace* bajo *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En *Almacenamiento*, selecciona *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*.
+. En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. En la pestaña *Volúmenes*, selecciona el menú de tres puntos para proteger el volumen.
+. Seleccione *Acciones de protección de datos*, *Snapshots* y luego *Crear volumen a partir de una instantánea*.
+. En el cuadro de diálogo Crear volumen a partir de una instantánea, en el campo *Nombre de instantánea*, introduzca un nombre de instantánea.
+. Haga clic en *Crear*.
+

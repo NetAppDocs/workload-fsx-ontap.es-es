@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: delete-file-system.html 
+keywords: file system, delete file system, file system deletion 
+summary: Para eliminar un sistema de archivos, primero debe eliminar todos los volúmenes, máquinas virtuales de almacenamiento o relaciones de replicación asociados con el sistema de archivos. 
+---
+= Suprimir un sistema de archivos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para eliminar un sistema de archivos, primero debe eliminar todos los volúmenes, máquinas virtuales de almacenamiento o relaciones de replicación asociados con el sistema de archivos.
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos FSX for ONTAP que deseas eliminar.
+. Seleccione *gestionar*.
+. En la pestaña *Overview*, haz clic en el menú de tres puntos.
+. Haga clic en *Eliminar*.
+. En el cuadro de diálogo Eliminar FSX para el sistema de archivos ONTAP, introduzca el nombre del sistema de archivos FSx para ONTAP que desea eliminar.
+. Haga clic en *Eliminar*.
+

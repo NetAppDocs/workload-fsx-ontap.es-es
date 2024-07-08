@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: update-backup-schedule.html 
+keywords: backup schedule, backup policy, update backups, update backup schedule, FSx for ONTAP backup 
+summary: Actualiza el programa de backup de FSx para ONTAP cuando sea necesario. 
+---
+= Actualizar el programa de backup de FSx para ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Actualiza el programa de backup de FSx para ONTAP cuando sea necesario.
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, haga clic en *Ir a Inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos para actualizar la programación de copia de seguridad y luego selecciona *Administrar*.
+. En Información, haga clic en el icono del lápiz junto a *FSX para copia de seguridad de ONTAP*. El icono del lápiz aparece junto a la flecha desplegable cuando el ratón pasa por encima de la fila *FSX for ONTAP BACKUP*.
+. En el cuadro de diálogo *FSX para copia de seguridad de ONTAP*, proporcione lo siguiente:
++
+.. *Copias de seguridad automáticas diarias*: Habilita o deshabilita la función. Si deshabilita la función, haga clic en *Aplicar*. Si habilita la función, complete los siguientes pasos.
+.. *Período de retención de respaldo automático*: Ingrese el número de días para retener las copias de seguridad automáticas.
+.. *Ventana de copia de seguridad automática diaria*: Seleccione *Sin preferencia* (se selecciona una hora de inicio de copia de seguridad diaria) o *Seleccione la hora de inicio para copias de seguridad diarias* y especifique una hora de inicio.
+.. *Ventana de mantenimiento semanal*: Seleccione *Sin preferencia* (se selecciona una hora de inicio de ventana de mantenimiento semanal) o *Seleccione la hora de inicio para la ventana de mantenimiento semanal de 30 minutos* y especifique una hora de inicio.
+
+
+. Haga clic en *aplicar*.
+

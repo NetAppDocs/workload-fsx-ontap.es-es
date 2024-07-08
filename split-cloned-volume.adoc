@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: split-cloned-volume.html 
+keywords: split clone volume, FlexVol volume 
+summary: Divida un volumen clonado FlexVol de su volumen principal para que el clon sea un volumen FlexVol normal de lectura y escritura. 
+---
+= Divida un volumen clonado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Divida un volumen clonado FlexVol de su volumen principal para que el clon sea un volumen FlexVol normal de lectura y escritura.
+
+Se puede acceder a los datos en el clon y en el elemento principal durante la división. El proceso de división solo actualiza los metadatos y requiere una E/S mínima. No se copian bloques de datos.
+
+.Acerca de esta tarea
+La operación de división de clones implica lo siguiente:
+
+* Durante la operación de división, no se pueden crear nuevas copias Snapshot del volumen FlexClone.
+* Un volumen FlexClone no puede dividirse del volumen principal si pertenece a una relación de protección de datos.
+* Si desconecta el volumen FlexClone mientras la separación está en curso, la operación de división se suspenderá; cuando el volumen FlexClone vuelva a estar en línea, se reanudará la operación de separación.
+* Después de la división, tanto el volumen FlexVol principal como el clon requieren toda la asignación de espacio determinada por las garantías de volumen.
+* Después de dividir un volumen FlexClone de su principal, no se pueden volver a unir dos.
+
+
+.Antes de empezar
+Tenga en cuenta lo siguiente antes de dividir un volumen clonado:
+
+* Para dividir un volumen clonado, debe link:manage-links.html["asocie un enlace"]. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, haga clic en *Asociar enlace* bajo *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
+* Debe ser un administrador de clústeres.
+* El volumen FlexClone debe estar en línea cuando comience la operación de división.
+* El volumen primario debe estar en línea para que la división se complete correctamente.
+
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. Seleccione la pestaña *Volúmenes*.
+. En la pestaña Volumes, seleccione el menú de tres puntos del volumen con el volumen clonado que se va a dividir.
+. Seleccione *Acciones de protección de datos*, luego *Dividir volumen clonado*.
+. En el cuadro de diálogo Dividir volumen, haga clic en *Eliminar*.
+

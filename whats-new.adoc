@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes, new features, workload factory, amazon fsx' 
+summary: Descubra las novedades de Amazon FSx para NetApp ONTAP. 
+---
+= Lo nuevo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Descubra las novedades de Amazon FSx para NetApp ONTAP.
+
+
+
+== 7 de julio
+
+Amazon FSx para NetApp ONTAP ya está disponible de forma general en BlueXP Workload Factory.
+
+link:learn-fsx-ontap.html["Obtén más información sobre BlueXP Workload Factory para Amazon FSx para NetApp ONTAP"].

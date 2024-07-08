@@ -1,0 +1,148 @@
+---
+sidebar: sidebar 
+permalink: create-volume.html 
+keywords: create volume, FSx for ONTAP volume 
+summary: Después de configurar el sistema de archivos FSx para ONTAP, puede crear FSx para ONTAP Volumes. 
+---
+= Cree un volumen de FSx para ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Después de configurar el sistema de archivos FSx para ONTAP, puede crear FSx para ONTAP Volumes.
+
+.Acerca de esta tarea
+FSX para volúmenes de ONTAP son recursos virtuales que se utilizan para agrupar datos, determinar cómo se almacenan los datos y determinar el tipo de acceso a ellos. Los volúmenes no consumen capacidad de almacenamiento del sistema de archivos. Los datos que se almacenan en un volumen consumen principalmente almacenamiento SSD. Según la política de organización en niveles del volumen, los datos también pueden consumir almacenamiento en el pool de capacidad. Se establece el tamaño de un volumen al crearlo y se puede cambiar su tamaño más adelante.
+
+Se pueden usar los siguientes protocolos para los volúmenes:
+
+* CIFS: Protocolo de almacenamiento de ficheros para sistemas operativos Windows
+* NFS: Protocolo de almacenamiento de ficheros para sistemas operativos Unix
+* ISCSI: Protocolo de almacenamiento basado en bloques
+
+
+.Antes de empezar
+Revise los siguientes requisitos previos antes de crear un volumen:
+
+* Debe tener un sistema de archivos FSx for ONTAP en Workload Factory.
+* Debe tener una máquina virtual de almacenamiento.
+* Para acceder al protocolo, complete lo siguiente:
++
+** Para configurar el acceso al volumen, debe link:manage-links.html["asocie un enlace"]. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, haga clic en *Asociar enlace* bajo *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
+** Tiene que configurar el acceso para el protocolo que seleccione, ya sea CIFS, NFS o iSCSI.
+
+
+
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos en el que quieres crear un volumen y selecciona *Administrar*.
+. En la pestaña *Overview*, haz clic en *Crear volumen*.
+. En la página Create volume, en General details, proporcione los siguientes detalles:
++
+.. *Nombre del volumen*: Introduzca un nombre para el volumen.
+.. *Nombre de VM de almacenamiento*: Opcionalmente, introduzca un nombre de VM de almacenamiento.
+.. *Estilo de volumen*: Selecciona el volumen *FlexVol* o *FlexGroup*.
++
+El estilo de volumen FlexVol se selecciona de forma predeterminada.
+
++
+El tamaño del volumen de FlexGroup depende del número de componentes. Se requiere 100 GiB por componente.
+
+.. *Tamaño del volumen*: Introduzca el tamaño del volumen y la unidad.
++
+Opcionalmente, habilite el crecimiento automático de volúmenes. Esta opción está disponible cuando selecciona *Acceso a archivos* como el tipo de acceso por volumen.
+
+.. *Etiquetas*: Opcionalmente, puedes añadir hasta 50 etiquetas.
+
+
+. En Acceso (sólo para sistemas de archivos con enlaces asociados), proporcione los siguientes detalles:
++
+.. *Tipo de acceso*: Selecciona *Acceso a archivos* o *Acceso a bloques*. Los campos adicionales para configurar el acceso a volúmenes varían según la selección.
++
+*** *Acceso a archivos*: Permite que múltiples usuarios autorizados y dispositivos accedan al volumen mediante protocolos SMB/CIFS, NFS o dual (SMB/NFS).
++
+Complete los siguientes campos para configurar el acceso a archivos al volumen.
+
++
+.... *Política de exportación NFS*: Proporcione los siguientes detalles para proporcionar acceso NFS:
++
+..... *Control de acceso*: Selecciona una *Política de exportación personalizada*, *Política de exportación existente* o *Sin acceso al volumen* en el menú desplegable.
+..... *Nombre de la política de exportación*:
++
+Si seleccionó una política de exportación personalizada, seleccione un nombre de política existente en el menú desplegable.
+
++
+Si seleccionó una política de exportación existente, escriba un nuevo nombre de política.
+
+..... *Agregar regla de política de exportación*: Opcionalmente, para una política de exportación personalizada, puede agregar reglas de política de exportación a la política.
+
+
+.... *Compartir CIFS*: Introduzca el nombre del recurso compartido CIFS para proporcionar acceso SMB.
+
+
+*** *Acceso en bloque*: Permite a los hosts que ejecutan aplicaciones empresariales críticas acceder al volumen utilizando el protocolo iSCSI.
++
+Complete los siguientes campos para configurar el acceso en bloque al volumen.
+
++
+.... *Configuración iSCSI*: Proporcione los siguientes detalles para configurar iSCSI para el acceso de bloques al volumen.
++
+..... Seleccione *Crear un nuevo iGroup* o *Asignar un iGroup existente*.
+..... Seleccione el *Sistema operativo Host* en el menú desplegable.
+..... Introduzca un *Nombre de iGroup* para un nuevo iGroup.
+..... En Host Initiators, añada uno o varios iniciadores de host de nombre completo de iSCSI (IQN).
+
+
+
+
+
+
+
+
+. En Eficiencia y protección, proporcione los siguientes detalles:
++
+.. * Eficiencia de almacenamiento*: Desactivar o activar la eficiencia de almacenamiento.
++
+La eficiencia del almacenamiento se logra utilizando las funciones de deduplicación y compresión de ONTAP. La deduplicación elimina los bloques de datos duplicados. La compresión de datos comprime los bloques de datos para reducir la cantidad de almacenamiento físico necesaria.
+
+.. *Política de instantáneas*: Seleccione la política de instantáneas para especificar la frecuencia y retención de instantáneas.
++
+Las siguientes son políticas predeterminadas de AWS. Para las políticas de Snapshot personalizadas, debe asociar un enlace.
+
++
+`default`:: Esta política crea Snapshot de forma automática según la siguiente programación, siendo las copias Snapshot más antiguas eliminadas para dejar espacio para las copias más recientes:
++
+--
+*** Un máximo de seis instantáneas cada hora tomadas cinco minutos más allá de la hora.
+*** Un máximo de dos instantáneas diarias tomadas de lunes a sábado a las 10 minutos después de la medianoche.
+*** Un máximo de dos instantáneas semanales tomadas cada domingo a las 15 minutos después de la medianoche.
++
+
+NOTE: Las horas de las instantáneas se basan en la zona horaria del sistema de archivos, que se establece de forma predeterminada en Hora universal coordinada (UTC). Para obtener información sobre cómo cambiar la zona horaria, consulte link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html["Mostrar y configurar la zona horaria del sistema"^] en la documentación de soporte de NetApp.
+
+
+
+--
+`default-1weekly`:: Esta política funciona del mismo modo que la `default` política, excepto que solo conserva una copia de Snapshot de la programación semanal.
+`none`:: Esta política no toma ninguna instantánea. Es posible asignar esta política a los volúmenes para evitar que se tomen Snapshot automáticas.
+
+
+.. *Política de niveles*: Seleccione la política de organización en niveles para los datos almacenados en el volumen.
++
+Auto es la política de organización en niveles predeterminada cuando se crea un volumen mediante la interfaz de usuario de Workload Factory FSx para ONTAP. Para obtener más información sobre las políticas de organización en niveles de volúmenes, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^] la documentación de AWS FSx para NetApp ONTAP.
+
+
+
+. En Configuración avanzada, proporcione lo siguiente:
++
+.. *Ruta de unión*: Introduzca la ubicación en el espacio de nombres de la VM de almacenamiento donde se monta el volumen. La ruta de unión predeterminada es `/<volume-name>`.
+.. *Lista de agregados*: Solo para volúmenes FlexGroup. Añada o quite agregados. El número mínimo de agregados es uno.
+.. *Número de constituyentes*: Solo para volúmenes FlexGroup. Introduzca el número de componentes por agregado. Se requiere 100 GiB por componente.
+
+
+. Haga clic en *Crear*.
+

@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: clone-volume.html 
+keywords: clone volume 
+summary: Clone un volumen para crear un volumen de lectura y escritura del volumen original para la prueba. 
+---
+= Clonar un volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Clone un volumen para crear un volumen de lectura y escritura del volumen original para la prueba.
+
+El clon refleja el estado actual de un momento específico de los datos. También puede utilizar clones para proporcionar a los usuarios adicionales acceso a los datos sin tener que darles acceso a los datos de producción.
+
+.Acerca de esta tarea
+Solo se admite el clonado de volúmenes para volúmenes FlexClone.
+
+Cuando se clona un volumen, se crea un volumen editable con referencias a las copias Snapshot del volumen principal. La creación de clones se produce en segundos. Los datos clonados no residen en el clon del volumen, sino que residen en el volumen principal. Todos los datos nuevos que se escriben en el volumen después de la creación del clon residen en el clon.
+
+Para que un volumen clonado contenga todos los datos del volumen principal y todos los datos nuevos añadidos al clon después de su creación, deberá hacerlo link:split-cloned-volume.html["divida el clon"] a partir del volumen principal. Además, no se puede eliminar un volumen principal si tiene un clon. Debe dividir un clon para poder eliminar un volumen principal.
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. Seleccione la pestaña *Volúmenes*.
+. En la pestaña Volumes, seleccione el menú de tres puntos del volumen que desea clonar.
+. Seleccione *Acciones de protección de datos*, luego *Clonar volumen*.
+. En el cuadro de diálogo Clone volume, escriba un nombre para el clon del volumen.
+. Haga clic en *Clonar*.
+

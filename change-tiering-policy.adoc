@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: change-tiering-policy.html 
+keywords:  
+summary: Cambie la política de organización en niveles para volver a asignar datos del nivel de almacenamiento primario de alto rendimiento al nivel de almacenamiento del pool de capacidad secundario. 
+---
+= Cambiar la política de organización en niveles de un volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cambie la política de organización en niveles para volver a asignar datos automáticamente desde el nivel de almacenamiento primario de alto rendimiento al nivel de almacenamiento del pool de capacidad secundario.
+
+.Acerca de esta tarea
+Puede cambiar la política de organización en niveles de un volumen en cualquier momento. La política de organización en niveles se define por volumen.
+
+Decidir dónde se almacenan los datos tiene implicaciones para ahorrar costes.
+
+FSX para ONTAP tiene dos niveles para almacenar datos de volúmenes:
+
+* *Nivel de almacenamiento SSD*: Este nivel de almacenamiento primario es para los datos a los que accede con más frecuencia, también conocidos como datos _hot_. El almacenamiento de datos en el nivel de almacenamiento primario es más caro que en el nivel de almacenamiento secundario.
+* *Nivel de almacenamiento del pool de capacidad*: Este nivel de almacenamiento secundario es para datos archivados o datos a los que se accede con poca frecuencia, también conocidos como datos _cold_.
+
+
+Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html#storage-tiers["Gestión de la capacidad de almacenamiento"^] en la documentación de AWS para FSx para NetApp ONTAP para obtener más información sobre los niveles de almacenamiento.
+
+.Antes de empezar
+Revise las cuatro políticas de organización en niveles disponibles antes de cambiar la política de organización en niveles.
+
+* *Auto*: Organiza en niveles todos los datos fríos que incluyen datos de usuario y instantáneas al nivel de almacenamiento de la agrupación de capacidad durante un período de tiempo específico.
+* *Solo Snapshot*: Organiza en niveles solo los datos de instantánea en el nivel de almacenamiento de la agrupación de capacidad.
+* *Ninguno*: Mantiene todos los datos de su volumen en el nivel de almacenamiento primario.
+* *Todo*: Marca todos los datos del usuario y los datos de instantánea como fríos y los almacena en el nivel de almacenamiento del grupo de capacidad.
+
+
+Tenga en cuenta que algunas políticas de organización en niveles tienen asociado un período de enfriamiento mínimo que establece el tiempo, o _días de enfriamiento_, los datos de usuario en un volumen deben permanecer inactivos para que los datos se consideren inactivos y se muevan al nivel de almacenamiento del pool de capacidad. El período de enfriamiento comienza cuando los datos se escriben en el disco.
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con el volumen a actualizar y luego selecciona *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. En la pestaña Volumes, haga clic en el menú de tres puntos del volumen para cambiar la política de organización en niveles.
+. Selecciona *Acciones avanzadas*, luego *Cambiar política de niveles*.
+. En la página Change Tiering policy, seleccione una de las siguientes políticas de organización en niveles:
++
+** *Auto*: Ingrese el número de días de enfriamiento.
+** *Solo instantánea*: Introduzca el número de días de enfriamiento.
+** *Ninguno*
+** *Todo*
+
+
+. Haga clic en *aplicar*.
+

@@ -1,0 +1,107 @@
+---
+sidebar: sidebar 
+permalink: known-limitations.html 
+keywords: limitations, fsx, ontap 
+summary: Las limitaciones conocidas identifican plataformas, dispositivos o funciones que no son compatibles con esta versión del producto o cuya interoperabilidad con esta no es óptima. Revise estas limitaciones detenidamente. 
+---
+= Limitaciones conocidas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Las limitaciones conocidas identifican plataformas, dispositivos o funciones que no son compatibles con esta versión del producto en Workload Factory o cuya interoperabilidad con esta no es óptima. Revise estas limitaciones detenidamente.
+
+
+
+== Modos de funcionamiento
+
+El modo _Read_ no está disponible actualmente.
+
+
+
+== Enlace
+
+Se necesita un enlace para completar algunas operaciones como la replicación en la interfaz de usuario de Workload Factory.
+
+
+
+== Eficiencia del almacenamiento
+
+La eficiencia del almacenamiento no puede deshabilitarse ni habilitarse tras la creación del volumen.
+
+
+
+== Soporte regional de capacidad de rendimiento
+
+
+
+=== Puestas en marcha de escalado vertical
+
+Las siguientes regiones admiten hasta 4 GB/s de capacidad de rendimiento máxima para implementaciones de escalado vertical: Región del Este de LOS EE. UU. (Ohio), región del Este de los EE. UU. (Norte de Virginia), región del Oeste de los EE. UU. (Oregón) y Europa (Irlanda).
+
+
+
+== Puestas en marcha de escalado horizontal
+
+Las siguientes regiones admiten hasta 3 TB y 6 GB/s de capacidad de rendimiento máxima para puestas en marcha de escalado horizontal: EE. UU. Este (N. Virginia), Oriente de los EE. UU. (Ohio), Oeste de los EE. UU. (Oregón), Europa (Irlanda) y Asia Pacífico (Sídney).
+
+
+
+== Gestión de la capacidad
+
+* Actualmente, la función de crecimiento automático del volumen no se admite con el protocolo iSCSI.
+* Cuando se ejecuta la función de gestión automática de la capacidad, no se permite el aumento de la capacidad manual.
+* Solo es posible deshabilitar la función de gestión automática de capacidad con los mismos permisos que se usan para habilitarla.
+
+
+
+
+== Máquinas virtuales de almacenamiento
+
+El número de equipos virtuales de almacenamiento es limitado por SKU. Workload Factory no admite la creación de equipos virtuales de almacenamiento más allá de este límite.^1^
+
+Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Gestión de máquinas virtuales de almacenamiento de FSx para ONTAP"^] en la documentación de AWS el número máximo de SVM por sistema de archivos.
+
+
+
+== Compatibilidad con el protocolo iSCSI
+
+* El protocolo iSCSI solo se admite para las instalaciones de escalado vertical. 1
+* El protocolo iSCSI solo está disponible para volúmenes FlexGroup. 1
+* Solo se puede configurar un único LUN por volumen.
+
+
+
+
+== Soporte regional
+
+* La región oeste de Canadá (Calgary) no es compatible actualmente.
+
+
+
+
+== Protección de datos
+
+* No se pueden eliminar las snapshots.
+* Solo se admite la replicación entre sistemas de archivos FSx para ONTAP.
+* Al replicar un sistema de archivos, todos los volúmenes del sistema de archivos usan la misma política de replicación.
+* Sólo la última instantánea está disponible para restaurar.
+
+
+
+
+== Calculadora del ahorro en almacenamiento
+
+La calculadora de ahorro en almacenamiento no calcula el ahorro de costes si utiliza las siguientes configuraciones:
+
+* FSX para Windows File Server: Tipo de almacenamiento de HDD
+* Almacenamiento de bloques elásticos (EBS): Tipos de volumen estándar, ST1 y sc1
+* Sistema de archivos elásticos (EFS): Modo de rendimiento de repartición
+
+
+Nota:
+
+. Se aplica a Amazon FSx para NetApp ONTAP
+

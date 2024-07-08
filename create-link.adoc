@@ -1,0 +1,106 @@
+---
+sidebar: sidebar 
+permalink: create-link.html 
+keywords: links, add, add links, add link, create link 
+summary: Puede crear y gestionar enlaces para proporcionar una relación de confianza y conectividad entre una cuenta de Workload Factory y uno o varios sistemas de archivos de FSx for ONTAP. 
+---
+= Cree un vínculo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede crear y gestionar enlaces para proporcionar una relación de confianza y conectividad entre una cuenta de Workload Factory y uno o varios sistemas de archivos de FSx for ONTAP. De este modo, puedes supervisar y gestionar determinadas funciones directamente desde el sistema de archivos FSx para ONTAP que no están disponibles a través de la API de AWS FSx para ONTAP.
+
+link:links-overview.html["Obtenga más información sobre los enlaces"].
+
+.Acerca de esta tarea
+Los enlaces aprovechan AWS Lambda para ejecutar código en respuesta a eventos y administrar automáticamente los recursos informáticos requeridos por ese código. Los enlaces que cree forman parte de su cuenta de NetApp y están asociados a una cuenta de AWS.
+
+Puedes crear un enlace en tu cuenta al definir un sistema de archivos FSx for ONTAP. Ese enlace se utilizará para ese sistema de archivos, y puede ser utilizado por otros sistemas de archivos FSX for ONTAP.
+
+Tendrás que iniciar una pila de AWS CloudFormation en tu cuenta de AWS para crear el vínculo.
+
+.Antes de empezar
+* Debe tener credenciales para iniciar sesión en su cuenta de AWS.
+* Debe tener los siguientes permisos en su cuenta de AWS al agregar un enlace usando una pila de CloudFormation:
++
+[%collapsible]
+====
+[source, json]
+----
+"cloudformation:GetTemplateSummary",
+"cloudformation:CreateStack",
+"cloudformation:DeleteStack",
+"cloudformation:DescribeStacks",
+"cloudformation:ListStacks",
+"cloudformation:DescribeStackEvents",
+"cloudformation:ListStackResources",
+"ec2:DescribeSubnets",
+"ec2:DescribeSecurityGroups",
+"ec2:DescribeVpcs",
+"iam:ListRoles",
+"iam:GetRolePolicy",
+"iam:GetRole",
+"iam:DeleteRolePolicy",
+"iam:CreateRole",
+"iam:DetachRolePolicy",
+"iam:PassRole",
+"iam:PutRolePolicy",
+"iam:DeleteRole",
+"iam:AttachRolePolicy",
+"lambda:AddPermission",
+"lambda:RemovePermission",
+"lambda:InvokeFunction",
+"lambda:GetFunction",
+"lambda:CreateFunction",
+"lambda:DeleteFunction",
+"lambda:TagResource",
+"codestar-connections:GetSyncConfiguration",
+"ecr:BatchGetImage",
+"ecr:GetDownloadUrlForLayer"
+----
+====
+
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos para asociar un enlace y luego selecciona *Administrar*.
+. En la descripción general del sistema de archivos, seleccione *Enlace asociado*.
+. En el cuadro de diálogo de enlace Asociado, seleccione *Crear un nuevo enlace* y seleccione *Continuar*.
+. En la página Crear Enlace, proporcione lo siguiente:
++
+.. *Nombre del enlace*: Introduzca el nombre que desea utilizar para este enlace. El nombre debe ser único dentro de su cuenta.
+.. *Etiquetas*: Opcionalmente, agrega cualquier etiqueta que quieras asociar a este enlace para que puedas categorizar más fácilmente tus recursos. Por ejemplo, podría agregar una etiqueta que identifique este enlace como utilizado por FSX para sistemas de archivos ONTAP.
++
+La cuenta de AWS y la información adicional de la cuenta, la ubicación y el grupo de seguridad se recuperan automáticamente en función del sistema de archivos FSx para ONTAP.
+
+
+
+. Selecciona *Redirigir a CloudFormation*.
++
+Se muestra un cuadro de diálogo que explica cómo crear el enlace desde el servicio AWS CloudFormation.
+
+. Seleccione *Continuar* para abrir la consola de administración de AWS y, a continuación, inicie sesión en la cuenta de AWS para este sistema de archivos de FSx para ONTAP.
+. En la página Quick create stack, en Capacidades, seleccione *Reconozco que AWS CloudFormation podría crear recursos de IAM*.
++
+Tenga en cuenta que se conceden tres permisos a Lambda al iniciar la plantilla de CloudFormation. Workload Factory utiliza estos permisos cuando se utilizan enlaces.
+
++
+[source, json]
+----
+"lambda:InvokeFunction",
+"lambda:GetFunction",
+"lambda:UpdateFunctionCode"
+----
+. Seleccione *Crear pila* y luego seleccione *Continuar*.
++
+Puede supervisar el estado de creación del enlace desde la página Eventos. Esto no debería tardar más de 5 minutos.
+
+. Vuelva a la interfaz de Workload Factory y verá que el enlace está asociado con el sistema de archivos FSx for ONTAP.
+
+
+.Resultado
+El enlace que ha creado está asociado con el sistema de archivos FSX for ONTAP.

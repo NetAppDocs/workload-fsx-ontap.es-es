@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: change-cifs-share.html 
+keywords: cifs, CIFS, cifs share, change cifs share, update cifs share, modify cifs share 
+summary: Cambie el recurso compartido de CIFS para un volumen que utiliza el tipo de protocolo SMB/CIFS. 
+---
+= Cambiar el recurso compartido CIFS de un volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para cambiar la cuota CIFS de un volumen, es necesario determinar los usuarios y los grupos a los que deben otorgar acceso y el tipo de acceso que se les otorga.
+
+.Antes de empezar
+Determine los usuarios o grupos a los que se va a dar acceso y el tipo de acceso que se les debe otorgar.
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con el volumen a actualizar y luego selecciona *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. En la pestaña Volumes, haga clic en el menú de tres puntos del volumen para cambiar el recurso compartido de SMB.
+. Seleccione *Acciones avanzadas* y luego *Editar recurso compartido de CIFS*.
+. En la página Edit CIFS Share, proporcione lo siguiente:
++
+.. *Usuarios o grupos*: Introduce usuarios y grupos válidos. Separe cada entrada por un punto y coma “;”.
+.. *Permisos*: Selecciona *Control total*, *Leer/Escribir*, *Leer* o *Sin acceso*.
+
+
+. Haga clic en *aplicar*.
+

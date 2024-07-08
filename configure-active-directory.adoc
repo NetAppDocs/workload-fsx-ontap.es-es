@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: configure-active-directory.html 
+keywords: configure AD, configure active directory, update ad, edit active directory 
+summary:  
+---
+= Configure y actualice Active Directory para una máquina virtual de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Configura y actualiza Active Directory para una máquina virtual de almacenamiento en un sistema de archivos FSx para ONTAP.
+
+.Acerca de esta tarea
+Los mismos pasos se aplican para configurar y actualizar Active Directory para una máquina virtual de almacenamiento.
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con la VM de almacenamiento para actualizar y luego selecciona *Administrar*.
+. En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
+. En la pestaña Storage VMs, seleccione el menú de tres puntos de la máquina virtual de almacenamiento para configurar Active Directory.
+. Seleccione *Administrar configuración de AD*.
+. En la página Gestionar configuración de AD, proporcione lo siguiente:
++
+.. *Dominio de Active Directory para unirse*: Introduzca el nombre de dominio completo (FQDN) de su Active Directory.
+.. *Direcciones IP DNS*: Introduzca hasta tres direcciones IP separadas por comas.
+.. *Servidor SMB Nombre NetBIOS*: Introduzca el nombre NetBIOS del servidor SMB del objeto de equipo de Active Directory para crear para su VM de almacenamiento. Este es el nombre de esta máquina virtual de almacenamiento SVM en Active Directory.
+.. *Nombre de usuario*: Introduzca el nombre de usuario de la cuenta de servicio en su Active Directory existente.
++
+No incluya un prefijo o sufijo de dominio. Para `EXAMPLE\ADMIN`, utilice `ADMIN`.
+
+.. *Contraseña*: Introduzca la contraseña de la cuenta de servicio.
+.. *Unidad de organización (OU)*: Ingrese la unidad de organización.
++
+La unidad organizativa es el nombre de ruta de acceso distinguida de la unidad organizativa a la que desea unirse al sistema de archivos.
+
+.. *Grupo de administradores delegados*: Opcionalmente, entra en el grupo de administradores del sistema de archivos delegado.
++
+El grupo de administradores suprimido es el nombre del grupo de Active Directory que puede administrar el sistema de archivos.
+
++
+Si utiliza AWS Managed Microsoft AD, debe especificar un grupo como AWS Delegated FSx Administrators, AWS Delegated Administrators o un grupo personalizado con permisos delegados a la OU.
+
++
+Si se va a unir a un AD autogestionado, utilice el nombre del grupo en su AD. El grupo por defecto es `Domain Admins`.
+
+
+
+. Haga clic en *aplicar*.
+

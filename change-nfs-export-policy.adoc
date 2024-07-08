@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: change-nfs-export-policy.html 
+keywords: NFS, nfs, export policy, change export policy, update export policy, modify export policy 
+summary: Cambie la política de exportación de NFS para un volumen que usa los tipos de protocolos NFSv3 o NFSv4,1. 
+---
+= Cambie la política de exportación de NFS de un volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cambie la política de exportación de NFS para un volumen que usa los tipos de protocolos NFSv3 o NFSv4,1.
+
+.Acerca de esta tarea
+El cambio de la política de exportación de un volumen implica añadir reglas de políticas de exportación que detallan las especificaciones del cliente, el control de acceso, el acceso de los superusuarios y la versión de NFS. Puede añadir más de una política de exportación y asignarles prioridades.
+
+.Antes de empezar
+Determinar las especificaciones del cliente para las reglas de las políticas de exportación. Los valores válidos para la especificación de cliente son los siguientes:
+
+* Direcciones IP
+* Direcciones IP con máscaras de subred
+* Las direcciones IP con una máscara de red
+* Un nombre de netgroup precedido por el carácter «@»
+* Un nombre de dominio precedido por un punto “.”
+* Nombres de host
+
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con el volumen a actualizar y luego selecciona *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. En la pestaña Volumes, haga clic en el menú de tres puntos del volumen para cambiar la política de exportación de NFS.
+. Seleccione *Acciones avanzadas* y luego *Editar política de exportación NFS*.
+. En la página Edit NFS export policy, proporcione lo siguiente:
++
+.. *Control de acceso*: Seleccione *Política de exportación personalizada* o *Política de exportación existente*.
++
+Alternativamente, puede seleccionar *No hay acceso al volumen*.
+
+.. *Nombre de la política de exportación*: Opcionalmente, introduzca un nombre para la política de exportación.
+.. *Agregar regla de política de exportación*: Proporcione los siguientes detalles y clasifique las políticas que comienzan con #1 como regla de prioridad:
++
+... *Especificación del cliente*: Separe múltiples valores con comas.
+... *Control de acceso*: Selecciona *Leer/Escribir*, *Solo lectura* o *Sin acceso* en el menú desplegable.
+... *Acceso de superusuario*: Selecciona *Sí* o *No*.
+... *Versión NFS*: Seleccione *ALL*, *NFSv3* o *NFSv4*.
+
+
+
+
+. Haga clic en *aplicar*.
+

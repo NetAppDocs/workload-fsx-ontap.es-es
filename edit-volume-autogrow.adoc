@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: edit-volume-autogrow.html 
+keywords: volume autogrow, increase volume capacity, enable autogrow 
+summary: Habilite el crecimiento automático de volúmenes para permitir que Workload Factory gestione la capacidad de volumen. Puede deshabilitarla en cualquier momento. 
+---
+= Habilitar el crecimiento automático del volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Habilite el crecimiento automático de volúmenes para permitir que Workload Factory gestione la capacidad de volumen. Puede deshabilitarla en cualquier momento.
+
+Opcionalmente, es posible aumentar manualmente la capacidad del volumen de un volumen en cualquier momento mediante el link:increase-volume-capacity.html["función aumentar capacidad del volumen"].
+
+
+NOTE: No se admite el crecimiento automático de volúmenes para los volúmenes iSCSI.
+
+.Antes de empezar
+Para habilitar el crecimiento automático de volúmenes, link:manage-links.html["asocie un enlace"]debe . Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, haga clic en *Asociar enlace* bajo *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña FSX para ONTAP, selecciona el menú de tres puntos del sistema de archivos con el volumen que se va a actualizar y luego selecciona *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. En la pestaña Volumes, seleccione el menú de tres puntos para el volumen que desea modificar.
+. Selecciona *Acciones básicas*, luego *Editar crecimiento automático del volumen*.
+. En el cuadro de diálogo Edit autogrow, habilite el crecimiento automático de volúmenes.
+. Haga clic en *aplicar*.
+

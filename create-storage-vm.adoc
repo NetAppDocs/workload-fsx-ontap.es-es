@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: create-storage-vm.html 
+keywords: create storage VM, create svm 
+summary: 'Puedes crear una máquina virtual de almacenamiento (SVM) FSx para ONTAP para proporcionar servicios de datos y almacenamiento para tus cargas de trabajo en Workload Factory.' 
+---
+= Crea una máquina virtual de almacenamiento para un sistema de archivos FSx para ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Crea una máquina virtual de almacenamiento (SVM) para un sistema de archivos FSx para ONTAP y accede a los servicios de datos y almacenamiento virtualmente para tus cargas de trabajo en Workload Factory.
+
+.Acerca de esta tarea
+Los equipos virtuales de almacenamiento son servidores de archivos aislados que se pueden utilizar para acceder a los datos de cada carga de trabajo en Workload Factory Storage. Cada SVM tiene sus propias credenciales administrativas y extremos para administrar y acceder a los datos.
+
+Con SVM, cuando accedes a los datos en FSx para ONTAP, tus clientes y estaciones de trabajo montan un volumen, un recurso compartido de CIFS/SMB o un LUN iSCSI alojado en una SVM mediante el extremo del SVM (dirección IP).
+
+.Antes de empezar
+Comprobar la cantidad de máquinas virtuales de almacenamiento admitida por sistema de archivos. Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Gestión de máquinas virtuales de almacenamiento de FSx para ONTAP"^] en la documentación de AWS el número máximo de SVM por sistema de archivos.
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña FSx para ONTAP, haz clic en el menú de tres puntos del sistema de archivos para crear una VM de almacenamiento y selecciona *Administrar*.
+. En la descripción general del sistema de archivos, seleccione *Crear una VM de almacenamiento*.
+. En la página Storage VM, en Storage VM configuration, proporcione lo siguiente:
++
+.. *Nombre*: Introduzca un nombre para la VM de almacenamiento.
+.. *Credenciales de VM de almacenamiento*: Proporcione una contraseña para el usuario de esta VM de almacenamiento `vsadmin` o utilice las credenciales de usuario del sistema de archivos `fsxadmin` .
+.. * Estilo de seguridad del volumen raíz*: Seleccione el estilo de seguridad del volumen raíz según el tipo de clientes que acceden a sus datos: UNIX (clientes Linux), NTFS (clientes Windows) o Mixto.
+.. *Etiquetas*: Opcionalmente, puedes añadir hasta 50 etiquetas.
+
+
+. Haga clic en *Crear*.
+

@@ -1,0 +1,129 @@
+---
+sidebar: sidebar 
+permalink: explore-savings.html 
+keywords: cost, savings, compare costs, EBS, EFS, FSx for Windows file servers FSx for ONTAP 
+summary: 'Explora el ahorro en tus cargas de trabajo de almacenamiento en el almacenamiento de Amazon Elastic Block Store (EBS), Elastic File System (EFS) y FSx para servidores de archivos de Windows frente a AWS FSx para NetApp ONTAP.' 
+---
+= Explora los ahorros en FSx para ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Descubre el ahorro en tus cargas de trabajo de almacenamiento que usan Amazon Elastic Block Store (EBS), Elastic File System (EFS) y FSx para servidor de archivos de Windows frente a FSx para NetApp ONTAP.
+
+.Acerca de esta tarea
+Workload Factory proporciona una calculadora de almacenamiento para que puedas comparar los costes del almacenamiento en los sistemas de archivos FSx para ONTAP con los de Elastic Block Store (EBS), Elastic File System (EFS) y FSx para el almacenamiento del servidor de archivos de Windows. Dependiendo de sus requisitos de almacenamiento, es posible que los sistemas de archivos FSx para ONTAP sean los más rentables para usted.
+
+Puede analizar el ahorro en un sistema de almacenamiento específico o en volúmenes específicos con la calculadora de almacenamiento. La calculadora de almacenamiento muestra si el almacenamiento para las cargas de trabajo en estos sistemas de almacenamiento sería menos costoso si utiliza un sistema de archivos FSx para ONTAP.
+
+Si Workload Factory determina que podría ahorrar dinero ejecutando estas cargas de trabajo en un sistema de archivos FSx para ONTAP, puede implementar el sistema de archivos desde la calculadora directamente desde Workload Factory. En algunos casos, Workload Factory puede recomendar implementar varios sistemas de archivos según la cantidad de almacenamiento que esté usando y según las características de rendimiento de sus cargas de trabajo.
+
+
+
+== Proporcione los requisitos del sistema
+
+Si habilitó el modo _Automate_ (link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["más información sobre los modos"]) añadiendo credenciales de AWS a su cuenta Workload Factory, Workload Factory puede identificar todos los sistemas de almacenamiento disponibles en su cuenta de AWS y mostrar las características de los volúmenes en esos sistemas en la página de inventario de almacenamiento. La cuenta de AWS que se busca se basa en las credenciales que ha definido en su cuenta de Workload Factory.
+
+En esta figura, se muestran los volúmenes en FSx para los sistemas de servidor de archivos de Windows que se han detectado en una cuenta de AWS.
+
+image:screenshot-storage-inventory.png["La página de inventario de almacenamiento que muestra su inventario actual de volúmenes en FSx para servidores de archivos de Windows."]
+
+Si no ha agregado credenciales para vincular su cuenta de Workload Factory con una cuenta de AWS (denominada modo _BASIC_), puede introducir manualmente las características necesarias para un sistema de almacenamiento que planea poner en marcha y la calculadora de almacenamiento determinará el mejor sistema de archivos en función del coste. Puedes usar este método para abarcar un nuevo sistema de archivos FSX for ONTAP mientras también usas el modo _Automate_.
+
+En esta figura se muestra la página de la calculadora de almacenamiento con una comparación entre FSx para ONTAP y el almacenamiento de EBS.
+
+image:screenshot-ebs-calculator.png["La página de la calculadora de almacenamiento con una comparación entre FSx para ONTAP y el almacenamiento de Elastic Block Store."]
+
+.Antes de empezar
+Para que Workload Factory detecte los entornos de almacenamiento de Amazon Elastic Block Store (EBS), Elastic File System (EFS) y FSx para Windows File Server en su cuenta de AWS, asegúrese de estar en su cuenta de AWS. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos _automatic_"^]
+
+
+
+== Explora el ahorro
+
+Siga los pasos debajo de la pestaña para su selección de almacenamiento.
+
+[role="tabbed-block"]
+====
+.Elastic Block Store (EBS) de Amazon
+--
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, selecciona *Explorar ahorros* y luego *Amazon Elastic Block Store (EBS)*.
+. En la calculadora de ahorro de almacenamiento, proporcione la siguiente información:
++
+.. *Caso de uso*: Seleccione un caso de uso en el menú desplegable. El caso de uso seleccionado determina las características del sistema de archivos FSx para ONTAP para su comparación.
+.. *Región*: Selecciona la región para tu configuración de EBS en el menú desplegable.
+.. *Seleccione el tipo de volumen EBS*: Seleccione el tipo de volumen EBS utilizado para su configuración.
+.. *Número de volúmenes*: Ingresa el número de volúmenes en tu configuración de EBS.
+.. *Cantidad de almacenamiento por volumen (TiB)*: Ingrese la cantidad de almacenamiento por volumen en TiB.
+.. *Frecuencia de instantánea*: Seleccione la frecuencia de instantánea para su configuración de EBS.
+.. *Cantidad cambiada por instantánea (GiB)*: Solo para almacenamiento de instantáneas. Introduzca la cantidad modificada por snapshot en GiB.
+.. *IOPS provisionadas por volumen*: Para volúmenes de GP3, io1 y io2. Introduzca las IOPS aprovisionadas por volumen.
+.. *Rendimiento (MiB/s)*: Solo para GP3 volúmenes. Introduzca el rendimiento en MiB/s por volumen.
+
+
+
+
+--
+.Amazon FSx para Windows File Server
+--
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, selecciona *Explorar ahorros* y luego *Amazon FSx para Windows File Server*.
+. En la calculadora de ahorro de almacenamiento, proporcione la siguiente información:
++
+.. *Caso de uso*: Seleccione un caso de uso en el menú desplegable. El caso de uso seleccionado determina las características del sistema de archivos FSx para ONTAP para su comparación.
+.. *Región*: Selecciona la región para tu configuración de FSX para Windows File Server en el menú desplegable.
+.. *Tipo de implementación*: Selecciona *Zona de disponibilidad única* o *Múltiples zonas de disponibilidad*.
+.. *Tipo de almacenamiento*: El tipo de almacenamiento SSD se selecciona por defecto.
+.. *Capacidad de almacenamiento (TiB)*: Ingrese la capacidad de almacenamiento para la configuración.
+.. *Ahorro en deduplicación (%)*: Introduzca el porcentaje de ahorro de capacidad que espera de la deduplicación.
+.. *Frecuencia de instantánea*: Seleccione la frecuencia de instantánea para su configuración.
+.. *Cantidad cambiada por instantánea (GiB)*: Solo para almacenamiento de instantáneas. Introduzca la cantidad modificada por snapshot en GiB.
+.. * IOPS SSD aprovisionado*: Introduzca la IOPS SSD aprovisionada.
+.. *Rendimiento (MiB/s)*: Ingrese el rendimiento en MIB/s..
+
+
+
+
+--
+.Amazon Elastic File System (EFS)
+--
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Explorar ahorros* y luego *Amazon Elastic File System (EFS)*.
+. En la calculadora de ahorro de almacenamiento, proporcione la siguiente información:
++
+.. *Caso de uso*: Seleccione un caso de uso en el menú desplegable. El caso de uso seleccionado determina las características del sistema de archivos FSx para ONTAP para su comparación.
+.. *Región*: Selecciona la región para tu configuración de FSX para Windows File Server en el menú desplegable.
+.. *Tipo de sistema de archivos*: Seleccione *Regional* o *una zona*.
+.. *Capacidad de almacenamiento (TiB)*: Introduzca la capacidad de almacenamiento de la configuración EFS.
+.. *Datos a los que se accede con frecuencia (%)*: Introduzca el porcentaje de datos a los que se accede con frecuencia.
+.. *Modo de rendimiento*: Seleccione *Rendimiento aprovisionado* o *Rendimiento elástico*.
+.. *Rendimiento (MiB/s)*: Ingrese el rendimiento en MIB/s..
+
+
+
+
+--
+====
+Después de proporcionar detalles sobre la configuración del sistema de almacenamiento, revise los cálculos y las recomendaciones que se proporcionan en la página.
+
+Además, desplácese hacia abajo hasta la parte inferior de la página hasta *Exportar PDF* o *Ver los cálculos*.
+
+
+
+== Pon en marcha FSx para sistemas de archivos ONTAP
+
+Si desea cambiar a FSX para ONTAP para obtener ahorros de costos, haga clic en *Crear* para crear los sistemas de archivos directamente desde el Asistente para crear un FSX para el sistema de archivos ONTAP o haga clic en *Guardar* para guardar las configuraciones recomendadas para más adelante.
+
+Métodos de despliegue:: En el modo _Automate_, puede implementar el sistema de archivos FSx para ONTAP directamente desde Workload Factory. También puede copiar el contenido de la ventana CodeBox e implementar el sistema utilizando uno de los métodos CodeBox.
++
+--
+En el modo _BASIC_, puede copiar el contenido de la ventana CodeBox e implementar el sistema de archivos FSX for ONTAP utilizando uno de los métodos CodeBox.
+
+--
+

@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: change-snapshot-policy.html 
+keywords: snapshot policy, snapshot schedule, modify snapshot policy, edit snapshot policy, change snapshot policy 
+summary: Actualice la política de snapshots de un volumen en cualquier momento. 
+---
+= Cambie la política de Snapshot de un volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Actualice la política de snapshots de un volumen en cualquier momento.
+
+.Acerca de esta tarea
+Esta operación actualiza la frecuencia de las instantáneas tomadas para un volumen o deshabilita las instantáneas automáticas.
+
+.Antes de empezar
+Se necesita un enlace para mostrar las políticas de instantáneas existentes. Para asociar un enlace, haga clic en *Enlace asociado* bajo *Nombre de cuenta*. A continuación, vuelva a esta operación.
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. Seleccione la pestaña *Volúmenes*.
+. En la pestaña *Volúmenes*, seleccione el menú de tres puntos del volumen para cambiar la política de instantáneas.
+. Seleccione *Acciones de protección de datos*, *Snapshots* y luego *Administrar políticas de instantáneas*.
+. En la página de administración de políticas de Snapshot, seleccione *Cambiar una política de instantáneas existente*.
+. En el campo *Nombre de la política de instantáneas*, seleccione una política de instantáneas diferente para este volumen.
++
+Para desactivar las instantáneas automáticas, seleccione `none`.
+
++
+Si no existen otras políticas de instantáneas, link:create-snapshot-policy.html["cree una política de snapshots nueva para este volumen"].
+
+. Haga clic en *aplicar*.
+

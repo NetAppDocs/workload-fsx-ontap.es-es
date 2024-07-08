@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: restore-volume-from-snapshot.html 
+keywords: restore volume, snapshot 
+summary: Restaura un volumen de FSx para ONTAP a partir de una instantánea cuando el volumen contenga archivos dañados o eliminados. 
+---
+= Restaurar un volumen a partir de una copia de Snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Restaura un volumen de FSx para ONTAP a partir de una instantánea cuando el volumen contenga archivos dañados o eliminados.
+
+.Acerca de esta tarea
+Esta operación restaura los datos de una copia de Snapshot a un volumen nuevo.
+
+.Antes de empezar
+Solo es posible restaurar un volumen a partir de una copia Snapshot si tiene una copia Snapshot existente del volumen.
+
+Asegúrese de contar con capacidad suficiente para completar esta operación.
+
+.Pasos
+. Inicie sesión en la consola de Workload Factory.
+. En *Almacenamiento*, selecciona *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*.
+. En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. En la pestaña *Volúmenes*, selecciona el menú de tres puntos para que el volumen se restaure desde una instantánea.
+. Seleccione *Acciones de protección de datos*, *Snapshots*, luego *Restaurar volumen desde una instantánea*.
+. En el cuadro de diálogo Restaurar volumen de una instantánea, en el campo *Nombre de la instantánea*, seleccione la instantánea que desea restaurar en el menú desplegable.
+. En el campo *Nombre del volumen restaurado*, introduzca un nombre único para el volumen que desea restaurar.
+. Haga clic en *Restaurar*.
+
