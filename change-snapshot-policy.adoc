@@ -20,7 +20,7 @@ Esta operación actualiza la frecuencia de las instantáneas tomadas para un vol
 Se necesita un enlace para mostrar las políticas de instantáneas existentes. Para asociar un enlace, haga clic en *Enlace asociado* bajo *Nombre de cuenta*. A continuación, vuelva a esta operación.
 
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . Seleccione la pestaña *Volúmenes*.
 . En la pestaña *Volúmenes*, seleccione el menú de tres puntos del volumen para cambiar la política de instantáneas.

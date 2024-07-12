@@ -22,7 +22,7 @@ Los backups de FSx para ONTAP son incrementales, lo que significa que solo los d
 Para realizar backups de los volúmenes, tanto el volumen como el sistema de archivos deben tener suficiente capacidad de almacenamiento SSD disponible para almacenar la snapshot de backup. Al realizar una copia Snapshot de backup, la capacidad de almacenamiento adicional que consume la copia de Snapshot no puede provocar que el volumen supere el 98% de la utilización de almacenamiento de las unidades de estado sólido. Si esto sucede, la copia de seguridad fallará.
 
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.

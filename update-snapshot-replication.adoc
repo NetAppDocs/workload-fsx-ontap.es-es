@@ -14,7 +14,7 @@ summary: Actualizar manualmente los datos Snapshot que se transfieren entre los 
 Una relación de replicación tiene una programación de replicación establecida, pero puede actualizar manualmente los datos de instantánea transferidos entre los volúmenes de origen y de destino cuando sea necesario.
 
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Relaciones de replicación*.

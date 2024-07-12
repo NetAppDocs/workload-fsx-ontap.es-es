@@ -50,7 +50,7 @@ Siga los pasos debajo de la pestaña para su selección de almacenamiento.
 .Elastic Block Store (EBS) de Amazon
 --
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, selecciona *Explorar ahorros* y luego *Amazon Elastic Block Store (EBS)*.
 . En la calculadora de ahorro de almacenamiento, proporcione la siguiente información:
 +
@@ -71,7 +71,7 @@ Siga los pasos debajo de la pestaña para su selección de almacenamiento.
 .Amazon FSx para Windows File Server
 --
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, selecciona *Explorar ahorros* y luego *Amazon FSx para Windows File Server*.
 . En la calculadora de ahorro de almacenamiento, proporcione la siguiente información:
 +
@@ -93,7 +93,7 @@ Siga los pasos debajo de la pestaña para su selección de almacenamiento.
 .Amazon Elastic File System (EFS)
 --
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Explorar ahorros* y luego *Amazon Elastic File System (EFS)*.
 . En la calculadora de ahorro de almacenamiento, proporcione la siguiente información:
 +

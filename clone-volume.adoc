@@ -23,7 +23,7 @@ Cuando se clona un volumen, se crea un volumen editable con referencias a las co
 Para que un volumen clonado contenga todos los datos del volumen principal y todos los datos nuevos añadidos al clon después de su creación, deberá hacerlo link:split-cloned-volume.html["divida el clon"] a partir del volumen principal. Además, no se puede eliminar un volumen principal si tiene un clon. Debe dividir un clon para poder eliminar un volumen principal.
 
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . Seleccione la pestaña *Volúmenes*.
 . En la pestaña Volumes, seleccione el menú de tres puntos del volumen que desea clonar.

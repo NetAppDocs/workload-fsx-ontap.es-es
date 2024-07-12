@@ -22,7 +22,7 @@ NOTE: No se admite el crecimiento automático de volúmenes para los volúmenes 
 Para habilitar el crecimiento automático de volúmenes, link:manage-links.html["asocie un enlace"]debe . Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, haga clic en *Asociar enlace* bajo *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
 
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . En la pestaña FSX para ONTAP, selecciona el menú de tres puntos del sistema de archivos con el volumen que se va a actualizar y luego selecciona *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.

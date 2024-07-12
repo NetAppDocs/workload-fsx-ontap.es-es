@@ -36,7 +36,7 @@ Puede crear un sistema de archivos FSX for ONTAP utilizando _Quick create_ o _Ad
 La creación rápida le permite utilizar una configuración recomendada de mejores prácticas. Puedes cambiar la mayoría de los ajustes después de crear un sistema de archivos FSX for ONTAP.
 
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, selecciona *Crear FSX para ONTAP*.
 . En la página Crear FSX para ONTAP, selecciona *Creación rápida*.
 +

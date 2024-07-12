@@ -14,7 +14,7 @@ summary: Actualiza el programa de backup de FSx para ONTAP cuando sea necesario.
 Actualiza el programa de backup de FSx para ONTAP cuando sea necesario.
 
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, haga clic en *Ir a Inventario de almacenamiento*.
 . En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos para actualizar la programación de copia de seguridad y luego selecciona *Administrar*.
 . En Información, haga clic en el icono del lápiz junto a *FSX para copia de seguridad de ONTAP*. El icono del lápiz aparece junto a la flecha desplegable cuando el ratón pasa por encima de la fila *FSX for ONTAP BACKUP*.

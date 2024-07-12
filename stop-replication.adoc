@@ -14,7 +14,7 @@ summary: Detener una relación de replicación entre los volúmenes de origen y 
 Cuando se detiene una replicación, la replicación programada se actualiza del volumen de origen a la pausa del volumen de destino. El volumen objetivo pasará de solo lectura a lectura y escritura.
 
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Relaciones de replicación*.

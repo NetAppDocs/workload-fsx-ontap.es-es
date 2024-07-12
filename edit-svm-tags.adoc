@@ -14,7 +14,7 @@ summary: Añada, actualice o quite etiquetas de máquinas virtuales de almacenam
 Las etiquetas pueden ayudarte a categorizar tus recursos. Puede agregar, editar y quitar etiquetas para una máquina virtual de almacenamiento en cualquier momento.
 
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con la VM de almacenamiento para actualizar y luego selecciona *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.

@@ -18,7 +18,7 @@ También puede link:enable-auto-capacity-management.html["habilite la función d
 .Acerca de esta tarea
 El aumento de la capacidad del sistema de archivos afecta al IOPS de su sistema de archivos FSx para ONTAP.
 
-Cuando se utiliza automáticamente link:provision-iops.html["Aprovisione IOPS"] en el caso de un sistema de archivos, IOPS aumenta en 3 IOPS con cada aumento de 1 GiB de la capacidad de SSD. Por ejemplo, si aprovisiona 100 TiB (102.400 GiB) de capacidad SSD, las IOPS aumentarán en 300 TiB (307.200 GiB).
+Cuando se utiliza automáticamente link:provision-iops.html["Aprovisione IOPS"] en el caso de un sistema de archivos, IOPS aumenta en 3 IOPS con cada aumento de 1 GiB de la capacidad de SSD.
 
 Cuando se realiza link:provision-iops.html["Aprovisione IOPS"] manualmente, es posible que deba aumentar la asignación de IOPS para respaldar la mayor capacidad del sistema de archivos.
 

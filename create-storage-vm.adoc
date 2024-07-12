@@ -22,7 +22,7 @@ Con SVM, cuando accedes a los datos en FSx para ONTAP, tus clientes y estaciones
 Comprobar la cantidad de máquinas virtuales de almacenamiento admitida por sistema de archivos. Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Gestión de máquinas virtuales de almacenamiento de FSx para ONTAP"^] en la documentación de AWS el número máximo de SVM por sistema de archivos.
 
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . En la pestaña FSx para ONTAP, haz clic en el menú de tres puntos del sistema de archivos para crear una VM de almacenamiento y selecciona *Administrar*.
 . En la descripción general del sistema de archivos, seleccione *Crear una VM de almacenamiento*.

@@ -37,7 +37,7 @@ Revise los siguientes requisitos previos antes de crear un volumen:
 
 
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos en el que quieres crear un volumen y selecciona *Administrar*.
 . En la pestaña *Overview*, haz clic en *Crear volumen*.

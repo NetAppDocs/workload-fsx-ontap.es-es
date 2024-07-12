@@ -25,7 +25,7 @@ NOTE: No se conserva ningún dato que se escriba en el volumen de origen origina
 Asegúrese de conocer los roles actuales y futuros de los volúmenes de origen y objetivo, ya que los cambios en el nuevo volumen objetivo se sobrescribirán con el nuevo volumen de origen. Si se utiliza incorrectamente, puede experimentar una pérdida de datos involuntaria.
 
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Relaciones de replicación*.

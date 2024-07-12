@@ -22,7 +22,7 @@ link:links-overview.html["Obtenga más información sobre los enlaces"] o link:c
 Puede ver los enlaces que están actualmente asociados a su cuenta.
 
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . En el menú Cuenta, selecciona *Enlaces*.
 +
@@ -43,7 +43,7 @@ image:screenshot-view-link-details.png["Pantallas que muestran los sistemas de a
 Después de crear un enlace, puede asociarlo con sus sistemas de archivos FSx for ONTAP. Cada sistema de archivos se puede asociar a un único enlace en una sola cuenta de NetApp, pero un enlace se puede asociar a muchos sistemas de archivos.
 
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos para asociar un enlace y luego selecciona *Administrar*.
 . En la descripción general del sistema de archivos, seleccione *Enlace asociado*.
@@ -71,7 +71,7 @@ Puede eliminar un enlace que ya no utilice en su entorno. Cualquier sistema de a
 Tenga en cuenta que el enlace solo se elimina de Workload Factory - no se elimina de su entorno AWS. Debe eliminar la función Lambda de su cuenta de AWS después de eliminar el enlace en Workload Factory.
 
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . En el menú Cuenta, selecciona *Enlaces*.
 . En la página Enlaces, selecciona el botón de menú y selecciona *Eliminar*.

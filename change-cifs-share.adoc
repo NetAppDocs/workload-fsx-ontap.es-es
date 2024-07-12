@@ -17,7 +17,7 @@ Para cambiar la cuota CIFS de un volumen, es necesario determinar los usuarios y
 Determine los usuarios o grupos a los que se va a dar acceso y el tipo de acceso que se les debe otorgar.
 
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con el volumen a actualizar y luego selecciona *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.

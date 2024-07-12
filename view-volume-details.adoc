@@ -16,7 +16,7 @@ Vea detalles de volumen, distribución, consumo, acceso y protección.
 Los detalles del volumen solo aparecen después de que se creó un volumen en un sistema de archivos.
 
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
+. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . En la pestaña Volúmenes, seleccione el menú de tres puntos para el volumen que desea modificar.
 . Seleccione *Acciones básicas* y luego *Ver detalles del volumen*.
