@@ -28,6 +28,6 @@ Considere lo siguiente antes de eliminar un volumen:
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
 . En la ficha Volúmenes, seleccione el menú de tres puntos del volumen que desea eliminar.
 . Seleccione *Acciones básicas* y luego *Eliminar volumen*.
-. En el cuadro de diálogo Eliminar volumen, escriba «delete» para eliminar el volumen.
+. En el cuadro de diálogo Eliminar volumen, escriba «Eliminar» para eliminar el volumen.
 . Haga clic en *Eliminar*.
 

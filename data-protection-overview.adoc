@@ -30,6 +30,10 @@ La replicación crea una copia secundaria de sus datos en otro sistema de archiv
 
 Puedes elegir crear volúmenes replicados en otro sistema de archivos FSx for ONTAP y archivos de backup en el cloud. O puede elegir simplemente crear volúmenes replicados o archivos de copia de seguridad - es su elección.
 
+El siguiente diagrama muestra una representación visual de la protección de datos para el almacenamiento de FSx para ONTAP mediante snapshots, replicación entre regiones y backup en el almacenamiento de objetos.
+
+image:diagram-fsx-data-protection.png["La captura de pantalla muestra la protección de datos para el almacenamiento de FSx para ONTAP mediante snapshots, replicación en varias regiones y backup en el almacenamiento de objetos."]
+
 
 
 == Prácticas recomendadas para proteger sus datos de cargas de trabajo

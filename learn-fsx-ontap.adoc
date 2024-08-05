@@ -49,6 +49,18 @@ FSX para ONTAP ofrece las siguientes características:
 
 
 
+== Herramientas para utilizar Workload Factory
+
+Puede utilizar BlueXP Workload Factory con las siguientes herramientas:
+
+* *Consola de Workload Factory*: La consola Workload Factory proporciona una interfaz visual que le brinda una visión integral de sus aplicaciones y proyectos
+* *API REST*: Las API REST DE Workloads Factory te permiten implementar y administrar tus sistemas de archivos FSx for ONTAP y otros recursos de AWS
+* *CloudFormation*: El código CloudFormation de AWS te permite realizar las acciones definidas en la consola Workload Factory para modelar, aprovisionar y administrar recursos de AWS y de terceros desde la pila CloudFormation en tu cuenta de AWS.
+* *Terraform BlueXP Workload Factory Provider*: Terraform te permite crear y administrar flujos de trabajo de infraestructura generados en la consola Workload Factory.
+
+
+
+
 == Coste
 
 Tu cuenta de FSx para ONTAP es mantenida por AWS, no por Workload Factory. Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Precios para Amazon FSx for NetApp ONTAP"^].

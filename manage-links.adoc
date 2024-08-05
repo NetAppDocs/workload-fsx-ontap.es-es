@@ -31,7 +31,7 @@ image:screenshot-links-button.png["Una captura de pantalla que muestra cómo abr
 . Si existe algún enlace, la página de visión general proporciona la información.
 . Para ver los sistemas de archivos FSX for ONTAP asociados a un enlace, seleccione el botón *Ver* en la sección de recursos asociados.
 +
-image:screenshot-view-link-details.png["Pantallas que muestran los sistemas de archivos de FSx para ONTAP que utilizan un enlace específico."]
+image:screenshot-view-link-details.png["Una captura de pantalla que muestra los sistemas de archivos de FSx para ONTAP que utilizan un enlace específico."]
 
 . Si necesita el nombre del recurso de Amazon (ARN) para el enlace, puede seleccionar el icono _copy_ junto al campo ARN.
 

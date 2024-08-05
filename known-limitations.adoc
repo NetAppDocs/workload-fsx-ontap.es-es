@@ -15,12 +15,6 @@ Las limitaciones conocidas identifican plataformas, dispositivos o funciones que
 
 
 
-== Modos de funcionamiento
-
-El modo _Read_ no está disponible actualmente.
-
-
-
 == Enlace
 
 Se necesita un enlace para completar algunas operaciones como la replicación en la interfaz de usuario de Workload Factory.

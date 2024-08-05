@@ -21,6 +21,15 @@ Con SVM, cuando accedes a los datos en FSx para ONTAP, tus clientes y estaciones
 .Antes de empezar
 Comprobar la cantidad de máquinas virtuales de almacenamiento admitida por sistema de archivos. Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Gestión de máquinas virtuales de almacenamiento de FSx para ONTAP"^] en la documentación de AWS el número máximo de SVM por sistema de archivos.
 
+
+
+== Cree una máquina virtual de almacenamiento
+
+Es posible crear una máquina virtual de almacenamiento desde la consola de Workload Factory. También puede utilizar las siguientes herramientas disponibles en CodeBox: API REST, CloudFormation y Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Aprende a usar CodeBox para la automatización"^].
+
+
+NOTE: Al usar Terraform de CodeBox, el código que copie o descargue oculta `fsxadmin` y `vsadmin` las contraseñas. Deberá volver a introducir las contraseñas cuando ejecute el código.
+
 .Pasos
 . Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
