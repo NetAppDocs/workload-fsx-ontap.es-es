@@ -1,0 +1,20 @@
+= Soporte de terraform
+:allow-uri-read: 
+
+
+
+
+=== Soporte de terraform
+
+Ahora puede utilizar Terraform de CodeBox para implementar y gestionar sistemas de archivos y equipos virtuales de almacenamiento.
+
+* link:create-file-system.html["Crear un sistema de archivos"]
+* link:create-storage-vm.html["Cree una máquina virtual de almacenamiento"]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["Utilice Terraform de CodeBox"^]
+
+
+
+
+=== Recomendaciones de rendimiento y IOPS en la calculadora de almacenamiento
+
+La calculadora de almacenamiento hace recomendaciones para la configuración del sistema de archivos FSx para ONTAP para el rendimiento e IOPS basadas en las prácticas recomendadas de AWS, lo que proporciona una orientación óptima para sus selecciones.
