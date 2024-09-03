@@ -1049,7 +1049,6 @@
   <block id="21e6ab9737790ab1abc18e49091d3c18" category="paragraph">El siguiente diagrama muestra una representación visual de la protección de datos para el almacenamiento de FSx para ONTAP mediante snapshots, replicación entre regiones y backup en el almacenamiento de objetos.</block>
   <block id="90388f794d575e628df271470a4b766e" category="inline-image-macro">La captura de pantalla muestra la protección de datos para el almacenamiento de FSx para ONTAP mediante snapshots, replicación en varias regiones y backup en el almacenamiento de objetos.</block>
   <block id="29bed1477f8a04f4f702564c7e6bb224" category="paragraph"><block ref="29bed1477f8a04f4f702564c7e6bb224" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d9c70344ba40b88fdb8c4d8e5b34884e" category="list-text">En el cuadro de diálogo Eliminar volumen, escriba «Eliminar» para eliminar el volumen.</block>
   <block id="0d9b99cb00c934d1cd88332ae901fc26" category="section-title">Herramientas para utilizar Workload Factory</block>
   <block id="76737aecf42a629e0422271332fcc5a3" category="paragraph">Puede utilizar BlueXP Workload Factory con las siguientes herramientas:</block>
   <block id="0fc51b33bbeafc6425a9bd19ec449966" category="list-text">*Consola de Workload Factory*: La consola Workload Factory proporciona una interfaz visual que le brinda una visión integral de sus aplicaciones y proyectos</block>
@@ -1126,4 +1125,17 @@
   <block id="3b915cd68add8a6cdac4cd1adeb5f100" category="list-text"><block ref="3b915cd68add8a6cdac4cd1adeb5f100" category="inline-link-macro-rx"></block></block>
   <block id="bbccc2f370efe6824018b613b1dd5839" category="paragraph">Amazon FSx para NetApp ONTAP ya está disponible de forma general en Workload Factory.</block>
   <block id="0fd886acd6700c343d655429665d7e6a" category="paragraph">Ahora puede utilizar Terraform desde CodeBox para implementar sistemas de archivos y equipos virtuales de almacenamiento.</block>
+  <block id="f0881d896f399a09e86122a09c00b74d" category="doc">Compatibilidad con modo lectura para la gestión del almacenamiento</block>
+  <block id="8db376980442524a58ebd917532846d7" category="paragraph">El modo de lectura está disponible para la gestión del almacenamiento en Workload Factory. El modo de lectura mejora la experiencia del modo básico al agregar permisos de solo lectura para que las plantillas de infraestructura como código se rellenen con sus variables específicas. Las plantillas de infraestructura como código se pueden ejecutar directamente desde su cuenta de AWS sin tener que proporcionar permisos de modificación a Workload Factory.</block>
+  <block id="06fdd4e2a129920e1eda56425068ba01" category="inline-link-macro">Más información sobre el modo de lectura</block>
+  <block id="2d68ad2bd6b1f5ddb456706e84602c5e" category="paragraph"><block ref="2d68ad2bd6b1f5ddb456706e84602c5e" category="inline-link-macro-rx"></block></block>
+  <block id="fc30083e7a76ed4c8eb6167ea377c198" category="section-title">Realice backups antes de la eliminación de volúmenes</block>
+  <block id="8b97ffb47ece0280994594aa00a04a55" category="paragraph">Ahora puede realizar un backup de un volumen antes de eliminarlo. La copia de seguridad permanecerá en el sistema de archivos hasta que se elimine.</block>
+  <block id="8fb924f94cef9a4615d9910253ac7353" category="paragraph"><block ref="8fb924f94cef9a4615d9910253ac7353" category="inline-link-macro-rx"></block></block>
+  <block id="7dd9587dbbaf30e59e9c0550bb88b5cd" category="list-text">En el cuadro de diálogo Delete volume, realice lo siguiente:</block>
+  <block id="ad3bbbefb363832c16c692a050c01cc8" category="list-text">Opcionalmente, haga clic en *Realizar una copia de seguridad del volumen* para hacer una copia de seguridad del volumen antes de su eliminación.</block>
+  <block id="54ae4e9761548739e1dcb7a7a20751ad" category="paragraph">La copia de seguridad permanecerá en el sistema de archivos hasta que la elimine manualmente.</block>
+  <block id="26983a904e0717c520032a2178795368" category="list-text">Haga clic en *continuar*.</block>
+  <block id="b1bb1fd299d4d0d5a0bcf89deacb85de" category="list-text">Escriba «delete» para eliminar el volumen.</block>
+  <block id="b5cef683aab00353096b98823a237e69" category="section-title">1 de septiembre de 2024</block>
 </blocks>
