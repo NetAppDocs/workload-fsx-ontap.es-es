@@ -11,7 +11,7 @@ summary: Divida un volumen clonado FlexVol de su volumen principal para que el c
 
 
 [role="lead"]
-Divida un volumen clonado FlexVol de su volumen principal para que el clon sea un volumen FlexVol normal de lectura y escritura.
+Divida un FlexVol volume clonado de su volumen principal para que el clon sea un FlexVol volume de lectura y escritura normal.
 
 Se puede acceder a los datos en el clon y en el elemento principal durante la división. El proceso de división solo actualiza los metadatos y requiere una E/S mínima. No se copian bloques de datos.
 

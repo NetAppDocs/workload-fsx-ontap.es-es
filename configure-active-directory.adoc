@@ -19,7 +19,7 @@ Los mismos pasos se aplican para configurar y actualizar Active Directory para u
 .Pasos
 . Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con la VM de almacenamiento para actualizar y luego selecciona *Administrar*.
+. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos con la VM de almacenamiento para actualizar y luego selecciona *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
 . En la pestaña Storage VMs, seleccione el menú de tres puntos de la máquina virtual de almacenamiento para configurar Active Directory.
 . Seleccione *Administrar configuración de AD*.
@@ -39,13 +39,13 @@ La unidad organizativa es el nombre de ruta de acceso distinguida de la unidad o
 
 .. *Grupo de administradores delegados*: Opcionalmente, entra en el grupo de administradores del sistema de archivos delegado.
 +
-El grupo de administradores suprimido es el nombre del grupo de Active Directory que puede administrar el sistema de archivos.
+El grupo Delegated administrators es el nombre del grupo de Active Directory que puede administrar el sistema de archivos.
 
 +
 Si utiliza AWS Managed Microsoft AD, debe especificar un grupo como AWS Delegated FSx Administrators, AWS Delegated Administrators o un grupo personalizado con permisos delegados a la OU.
 
 +
-Si se va a unir a un AD autogestionado, utilice el nombre del grupo en su AD. El grupo por defecto es `Domain Admins`.
+Si se está conectando a un AD autogestionado, utilice el nombre del grupo en su AD. El grupo por defecto es `Domain Admins`.
 
 
 
