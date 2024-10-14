@@ -647,7 +647,6 @@
   <block id="b1c8cb58e124bead4ca2e09fa1c20c9b" category="paragraph">Consulte <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block> en la documentación de AWS el número máximo de SVM por sistema de archivos.</block>
   <block id="3a448e496404b548627a97fc00da8e23" category="section-title">Compatibilidad con el protocolo iSCSI</block>
   <block id="33060a985f3ea357dedca3b638c9dedc" category="list-text">El protocolo iSCSI solo se admite para las instalaciones de escalado vertical. 1</block>
-  <block id="37ea650652be756727cc05f929ac982b" category="list-text">El protocolo iSCSI solo está disponible para volúmenes FlexGroup. 1</block>
   <block id="53c858a11ae23c19aee107fb913f096a" category="list-text">Solo se puede configurar un único LUN por volumen.</block>
   <block id="044dbc650d6316ed90f739b69dfff7ee" category="section-title">Soporte regional</block>
   <block id="1bf3a4f06c8408a2ff436e0b847ca3a3" category="list-text">La región oeste de Canadá (Calgary) no es compatible actualmente.</block>
@@ -1157,4 +1156,5 @@
   <block id="80cda6d0b485a6d7ad08bec0e4e1e512" category="list-text">Inicie sesión en la consola de Workload Factory.</block>
   <block id="c7f0e7c4e7e9f76582f27e34058deaa6" category="paragraph">Divida un FlexVol volume clonado de su volumen principal para que el clon sea un FlexVol volume de lectura y escritura normal.</block>
   <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">29 de septiembre de 2024</block>
+  <block id="50fa5062b83d0f575448ba449245fa17" category="list-text">El protocolo iSCSI solo está disponible para volúmenes FlexVol. 1</block>
 </blocks>

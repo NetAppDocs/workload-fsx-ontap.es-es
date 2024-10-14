@@ -63,7 +63,7 @@ Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.ht
 == Compatibilidad con el protocolo iSCSI
 
 * El protocolo iSCSI solo se admite para las instalaciones de escalado vertical. 1
-* El protocolo iSCSI solo está disponible para volúmenes FlexGroup. 1
+* El protocolo iSCSI solo está disponible para volúmenes FlexVol. 1
 * Solo se puede configurar un único LUN por volumen.
 
 
