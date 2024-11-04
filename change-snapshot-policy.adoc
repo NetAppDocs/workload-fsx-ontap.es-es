@@ -11,10 +11,7 @@ summary: Actualice la política de snapshots de un volumen en cualquier momento.
 
 
 [role="lead"]
-Actualice la política de snapshots de un volumen en cualquier momento.
-
-.Acerca de esta tarea
-Esta operación actualiza la frecuencia de las instantáneas tomadas para un volumen o deshabilita las instantáneas automáticas.
+Actualice la frecuencia de las instantáneas realizadas para un volumen o desactive las instantáneas automáticas en cualquier momento.
 
 .Antes de empezar
 Se necesita un enlace para mostrar las políticas de instantáneas existentes. Para asociar un enlace, haga clic en *Enlace asociado* bajo *Nombre de cuenta*. A continuación, vuelva a esta operación.
@@ -22,6 +19,8 @@ Se necesita un enlace para mostrar las políticas de instantáneas existentes. P
 .Pasos
 . Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos FSX for ONTAP que contiene el volumen con la política de instantáneas que se va a actualizar y luego selecciona *Administrar*.
+. En la pestaña Descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
 . Seleccione la pestaña *Volúmenes*.
 . En la pestaña *Volúmenes*, seleccione el menú de tres puntos del volumen para cambiar la política de instantáneas.
 . Seleccione *Acciones de protección de datos*, *Snapshots* y luego *Administrar políticas de instantáneas*.

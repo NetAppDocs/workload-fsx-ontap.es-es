@@ -68,7 +68,6 @@
   <block id="6c25e6a6da95b3d583c6ec4c3f82ed4d" category="list-text">Semanal</block>
   <block id="d8977131f7da0505ccdd8e33f901bb75" category="summary">Actualice la política de snapshots de un volumen en cualquier momento.</block>
   <block id="340f8dee912ac16b4fb008726d3ee88f" category="doc">Cambie la política de Snapshot de un volumen</block>
-  <block id="98a71d4244a8d2bc70cdcddc5cb64af6" category="paragraph">Esta operación actualiza la frecuencia de las instantáneas tomadas para un volumen o deshabilita las instantáneas automáticas.</block>
   <block id="53e6e67988f9acb9f1aab8ccad2c0340" category="paragraph">Se necesita un enlace para mostrar las políticas de instantáneas existentes. Para asociar un enlace, haga clic en *Enlace asociado* bajo *Nombre de cuenta*. A continuación, vuelva a esta operación.</block>
   <block id="6e1473c0de5b054e5e9236bbe796cc32" category="list-text">Seleccione la pestaña *Volúmenes*.</block>
   <block id="b7896e81066533818c46cd2b875eb7bf" category="list-text">En la pestaña *Volúmenes*, seleccione el menú de tres puntos del volumen para cambiar la política de instantáneas.</block>
@@ -844,7 +843,6 @@
   <block id="edacd360980e63a5f2e01df2fa59b050" category="list-text">En el cuadro de diálogo Reset fsxadmin password, introduzca una nueva contraseña de fsxadmin y vuelva a introducirla para confirmar.</block>
   <block id="279e520d9175d8e5591ed2ca3fc5acab" category="summary">Restablezca la contraseña de la máquina virtual de almacenamiento cuando sea necesario.</block>
   <block id="217c9f6fe263e655130a845fd58ccebe" category="doc">Restablezca la contraseña para una máquina virtual de almacenamiento</block>
-  <block id="eda74f1b1bef1d5fd22f162e31e3f4c5" category="list-text">Seleccione la pestaña *Storage VMs*.</block>
   <block id="a22a424f6f09fb9aab17350b24d152ce" category="list-text">En la pestaña Storage VMs, seleccione el menú de tres puntos de la máquina virtual de almacenamiento para restablecer la contraseña.</block>
   <block id="3930015dcc2810869591e35a2b5d714b" category="list-text">Seleccione *Restablecer contraseña*.</block>
   <block id="0828ddc896996b7d41cc9ceb1e453764" category="list-text">En el cuadro de diálogo Reset password, proporcione lo siguiente:</block>
@@ -1091,7 +1089,6 @@
   <block id="c0c6f43c72d4131a3142969ee1f93961" category="paragraph">Para cambiar a FSX para ONTAP, siga las instrucciones a <block ref="d4d3e2c1446af85f31cda9e1ddaf30d7" category="inline-xref-macro-rx"></block>.</block>
   <block id="b531032648e600a642b682616d2a0bdd" category="section-title">Explore el ahorro para los entornos de almacenamiento detectados</block>
   <block id="cb10bf47866edd2ac9fb6586867bd1f6" category="admonition">Esta opción de calculadora no admite cálculos para las instantáneas de EBS y las copias redundantes de FSx para Windows File Server. Al analizar el ahorro mediante la personalización, puedes proporcionar detalles de copias Snapshot de EBS y FSx para el servidor de archivos de Windows.</block>
-  <block id="9f9100c91adcf9dad4883f822e09cda9" category="list-text">En el inventario de almacenamiento, seleccione la pestaña *Elastic Block Store (EBS)*.</block>
   <block id="4e6bb917970bfdc851c5092e11272217" category="list-text">Seleccione la instancia (s) para comparar con FSX para ONTAP y haga clic en *Explorar ahorros*.</block>
   <block id="f59ef66ff04b00cacb36ef4c77c51958" category="list-text">Aparece la calculadora de ahorro en almacenamiento. Las siguientes características del sistema de almacenamiento se rellenan previamente en función de las instancias seleccionadas:</block>
   <block id="bca9e850c916e20118ab9da7a15e1ab7" category="list-text">*Caso de uso*: El caso de uso para su configuración. Puede cambiar el caso de uso si es necesario.</block>
@@ -1099,13 +1096,11 @@
   <block id="6c52ebf14450d045b355a868931e1164" category="list-text">*Cantidad total de almacenamiento (TiB)*: La cantidad de almacenamiento por volumen en TiB</block>
   <block id="304b6d4108ca48d891db9c471488358b" category="list-text">*Total de IOPS aprovisionadas*: Para volúmenes de GP3, io1 y io2</block>
   <block id="8f5e9660dd3425492cf59bc6e12606d8" category="list-text">*Rendimiento total (MIB/s)*: Solo para GP3 volúmenes</block>
-  <block id="2da38d4eab31e419f29bebc00eb3d264" category="list-text">En el inventario de almacenamiento, seleccione la pestaña *FSX para Windows File Server*.</block>
   <block id="15fc70bd68494b595c2e5441312916e5" category="list-text">Aparece la calculadora de ahorro en almacenamiento. Las siguientes características del sistema de almacenamiento se rellenan previamente según el tipo de implementación de las instancias seleccionadas:</block>
   <block id="a32ffe6360aa9a89cb9696c19f828d91" category="list-text">* Sistemas de archivos seleccionados</block>
   <block id="148f511d9c35e6ff4cb92ebc25a1c9cf" category="list-text">*Cantidad total de almacenamiento (TiB)*</block>
   <block id="9dbb3393e470b57796b7ec491b66bdea" category="list-text">* IOPS SSD aprovisionado*</block>
   <block id="22706a4c75c6b61679dc073e45ec6e08" category="list-text">*Rendimiento (MIB/s)*</block>
-  <block id="ff878267bfd97975ad2ec503878325c1" category="list-text">En el inventario de almacenamiento, seleccione la pestaña *Elastic File System (EFS)*.</block>
   <block id="a765aa8369baa37d4241f37483d8954c" category="list-text">*Sistemas de archivos totales*</block>
   <block id="9285022230e927d788a11d636f2a52c4" category="list-text">*Rendimiento total aprovisionado (MIB/s)*</block>
   <block id="6aae74300e54ee6bdcfadde9a88345f6" category="list-text">*Rendimiento elástico total - leer (GiB)*</block>
@@ -1157,4 +1152,21 @@
   <block id="da13b22f351bd4b981038bd55ca5d3ab" category="list-text">Relaciones de replicación: Debe <block ref="fa9c4758a74309c74eff4644a0675063" category="inline-link-macro-rx"></block> para este volumen antes de eliminar el volumen para que no se queden relaciones rotas.</block>
   <block id="f14fbd72eb1c8ba39f23e290779d3ac7" category="paragraph">Elija entre _BASIC_, _READ_ y _AUTOMATIC_ <block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
   <block id="9b0784be448bb1dc8f08485434f9a91a" category="paragraph">Si opera en modo _READ_ o _AUTOMATIC_, necesitará <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> seleccionar capacidades de carga de trabajo, como bases de datos e IA, y crear las políticas de IAM para asegurarse de que tiene los permisos correctos para operar en modo _READ_ o _AUTOMATIC_.</block>
+  <block id="31139fb3d548620b7d82f880e4660606" category="doc">Vistas de pestañas en el inventario de almacenamiento</block>
+  <block id="d4aa654cea4681dd5ca03650594006c6" category="paragraph">El inventario de almacenamiento se ha actualizado a una vista de dos pestañas:</block>
+  <block id="71083868a2ec5abfee9a2647a74612c0" category="list-text">Ficha FSX for ONTAP: Muestra los sistemas de archivos FSx para ONTAP que tienes actualmente.</block>
+  <block id="1113c9108b3e58789456954d1c2ea9c2" category="list-text">Pestaña de ahorro: Muestra los sistemas de almacenamiento de bloques elásticos, FSx para Windows File Server y Elastic File Systems. A partir de ahí, puedes explorar el ahorro de estos sistemas en comparación con FSx para ONTAP.</block>
+  <block id="62cf721f97d39a9aaf1ac7786071551c" category="paragraph">Actualice la frecuencia de las instantáneas realizadas para un volumen o desactive las instantáneas automáticas en cualquier momento.</block>
+  <block id="110f1585246a580402f0c6b34d42e65a" category="list-text">En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos FSX for ONTAP que contiene el volumen con la política de instantáneas que se va a actualizar y luego selecciona *Administrar*.</block>
+  <block id="fa8dc6e67f45bcde58853510e56ce6a1" category="list-text">En la pestaña Descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.</block>
+  <block id="74e854d4ac135e193bafa7dfdf343efe" category="list-text">En Almacenamiento, selecciona *Ir al inventario de almacenamiento*.</block>
+  <block id="9df0f8cc7fbb70153a71c3d1657c3d81" category="list-text">En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos FSX for ONTAP que contiene el volumen a clonar y luego selecciona *Administrar*.</block>
+  <block id="80ad1fda17ca981880509b63f91591c9" category="list-text">En el Inventario de almacenamiento, selecciona la pestaña *Explorar ahorros*.</block>
+  <block id="a1e5470290e2e47a8295d8ae0b1e78af" category="list-text">En la pestaña *Tienda de bloques elásticos (EBS)*, selecciona las instancias para comparar con FSX para ONTAP y haz clic en *Explorar ahorros*.</block>
+  <block id="69664318bb60fdf05cfe25fa2b5a7242" category="list-text">Seleccione la pestaña *FSX for Windows File Server*.</block>
+  <block id="5e172a101429002f6723f0f156cbd608" category="list-text">Seleccione la pestaña *Elastic File System (EFS)*.</block>
+  <block id="78745d22af85f4409daf48ce5059c4c0" category="list-text">En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos FSX for ONTAP con la VM de almacenamiento para actualizar y luego selecciona *Administrar*.</block>
+  <block id="8c9880429b2df2018a366dbb14193026" category="list-text">En la pestaña Overview del sistema de archivos, seleccione la pestaña *Storage VMs*.</block>
+  <block id="ca677da26b1ef83b53f1decf3bf448d0" category="list-text">En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos FSX for ONTAP que contiene el volumen clonado para dividir y luego selecciona *Administrar*.</block>
+  <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">3 de noviembre de 2024</block>
 </blocks>

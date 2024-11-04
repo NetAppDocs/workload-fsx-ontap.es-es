@@ -122,9 +122,9 @@ Siga los pasos debajo de la pestaña para su selección de almacenamiento.
 --
 .Pasos
 . Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
-. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En el inventario de almacenamiento, seleccione la pestaña *Elastic Block Store (EBS)*.
-. Seleccione la instancia (s) para comparar con FSX para ONTAP y haga clic en *Explorar ahorros*.
+. En Almacenamiento, selecciona *Ir al inventario de almacenamiento*.
+. En el Inventario de almacenamiento, selecciona la pestaña *Explorar ahorros*.
+. En la pestaña *Tienda de bloques elásticos (EBS)*, selecciona las instancias para comparar con FSX para ONTAP y haz clic en *Explorar ahorros*.
 . Aparece la calculadora de ahorro en almacenamiento. Las siguientes características del sistema de almacenamiento se rellenan previamente en función de las instancias seleccionadas:
 +
 .. *Caso de uso*: El caso de uso para su configuración. Puede cambiar el caso de uso si es necesario.
@@ -141,8 +141,9 @@ Siga los pasos debajo de la pestaña para su selección de almacenamiento.
 --
 .Pasos
 . Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
-. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En el inventario de almacenamiento, seleccione la pestaña *FSX para Windows File Server*.
+. En Almacenamiento, selecciona *Ir al inventario de almacenamiento*.
+. En el Inventario de almacenamiento, selecciona la pestaña *Explorar ahorros*.
+. Seleccione la pestaña *FSX for Windows File Server*.
 . Seleccione la instancia (s) para comparar con FSX para ONTAP y haga clic en *Explorar ahorros*.
 . Aparece la calculadora de ahorro en almacenamiento. Las siguientes características del sistema de almacenamiento se rellenan previamente según el tipo de implementación de las instancias seleccionadas:
 +
@@ -160,8 +161,9 @@ Siga los pasos debajo de la pestaña para su selección de almacenamiento.
 --
 .Pasos
 . Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
-. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En el inventario de almacenamiento, seleccione la pestaña *Elastic File System (EFS)*.
+. En Almacenamiento, selecciona *Ir al inventario de almacenamiento*.
+. En el Inventario de almacenamiento, selecciona la pestaña *Explorar ahorros*.
+. Seleccione la pestaña *Elastic File System (EFS)*.
 . Seleccione la instancia (s) para comparar con FSX para ONTAP y haga clic en *Explorar ahorros*.
 . Aparece la calculadora de ahorro en almacenamiento. Las siguientes características del sistema de almacenamiento se rellenan previamente en función de las instancias seleccionadas:
 +

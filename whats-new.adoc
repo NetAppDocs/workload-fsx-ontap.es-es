@@ -15,6 +15,20 @@ Descubra las novedades de Amazon FSx para NetApp ONTAP.
 
 
 
+== 3 de noviembre de 2024
+
+
+
+=== Vistas de pestañas en el inventario de almacenamiento
+
+El inventario de almacenamiento se ha actualizado a una vista de dos pestañas:
+
+* Ficha FSX for ONTAP: Muestra los sistemas de archivos FSx para ONTAP que tienes actualmente.
+* Pestaña de ahorro: Muestra los sistemas de almacenamiento de bloques elásticos, FSx para Windows File Server y Elastic File Systems. A partir de ahí, puedes explorar el ahorro de estos sistemas en comparación con FSx para ONTAP.
+
+
+
+
 == 29 de septiembre de 2024
 
 
