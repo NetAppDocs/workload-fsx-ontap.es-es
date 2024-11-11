@@ -2,22 +2,22 @@
 sidebar: sidebar 
 permalink: change-snapshot-policy.html 
 keywords: snapshot policy, snapshot schedule, modify snapshot policy, edit snapshot policy, change snapshot policy 
-summary: Actualice la política de snapshots de un volumen en cualquier momento. 
+summary: Actualice la política de copias Snapshot de un volumen en la fábrica de cargas de trabajo BlueXP  en cualquier momento. 
 ---
-= Cambie la política de Snapshot de un volumen
+= Cambie la política de Snapshot de un volumen en la fábrica de cargas de trabajo BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Actualice la frecuencia de las instantáneas realizadas para un volumen o desactive las instantáneas automáticas en cualquier momento.
+Actualice la frecuencia de las instantáneas tomadas para un volumen o desactive las instantáneas automáticas en cualquier momento en la fábrica de cargas de trabajo BlueXP .
 
 .Antes de empezar
-Se necesita un enlace para mostrar las políticas de instantáneas existentes. Para asociar un enlace, haga clic en *Enlace asociado* bajo *Nombre de cuenta*. A continuación, vuelva a esta operación.
+Para mostrar las políticas de instantáneas existentes, debe asociar un enlace. Para asociar un enlace, seleccione *Enlace asociado* en *Nombre de cuenta*. A continuación, vuelva a esta operación.
 
 .Pasos
-. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos FSX for ONTAP que contiene el volumen con la política de instantáneas que se va a actualizar y luego selecciona *Administrar*.
 . En la pestaña Descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
@@ -32,5 +32,5 @@ Para desactivar las instantáneas automáticas, seleccione `none`.
 +
 Si no existen otras políticas de instantáneas, link:create-snapshot-policy.html["cree una política de snapshots nueva para este volumen"].
 
-. Haga clic en *aplicar*.
+. Seleccione *Aplicar* para guardar los cambios.
 

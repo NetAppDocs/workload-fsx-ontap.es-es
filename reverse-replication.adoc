@@ -4,14 +4,14 @@ permalink: reverse-replication.html
 keywords: reverse replication, change replication 
 summary: Invierta una relación de replicación para que el volumen de destino se convierta en el volumen de origen. 
 ---
-= Invierta una relación de replicación
+= Invierta una relación de replicación en el fábrica de cargas de trabajo de BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Invierta una relación de replicación para que el volumen de destino se convierta en el volumen de origen.
+Revierte una relación de replicación en la fábrica de cargas de trabajo de BlueXP  de modo que el volumen de destino se convierte en el volumen de origen.
 
 Después de detener la replicación y realizar cambios en el volumen objetivo, puede replicar esos cambios de nuevo en el volumen de origen. Este proceso es habitual en una situación de recuperación ante desastres en la que se opera en el volumen de destino durante un tiempo y se desean cambiar roles de los volúmenes.
 
@@ -25,11 +25,11 @@ NOTE: No se conserva ningún dato que se escriba en el volumen de origen origina
 Asegúrese de conocer los roles actuales y futuros de los volúmenes de origen y objetivo, ya que los cambios en el nuevo volumen objetivo se sobrescribirán con el nuevo volumen de origen. Si se utiliza incorrectamente, puede experimentar una pérdida de datos involuntaria.
 
 .Pasos
-. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Relaciones de replicación*.
-. En la pestaña Relaciones de replicación, haga clic en el menú de tres puntos de la relación de replicación que desea revertir.
+. En la pestaña Relaciones de replicación, seleccione el menú de tres puntos de la relación de replicación que desea revertir.
 . Seleccione *Relación inversa*.
-. En el cuadro de diálogo Relación inversa, haga clic en *Invertir*.
+. En el cuadro de diálogo Relación inversa, seleccione *Invertir*.
 

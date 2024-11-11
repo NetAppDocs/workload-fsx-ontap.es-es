@@ -1,10 +1,11 @@
 ---
 indexpage:
-  title: Documentación de Amazon FSX para ONTAP de NetApp
+  title: Documentación de fábrica de cargas de trabajo de Amazon FSx para NetApp ONTAP
+    para BlueXP 
   lead: Amazon FSX para ONTAP de NetApp aporta todas las funcionalidades de ONTAP
     a un servicio gestionado nativo de AWS que ofrece una experiencia de cloud híbrido
-    coherente. En esta documentación se describe cómo gestionar FSx para ONTAP mediante
-    BlueXP Workload Factory.
+    coherente. Esta documentación describe cómo gestionar FSx para ONTAP mediante
+    la fábrica de cargas de trabajo de BlueXP .
   tiles:
   - title: Manos a la obra
     links:

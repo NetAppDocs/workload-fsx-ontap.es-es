@@ -4,7 +4,7 @@ permalink: delete-svm.html
 keywords: delete storage vm, delete svm, remove svm 
 summary: 'Elimina una máquina virtual de almacenamiento (SVM) que ya no necesitas de una configuración del sistema de archivos FSx para ONTAP.' 
 ---
-= Eliminar una máquina virtual de almacenamiento
+= Eliminar una máquina virtual de almacenamiento en la fábrica de cargas de trabajo BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -21,12 +21,12 @@ Revise lo siguiente antes de eliminar una máquina virtual de almacenamiento:
 
 
 .Pasos
-. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
 . En la pestaña Storage VMs, seleccione el menú de tres puntos de la máquina virtual de almacenamiento para configurar Active Directory.
 . Seleccione *Eliminar VM de almacenamiento*.
 . En el cuadro de diálogo Delete storage VM, escriba «delete» para eliminar la máquina virtual de almacenamiento.
-. Haga clic en *Eliminar*.
+. Seleccione *Eliminar*.
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: change-replication-schedule.html 
 keywords: change replication schedule, update replication schedule, edit replication schedule 
-summary: Cambie la programación de replicación del volumen de origen en una relación de replicación. 
+summary: Cambie la programación de replicación del volumen de origen en una relación de replicación en la fábrica de cargas de trabajo de BlueXP . 
 ---
 = Cambie la programación de replicación de un volumen de origen
 :allow-uri-read: 
@@ -11,16 +11,16 @@ summary: Cambie la programación de replicación del volumen de origen en una re
 
 
 [role="lead"]
-Cambie la programación de replicación del volumen de origen en una relación de replicación.
+Cambie la programación de replicación del volumen de origen en una relación de replicación en la fábrica de cargas de trabajo de BlueXP .
 
 Elige la frecuencia con la que se transfieren las snapshots del volumen de origen al volumen replicado para que coincidan con los objetivos de punto requeridos (RPO).
 
 .Pasos
-. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Relaciones de replicación*.
-. En la pestaña Relaciones de replicación, haga clic en el menú de tres puntos de la programación de la relación de replicación que desea cambiar.
+. En la pestaña Relaciones de replicación, seleccione el menú de tres puntos de la programación de la relación de replicación que desea cambiar.
 . Seleccione *Editar intervalo de replicación*.
 . En el cuadro de diálogo Edit replication interval, seleccione la frecuencia de la transferencia Snapshot desde el volumen de origen. Puede seleccionar entre las siguientes frecuencias:
 +
@@ -31,5 +31,5 @@ Elige la frecuencia con la que se transfieren las snapshots del volumen de orige
 ** Semanal
 
 
-. Haga clic en *aplicar*.
+. Seleccione *aplicar*.
 

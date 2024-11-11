@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-snapshot.html 
 keywords: create snapshot, snapshot 
-summary: Cree una snapshot manual de un volumen de FSx para ONTAP. Las copias Snapshot son versiones puntuales del contenido del volumen. 
+summary: Crea una copia Snapshot manual de un volumen de FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP . Las copias Snapshot son versiones puntuales del contenido del volumen. 
 ---
 = Cree una snapshot manual de un volumen de FSx para ONTAP
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Cree una snapshot manual de un volumen de FSx para ONTAP. Las copias Sn
 
 
 [role="lead"]
-Cree una snapshot manual de un volumen de FSx para ONTAP. Las copias Snapshot son versiones puntuales del contenido del volumen.
+Crea una copia Snapshot manual de un volumen de FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP . Las copias Snapshot son versiones puntuales del contenido del volumen.
 
 Las Snapshot son recursos de volúmenes y son capturas instantáneas de los datos que solo consumen espacio para los datos modificados. Debido a que los datos cambian con el tiempo, las snapshots suelen consumir más espacio a medida que envejecen.
 
@@ -21,15 +21,15 @@ FSX para volúmenes de ONTAP utiliza la copia puntual en escritura, de modo que 
 NOTE: Las copias Snapshot no son copias de sus datos. Si desea hacer copias de sus datos, considere la posibilidad de utilizar las funciones de replicación de volúmenes o backups de FSx para ONTAP.
 
 .Antes de empezar
-Debe link:manage-links.html["asocie un enlace"] crear una copia de Snapshot. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, haga clic en *Asociar enlace* bajo *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
+Debe link:manage-links.html["asocie un enlace"] crear una copia de Snapshot. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
 
 .Pasos
-. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En *Almacenamiento*, selecciona *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. En la pestaña *Volúmenes*, selecciona el menú de tres puntos para proteger el volumen.
+. En la pestaña *Volúmenes*, seleccione el menú de tres puntos para el volumen a proteger.
 . Seleccione *Acciones de protección de datos*, *Snapshots* y luego *Crear volumen a partir de una instantánea*.
 . En el cuadro de diálogo Crear volumen a partir de una instantánea, en el campo *Nombre de instantánea*, introduzca un nombre de instantánea.
-. Haga clic en *Crear*.
+. Seleccione *Crear*.
 

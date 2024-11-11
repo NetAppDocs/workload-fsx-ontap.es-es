@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-volume-from-snapshot.html 
 keywords: create volume from snapshot, new volume 
-summary: Cree una snapshot manual de un volumen de FSx para ONTAP. Las copias Snapshot son versiones puntuales del contenido del volumen. 
+summary: Crea una copia Snapshot manual de un volumen de FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP . Las copias Snapshot son versiones puntuales del contenido del volumen. 
 ---
 = Crea un nuevo volumen de FSx para ONTAP a partir de una copia Snapshot
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Cree una snapshot manual de un volumen de FSx para ONTAP. Las copias Sn
 
 
 [role="lead"]
-Crea un nuevo volumen de FSx para ONTAP a partir de una copia snapshot para permitir la recuperación en un momento específico.
+Crea un nuevo volumen de FSx para ONTAP a partir de un snapshot en la fábrica de cargas de trabajo de BlueXP  para permitir la recuperación en un momento específico.
 
 .Acerca de esta tarea
 Una copia Snapshot es una imagen de solo lectura de un volumen FSx para ONTAP tomado en un momento dado. La creación de un nuevo volumen a partir de una copia de Snapshot realiza una copia de un volumen completo en unos pocos segundos independientemente del tamaño del volumen. La copia recién creada representa un nuevo volumen.
@@ -24,12 +24,12 @@ Tenga en cuenta las siguientes limitaciones antes de crear un volumen a partir d
 
 
 .Pasos
-. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos con la instantánea de volumen y luego selecciona *Administrar*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con la instantánea de volumen y luego selecciona *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. En la pestaña Volumes, haga clic en el menú de tres puntos para el volumen que tiene la snapshot de la que desea crear un volumen.
+. En la pestaña Volumes, seleccione el menú de tres puntos para el volumen que tiene la snapshot de la que desea crear un volumen.
 . Seleccione *Acciones de protección de datos*, *Snapshots* y luego *Crear un volumen a partir de una instantánea*.
 . En el cuadro de diálogo Create volume from a Snapshot, introduzca el nombre de la snapshot.
-. Haga clic en *Crear*.
+. Seleccione *Crear*.
 

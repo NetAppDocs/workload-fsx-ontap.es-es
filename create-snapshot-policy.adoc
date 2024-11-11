@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-snapshot-policy.html 
 keywords: create 
-summary: Crear una política de snapshots para FSx para ONTAP Volumes. Una política de Snapshot define la manera en que el sistema crea copias de Snapshot para un volumen. 
+summary: Crear una política de copias Snapshot para FSx para ONTAP Volumes en la fábrica de cargas de trabajo de BlueXP . Una política de Snapshot define la manera en que el sistema crea copias de Snapshot para un volumen. 
 ---
 = Crear una política de snapshots para FSx para ONTAP Volumes
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Crear una política de snapshots para FSx para ONTAP Volumes. Una polí
 
 
 [role="lead"]
-Cree una política de snapshots personalizada para FSx para volúmenes de ONTAP. Una política de Snapshot define la manera en que el sistema crea copias de Snapshot para un volumen.
+Crear una política de snapshots personalizada para FSx para ONTAP Volumes en la fábrica de cargas de trabajo de BlueXP . Una política de Snapshot define la manera en que el sistema crea copias de Snapshot para un volumen.
 
 .Acerca de esta tarea
 Puede crear una política de Snapshot personalizada que difiera de las tres políticas de Snapshot incorporadas para FSx para ONTAP:
@@ -32,31 +32,14 @@ La personalización de una política le permite especificar cuándo se deben cre
 ** La sobrescritura de todos los datos de una copia Snapshot consume una capacidad de volumen importante, lo que tiene en cuenta el aprovisionamiento de la capacidad del volumen.
 
 
-* Para crear una política de snapshot personalizada, link:manage-links.html["asocie un enlace"]debe . Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, haga clic en *Asociar enlace* bajo *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
+* Para crear una política de snapshot personalizada, link:manage-links.html["asocie un enlace"]debe . Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
 
 
 .Pasos
-. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
-. En *Almacenamiento*, selecciona *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*.
-. En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. En la pestaña *Volúmenes*, selecciona el menú de tres puntos para proteger el volumen con instantáneas programadas.
-. Seleccione *Acciones de protección de datos*, *Snapshots* y luego *Administrar políticas de instantáneas*.
-. En la página de administración de políticas de Snapshot, seleccione *Crear una nueva política de instantáneas*.
-. En el campo *Nombre de la política de instantáneas*, introduzca un nombre para la política de instantáneas.
-. Opcional: En el campo *Descripción*, introduzca una descripción para la política de instantáneas.
-. En *Programar*, seleccione cuándo crear instantáneas. Por ejemplo, cada minuto o cada hora.
-+
-Puede seleccionar más de una frecuencia.
+Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones . . En *Almacenamiento*, selecciona *Ir al inventario de almacenamiento*. . En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*. . En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*. . En la pestaña *Volúmenes*, seleccione el menú de tres puntos para proteger el volumen con instantáneas programadas. . Seleccione *Acciones de protección de datos*, *Snapshots* y luego *Administrar políticas de instantáneas*. . En la página de administración de políticas de Snapshot, seleccione *Crear una nueva política de instantáneas*. . En el campo *Nombre de la política de instantáneas*, introduzca un nombre para la política de instantáneas. . Opcional: En el campo *Descripción*, introduzca una descripción para la política de instantáneas. . En *Programar*, seleccione cuándo crear instantáneas. Por ejemplo, cada minuto o cada hora.
 
-. En *Número de copias*, introduzca el número de copias que desea conservar.
-+
-El número máximo de copias es 1.023.
++ Puede seleccionar más de una frecuencia. . En *Número de copias*, introduzca el número de copias que desea conservar.
 
-. Opcional: En *convención de nomenclatura*, ingrese un *Prefijo* para la política.
-. *La etiqueta de retención* se rellena automáticamente.
-+
-Esta etiqueta hace referencia a la etiqueta de SnapMirror, o replicación, que se usa para seleccionar solo snapshots especificados para la replicación del sistema de archivos de origen al de destino.
++ El número máximo de copias es 1.023. . Opcional: En *convención de nomenclatura*, ingrese un *Prefijo* para la política. . *La etiqueta de retención* se rellena automáticamente.
 
-. Haga clic en *aplicar*.
-
++ Esta etiqueta se refiere a la SnapMirror, o etiqueta de replicación, que se utiliza para seleccionar solo instantáneas especificadas para la replicación desde el origen al sistema de archivos de destino. . Seleccione *aplicar*.

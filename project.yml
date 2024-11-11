@@ -86,16 +86,16 @@ sidebar:
         url: "/edit-volume-autogrow.html"
       - title: Aumentar la capacidad del volumen
         url: "/increase-volume-capacity.html"
-      - title: Editar etiquetas de volumen
-        url: "/edit-volume-tags.html"
+      - title: Gestione etiquetas de volumen
+        url: "/manage-volume-tags.html"
       - title: Reequilibrar la capacidad de un volumen
         url: "/rebalance-volume.html"
       - title: Cambie la política de organización en niveles
         url: "/change-tiering-policy.html"
-      - title: Cambie la política de exportación de NFS
-        url: "/change-nfs-export-policy.html"
-      - title: Cambie el recurso compartido CIFS
-        url: "/change-cifs-share.html"
+      - title: Gestione la directiva de exportación de NFS
+        url: "/manage-nfs-export-policy.html"
+      - title: Gestionar el recurso compartido CIFS
+        url: "/manage-cifs-share.html"
       - title: Divida un volumen clonado
         url: split-cloned-volume.html
       - title: Eliminar un volumen
@@ -118,8 +118,8 @@ sidebar:
       - title: Configure y actualice Active Directory para una máquina virtual de
           almacenamiento
         url: "/configure-active-directory.html"
-      - title: Editar las etiquetas de máquinas virtuales de almacenamiento
-        url: "/edit-svm-tags.html"
+      - title: Gestionar las etiquetas de equipos virtuales de almacenamiento
+        url: "/manage-svm-tags.html"
       - title: Restablecer la contraseña de la máquina virtual de almacenamiento
         url: reset-svm-password.html
       - title: Eliminar una máquina virtual de almacenamiento
@@ -128,8 +128,8 @@ sidebar:
       entries:
       - title: Cambie la política de Snapshot de un volumen
         url: change-snapshot-policy.html
-      - title: Actualizar el programa de backup de FSx para ONTAP
-        url: "/update-backup-schedule.html"
+      - title: Gestione la programación de backups de FSx para ONTAP
+        url: "/manage-backup-schedule.html"
       - title: Habilite y edite snapshots para retención a largo plazo
         url: "/enable-snapshots-long-term.html"
       - title: Invierta una relación de replicación
@@ -167,5 +167,5 @@ sidebar:
   - title: Avisos legales
     url: "/legal-notices.html"
 product-family:
-  name: BlueXP Workload Factory for AWS
+  name: BlueXP workload factory
   repo: workload-family

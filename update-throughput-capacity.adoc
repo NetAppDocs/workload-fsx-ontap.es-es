@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: update-throughput-capacity.html 
 keywords: update throughput, change throughput, throughput capacity 
-summary: Actualice la capacidad de rendimiento de un sistema de archivos FSx para ONTAP según sea necesario. 
+summary: Actualiza la capacidad de rendimiento de un sistema de archivos FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP  según sea necesario. 
 ---
 = Actualice la capacidad de rendimiento de un sistema de archivos
 :allow-uri-read: 
@@ -11,15 +11,15 @@ summary: Actualice la capacidad de rendimiento de un sistema de archivos FSx par
 
 
 [role="lead"]
-Actualice la capacidad de rendimiento de un sistema de archivos FSx para ONTAP según sea necesario.
+Actualiza la capacidad de rendimiento de un sistema de archivos FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP  según sea necesario.
 
 Para ver los límites de capacidad de rendimiento, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Cuotas"^] la documentación de AWS FSx para NetApp ONTAP.
 
 .Pasos
-. Inicie sesión en la consola de Workload Factory.
-. En Almacenamiento, haga clic en *Ir a Inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos para actualizar la capacidad de rendimiento y luego selecciona *Administrar*.
-. En Información, haga clic en el icono del lápiz junto a *Capacidad de rendimiento*. El icono del lápiz aparece junto a la flecha desplegable cuando el ratón pasa por encima de la fila *Capacidad de rendimiento*.
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En Almacenamiento, selecciona *Ir a Inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos para actualizar la capacidad de rendimiento y luego selecciona *Administrar*.
+. En Información, seleccione el icono del lápiz junto a *Capacidad de rendimiento*. El icono del lápiz aparece junto a la flecha desplegable cuando el ratón pasa por encima de la fila *Capacidad de rendimiento*.
 . En el cuadro de diálogo Capacidad de rendimiento, seleccione la capacidad de rendimiento que necesita.
-. Haga clic en *aplicar*.
+. Seleccione *Aplicar* para guardar los cambios.
 

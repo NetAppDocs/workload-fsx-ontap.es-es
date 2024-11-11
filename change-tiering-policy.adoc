@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: change-tiering-policy.html 
 keywords:  
-summary: Cambie la política de organización en niveles para volver a asignar datos del nivel de almacenamiento primario de alto rendimiento al nivel de almacenamiento del pool de capacidad secundario. 
+summary: Cambie la política de organización en niveles en la fábrica de cargas de trabajo BlueXP  para volver a asignar datos del nivel de almacenamiento principal de alto rendimiento al nivel de almacenamiento del pool de capacidad secundario. 
 ---
-= Cambiar la política de organización en niveles de un volumen
+= Cambie la política de organización en niveles de un volumen en la fábrica de cargas de trabajo BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Cambie la política de organización en niveles para volver a asignar datos automáticamente desde el nivel de almacenamiento primario de alto rendimiento al nivel de almacenamiento del pool de capacidad secundario.
+En la fábrica de cargas de trabajo BlueXP , se puede cambiar la política de organización en niveles para volver a asignar datos automáticamente desde el nivel de almacenamiento primario de alto rendimiento al nivel de almacenamiento secundario del pool de capacidad.
 
 .Acerca de esta tarea
 Puede cambiar la política de organización en niveles de un volumen en cualquier momento. La política de organización en niveles se define por volumen.
@@ -38,11 +38,11 @@ Revise las cuatro políticas de organización en niveles disponibles antes de ca
 Tenga en cuenta que algunas políticas de organización en niveles tienen asociado un período de enfriamiento mínimo que establece el tiempo, o _días de enfriamiento_, los datos de usuario en un volumen deben permanecer inactivos para que los datos se consideren inactivos y se muevan al nivel de almacenamiento del pool de capacidad. El período de enfriamiento comienza cuando los datos se escriben en el disco.
 
 .Pasos
-. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con el volumen a actualizar y luego selecciona *Administrar*.
+. En la pestaña *FSX for ONTAP*, seleccione el menú de tres puntos del sistema de archivos con el volumen que desea actualizar y luego seleccione *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. En la pestaña Volumes, haga clic en el menú de tres puntos del volumen para cambiar la política de organización en niveles.
+. En la pestaña Volumes, seleccione el menú de tres puntos del volumen para cambiar la política de organización en niveles.
 . Selecciona *Acciones avanzadas*, luego *Cambiar política de niveles*.
 . En la página Change Tiering policy, seleccione una de las siguientes políticas de organización en niveles:
 +
@@ -52,5 +52,5 @@ Tenga en cuenta que algunas políticas de organización en niveles tienen asocia
 ** *Todo*
 
 
-. Haga clic en *aplicar*.
+. Seleccione *aplicar*.
 

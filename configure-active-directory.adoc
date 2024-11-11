@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: configure-active-directory.html 
 keywords: configure AD, configure active directory, update ad, edit active directory 
-summary:  
+summary: Configura y actualiza Active Directory para una máquina virtual de almacenamiento en un sistema de archivos FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP . 
 ---
 = Configure y actualice Active Directory para una máquina virtual de almacenamiento
 :allow-uri-read: 
@@ -11,15 +11,15 @@ summary:
 
 
 [role="lead"]
-Configura y actualiza Active Directory para una máquina virtual de almacenamiento en un sistema de archivos FSx para ONTAP.
+Configura y actualiza Active Directory para una máquina virtual de almacenamiento en un sistema de archivos FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP .
 
 .Acerca de esta tarea
 Los mismos pasos se aplican para configurar y actualizar Active Directory para una máquina virtual de almacenamiento.
 
 .Pasos
-. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos con la VM de almacenamiento para actualizar y luego selecciona *Administrar*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con la VM de almacenamiento para actualizar y luego selecciona *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
 . En la pestaña Storage VMs, seleccione el menú de tres puntos de la máquina virtual de almacenamiento para configurar Active Directory.
 . Seleccione *Administrar configuración de AD*.
@@ -49,5 +49,5 @@ Si se está conectando a un AD autogestionado, utilice el nombre del grupo en su
 
 
 
-. Haga clic en *aplicar*.
+. Seleccione *aplicar*.
 

@@ -4,21 +4,21 @@ permalink: restore-from-backup.html
 keywords: restore backup, new volume, volume restoration, backup 
 summary: Restaura un volumen a partir de un backup a cualquier sistema de archivos de FSx para ONTAP en tu cuenta de AWS. 
 ---
-= Restaurar un volumen desde un backup
+= Restaurar un volumen desde un backup en la fábrica de cargas de trabajo BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Restaura un volumen a partir de un backup a cualquier sistema de archivos de FSx para ONTAP en tu cuenta de AWS.
+En la fábrica de cargas de trabajo de BlueXP , puedes restaurar un volumen a partir de un backup en cualquier sistema de archivos de FSx para ONTAP en tu cuenta de AWS.
 
 .Pasos
-. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. Desde la pestaña *Volúmenes*, haz clic en el menú de tres puntos para que el volumen se restaure desde una copia de seguridad.
+. En la pestaña *Volúmenes*, seleccione el menú de tres puntos para que el volumen se restaure desde una copia de seguridad.
 . Seleccione *Acciones de protección de datos*, *FSX para copia de seguridad de ONTAP* y luego *Restaurar desde una copia de seguridad*.
 . En el cuadro de diálogo Restore from a backup, proporcione lo siguiente:
 +
@@ -28,5 +28,5 @@ Restaura un volumen a partir de un backup a cualquier sistema de archivos de FSx
 .. *Nombre del volumen restaurado*: Introduzca el nombre del volumen restaurado.
 
 
-. Haga clic en *Restaurar*.
+. Seleccione *Restaurar*.
 

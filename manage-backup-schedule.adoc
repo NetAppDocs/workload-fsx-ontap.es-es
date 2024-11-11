@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: manage-backup-schedule.html 
+keywords: backup schedule, backup policy, update backups, update backup schedule, FSx for ONTAP backup 
+summary: Gestione la programación de backups de un sistema de archivos FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP  cuando sea necesario. 
+---
+= Gestione la programación de backups para un sistema de archivos FSx for ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gestione la programación de backups de un sistema de archivos FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP .
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En Almacenamiento, selecciona *Ir a Inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos para actualizar la programación de copia de seguridad y luego selecciona *Administrar*.
+. En Información, seleccione el icono del lápiz junto a *FSX for ONTAP Backup*. El icono del lápiz aparece junto a la flecha desplegable cuando el ratón pasa por encima de la fila *FSX for ONTAP BACKUP*.
+. En el cuadro de diálogo *FSX para copia de seguridad de ONTAP*, proporcione lo siguiente:
++
+.. *Copias de seguridad automáticas diarias*: Habilita o deshabilita la función. Si desactiva la función, seleccione *Aplicar*. Si habilita la función, complete los siguientes pasos.
+.. *Período de retención de respaldo automático*: Ingrese el número de días para retener las copias de seguridad automáticas.
+.. *Ventana de copia de seguridad automática diaria*: Seleccione *Sin preferencia* (se selecciona una hora de inicio de copia de seguridad diaria) o *Seleccione la hora de inicio para copias de seguridad diarias* y especifique una hora de inicio.
+.. *Ventana de mantenimiento semanal*: Seleccione *Sin preferencia* (se selecciona una hora de inicio de ventana de mantenimiento semanal) o *Seleccione la hora de inicio para la ventana de mantenimiento semanal de 30 minutos* y especifique una hora de inicio.
+
+
+. Seleccione *aplicar*.
+

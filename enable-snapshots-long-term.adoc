@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: enable-snapshots-long-term.html 
 keywords: snapshot long-term retention, enable long-term retention 
-summary: Cambie la programación de replicación del volumen de origen en una relación de replicación. 
+summary: Habilite snapshots para retención a largo plazo, lo que le permite replicar snapshots concretos para recuperación ante desastres a largo plazo. 
 ---
 = Habilite y edite snapshots para retención a largo plazo
 :allow-uri-read: 
@@ -11,24 +11,24 @@ summary: Cambie la programación de replicación del volumen de origen en una re
 
 
 [role="lead"]
-Habilitar snapshots para la retención a largo plazo le permite replicar snapshots concretos para una recuperación ante desastres a largo plazo.
+En la fábrica de cargas de trabajo de BlueXP , puede habilitar instantáneas para su retención a largo plazo, lo que le permite replicar snapshots específicas para la recuperación ante desastres a largo plazo.
 
-La retención a largo plazo permite que los servicios empresariales continúen funcionando incluso si se produce un fallo completo del sitio, compatible con la conmutación por error de forma transparente mediante una copia secundaria.
+La retención a largo plazo permite que los servicios empresariales continúen funcionando incluso en caso de fallas completas del sitio, lo que permite la recuperación tras fallas transparente de aplicaciones mediante una copia secundaria.
 
 Los mismos pasos se aplican para habilitar y editar copias Snapshot para una retención a largo plazo.
 
 .Pasos
-. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Relaciones de replicación*.
-. En la pestaña Relaciones de replicación, haga clic en el menú de tres puntos de la programación de la relación de replicación que desea cambiar.
+. En la pestaña Relaciones de replicación, seleccione el menú de tres puntos de la programación de la relación de replicación que desea cambiar.
 . Seleccione *Editar retención a largo plazo*.
 . En el cuadro de diálogo Editar retención a largo plazo, habilite o deshabilite instantáneas para retención a largo plazo.
-. Si selecciona desactivar las instantáneas para la retención a largo plazo, haga clic en *Aplicar* para completar esta operación.
+. Si selecciona desactivar las instantáneas para la retención a largo plazo, seleccione *Aplicar* para completar esta operación.
 . Si selecciona habilitar Snapshot para la retención a largo plazo, elija entre seleccionar una política existente o crear una nueva.
 +
-.. Para una política existente, seleccione una política existente del menú desplegable.
+.. Para utilizar una política existente, selecciónela en el menú desplegable.
 .. Para crear una nueva política, proporcione lo siguiente:
 +
 ... *Nombre de la política*: Introduzca un nombre de política.
@@ -38,5 +38,5 @@ Los mismos pasos se aplican para habilitar y editar copias Snapshot para una ret
 
 
 
-. Haga clic en *aplicar*.
+. Seleccione *aplicar*.
 

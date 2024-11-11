@@ -4,7 +4,7 @@ permalink: access-data.html
 keywords: access data, mount clients, on-premises 
 summary: Puede acceder a sus sistemas de archivos FSx para ONTAP desde las instalaciones montando volúmenes para clientes NAS y montando LUN iSCSI para clientes SAN. 
 ---
-= Acceda a sus datos
+= Accede a tus datos del sistema de archivos FSx for ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

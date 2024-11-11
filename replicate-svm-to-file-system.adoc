@@ -11,13 +11,13 @@ summary: Replicar una máquina virtual de almacenamiento a otro sistema de archi
 
 
 [role="lead"]
-Replicar una máquina virtual de almacenamiento a otro sistema de archivos FSx para ONTAP proporciona una capa protectora de acceso a los datos en caso de pérdida de datos. Esta operación replica todos los volúmenes de una máquina virtual de almacenamiento en otro sistema de archivos FSx para ONTAP.
+Replicar una máquina virtual de almacenamiento a otro sistema de archivos FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP  proporciona una capa protectora de acceso a los datos en caso de pérdida de datos. Esta operación replica todos los volúmenes de una máquina virtual de almacenamiento en otro sistema de archivos FSx para ONTAP.
 
 .Antes de empezar
-Para replicar una máquina virtual de almacenamiento en otro sistema de archivos FSx for ONTAP, debe link:manage-links.html["asocie un enlace"]. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, haga clic en *Asociar enlace* bajo *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
+Para replicar una máquina virtual de almacenamiento en otro sistema de archivos FSx for ONTAP, debe link:manage-links.html["asocie un enlace"]. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
 
 .Pasos
-. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con la VM de almacenamiento para replicar y luego selecciona *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
@@ -30,7 +30,7 @@ Para replicar una máquina virtual de almacenamiento en otro sistema de archivos
 .. *Nombre del volumen*: El nombre del volumen de destino se genera automáticamente con el siguiente formato `{OriginalVolumeName}_copy`.
 .. *Política de niveles*: Seleccione la política de organización en niveles para los datos almacenados en el volumen de destino.
 +
-_Auto_ es la política de organización en niveles predeterminada cuando se crea un volumen con la interfaz de usuario de Workload Factory FSx para ONTAP. Para obtener más información sobre las políticas de organización en niveles de volúmenes, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^]la documentación de AWS FSx para NetApp ONTAP.
+_Auto_ es la política de organización en niveles predeterminada al crear un volumen mediante la interfaz de usuario de FSx para ONTAP de la fábrica de cargas de trabajo. Para obtener más información sobre las políticas de organización en niveles de volúmenes, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^]la documentación de AWS FSx para NetApp ONTAP.
 
 .. *Tasa de transferencia máxima*: Selecciona *Limited* e introduce el límite máximo de transferencia en MB/s.. Alternativamente, selecciona *Ilimitado*.
 +
@@ -57,7 +57,7 @@ Si habilita la retención a largo plazo, seleccione una política existente o cr
 
 
 
-. Haga clic en *Crear*.
+. Seleccione *Crear*.
 
 
 .Resultado

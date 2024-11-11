@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: get-help.html 
 keywords: help, ticket, open support case, support, netapp support, technical support, call support, phone number, open ticket, web ticket, open an issue 
-summary: 'NetApp ofrece compatibilidad con Workload Factory y sus servicios de cloud de diversas maneras. Hay disponibles amplias opciones de auto soporte gratuito las 24 horas del día, los 7 días de la semana, como artículos de la base de conocimiento (KB) y un foro de la comunidad. Su registro de soporte incluye soporte técnico remoto a través de tickets web.' 
+summary: 'NetApp proporciona compatibilidad con la fábrica de cargas de trabajo y sus servicios cloud de diversas formas. Hay disponibles amplias opciones de auto soporte gratuito las 24 horas del día, los 7 días de la semana, como artículos de la base de conocimiento (KB) y un foro de la comunidad. Su registro de soporte incluye soporte técnico remoto a través de tickets web.' 
 ---
-= Obtén ayuda para FSx for ONTAP for Workload Factory
+= Obtén ayuda para FSx for ONTAP para la fábrica de cargas de trabajo
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

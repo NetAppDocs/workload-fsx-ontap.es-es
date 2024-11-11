@@ -2,25 +2,26 @@
 sidebar: sidebar 
 permalink: stop-replication.html 
 keywords: stop replication, break replication 
-summary: Detener una relación de replicación entre los volúmenes de origen y objetivo. 
+summary: Detener una relación de replicación entre los volúmenes de origen y los volúmenes de destino en la fábrica de cargas de trabajo de BlueXP . 
 ---
-= Detener una relación de replicación
+= Detener una relación de replicación en la fábrica de cargas de trabajo de BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Cuando se detiene una replicación, la replicación programada se actualiza del volumen de origen a la pausa del volumen de destino. El volumen objetivo pasará de solo lectura a lectura y escritura.
+Detener una relación de replicación en la fábrica de cargas de trabajo de BlueXP . Cuando se detiene una relación de replicación, se realiza una actualización programada del volumen de origen al volumen de destino. El volumen objetivo pasará de solo lectura a lectura y escritura.
 
 .Pasos
-. Inicie sesión en link:https://console.workloads.netapp.com/["Consola de Workload Factory"^]
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, haz clic en el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Relaciones de replicación*.
-. En la pestaña Relaciones de replicación, haga clic en el menú de tres puntos de la relación de replicación que desea detener.
+. En la pestaña Relaciones de replicación, seleccione el menú de tres puntos de la relación de replicación que desea detener.
 . Selecciona *Break*.
 . En el cuadro de diálogo Break replication, seleccione *Break*.
 
 
+.Resultado
 El estado de replicación del volumen cambia a *roto*. El volumen objetivo pasa a ser editable.
