@@ -81,10 +81,15 @@ Si seleccionó una política de exportación existente, escriba un nuevo nombre 
 ..... *Agregar regla de política de exportación*: Opcionalmente, para una política de exportación personalizada, puede agregar reglas de política de exportación a la política.
 
 
-.... *Compartir CIFS*: Introduzca el nombre del recurso compartido CIFS para proporcionar acceso SMB.
+.... *CIFS Share*: Proporciona lo siguiente:
++
+..... *Nombre*: Introduzca el nombre del recurso compartido CIFS para proporcionar acceso SMB.
+..... *Permisos*: Seleccione Control total, Acceso de lectura/escritura, Lectura o Sin acceso y, a continuación, introduzca los usuarios o grupos separados por un punto y coma ( ; ). Los usuarios o grupos distinguen entre mayúsculas y minúsculas y el dominio del usuario se debe incluir con el formato “dominio\nombre de usuario”.
 
 
-*** *Acceso en bloque*: Permite a los hosts que ejecutan aplicaciones empresariales críticas acceder al volumen utilizando el protocolo iSCSI.
+
+
+*** *Acceso en bloque*: Permite a los hosts que ejecutan aplicaciones empresariales críticas acceder al volumen utilizando el protocolo iSCSI. El acceso en bloque solo está disponible cuando la implementación de escalado horizontal del sistema de archivos cuenta con 6 pares de alta disponibilidad o menos.
 +
 Complete los siguientes campos para configurar el acceso en bloque al volumen.
 

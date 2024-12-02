@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: change-tiering-policy.html 
-keywords:  
+keywords: tiering policy, change tier, change tiers, tier policy update 
 summary: Cambie la política de organización en niveles en la fábrica de cargas de trabajo BlueXP  para volver a asignar datos del nivel de almacenamiento principal de alto rendimiento al nivel de almacenamiento del pool de capacidad secundario. 
 ---
 = Cambie la política de organización en niveles de un volumen en la fábrica de cargas de trabajo BlueXP 

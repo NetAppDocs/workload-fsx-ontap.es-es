@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: access-data.html 
-keywords: access data, mount clients, on-premises 
+keywords: access data, mount point, mount volumes, mount clients, on-premises 
 summary: Puede acceder a sus sistemas de archivos FSx para ONTAP desde las instalaciones montando volúmenes para clientes NAS y montando LUN iSCSI para clientes SAN. 
 ---
 = Accede a tus datos del sistema de archivos FSx for ONTAP
@@ -14,6 +14,24 @@ summary: Puede acceder a sus sistemas de archivos FSx para ONTAP desde las insta
 Puede acceder a sus sistemas de archivos FSx para ONTAP desde las instalaciones montando volúmenes para clientes NAS y montando LUN iSCSI para clientes SAN.
 
 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["Accediendo a los datos"^] En la documentación de Amazon FSx para NetApp ONTAP encontrarás temas sobre cómo acceder a los datos para tu referencia.
+
+También puede obtener el punto de montaje para volúmenes en la fábrica de cargas de trabajo BlueXP .
+
+
+
+== Obtén el punto de montaje para volúmenes en la fábrica de cargas de trabajo BlueXP 
+
+Obtenga el punto de montaje de un volumen para montar un recurso compartido en un recurso compartido CIFS o un cliente NFS.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En Almacenamiento, selecciona *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. En la pestaña Volúmenes, seleccione el menú de tres puntos para el volumen, luego *Acciones básicas* y luego *Comando de montaje de vista*.
+. En el cuadro de diálogo de comandos Mount, seleccione *Copy* para copiar el comando. Ingresarás el comando copiado en tu terminal.
+. Seleccione *Cerrar*.
+
 
 
 

@@ -27,6 +27,8 @@ Explorar el ahorro a través de la personalización: Proporciona los ajustes de 
 
 Explora el ahorro de los entornos de almacenamiento detectados: La fábrica de cargas de trabajo se conecta a los entornos de almacenamiento de AWS existentes y añade los detalles a la calculadora para realizar una comparación automática. Tendrás que conceder permisos de automatización para usar el modo automático. Puede cambiar el caso de uso, pero todos los demás detalles se determinan automáticamente en el cálculo.
 
+Además, puede link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Añada las credenciales de AWS"^]mejorar la precisión del análisis de la calculadora. Selecciona *Calcular los ahorros en función de los recursos existentes*. Se le redirigirá a la página Agregar credenciales. Después de agregar credenciales, seleccione los recursos existentes para comparar con FSx para ONTAP y seleccione *Explorar ahorros*.
+
 
 
 == Explora el ahorro a través de la personalización
@@ -100,7 +102,12 @@ Siga los pasos debajo de la pestaña para su selección de almacenamiento.
 ====
 Después de proporcionar detalles sobre la configuración del sistema de almacenamiento, revise los cálculos y las recomendaciones que se proporcionan en la página.
 
-Además, desplácese hacia abajo hasta la parte inferior de la página hasta *Exportar PDF* o *Ver los cálculos*.
+Además, desplácese hasta la parte inferior de la página para ver el informe seleccionando una de las siguientes opciones:
+
+* *Exportar PDF*
+* *Enviar por correo electrónico*
+* *Ver los cálculos*
+
 
 Para cambiar a FSX para ONTAP, siga las instrucciones a <<Pon en marcha FSx para sistemas de archivos ONTAP,Pon en marcha FSx para sistemas de archivos ONTAP>>.
 
@@ -179,7 +186,12 @@ Siga los pasos debajo de la pestaña para su selección de almacenamiento.
 ====
 Después de proporcionar detalles sobre la configuración del sistema de almacenamiento, revise los cálculos y las recomendaciones que se proporcionan en la página.
 
-Además, desplácese hacia abajo hasta la parte inferior de la página hasta *Exportar PDF* o *Ver los cálculos*.
+Además, desplácese hasta la parte inferior de la página para ver el informe seleccionando una de las siguientes opciones:
+
+* *Exportar PDF*
+* *Enviar por correo electrónico*
+* *Ver los cálculos*
+
 
 
 

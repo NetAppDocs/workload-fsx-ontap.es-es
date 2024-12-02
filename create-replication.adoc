@@ -62,11 +62,11 @@ Sin un límite, el rendimiento de la red y de las aplicaciones puede disminuir. 
 Si habilita la retención a largo plazo, seleccione una política existente o cree una nueva política para definir las snapshots que se replicarán y el número que se retendrá.
 
 +
-... Para *Elige una política existente*, selecciona una política existente en el menú desplegable.
-... Para *Crear una nueva política*, proporcione lo siguiente:
+*** Para *Elige una política existente*, selecciona una política existente en el menú desplegable.
+*** Para *Crear una nueva política*, proporcione lo siguiente:
 +
-.... *Nombre de la política*: Introduzca un nombre de política.
-.... *Políticas de instantáneas*: En la tabla, seleccione la frecuencia de la política de instantáneas y el número de copias que se deben retener. Puede seleccionar más de una política de Snapshot.
+**** *Nombre de la política*: Introduzca un nombre de política.
+**** *Políticas de instantáneas*: En la tabla, seleccione la frecuencia de la política de instantáneas y el número de copias que se deben retener. Puede seleccionar más de una política de Snapshot.
 
 
 
@@ -93,7 +93,7 @@ Si habilita la retención a largo plazo, seleccione una política existente o cr
 +
 _Auto_ es la política de organización en niveles predeterminada al crear un volumen mediante la interfaz de usuario de FSx para ONTAP de la fábrica de cargas de trabajo. Para obtener más información sobre las políticas de organización en niveles de volúmenes, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^]la documentación de AWS FSx para NetApp ONTAP.
 
-.. *Tasa de transferencia máxima*: Selecciona *Limited* e introduce el límite máximo de transferencia en MB/s.. Alternativamente, selecciona *Ilimitado*.
+.. *Tasa de transferencia máxima*: Seleccione *Limited* e introduzca el límite máximo de transferencia en MIB/s.. Alternativamente, selecciona *Ilimitado*.
 +
 Sin un límite, el rendimiento de la red y de las aplicaciones puede disminuir. También recomendamos una tasa de transferencia ilimitada para los sistemas de archivos de FSx for ONTAP para cargas de trabajo cruciales; por ejemplo, aquellas que se usan principalmente para la recuperación ante desastres.
 
@@ -107,11 +107,11 @@ Sin un límite, el rendimiento de la red y de las aplicaciones puede disminuir. 
 Si habilita la retención a largo plazo, seleccione una política existente o cree una nueva política para definir las snapshots que se replicarán y el número que se retendrá.
 
 +
-... Para *Elige una política existente*, selecciona una política existente en el menú desplegable.
-... Para *Crear una nueva política*, proporcione lo siguiente:
+*** Para *Elige una política existente*, selecciona una política existente en el menú desplegable.
+*** Para *Crear una nueva política*, proporcione lo siguiente:
 +
-.... *Nombre de la política*: Introduzca un nombre de política.
-.... *Políticas de instantáneas*: En la tabla, seleccione la frecuencia de la política de instantáneas y el número de copias que se deben retener. Puede seleccionar más de una política de Snapshot.
+**** *Nombre de la política*: Introduzca un nombre de política.
+**** *Políticas de instantáneas*: En la tabla, seleccione la frecuencia de la política de instantáneas y el número de copias que se deben retener. Puede seleccionar más de una política de Snapshot.
 
 
 
@@ -124,4 +124,4 @@ Si habilita la retención a largo plazo, seleccione una política existente o cr
 --
 ====
 .Resultado
-La relación de replicación aparece en la pestaña *Relaciones de replicación*.
+La relación de replicación aparece en la pestaña *Relaciones de replicación* en el sistema de archivos FSX for ONTAP de destino.

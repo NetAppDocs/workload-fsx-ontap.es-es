@@ -59,6 +59,9 @@ También puede cargar una configuración guardada.
 +
 *** Para las puestas en marcha de escalado vertical, solo puede tener un par de alta disponibilidad.
 *** Para las puestas en marcha de escalado horizontal, puede tener entre dos y doce parejas de alta disponibilidad.
++
+Para aprovisionar volúmenes de bloque iSCSI en el sistema de archivos, seleccione no más de 6 parejas de alta disponibilidad.
+
 
 
 .. *Tipo de implementación*: Seleccione un tipo de implementación.
@@ -129,6 +132,9 @@ También puede cargar una configuración guardada.
 +
 *** Para las puestas en marcha de escalado vertical, solo puede tener un par de alta disponibilidad.
 *** Para las puestas en marcha de escalado horizontal, puede tener entre dos y doce parejas de alta disponibilidad.
++
+Para aprovisionar volúmenes de bloque iSCSI en el sistema de archivos, seleccione no más de 6 parejas de alta disponibilidad.
+
 
 
 .. *Tipo de implementación*: Seleccione un tipo de implementación.

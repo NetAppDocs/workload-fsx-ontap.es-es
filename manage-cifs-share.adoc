@@ -25,9 +25,16 @@ Determine los usuarios o grupos a los que se va a dar acceso y el tipo de acceso
 . Seleccione *Acciones avanzadas* y luego *Editar recurso compartido de CIFS*.
 . En la página Edit CIFS Share, proporcione lo siguiente:
 +
-.. *Usuarios o grupos*: Introduce usuarios y grupos válidos. Separe cada entrada por un punto y coma “;”.
-.. *Permisos*: Selecciona *Control total*, *Leer/Escribir*, *Leer* o *Sin acceso*.
+.. *Nombre*: Introduzca el nombre del recurso compartido CIFS.
+.. *Permisos*: Seleccione Control total, Acceso de lectura/escritura, Lectura o Sin acceso y, a continuación, introduzca los usuarios o grupos separados por un punto y coma ( ; ). Los usuarios o grupos distinguen entre mayúsculas y minúsculas y el dominio del usuario se debe incluir con el formato “dominio\nombre de usuario”.
 
 
-. Seleccione *aplicar*.
+. Seleccione Aplicar.
++
+Los cambios pueden hacer que los usuarios o grupos actuales pierdan el acceso al recurso compartido CIFS.
 
+. Selecciona *Continuar* para guardar los cambios.
+
+
+.Resultado
+Se aplican cambios en el recurso compartido CIFS.

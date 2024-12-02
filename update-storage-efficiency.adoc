@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: update-storage-efficiency.html 
+keywords: storage efficiency change, update storage efficiency 
+summary: En la fábrica de cargas de trabajo BlueXP , puede actualizar la configuración de eficiencia del almacenamiento después de la creación del volumen. 
+---
+= Actualice la configuración de eficiencia del almacenamiento de un volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+En la fábrica de cargas de trabajo BlueXP , puede actualizar la configuración de eficiencia del almacenamiento después de la creación del volumen.
+
+.Acerca de esta tarea
+La función de eficiencia del almacenamiento incluye deduplicación, compresión de datos y compactación de datos para conseguir un ahorro de espacio óptimo en una unidad FlexVol volume. La deduplicación elimina los bloques de datos duplicados. La compresión de datos comprime los bloques de datos para reducir la cantidad de almacenamiento físico necesaria. La compactación de datos almacena más datos en menos espacio para aumentar la eficiencia del almacenamiento.
+
+Si eligió no habilitar la eficiencia de almacenamiento cuando creó un volumen, puede habilitar el ajuste para el posible ahorro de espacio y costes en cualquier momento.
+
+Los volúmenes utilizan thin provisioning tanto si se habilita como si se deshabilita la eficiencia del almacenamiento.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, seleccione el menú de tres puntos del sistema de archivos con el volumen que desea actualizar y luego seleccione *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. En la pestaña Volumes, seleccione el menú de tres puntos del volumen para cambiar la política de organización en niveles.
+. Seleccione *Acciones avanzadas*, luego *Establecer la eficiencia del almacenamiento*.
+. Seleccione habilitar o deshabilitar la eficiencia del almacenamiento del volumen.
+. Selecciona *Aplicar* para guardar el cambio.
+
