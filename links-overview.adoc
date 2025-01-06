@@ -41,13 +41,16 @@ La fábrica de cargas de trabajo requiere un enlace para mostrar información y 
 
 Las características que requieren un enlace incluyen:
 
-* Muestra la versión de ONTAP que está instalada en un sistema de archivos FSx for ONTAP
-* Gestione volúmenes iSCSI en el sistema
-* Habilite y deshabilite la función de crecimiento automático para los volúmenes
-* Permite crear y gestionar políticas de Snapshot
-* Configure las relaciones de replicación y replique volúmenes entre sistemas de archivos
-* Configure las relaciones de backup y haga backups de los datos de volúmenes en el almacenamiento en cloud
-* Clone volúmenes en un sistema de archivos
-* Mostrar métricas adicionales directamente desde ONTAP (las métricas predeterminadas son recopiladas por Amazon CloudWatch)
+* Visualización de la versión de ONTAP que está instalada en un sistema de archivos FSx for ONTAP
+* Gestión de volúmenes iSCSI en un sistema de archivos FSx para ONTAP
+* Función de crecimiento automático para volúmenes
+* Creación y gestión de políticas de Snapshot
+* Configuración de las relaciones de replicación
+* Replicación de volúmenes entre sistemas de archivos FSx para ONTAP
+* Configuración de las relaciones de backup
+* Backups de datos de volúmenes en el almacenamiento en la nube
+* Clones de volúmenes dentro de un sistema de archivos FSx para ONTAP
+* Visualización de métricas adicionales directamente desde ONTAP (las métricas predeterminadas son recopiladas por Amazon CloudWatch)
 * Gestión de las políticas de exportación de NFS
+* Gestión de recursos compartidos CIFS
 

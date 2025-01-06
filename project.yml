@@ -47,7 +47,7 @@ sidebar:
       - title: Cree un volumen
         url: "/create-volume.html"
       - title: Acceda a sus datos
-        url: access-data.html
+        url: "/access-data.html"
     - title: Cree una máquina virtual de almacenamiento
       url: "/create-storage-vm.html"
     - title: Proteja sus datos
@@ -77,7 +77,7 @@ sidebar:
         - title: Inicializar una relación de replicación
           url: "/initialize-replication.html"
       - title: Clonar un volumen
-        url: clone-volume.html
+        url: "/clone-volume.html"
       - title: Use datos de ONTAP en las instalaciones
         url: "/use-onprem-data.html"
   - title: Administración y supervisión
@@ -92,16 +92,16 @@ sidebar:
         url: "/manage-volume-tags.html"
       - title: Reequilibrar la capacidad de un volumen
         url: "/rebalance-volume.html"
-      - title: Cambie la política de organización en niveles
+      - title: Cambie una política de organización en niveles
         url: "/change-tiering-policy.html"
       - title: Actualice la eficiencia del almacenamiento
         url: "/update-storage-efficiency.html"
-      - title: Gestione la directiva de exportación de NFS
+      - title: Gestione las políticas de exportación de NFS
         url: "/manage-nfs-export-policy.html"
-      - title: Gestionar el recurso compartido CIFS
+      - title: Gestione los recursos compartidos de CIFS
         url: "/manage-cifs-share.html"
       - title: Divida un volumen clonado
-        url: split-cloned-volume.html
+        url: "/split-cloned-volume.html"
       - title: Eliminar un volumen
         url: "/delete-volume.html"
     - title: Administración del sistema de archivos
@@ -125,13 +125,13 @@ sidebar:
       - title: Gestionar las etiquetas de equipos virtuales de almacenamiento
         url: "/manage-svm-tags.html"
       - title: Restablecer la contraseña de la máquina virtual de almacenamiento
-        url: reset-svm-password.html
+        url: "/reset-svm-password.html"
       - title: Eliminar una máquina virtual de almacenamiento
         url: "/delete-svm.html"
     - title: Administración de la protección de datos
       entries:
       - title: Cambie la política de Snapshot de un volumen
-        url: change-snapshot-policy.html
+        url: "/change-snapshot-policy.html"
       - title: Gestione la programación de backups de FSx para ONTAP
         url: "/manage-backup-schedule.html"
       - title: Habilite y edite snapshots para retención a largo plazo

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-cifs-share.html 
 keywords: cifs, CIFS, cifs share, change cifs share, update cifs share, modify cifs share 
-summary: Cambie el recurso compartido de CIFS de un volumen en la fábrica de cargas de trabajo BlueXP  que utiliza el tipo de protocolo SMB/CIFS. 
+summary: La gestión del recurso compartido CIFS de un volumen en la fábrica de cargas de trabajo BlueXP  incluye la creación, determinar el acceso de usuarios y grupos, y la eliminación. 
 ---
 = Gestione el recurso compartido de CIFS de un volumen en la fábrica de cargas de trabajo BlueXP 
 :allow-uri-read: 
@@ -11,10 +11,20 @@ summary: Cambie el recurso compartido de CIFS de un volumen en la fábrica de ca
 
 
 [role="lead"]
-La gestión del recurso compartido CIFS de un volumen en la fábrica de cargas de trabajo de BlueXP  implica determinar los usuarios y grupos que deben otorgar acceso y el tipo de acceso que se les otorga.
+La gestión del recurso compartido CIFS de un volumen en la fábrica de cargas de trabajo BlueXP  incluye la creación de recursos compartidos CIFS, determinar los usuarios y grupos que deben otorgar acceso y el tipo de acceso que les otorga, y la eliminación de los recursos compartidos CIFS.
 
 .Antes de empezar
-Determine los usuarios o grupos a los que se va a dar acceso y el tipo de acceso que se les debe otorgar.
+Antes de comenzar, haga lo siguiente:
+
+* Para gestionar recursos compartidos CIFS, debe link:manage-links.html["asocie un enlace"]. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
+* Determine los usuarios o grupos a los que se va a dar acceso y el tipo de acceso que se les debe otorgar.
+
+
+
+
+== Cree un recurso compartido CIFS para un volumen
+
+Siga los pasos para crear un recurso compartido CIFS para un volumen.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -22,19 +32,63 @@ Determine los usuarios o grupos a los que se va a dar acceso y el tipo de acceso
 . En la pestaña *FSX for ONTAP*, seleccione el menú de tres puntos del sistema de archivos con el volumen que desea actualizar y luego seleccione *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
 . En la pestaña Volumes, seleccione el menú de tres puntos del volumen para cambiar el recurso compartido de SMB.
-. Seleccione *Acciones avanzadas* y luego *Editar recurso compartido de CIFS*.
-. En la página Edit CIFS Share, proporcione lo siguiente:
+. Seleccione *Acciones avanzadas*, luego *Administrar recursos compartidos CIFS*.
+. En la página Administrar recurso compartido de CIFS, seleccione *Crear recurso compartido de CIFS*.
+. En el cuadro de diálogo Create CIFS Share, proporcione lo siguiente:
 +
 .. *Nombre*: Introduzca el nombre del recurso compartido CIFS.
 .. *Permisos*: Seleccione Control total, Acceso de lectura/escritura, Lectura o Sin acceso y, a continuación, introduzca los usuarios o grupos separados por un punto y coma ( ; ). Los usuarios o grupos distinguen entre mayúsculas y minúsculas y el dominio del usuario se debe incluir con el formato “dominio\nombre de usuario”.
 
 
-. Seleccione Aplicar.
-+
-Los cambios pueden hacer que los usuarios o grupos actuales pierdan el acceso al recurso compartido CIFS.
-
-. Selecciona *Continuar* para guardar los cambios.
+. Seleccione *Crear*.
 
 
 .Resultado
-Se aplican cambios en el recurso compartido CIFS.
+Se crea el recurso compartido CIFS del volumen.
+
+
+
+== Cambiar un recurso compartido CIFS de un volumen
+
+Siga los pasos para cambiar la configuración de los recursos compartidos CIFS de un volumen.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, seleccione el menú de tres puntos del sistema de archivos con el volumen que desea actualizar y luego seleccione *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. En la pestaña Volumes, seleccione el menú de tres puntos del volumen para cambiar el recurso compartido de SMB.
+. Seleccione *Acciones avanzadas*, luego *Administrar recursos compartidos CIFS*.
+. En la página Manage CIFS Share, pase el ratón sobre un recurso compartido CIFS y seleccione el icono de lápiz para realizar cambios.
+. Cambie los permisos de acceso CIFS o los usuarios o los grupos para darles permisos.
++
+Los cambios pueden hacer que los usuarios o grupos actuales pierdan el acceso al recurso compartido CIFS.
+
+. Seleccione *Aplicar* para guardar los cambios.
+
+
+.Resultado
+Se actualiza el recurso compartido CIFS del volumen.
+
+
+
+== Eliminar un recurso compartido de CIFS de un volumen
+
+Siga los pasos para eliminar un recurso compartido CIFS de un volumen.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, seleccione el menú de tres puntos del sistema de archivos con el volumen que desea actualizar y luego seleccione *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. En la pestaña Volumes, seleccione el menú de tres puntos del volumen para cambiar el recurso compartido de SMB.
+. Seleccione *Acciones avanzadas*, luego *Administrar recursos compartidos CIFS*.
+. En la página Manage CIFS Share, pase el ratón sobre un recurso compartido CIFS y seleccione el icono de papelera para eliminarlo.
++
+Al eliminar el recurso compartido CIFS, este queda no disponible e inaccesible para ningún usuario que desee montarlo.
+
+. Seleccione *Eliminar* para confirmar la eliminación.
+
+
+.Resultado
+Se elimina el recurso compartido de CIFS del volumen.

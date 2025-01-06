@@ -27,7 +27,7 @@ Se necesita un enlace para completar algunas operaciones como la replicación en
 
 === Puestas en marcha de escalado vertical
 
-Las siguientes regiones admiten hasta 4 GB/s de capacidad de rendimiento máxima para implementaciones de escalado vertical: Región del Este de LOS EE. UU. (Ohio), región del Este de los EE. UU. (Norte de Virginia), región del Oeste de los EE. UU. (Oregón) y Europa (Irlanda).
+Las configuraciones de escalado vertical se admiten hasta 2 Gb/s en todas las regiones. Las siguientes regiones admiten hasta 4 GB/s de capacidad de rendimiento máxima para implementaciones de escalado vertical: Región del Este de LOS EE. UU. (Ohio), región del Este de los EE. UU. (Norte de Virginia), región del Oeste de los EE. UU. (Oregón) y Europa (Irlanda).
 
 
 
@@ -62,19 +62,11 @@ Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.ht
 
 
 
-== Soporte regional
-
-* La región oeste de Canadá (Calgary) no es compatible actualmente.
-
-
-
-
 == Protección de datos
 
 * No se pueden eliminar las snapshots.
-* Solo se admite la replicación entre sistemas de archivos FSx para ONTAP.
 * Al replicar un sistema de archivos, todos los volúmenes del sistema de archivos usan la misma política de replicación.
-* Sólo la última instantánea está disponible para restaurar.
+* Para relaciones de replicación de retención a largo plazo, solo se puede restaurar la última copia Snapshot.
 
 
 
