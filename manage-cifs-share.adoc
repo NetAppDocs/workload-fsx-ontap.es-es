@@ -11,13 +11,13 @@ summary: La gestión del recurso compartido CIFS de un volumen en la fábrica de
 
 
 [role="lead"]
-La gestión del recurso compartido CIFS de un volumen en la fábrica de cargas de trabajo BlueXP  incluye la creación de recursos compartidos CIFS, determinar los usuarios y grupos que deben otorgar acceso y el tipo de acceso que les otorga, y la eliminación de los recursos compartidos CIFS.
+La gestión del recurso compartido CIFS de un volumen en la fábrica de cargas de trabajo BlueXP  incluye la creación de recursos compartidos de CIFS, determinar los usuarios y grupos que deben otorgar acceso y el nivel de permisos que deben ofrecerlos, y la eliminación de recursos compartidos de CIFS.
 
 .Antes de empezar
 Antes de comenzar, haga lo siguiente:
 
 * Para gestionar recursos compartidos CIFS, debe link:manage-links.html["asocie un enlace"]. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
-* Determine los usuarios o grupos a los que se va a dar acceso y el tipo de acceso que se les debe otorgar.
+* Determine los usuarios o grupos a los que dar acceso y el nivel de permisos para otorgarlos.
 
 
 

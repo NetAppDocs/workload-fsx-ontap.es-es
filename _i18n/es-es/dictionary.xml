@@ -17,7 +17,6 @@
   <block id="ca56f4eb8ce272724e91bdcba9289351" category="inline-link-macro">Monte un LUN iSCSI en los clientes Windows</block>
   <block id="5e566a13383eb6798f798ddefecee8c1" category="list-text"><block ref="5e566a13383eb6798f798ddefecee8c1" category="inline-link-macro-rx"></block></block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">Antes de empezar</block>
-  <block id="30780a2d5d1315bb3798040fb45df6f0" category="paragraph">Determine los usuarios o grupos a los que se va a dar acceso y el tipo de acceso que se les debe otorgar.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Pasos</block>
   <block id="7f855d340cfe6607ed51975896dd19da" category="list-text">En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.</block>
   <block id="f76864e1c2588ae3d6373b6ab95e2209" category="list-text">Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.</block>
@@ -1294,7 +1293,6 @@
   <block id="310e8bd2aa0fbf766664a8fadbb86083" category="list-text">Gestión de las políticas de exportación de NFS</block>
   <block id="9d19d65b5c0b11e65c72a68e686c8efc" category="list-text">Gestión de recursos compartidos CIFS</block>
   <block id="5b4240cc70ef93fd3963a5a4a1489114" category="summary">La gestión del recurso compartido CIFS de un volumen en la fábrica de cargas de trabajo BlueXP  incluye la creación, determinar el acceso de usuarios y grupos, y la eliminación.</block>
-  <block id="5917a5ef86ec0bb832a8231c1ca2e1df" category="paragraph">La gestión del recurso compartido CIFS de un volumen en la fábrica de cargas de trabajo BlueXP  incluye la creación de recursos compartidos CIFS, determinar los usuarios y grupos que deben otorgar acceso y el tipo de acceso que les otorga, y la eliminación de los recursos compartidos CIFS.</block>
   <block id="ed2b1c265309f7d9a2006128f317479e" category="paragraph">Antes de comenzar, haga lo siguiente:</block>
   <block id="1832295f4669cf4c232bd0b7e1d64a4b" category="list-text">Para gestionar recursos compartidos CIFS, debe <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>. Si no tienes un enlace existente, <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.</block>
   <block id="0162ca60ba3c63c1058d5815f318b75b" category="section-title">Cree un recurso compartido CIFS para un volumen</block>
@@ -1320,4 +1318,6 @@
   <block id="5c8df45cbe01191b205c30373b7e5739" category="section-title">1 de diciembre de 2024</block>
   <block id="d83aca6cf65672d392d39e7c76942a11" category="sidebar">Cambie una política de organización en niveles</block>
   <block id="07b434b23f63ca6490df33b213599320" category="sidebar">Gestione las políticas de exportación de NFS</block>
+  <block id="6026d035efbb2d0fc978d9ab5bb5b084" category="paragraph">La gestión del recurso compartido CIFS de un volumen en la fábrica de cargas de trabajo BlueXP  incluye la creación de recursos compartidos de CIFS, determinar los usuarios y grupos que deben otorgar acceso y el nivel de permisos que deben ofrecerlos, y la eliminación de recursos compartidos de CIFS.</block>
+  <block id="34e81b46b7f1e5e087ae28a3b95e81fb" category="list-text">Determine los usuarios o grupos a los que dar acceso y el nivel de permisos para otorgarlos.</block>
 </blocks>
