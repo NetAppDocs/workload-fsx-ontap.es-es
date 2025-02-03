@@ -36,11 +36,19 @@ Revise los siguientes requisitos previos antes de crear un volumen:
 
 
 
+
+
+== Cree un volumen
+
+Puede crear un volumen utilizando las siguientes herramientas disponibles en CodeBox: API REST, CloudFormation y Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Aprende a usar CodeBox para la automatización"^].
+
+
+NOTE: Al usar Terraform de CodeBox, el código que copie o descargue oculta `fsxadmin` y `vsadmin` las contraseñas. Deberá volver a introducir las contraseñas cuando ejecute el código.
+
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos en el que quieres crear un volumen y selecciona *Administrar*.
-. En la pestaña *Overview*, selecciona *Crear volumen*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos en el que quieres crear un volumen y selecciona *Crear volumen*.
 . En la página Create volume, en General details, proporcione los siguientes detalles:
 +
 .. *Nombre del volumen*: Introduzca un nombre para el volumen.
@@ -113,6 +121,58 @@ Complete los siguientes campos para configurar el acceso en bloque al volumen.
 .. * Eficiencia de almacenamiento*: Desactivar o activar la eficiencia de almacenamiento.
 +
 La eficiencia del almacenamiento se logra utilizando las funciones de deduplicación y compresión de ONTAP. La deduplicación elimina los bloques de datos duplicados. La compresión de datos comprime los bloques de datos para reducir la cantidad de almacenamiento físico necesaria.
+
+.. *Archivos inmutables*: Esta función, también conocida como SnapLock, está desactivada por defecto. La habilitación de archivos inmutables impide que se eliminen o sobrescriban los datos durante un periodo de tiempo determinado. Habilitar esta función solo es posible durante la creación del volumen. Una vez habilitada, esta función no puede deshabilitarse. Esta es una función premium de FSx para ONTAP que tiene un coste adicional. Para obtener más información, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["Cómo funciona SnapLock"^]en la documentación de Amazon FSx para NetApp ONTAP.
++
+Al habilitar la función de archivos inmutables, los archivos de este volumen se confirman de forma permanente en un estado WORM inmutable (escritura única lectura múltiple).
+
++
+Modos de retención:: Puede seleccionar entre dos modos de retención: _Enterprise_ o _Compliance_.
++
+--
+*** En el modo _Enterprise_, un archivo inmutable o SnapLock, el administrador puede eliminar un archivo durante su período de retención.
+*** En el modo _Compliance_, no se puede eliminar un archivo WORM antes de que caduque su período de retención. De igual modo, el volumen inmutable no se puede eliminar hasta que caduquen los períodos de retención de todos los archivos en el volumen.
+
+
+--
+Período de retención:: El período de retención tiene dos valores: _Retention policy_ y _retention period_. La _retention policy_ define cuánto tiempo se retendrán los archivos en un estado WORM inmutable. Puede especificar su propia política de retención o utilizar la política de retención predeterminada (sin especificar), que es de 30 años. Los periodos de retención mínimo y máximo definen el intervalo de tiempo permitido para bloquear archivos.
++
+--
+NOTA:: Incluso después de que caduque el período de retención, no es posible modificar un ARCHIVO WORM. Solo puede eliminarlo o establecer un nuevo período de retención para volver a activar la protección WORM.
+
+
+--
+Confirmación automática:: Tendrá la opción de activar la función de confirmación automática. La función de compromiso automático confirma un archivo en estado WORM en un volumen SnapLock si el archivo no cambió durante el período de compromiso automático. La función de compromiso automático está deshabilitada de forma predeterminada. Los archivos que desea confirmar automáticamente deben residir en un volumen de SnapLock.
+Modo de adición de volúmenes:: No es posible modificar los datos existentes en un archivo protegido CON WORM. Sin embargo, los archivos inmutables le permiten conservar la protección de los datos existentes con archivos que se pueden agregar con WORM. Por ejemplo, puede generar archivos de registro o conservar datos de transmisión de audio o vídeo mientras escribe datos en ellos de forma incremental. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["Obtenga más información sobre el modo de adición de volúmenes"^] En documentación de Amazon FSx para NetApp ONTAP.
++
+--
+.Pasos para archivos inmutables
+... Seleccione esta opción para habilitar *archivos inmutables con tecnología SnapLock*.
+... Haga clic en el cuadro para aceptar y continuar.
+... Haga clic en *Activar*.
+... *Modo de retención*: Selecciona el modo *Enterprise* o *Compliance*.
+... *Período de retención*:
++
+**** Seleccione la política de retención:
++
+***** *Sin especificar*: Establece la política de retención a 30 años.
+***** *Especifique el período*: Ingrese el número de segundos, minutos, horas, días, meses o años para establecer su propia política de retención.
+
+
+**** Seleccione los períodos de retención mínimo y máximo:
++
+***** *Mínimo*: Introduzca el número de segundos, minutos, horas, días, meses o años para establecer el período de retención mínimo.
+***** *Máximo*: Introduzca el número de segundos, minutos, horas, días, meses o años para establecer el período de retención máximo.
+
+
+
+
+... *Autocommit*: Desactiva o activa la autocommit. Si habilita la confirmación automática, establezca el período de compromiso automático.
+... *Modo de adición de volumen*: Desactivar o activar. Permite agregar nuevo contenido a archivos WORM.
+
+
+--
+
 
 .. *Política de instantáneas*: Seleccione la política de instantáneas para especificar la frecuencia y retención de instantáneas.
 +

@@ -19,6 +19,7 @@ Considere lo siguiente antes de eliminar un volumen:
 * Relaciones de replicación: Debe link:delete-replication.html["suprimir todas las relaciones de replicación existentes"] para este volumen antes de eliminar el volumen para que no se queden relaciones rotas.
 * Snapshots locales: Todas las snapshots asociadas con este sistema de archivos FSx para ONTAP se eliminarán de forma permanente.
 * FSX para backup de ONTAP: Permanecerán las copias de backup de FSx para ONTAP y aún podrás utilizarlas.
+* Archivos inmutables: Los volúmenes que contienen archivos inmutables con tecnología SnapLock no se pueden eliminar hasta que caduque el período de retención.
 
 
 .Pasos

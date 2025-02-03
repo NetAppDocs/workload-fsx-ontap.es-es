@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: monitor-operations.html 
+keywords: monitor databases, monitor jobs, track database jobs 
+summary: Haga un seguimiento de FSx para ONTAP, las credenciales y las operaciones de enlaces, y supervise el progreso de las tareas con el seguimiento en la fábrica de cargas de trabajo de BlueXP  para almacenamiento. 
+---
+= Supervise las operaciones de almacenamiento con Tracker en la fábrica de cargas de trabajo de BlueXP 
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Supervise y realice un seguimiento de la ejecución de FSx para ONTAP, las credenciales y las operaciones de enlace, y supervise el progreso de las tareas con Tracker en la fábrica de cargas de trabajo de BlueXP .
+
+.Acerca de esta tarea
+La fábrica de cargas de trabajo proporciona Tracker, una función de supervisión, para que pueda supervisar y realizar un seguimiento del progreso y el estado de FSx para ONTAP, credenciales y operaciones de enlace, revisar detalles de tareas de operación y subtareas, diagnosticar cualquier problema o fallo, editar parámetros para operaciones fallidas y volver a intentar operaciones fallidas. Puede filtrar trabajos por tipo y estado, buscar trabajos mediante la función de búsqueda y descargar la tabla de trabajos.
+
+El Tracker admite hasta tres niveles de supervisión dependiendo de la operación. Cada tarea, como el despliegue del sistema de archivos, muestra la descripción de la tarea, el estado, la hora de inicio, la duración de la tarea, el usuario, la región, el recurso proxy, el identificador de tarea y todas las subtareas relacionadas.
+
+Niveles de tareas de Tracker con ejemplos::
++
+--
+* Nivel 1 (trabajo padre): Realiza un seguimiento de la implementación de un sistema de archivos.
+* Nivel 2 (subtrabajo): Realiza un seguimiento de los subtrabajos relacionados con el despliegue del sistema de archivos.
+* Nivel 3 (tarea): Enumera la secuencia de acciones realizadas en cada recurso.
+
+
+--
+Estado de la operación:: El estado de la operación en Tracker es el siguiente _in progress_, _success_ y _failed_.
++
+--
+Frecuencia de operación:: La frecuencia de operación se basa en el tipo de trabajo y la programación de trabajo.
+
+
+--
+Retención de eventos:: Los eventos se conservan en la interfaz de usuario durante 30 días.
+
+
+
+
+== Seguimiento y supervisión de operaciones
+
+Rastree y supervise las operaciones en BlueXP  con el Rastreador.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En Almacenamiento, selecciona *Ir a Inventario de almacenamiento*.
+. Desde el inventario de almacenamiento, seleccione el menú de configuración de la cuenta y luego seleccione *Rastreador*.
++
+image:screenshot-menu-tracker-option.png["Una captura de pantalla del menú de configuración de la cuenta con la opción Rastreador resaltada."]
+
+. En la ficha Rastreador, utilice los filtros o busque para restringir los resultados del trabajo. También es posible descargar un informe de trabajos.
+
+
+
+
+== Ver solicitud de API
+
+Vea la solicitud API en CodeBox para una tarea en Tracker.
+
+.Pasos
+. En Rastreador, seleccione una tarea.
+. Seleccione el menú de tres puntos y luego seleccione *Ver solicitud de API*.
+
+
+
+
+== Vuelva a intentar una operación fallida
+
+Vuelva a intentar una operación fallida en Tracker. También puede copiar el mensaje de error de una operación con un error.
+
+
+NOTE: Solo se permite el número x de reintentos para una operación fallida.
+
+.Pasos
+. En Tracker, seleccione una operación fallida.
+. Seleccione el menú de tres puntos y luego seleccione *Reintentar*.
+
+
+.Resultado
+Se vuelve a iniciar la operación.
+
+
+
+== Edite y vuelva a intentar una operación con errores
+
+Edite los parámetros de la operación fallida y vuelva a intentar la operación fuera de Tracker.
+
+.Pasos
+. En Tracker, seleccione una operación fallida.
+. Seleccione el menú de tres puntos y luego seleccione *Editar y volver a intentarlo*.
++
+Se le redirigirá a la página de operaciones, donde puede editar los parámetros y volver a intentar la operación.
+
+
+
+.Resultado
+Se vuelve a iniciar la operación. Vaya a Rastreador para ver el estado de la operación.

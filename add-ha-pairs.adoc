@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: add-ha-pairs.html 
+keywords: add high-availability pairs, add HA pairs, add HA pair, add high-availability pair, scale out, file system, fsx for ontap 
+summary: Agregue pares de alta disponibilidad a un sistema de archivos en la fábrica de cargas de trabajo BlueXP  para escalar horizontalmente el sistema de archivos. 
+---
+= Agregue pares de alta disponibilidad a un sistema de archivos en la fábrica de cargas de trabajo BlueXP 
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Añada pares de alta disponibilidad para escalar horizontalmente un sistema de archivos de segunda generación de FSx for ONTAP Single-AZ en la fábrica de cargas de trabajo de BlueXP  y aumente el rendimiento y la capacidad. Esta expansión le ofrece más escalabilidad del rendimiento y flexibilidad que los sistemas de archivos de primera generación.
+
+.Acerca de esta tarea
+Los nuevos pares de alta disponibilidad se agregan con la misma SKU y la misma capacidad para pareja de alta disponibilidad.
+
+Los siguientes aspectos no se admite la adición de pares de alta disponibilidad:
+
+* Implementaciones de alta disponibilidad de varias zonas o FSX de primera generación para sistemas de archivos ONTAP
+* FSX para sistemas de archivos de ONTAP con más de 5 equipos virtuales de almacenamiento
+* FSX para sistemas de archivos ONTAP con LUN iSCSI
+* Configuraciones que tienen la capacidad máxima de SSD o que están cerca de ella o han alcanzado los límites de asignación de I/O.
+
+
+Considere lo siguiente acerca de la adición de pares de alta disponibilidad:
+
+* Eliminación de la pareja DE ALTA DISPONIBILIDAD: Las parejas DE ALTA disponibilidad no se pueden quitar una vez añadidas al sistema de archivos.
+* Tiempo y limitaciones de funcionamiento: La adición de pares de alta disponibilidad puede tardar aproximadamente 30 minutos. Considere la posibilidad de agregar pares de alta disponibilidad durante un periodo de mantenimiento o durante periodos de baja actividad. Además, añadir pares de alta disponibilidad limita otras operaciones, como añadir más pares de alta disponibilidad, aprovisionar IOPS, aumentar la capacidad de SSD y actualizar la capacidad de rendimiento.
+* Asignación de I/O: La asignación de I/O automática depende de la capacidad de almacenamiento total. La asignación de I/O configurada por el usuario se multiplica por la cantidad de pares de alta disponibilidad añadidos.
+* NVMe cache: Al añadir parejas de alta disponibilidad, se habilita la caché NVMe de forma predeterminada. Recomendamos desactivar la memoria caché NVMe para cargas de trabajo pesadas.
+* Número de pares de alta disponibilidad: Se recomienda ampliar su sistema de archivos a un número par de pares de alta disponibilidad para una distribución de datos equilibrada en pares de alta disponibilidad.
+* Creación de LUN: La creación de LUN es posible en un sistema de archivos Single-AZ de segunda generación si aún no existen LUN en el sistema de archivos al agregar pares de alta disponibilidad. La creación de LUN solo se admite en un sistema de archivos con 6 pares de alta disponibilidad o menos.
+
+
+.Antes de empezar
+Haga lo siguiente antes de agregar parejas de alta disponibilidad a un sistema de archivos:
+
+* Elimine todos los LUN iSCSI para escalar horizontalmente el sistema de archivos.
+* Asegúrese de que el sistema de archivos no tenga más de 5 máquinas virtuales de almacenamiento.
+
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, en *Información*, selecciona el icono de lápiz junto a *Pares HA*.
+. En el cuadro de diálogo *Agregar pares HA*, seleccione el número de pares HA para agregar al sistema de archivos.
+. Seleccione *Añadir* para confirmar la adición de los pares HA.
+
+
+.Resultado
+La fábrica de carga de trabajo inicia el proceso para agregar los pares de alta disponibilidad al sistema de archivos. El sistema de archivos no está disponible para otras operaciones, como la creación de volúmenes hasta que se añadan las parejas de alta disponibilidad. Puede supervisar el progreso de la operación en la pestaña *Tracker*.

@@ -21,6 +21,14 @@ Se necesita un enlace para completar algunas operaciones como la replicación en
 
 
 
+== Limitaciones de añadir pares de alta disponibilidad
+
+* Esta operación puede tardar aproximadamente 30 minutos en completarse.
+* La adición de pares de alta disponibilidad limita las siguientes operaciones: Agregar más pares de alta disponibilidad, aprovisionar IOPS, aumentar la capacidad de SSD y actualizar la capacidad de rendimiento.
+
+
+
+
 == Soporte regional de capacidad de rendimiento
 
 
