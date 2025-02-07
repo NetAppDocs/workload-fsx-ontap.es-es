@@ -11,7 +11,7 @@ summary: Puede ver enlaces asociados a su cuenta, asociar un enlace y eliminar u
 
 
 [role="lead"]
-Administre los enlaces que haya asociado a su cuenta de fábrica de cargas de trabajo de BlueXP .
+Administre los enlaces que haya asociado a su cuenta de fábrica de cargas de trabajo de BlueXP . Puede ver los vínculos asociados con un sistema de archivos FSX for ONTAP, asociar un enlace con un sistema de archivos FSx for ONTAP, editar un enlace y eliminar un enlace.
 
 link:links-overview.html["Obtenga más información sobre los enlaces"] o link:create-link.html["cree un vínculo"].
 

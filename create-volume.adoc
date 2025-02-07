@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-volume.html 
 keywords: create volume, FSx for ONTAP volume 
-summary: Después de configurar el sistema de archivos FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP , puede crear FSx para volúmenes de ONTAP. 
+summary: Después de configurar el sistema de archivos FSx para ONTAP, cree FSx para ONTAP Volumes en la fábrica de cargas de trabajo de BlueXP . 
 ---
 = Crea un volumen FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP 
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Después de configurar el sistema de archivos FSx para ONTAP en la fáb
 
 
 [role="lead"]
-Después de configurar el sistema de archivos FSx para ONTAP, puedes crear FSx para ONTAP Volumes en la fábrica de cargas de trabajo de BlueXP .
+Después de configurar el sistema de archivos FSx para ONTAP, cree FSx para ONTAP Volumes en la fábrica de cargas de trabajo de BlueXP .
 
 .Acerca de esta tarea
 FSX para volúmenes de ONTAP son recursos virtuales que se utilizan para agrupar datos, determinar cómo se almacenan los datos y determinar el tipo de acceso a ellos. Los volúmenes no consumen capacidad de almacenamiento del sistema de archivos. Los datos que se almacenan en un volumen consumen principalmente almacenamiento SSD. Según la política de organización en niveles del volumen, los datos también pueden consumir almacenamiento en el pool de capacidad. Se establece el tamaño de un volumen al crearlo y se puede cambiar su tamaño más adelante.
