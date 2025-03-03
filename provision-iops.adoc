@@ -16,7 +16,7 @@ Aprovisiona automáticamente o aprovisiona manualmente IOPS de SSD para un siste
 .Acerca de esta tarea
 Puede habilitar el aprovisionamiento automático de IOPS de SSD para un sistema de archivos FSx o aprovisionar IOPS manualmente.
 
-Las IOPS aprovisionadas automáticamente se calculan como 3 IOPS por GiB.
+Las IOPS aprovisionadas automáticamente se calculan en tres IOPS por GiB.
 
 Si aprovisiona IOPS manualmente, es posible que deba aumentar las IOPS antes de link:increase-file-system-capacity.html["aumentando la capacidad del sistema de archivos"].
 

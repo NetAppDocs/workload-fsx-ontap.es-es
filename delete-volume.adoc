@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: delete-volume.html 
 keywords: delete volume, volume deletion 
-summary: Puede eliminar un volumen en su sistema de archivos FSx para ONTAP en cualquier momento. Esta operación es irreversible. 
+summary: Elimina un volumen en tu sistema de archivos FSx para ONTAP que ya no sea necesario y para liberar espacio. Esta operación es irreversible. 
 ---
 = Elimine un volumen en la fábrica de carga de trabajo BlueXP 
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Puede eliminar un volumen en su sistema de archivos FSx para ONTAP en c
 
 
 [role="lead"]
-Puede eliminar un volumen en su sistema de archivos FSx para ONTAP en cualquier momento. Esta operación es irreversible.
+Elimina un volumen en tu sistema de archivos FSx para ONTAP que ya no sea necesario y para liberar espacio. Esta operación es irreversible.
 
 .Antes de empezar
 Considere lo siguiente antes de eliminar un volumen:
@@ -19,7 +19,7 @@ Considere lo siguiente antes de eliminar un volumen:
 * Relaciones de replicación: Debe link:delete-replication.html["suprimir todas las relaciones de replicación existentes"] para este volumen antes de eliminar el volumen para que no se queden relaciones rotas.
 * Snapshots locales: Todas las snapshots asociadas con este sistema de archivos FSx para ONTAP se eliminarán de forma permanente.
 * FSX para backup de ONTAP: Permanecerán las copias de backup de FSx para ONTAP y aún podrás utilizarlas.
-* Archivos inmutables: Los volúmenes que contienen archivos inmutables con tecnología SnapLock no se pueden eliminar hasta que caduque el período de retención.
+* Copias Snapshot y archivos inmutables: Los volúmenes que contienen archivos inmutables y copias Snapshot no se pueden eliminar hasta que finalice el período de retención.
 
 
 .Pasos

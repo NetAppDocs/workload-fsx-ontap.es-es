@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: manage-immutable-files.html 
+keywords: enable immutable files, disable immutable files, lock files, unlock files 
+summary: Puede actualizar ciertos ajustes de archivos inmutables cuando la función está activada. 
+---
+= Gestione archivos inmutables de un volumen en la fábrica de cargas de trabajo de BlueXP 
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible actualizar ciertos ajustes de archivos inmutables de un volumen cuando la función está habilitada, como la política de retención y los períodos, el período de compromiso automático y el modo de adición de volúmenes.
+
+Tenga en cuenta que la activación de archivos inmutables solo es posible durante link:create-volume.html["creación de volúmenes"].
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. Seleccione la pestaña *Volúmenes*.
+. En la pestaña Volumes, seleccione el menú de tres puntos del volumen que desea clonar.
+. Selecciona *Acciones de protección de datos* y luego *Administrar archivos inmutables*.
+. En la página Gestionar archivos inmutables, puede actualizar lo siguiente:
++
+** *Período de retención*: Selecciona *Sin especificar* o *Especificar periodo*.
++
+*** *No especificado*: El período mínimo predeterminado es “0” años y el período máximo predeterminado es “30 años”.
+*** *Especificar periodo*: Opción para definir la política de retención, los periodos mínimos y máximos, la función de autoconfirmación y la función de modo de adición de volumen. Proporcione los siguientes detalles:
++
+**** *Política de retención*: Este período debe ser mayor o igual que el período de retención mínimo y menor o igual que el período de retención máximo.
+**** *Periodos mínimos y máximos*: Establece los periodos mínimo y máximo para confirmar archivos en este volumen en un estado de GUSANO inmutable.
+
+
+
+
+** *Autocommit*: Habilita o deshabilita la función para confirmar automáticamente archivos A WORM que no se hayan modificado durante el período de autocommit.
+** *Modo de adición de volumen*: Activa o desactiva la función. Al habilitar el modo de adición de volúmenes, es posible añadir nuevo contenido a los archivos WORM.
+
+
+. Haga clic en *aplicar*.
+
+
+.Resultado
+Ahora las actualizaciones se aplican al volumen.

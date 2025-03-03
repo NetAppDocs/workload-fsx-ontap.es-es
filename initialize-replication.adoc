@@ -11,7 +11,7 @@ summary: Inicialice una relación de replicación entre los volúmenes de origen
 
 
 [role="lead"]
-Inicializa una relación de replicación entre los volúmenes de origen y de destino en la fábrica de cargas de trabajo BlueXP .
+Inicializa una relación de replicación entre los volúmenes de origen y de destino para transferir la Snapshot y todos los bloques de datos en la fábrica de cargas de trabajo BlueXP .
 
 .Acerca de esta tarea
 La inicialización realiza una transferencia _baseline_: Realiza una instantánea del volumen de origen y, a continuación, transfiere la Snapshot y todos los bloques de datos a los que hace referencia al volumen de destino.

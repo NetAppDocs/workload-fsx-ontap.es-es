@@ -18,7 +18,7 @@ La replicación es una capa adicional de protección de datos que es esencial en
 
 Esta operación crea una relación de replicación para uno o todos los volúmenes de origen en un sistema de archivos FSx para ONTAP.
 
-Los volúmenes replicados en el sistema de archivos de destino siguen el formato de nomenclatura: `{OriginalVolumeName}_copy`.
+Los volúmenes replicados en el sistema de archivos de destino son volúmenes de protección de datos (DP) y siguen el formato de nomenclatura `{OriginalVolumeName}_copy`: .
 
 .Antes de empezar
 Asegúrese de cumplir con los siguientes requisitos previos antes de comenzar.
@@ -33,18 +33,20 @@ Complete los siguientes pasos para replicar un único volumen o replicar todos l
 ====
 .Replicación de un único volumen
 --
+Puede replicar un volumen de origen (lectura/escritura) o un volumen de protección de datos (DP). No puede crear una segunda réplica de un volumen de DP.
+
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos que contiene el volumen a replicar y luego selecciona *Replicar datos de volumen*.
-. En la página Create replication, en Replication target, proporcione lo siguiente:
+. En la página Replicar datos, en Destino de replicación, proporcione lo siguiente:
 +
 .. *FSX para el sistema de archivos ONTAP*: Seleccione credenciales, región y FSX para el nombre del sistema de archivos ONTAP para el sistema de archivos FSX para ONTAP de destino.
 .. *Nombre de VM de almacenamiento*: Seleccione la VM de almacenamiento en el menú desplegable.
 .. *Nombre del volumen*: El nombre del volumen de destino se genera automáticamente con el siguiente formato `{OriginalVolumeName}_copy`. Se puede usar el nombre de volumen generado automáticamente o introducir otro nombre de volumen.
 .. *Política de niveles*: Seleccione la política de organización en niveles para los datos almacenados en el volumen de destino.
 +
-_Auto_ es la política de organización en niveles predeterminada al crear un volumen mediante la interfaz de usuario de FSx para ONTAP de la fábrica de cargas de trabajo. Para obtener más información sobre las políticas de organización en niveles de volúmenes, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^]la documentación de AWS FSx para NetApp ONTAP.
+_Auto_ es la política de organización en niveles predeterminada al crear un volumen mediante la interfaz de usuario de FSx para ONTAP de la fábrica de cargas de trabajo. Para obtener más información sobre las políticas de organización en niveles de volúmenes, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^] la documentación de AWS FSx para NetApp ONTAP.
 
 .. *Tasa de transferencia máxima*: Selecciona *Limited* e introduce el límite máximo de transferencia en MB/s.. Alternativamente, selecciona *Ilimitado*.
 +
@@ -60,10 +62,16 @@ Sin un límite, el rendimiento de la red y de las aplicaciones puede disminuir. 
 Si habilita la retención a largo plazo, seleccione una política existente o cree una nueva política para definir las snapshots que se replicarán y el número que se retendrá.
 
 +
-*** Para *Elige una política existente*, selecciona una política existente en el menú desplegable.
-*** Para *Crear una nueva política*, proporcione lo siguiente:
+*** *Elige una política existente*: Selecciona una política existente en el menú desplegable.
+*** *Crear una nueva política*: Proporcionar lo siguiente:
 +
 **** *Nombre de la política*: Introduzca un nombre de política.
+**** Opcional: Habilitar copias de Snapshot inmutables.
++
+***** Seleccione *Activar instantáneas inmutables* para evitar que las instantáneas tomadas en esta política se eliminen durante el período de retención.
+***** Establezca el *Período de retención* en número de horas, días, meses o años.
+
+
 **** *Políticas de instantáneas*: En la tabla, seleccione la frecuencia de la política de instantáneas y el número de copias que se deben retener. Puede seleccionar más de una política de Snapshot.
 
 
@@ -77,12 +85,17 @@ Si habilita la retención a largo plazo, seleccione una política existente o cr
 --
 .Replicar todos los volúmenes en un sistema de archivos
 --
+Puede replicar todos los volúmenes de origen (lectura/escritura) y de protección de datos (DP) en un sistema de archivos.
+
+
+NOTE: Se admite una vez la replicación de un volumen de protección de datos.
+
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . En la pestaña FSX para ONTAP, seleccione el menú de tres puntos del sistema de archivos con los volúmenes y luego seleccione *Administrar*.
-. En la descripción general del sistema de archivos, seleccione *Crear replicación*.
-. En la página Create replication, en Replication target, proporcione lo siguiente:
+. En la descripción general del sistema de archivos, seleccione *Replicar datos*.
+. En la página Replicar datos, en Destino de replicación, proporcione lo siguiente:
 +
 .. *FSX para el sistema de archivos ONTAP*: Seleccione credenciales, región y FSX para el nombre del sistema de archivos ONTAP para el sistema de archivos FSX para ONTAP de destino.
 .. *Nombre de VM de almacenamiento*: Seleccione la VM de almacenamiento en el menú desplegable.
@@ -105,8 +118,8 @@ Sin un límite, el rendimiento de la red y de las aplicaciones puede disminuir. 
 Si habilita la retención a largo plazo, seleccione una política existente o cree una nueva política para definir las snapshots que se replicarán y el número que se retendrá.
 
 +
-*** Para *Elige una política existente*, selecciona una política existente en el menú desplegable.
-*** Para *Crear una nueva política*, proporcione lo siguiente:
+*** *Elige una política existente*: Selecciona una política existente en el menú desplegable.
+*** *Crear una nueva política*: Proporcionar lo siguiente:
 +
 **** *Nombre de la política*: Introduzca un nombre de política.
 **** *Políticas de instantáneas*: En la tabla, seleccione la frecuencia de la política de instantáneas y el número de copias que se deben retener. Puede seleccionar más de una política de Snapshot.
@@ -116,7 +129,7 @@ Si habilita la retención a largo plazo, seleccione una política existente o cr
 
 
 
-. Seleccione *Crear*.
+. Seleccione *Replicar*.
 
 
 --

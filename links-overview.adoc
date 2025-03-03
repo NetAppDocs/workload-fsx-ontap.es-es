@@ -29,7 +29,7 @@ Crea enlaces desde las páginas del sistema de archivos FSx para ONTAP en la fá
 
 == Externa
 
-Cada transacción que realiza Lambda incurre en un cargo. Puesto que Lambda actúa como proxy entre los dos sistemas, se produce una carga cuando Lambda envía una solicitud a la API REST DE ONTAP en un sistema de archivos y cuando envía la respuesta de vuelta a la fábrica de cargas de trabajo.
+Cada transacción que realiza Lambda incurre en un cargo. Debido a que Lambda actúa como proxy entre los dos sistemas, hay un cargo cuando Lambda envía una solicitud a la API REST DE ONTAP en un sistema de archivos y cuando envía la respuesta de nuevo a la fábrica de cargas de trabajo.
 
 link:https://aws.amazon.com/lambda/pricing/["Obtenga más información sobre los costos relacionados con el uso de AWS Lambda"^]
 

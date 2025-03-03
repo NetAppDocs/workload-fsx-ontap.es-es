@@ -22,7 +22,7 @@ Los detalles del volumen solo aparecen después de que se creó un volumen en un
 . Seleccione *Acciones básicas* y luego *Ver detalles del volumen*.
 . En *Detalles del volumen*, seleccione las pestañas para ver los siguientes detalles del volumen:
 +
-.. *Detalles generales*: Incluye nombre del volumen, UUID del volumen, ID del volumen, hora de creación, estado, tipo de volumen (lectura-escritura/protección de datos (RW/DP) o solo lectura), nombre de la política de Snapshot, máquina virtual de almacenamiento de host (SVM) y etiquetas.
+.. *Detalles generales*: Incluye nombre del volumen, UUID del volumen, ID del volumen, hora de creación, estado, tipo de volumen (lectura/escritura/protección de datos (RW/DP) o solo lectura), nombre de la política de instantáneas, VM de almacenamiento de alojamiento (SVM) y etiquetas.
 .. *Distribución*: Incluye agregados de alojamiento, estilo de volumen (FlexGroup o FlexVol), componentes (solo FlexGroup) y ratio de reequilibrio (solo FlexGroup -alto, medio o bajo).
 .. *Consumo*: Incluye tamaño, SSD usado, pool de capacidad utilizado, ajuste de crecimiento automático, tamaño máximo de crecimiento, configuración de eficiencia del almacenamiento, ahorro de espacio de compresión, ahorro de espacio de deduplicación, política de organización en niveles y días de refrigeración.
 .. *Acceso*: Incluye ruta de unión, estilo de seguridad, política de exportación y versión de NFS para NFS, y Active Directory, nombre de recurso compartido de CIFS, usuarios o grupos, y permisos para SMB/CIFS, y grupos de iniciadores y IQN de host para iSCSI.

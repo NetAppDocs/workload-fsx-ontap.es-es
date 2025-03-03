@@ -11,7 +11,7 @@ summary: 'Explora el ahorro en tus cargas de trabajo de almacenamiento en el alm
 
 
 [role="lead"]
-Descubre el ahorro en tus cargas de trabajo de almacenamiento que usan Amazon Elastic Block Store (EBS), Elastic File System (EFS) y FSx para servidor de archivos de Windows frente a FSx para NetApp ONTAP.
+Descubre el ahorro en las cargas de trabajo de almacenamiento que usan Amazon Elastic Block Store (EBS), Elastic File System (EFS) y FSx para servidor de archivos de Windows frente a FSx para NetApp ONTAP.
 
 El centro de cargas de trabajo de BlueXP  incluye una calculadora de ahorro en el almacenamiento para comparar los entornos de almacenamiento de Amazon con FSx para ONTAP. Puede obtener más ahorro con o sin necesidad de proporcionar sus credenciales de AWS y personalizar los ajustes de configuración para su entorno de almacenamiento. Al proporcionar credenciales de AWS, puede seleccionar una o más instancias de Amazon Elastic Block Store, por ejemplo, y dejar que la carga de trabajo realice la comparación automáticamente. Tanto de forma manual como automática, la calculadora determina qué servicio de almacenamiento proporciona el menor coste posible para sus necesidades de almacenamiento.
 

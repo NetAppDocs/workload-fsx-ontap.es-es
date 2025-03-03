@@ -60,13 +60,13 @@ También puede cargar una configuración guardada.
 *** Para las puestas en marcha de escalado vertical, solo puede tener un par de alta disponibilidad.
 *** Para las puestas en marcha de escalado horizontal, puede tener entre dos y doce parejas de alta disponibilidad.
 +
-Para aprovisionar volúmenes de bloque iSCSI en el sistema de archivos, seleccione no más de 6 parejas de alta disponibilidad.
+Para aprovisionar volúmenes de bloque iSCSI en el sistema de archivos, seleccione un máximo de seis parejas de alta disponibilidad.
 
 
 
 .. *Tipo de implementación*: Seleccione un tipo de implementación.
 +
-*** Implantación de zona de disponibilidad única (Single-AZ): Garantiza la disponibilidad mediante la supervisión de fallos de hardware y la sustitución automática de componentes de la infraestructura en caso de fallo. Logra una alta durabilidad replicando automáticamente sus datos dentro de una zona de disponibilidad para protegerlos frente a fallos de componentes.
+*** Implementación de zona de disponibilidad única (Single-AZ): Proporciona disponibilidad mediante la supervisión de fallos de hardware y la sustitución automática de componentes de la infraestructura en caso de fallo. Logra una alta durabilidad replicando automáticamente sus datos dentro de una zona de disponibilidad para protegerlos frente a fallos de componentes.
 *** Implantación de varias zonas de disponibilidad (Multi-AZ): Proporciona disponibilidad continua a los datos incluso cuando una zona de disponibilidad no está disponible. Los sistemas de archivos Multi-AZ admiten todas las funciones de disponibilidad y durabilidad de los sistemas de archivos Single-AZ. Un sistema de archivos Multi-AZ está diseñado para cargas de trabajo de producción vital para el negocio que requieren alta disponibilidad para los datos de archivos ONTAP compartidos y necesitan almacenamiento con una replicación incorporada en las zonas de disponibilidad.
 
 
@@ -139,7 +139,7 @@ Para aprovisionar volúmenes de bloque iSCSI en el sistema de archivos, seleccio
 
 .. *Tipo de implementación*: Seleccione un tipo de implementación.
 +
-*** Implantación de zona de disponibilidad única (Single-AZ): Garantiza la disponibilidad mediante la supervisión de fallos de hardware y la sustitución automática de componentes de la infraestructura en caso de fallo. Logra una alta durabilidad replicando automáticamente sus datos dentro de una zona de disponibilidad para protegerlos frente a fallos de componentes.
+*** Implementación de zona de disponibilidad única (Single-AZ): Proporciona disponibilidad mediante la supervisión de fallos de hardware y la sustitución automática de componentes de la infraestructura en caso de fallo. Logra una alta durabilidad replicando automáticamente sus datos dentro de una zona de disponibilidad para protegerlos frente a fallos de componentes.
 *** Implantación de varias zonas de disponibilidad (Multi-AZ): Proporciona disponibilidad continua a los datos incluso cuando una zona de disponibilidad no está disponible. Los sistemas de archivos Multi-AZ admiten todas las funciones de disponibilidad y durabilidad de los sistemas de archivos Single-AZ. Un sistema de archivos Multi-AZ está diseñado para cargas de trabajo de producción vital para el negocio que requieren alta disponibilidad para los datos de archivos ONTAP compartidos y necesitan almacenamiento con una replicación incorporada en las zonas de disponibilidad.
 
 

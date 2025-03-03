@@ -11,7 +11,7 @@ summary: Detener una relación de replicación entre los volúmenes de origen y 
 
 
 [role="lead"]
-Detener una relación de replicación en la fábrica de cargas de trabajo de BlueXP . Cuando se detiene una relación de replicación, se realiza una actualización programada del volumen de origen al volumen de destino. El volumen objetivo pasará de solo lectura a lectura y escritura.
+Detener una relación de replicación en la fábrica de cargas de trabajo de BlueXP . Cuando se detiene una relación de replicación, se realiza una actualización programada del volumen de origen al volumen de destino. El volumen objetivo pasará de solo lectura a lectura/escritura.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .

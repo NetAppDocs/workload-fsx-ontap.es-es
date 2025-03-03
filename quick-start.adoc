@@ -29,7 +29,7 @@ Elija entre _BASIC_, _READ_ y _AUTOMATIC_ link:https://docs.netapp.com/us-en/wor
 Si elige operar en modo _BASIC_, no necesita ir más allá. Puedes empezar a utilizar la fábrica de cargas de trabajo para FSx para ONTAP a fin de copiar muestras de código parcialmente completadas.
 
 [role="quick-margin-para"]
-Si opera en modo _READ_ o _AUTOMATIC_, necesitará link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["agregar credenciales a una cuenta manualmente"^] seleccionar capacidades de carga de trabajo, como bases de datos e IA, y crear las políticas de IAM para asegurarse de que tiene los permisos correctos para operar en modo _READ_ o _AUTOMATIC_.
+Si opera en modo _READ_ o _AUTOMATIC_, necesitará que link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["agregar credenciales a una cuenta manualmente"^]esto incluya seleccionar capacidades de carga de trabajo, como bases de datos e IA, y crear las políticas de IAM para asegurarse de que tiene los permisos correctos para operar en modo _READ_ o _AUTOMATIC_.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"] Crear un sistema de archivos
 [role="quick-margin-para"]

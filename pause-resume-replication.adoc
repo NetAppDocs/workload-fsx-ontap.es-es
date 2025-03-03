@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: pause-resume-replication.html 
+keywords: pause replication, quiesce replication, resume replication 
+summary: Pausa y reanuda una relación de replicación para que el volumen objetivo se convierta en el volumen de origen. 
+---
+= Pausa y reanudación de una relación de replicación en la fábrica de cargas de trabajo de BlueXP 
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Pausar una relación de replicación para detener las actualizaciones de replicación programadas del volumen de origen al volumen de destino. El volumen objetivo pasará de solo lectura a lectura y escritura. Ambos volúmenes siguen compartiendo la instantánea de replicación más reciente como nueva base para una resincronización posterior.
+
+.Acerca de esta tarea
+Cuando se pausa, la relación de replicación entre el volumen de origen y el volumen objetivo sigue existiendo. Las transferencias de datos se ponen en pausa y los volúmenes pasan a ser independientes. Para volver a habilitar la transferencia de cambios del volumen de origen al volumen de destino, reanude la replicación.
+
+Cuando se reanuda una replicación, todos los cambios realizados en el volumen objetivo se deshacen, y la fábrica de cargas de trabajo de BlueXP  vuelve a habilitar la replicación. El volumen de destino pasa de lectura-escritura a solo lectura y vuelve a recibir actualizaciones del volumen de origen en el intervalo de replicación programado. Cuando se reanuda una relación de replicación, el volumen de destino se revierte a la última instantánea de replicación inicial, momento en el que se vuelve a iniciar el proceso de replicación del volumen.
+
+.Antes de empezar
+Si hace una pausa cuando una transferencia está en curso, la transferencia no se ve afectada y la relación pasa a ser “Quiescing” hasta que se complete la transferencia. Si la transferencia actual se cancela, ahora se trata de una transferencia futura y no se reiniciará.
+
+
+
+== Pausar una relación de replicación
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Relaciones de replicación*.
+. En la pestaña Relaciones de replicación, seleccione el menú de tres puntos de la relación de replicación que desea pausar.
+. Selecciona *Pausa (Quiesce)*.
+. En el cuadro de diálogo *Relación de inactividad*, seleccione *Quiesce*.
+
+
+.Resultado
+La relación se detiene y su estado se muestra como “En pausa”.
+
+
+
+== Reanude una relación de replicación pausada
+
+Cuando se reanuda una relación de replicación, se eliminan todos los cambios realizados en el volumen de destino mientras se detuvo la replicación.
+
+
+NOTE: No se conserva ningún dato que se escriba en el volumen de origen original entre la última replicación de datos y la hora en la que se deshabilitó el volumen de origen.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Relaciones de replicación*.
+. En la pestaña Relaciones de replicación, seleccione el menú de tres puntos de la relación de replicación que desea reanudar.
+. Selecciona *Reanudar*.
+. En el cuadro de diálogo Reanudar relación, seleccione *Reanudar*.
+
+
+.Resultado
+Se reanuda la relación y su estado se muestra como «Replicado».

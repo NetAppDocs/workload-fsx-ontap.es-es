@@ -4,7 +4,7 @@ permalink: use-onprem-data.html
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
 summary: Detecta y replica datos de ONTAP on-premises en la fábrica de cargas de trabajo de BlueXP  para que se puedan usar para enriquecer las bases de conocimientos de IA. 
 ---
-= Utilice datos de clúster de ONTAP locales en la fábrica de cargas de trabajo BlueXP 
+= Utilice datos de clúster de ONTAP en las instalaciones en la fábrica de cargas de trabajo BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -74,7 +74,7 @@ Ahora los datos se pueden ver en su clúster de ONTAP en las instalaciones y <<R
 
 == Replique datos de volúmenes de un clúster de ONTAP en las instalaciones
 
-Replica datos de volúmenes de un clúster ONTAP on-premises en un sistema de archivos FSx para ONTAP. Una vez replicados, los datos se pueden usar para enriquecer las bases de conocimiento de IA.
+Replica datos de volúmenes de un clúster ONTAP on-premises en un sistema de archivos FSx para ONTAP. Después de la replicación, los datos se pueden usar para enriquecer las bases de conocimiento de IA.
 
 .Antes de empezar
 * Debe detectar un clúster de ONTAP en las instalaciones para replicar sus datos del volumen.
@@ -95,7 +95,7 @@ Replica datos de volúmenes de un clúster ONTAP on-premises en un sistema de ar
 .. *Nombre del volumen*: El nombre del volumen de destino se genera automáticamente con el siguiente formato `{OriginalVolumeName}_copy`. Se puede usar el nombre de volumen generado automáticamente o introducir otro nombre de volumen.
 .. *Datos por niveles*: Seleccione la política de organización en niveles para los datos almacenados en el volumen de destino.
 +
-*** *Auto*: La política de organización en niveles predeterminada al crear un volumen utilizando la interfaz de usuario FSX for ONTAP de fábrica de cargas de trabajo. Organiza en niveles todos los datos fríos, que incluyen datos de usuario y copias Snapshot en el nivel de almacenamiento del sistema de capacidad durante un período de tiempo específico.
+*** *Auto*: La política de organización en niveles predeterminada al crear un volumen utilizando la interfaz de usuario FSX for ONTAP de fábrica de cargas de trabajo. Organiza en niveles todos los datos fríos que incluyen datos de usuario y copias Snapshot en el nivel de almacenamiento del sistema de capacidad durante un período de tiempo específico.
 *** *Solo Snapshot*: Organiza en niveles solo los datos de instantánea en el nivel de almacenamiento de la agrupación de capacidad.
 *** *Ninguno*: Mantiene todos los datos de su volumen en el nivel de almacenamiento primario.
 *** *Todo*: Marca todos los datos del usuario y los datos de instantánea como fríos y los almacena en el nivel de almacenamiento del grupo de capacidad.

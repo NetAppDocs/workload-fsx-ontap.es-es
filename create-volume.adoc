@@ -16,7 +16,7 @@ Después de configurar el sistema de archivos FSx para ONTAP, cree FSx para ONTA
 .Acerca de esta tarea
 FSX para volúmenes de ONTAP son recursos virtuales que se utilizan para agrupar datos, determinar cómo se almacenan los datos y determinar el tipo de acceso a ellos. Los volúmenes no consumen capacidad de almacenamiento del sistema de archivos. Los datos que se almacenan en un volumen consumen principalmente almacenamiento SSD. Según la política de organización en niveles del volumen, los datos también pueden consumir almacenamiento en el pool de capacidad. Se establece el tamaño de un volumen al crearlo y se puede cambiar su tamaño más adelante.
 
-Se pueden usar los siguientes protocolos para los volúmenes:
+Los siguientes protocolos pueden usarse para los volúmenes:
 
 * CIFS: Protocolo de almacenamiento de ficheros para sistemas operativos Windows
 * NFS: Protocolo de almacenamiento de ficheros para sistemas operativos Unix
@@ -30,7 +30,7 @@ Revise los siguientes requisitos previos antes de crear un volumen:
 * Debe tener una máquina virtual de almacenamiento.
 * Para acceder al protocolo, complete lo siguiente:
 +
-** Para configurar el acceso al volumen, debe link:manage-links.html["asocie un enlace"]. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
+** Para configurar el acceso al volumen, debe link:manage-links.html["asocie un enlace"]. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Después de asociar el enlace, vuelva a esta operación.
 ** Tiene que configurar el acceso para el protocolo que seleccione, ya sea CIFS, NFS o iSCSI.
 
 
@@ -97,7 +97,7 @@ Si seleccionó una política de exportación existente, escriba un nuevo nombre 
 
 
 
-*** *Acceso en bloque*: Permite a los hosts que ejecutan aplicaciones empresariales críticas acceder al volumen utilizando el protocolo iSCSI. El acceso en bloque solo está disponible cuando la implementación de escalado horizontal del sistema de archivos cuenta con 6 pares de alta disponibilidad o menos.
+*** *Acceso en bloque*: Permite a los hosts que ejecutan aplicaciones empresariales críticas acceder al volumen utilizando el protocolo iSCSI. El acceso en bloque solo está disponible cuando la implementación de escalado horizontal del sistema de archivos cuenta con seis pares de alta disponibilidad o menos.
 +
 Complete los siguientes campos para configurar el acceso en bloque al volumen.
 
@@ -122,7 +122,7 @@ Complete los siguientes campos para configurar el acceso en bloque al volumen.
 +
 La eficiencia del almacenamiento se logra utilizando las funciones de deduplicación y compresión de ONTAP. La deduplicación elimina los bloques de datos duplicados. La compresión de datos comprime los bloques de datos para reducir la cantidad de almacenamiento físico necesaria.
 
-.. *Archivos inmutables*: Esta función, también conocida como SnapLock, está desactivada por defecto. La habilitación de archivos inmutables impide que se eliminen o sobrescriban los datos durante un periodo de tiempo determinado. Habilitar esta función solo es posible durante la creación del volumen. Una vez habilitada, esta función no puede deshabilitarse. Esta es una función premium de FSx para ONTAP que tiene un coste adicional. Para obtener más información, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["Cómo funciona SnapLock"^]en la documentación de Amazon FSx para NetApp ONTAP.
+.. *Archivos inmutables*: Esta función, también conocida como SnapLock, está desactivada por defecto. La habilitación de archivos inmutables impide que se eliminen o sobrescriban los datos durante un periodo de tiempo determinado. Habilitar esta función solo es posible durante la creación del volumen. Una vez habilitada la función, no puede deshabilitarse. Esta es una función premium de FSx para ONTAP que tiene un coste adicional. Para obtener más información, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["Cómo funciona SnapLock"^]en la documentación de Amazon FSx para NetApp ONTAP.
 +
 Al habilitar la función de archivos inmutables, los archivos de este volumen se confirman de forma permanente en un estado WORM inmutable (escritura única lectura múltiple).
 
@@ -135,7 +135,7 @@ Modos de retención:: Puede seleccionar entre dos modos de retención: _Enterpri
 
 
 --
-Período de retención:: El período de retención tiene dos valores: _Retention policy_ y _retention period_. La _retention policy_ define cuánto tiempo se retendrán los archivos en un estado WORM inmutable. Puede especificar su propia política de retención o utilizar la política de retención predeterminada (sin especificar), que es de 30 años. Los periodos de retención mínimo y máximo definen el intervalo de tiempo permitido para bloquear archivos.
+Período de retención:: El período de retención tiene dos valores: _Retention policy_ y _retention period_. La _retention policy_ define cuánto tiempo se retendrán los archivos en un estado WORM inmutable. Puede especificar su propia política de retención o utilizar la política de retención predeterminada (no especificada), que es de 30 años. Los periodos de retención mínimo y máximo definen el intervalo de tiempo permitido para bloquear archivos.
 +
 --
 NOTA:: Incluso después de que caduque el período de retención, no es posible modificar un ARCHIVO WORM. Solo puede eliminarlo o establecer un nuevo período de retención para volver a activar la protección WORM.
@@ -148,8 +148,8 @@ Modo de adición de volúmenes:: No es posible modificar los datos existentes en
 --
 .Pasos para archivos inmutables
 ... Seleccione esta opción para habilitar *archivos inmutables con tecnología SnapLock*.
-... Haga clic en el cuadro para aceptar y continuar.
-... Haga clic en *Activar*.
+... Seleccione la casilla para aceptar y continuar.
+... Selecciona *Activar*.
 ... *Modo de retención*: Selecciona el modo *Enterprise* o *Compliance*.
 ... *Período de retención*:
 +

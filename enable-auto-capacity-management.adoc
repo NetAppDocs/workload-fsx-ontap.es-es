@@ -14,12 +14,16 @@ summary: Al habilitar esta función, la fábrica de cargas de trabajo puede aña
 Al habilitar esta función, la fábrica de cargas de trabajo de BlueXP  puede añadir automáticamente almacenamiento incremental a un sistema de archivos FSx for ONTAP a medida que las necesidades de capacidad cambien con el tiempo.
 
 .Acerca de esta tarea
+Un análisis del sistema de archivos FSx para ONTAP se realiza cada 30 minutos para determinar si es necesario añadir almacenamiento incremental y comprobar si hay inodos de volúmenes disponibles o el número máximo de archivos y carpetas en un volumen, de modo que su recuento aumente según los umbrales de gestión automática de capacidad configurados.
+
 Solo una cuenta puede administrar esta función.
 
 La cantidad máxima de capacidad de almacenamiento en SSD para todos los sistemas de archivos FSx para ONTAP es de 524.288 GiB. Para solicitar un aumento de la cuota, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Cuotas"^] la documentación de AWS FSx para NetApp ONTAP.
 
 .Antes de empezar
 Debe tener credenciales con permisos _Automate_ en la fábrica de carga de trabajo para completar esta tarea.
+
+Para asegurarse de que los inodos de volumen aumenten junto con la capacidad de almacenamiento, debe link:manage-links.html["asocie un enlace"]. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Después de asociar el enlace, vuelva a esta operación.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -40,3 +44,6 @@ También puede desactivar la función. Si necesita aumentar la capacidad del sis
 
 . Seleccione *aplicar*.
 
+
+.Resultado
+El análisis del sistema de archivos se realiza cada 30 minutos para determinar si el sistema de archivos necesita capacidad adicional.

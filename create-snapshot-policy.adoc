@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-snapshot-policy.html 
 keywords: create 
-summary: Crear una política de copias Snapshot para FSx para ONTAP Volumes en la fábrica de cargas de trabajo de BlueXP . Una política de Snapshot define la manera en que el sistema crea copias de Snapshot para un volumen. 
+summary: Crear una política de copias Snapshot personalizada para una máquina virtual de almacenamiento en la fábrica de cargas de trabajo de BlueXP . 
 ---
-= Crear una política de snapshots para FSx para ONTAP Volumes
+= Crear una política de copias Snapshot para las máquinas virtuales de almacenamiento en la fábrica de cargas de trabajo de BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Crear una política de snapshots personalizada para FSx para ONTAP Volumes en la fábrica de cargas de trabajo de BlueXP . Una política de Snapshot define la manera en que el sistema crea copias de Snapshot para un volumen.
+Cree una política de snapshots personalizada para máquinas virtuales de almacenamiento en la fábrica de cargas de trabajo de BlueXP . Una política de Snapshot define la forma en que el sistema crea snapshots para una máquina virtual de almacenamiento. Puede crear una política de copias Snapshot para una máquina virtual de almacenamiento en un sistema de archivos FSx para ONTAP. También puede compartir la política en varios equipos virtuales de almacenamiento.
 
 .Acerca de esta tarea
 Puede crear una política de Snapshot personalizada que difiera de las tres políticas de Snapshot incorporadas para FSx para ONTAP:
@@ -39,13 +39,12 @@ La personalización de una política le permite especificar cuándo se deben cre
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En *Almacenamiento*, selecciona *Ir al inventario de almacenamiento*.
 . En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*.
-. En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. En la pestaña *Volúmenes*, seleccione el menú de tres puntos para proteger el volumen con instantáneas programadas.
-. Seleccione *Acciones de protección de datos*, *Snapshots* y luego *Administrar políticas de instantáneas*.
-. En la página de administración de políticas de Snapshot, seleccione *Crear una nueva política de instantáneas*.
+. En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
+. En la pestaña * Storage VMs*, seleccione el menú de tres puntos para el volumen a proteger con instantáneas programadas, luego *Advanced Actions* y luego *Manage snapshot policies*.
+. En la página de administración de políticas de Snapshot, seleccione *Crear política de instantáneas*.
 . En el campo *Nombre de la política de instantáneas*, introduzca un nombre para la política de instantáneas.
-. Opcional: En el campo *Descripción*, introduzca una descripción para la política de instantáneas.
-. En *Programar*, seleccione cuándo crear instantáneas. Por ejemplo, cada minuto o cada hora.
+. De forma opcional, introduzca una descripción para la política de Snapshot.
+. En *Programación de políticas y copias*, seleccione cuándo crear instantáneas. Por ejemplo, cada minuto o cada hora.
 +
 Puede seleccionar más de una frecuencia.
 
@@ -56,7 +55,15 @@ El número máximo de copias es 1.023.
 . Opcional: En *convención de nomenclatura*, ingrese un *Prefijo* para la política.
 . *La etiqueta de retención* se rellena automáticamente.
 +
-Esta etiqueta hace referencia a la etiqueta de SnapMirror, o replicación, que se usa para seleccionar solo snapshots especificados para la replicación del sistema de archivos de origen al de destino.
+Esta etiqueta hace referencia a la etiqueta SnapMirror, o replicación que se utiliza para seleccionar solo instantáneas especificadas para la replicación del sistema de archivos de origen al de destino.
 
-. Seleccione *aplicar*.
+. Opcional: Habilita *instantáneas inmutables* para cualquier horario que necesites, establece el *Período de retención* para cada horario y acepta la sentencia para continuar.
++
+Al habilitar snapshots inmutables, todas las snapshots de esta política de snapshots se bloquean para evitar que se eliminen durante el período de retención.
 
+. *Compartir entre VM de almacenamiento*: Habilitado por defecto. Cuando está habilitada, la política de Snapshot se comparte en todas las máquinas virtuales de almacenamiento del sistema de archivos. Deshabilite para crear una política de snapshots para una sola máquina virtual de almacenamiento.
+. Seleccione *Crear*.
+
+
+.Resultado
+Se ha creado la política de Snapshot.

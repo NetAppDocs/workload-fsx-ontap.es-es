@@ -16,7 +16,7 @@ La gestión del recurso compartido CIFS de un volumen en la fábrica de cargas d
 .Antes de empezar
 Antes de comenzar, haga lo siguiente:
 
-* Para gestionar recursos compartidos CIFS, debe link:manage-links.html["asocie un enlace"]. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
+* Para gestionar recursos compartidos CIFS, debe link:manage-links.html["asocie un enlace"]. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Después de asociar el enlace, vuelva a esta operación.
 * Determine los usuarios o grupos a los que dar acceso y el nivel de permisos para otorgarlos.
 
 
@@ -62,7 +62,7 @@ Siga los pasos para cambiar la configuración de los recursos compartidos CIFS d
 . En la página Manage CIFS Share, pase el ratón sobre un recurso compartido CIFS y seleccione el icono de lápiz para realizar cambios.
 . Cambie los permisos de acceso CIFS o los usuarios o los grupos para darles permisos.
 +
-Los cambios pueden hacer que los usuarios o grupos actuales pierdan el acceso al recurso compartido CIFS.
+Los cambios pueden provocar que los usuarios o grupos actuales pierdan el acceso al recurso compartido CIFS.
 
 . Seleccione *Aplicar* para guardar los cambios.
 

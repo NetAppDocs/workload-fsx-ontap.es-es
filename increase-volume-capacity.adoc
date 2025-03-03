@@ -19,7 +19,7 @@ De manera opcional, puede link:edit-volume-autogrow.html["habilite la función c
 Para un LUN de iSCSI, esta operación aumenta el tamaño del LUN del host. Después de aumentar la capacidad, siga el procedimiento proporcionado por el sistema operativo del host para detectar el nuevo tamaño de la LUN y expandir el sistema de archivos de la LUN.
 
 .Antes de empezar
-Para aumentar la capacidad del volumen, debe link:manage-links.html["asocie un enlace"]. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
+Para aumentar la capacidad del volumen, debe link:manage-links.html["asocie un enlace"]. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Después de asociar el enlace, vuelva a esta operación.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
