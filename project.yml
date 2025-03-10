@@ -155,8 +155,6 @@ sidebar:
         - title: Actualización manual de datos de instantáneas en una relación de
             replicación
           url: "/update-snapshot-replication.html"
-        - title: Replique un volumen de protección de datos
-          url: "/cascade-replication.html"
         - title: Pausa y reanuda una relación de replicación
           url: "/pause-resume-replication.html"
         - title: Detener una relación de replicación
