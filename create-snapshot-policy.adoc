@@ -26,6 +26,7 @@ De forma predeterminada, cada volumen está asociado con la política de Snapsho
 La personalización de una política le permite especificar cuándo se deben crear snapshots, cuántas copias se deben conservar y cómo asignarles un nombre.
 
 .Antes de empezar
+* Una vez creada una política de Snapshot, su asociación con las máquinas virtuales de almacenamiento no puede modificarse, pero siempre puede añadir o eliminar la política de los volúmenes.
 * Tenga en cuenta lo siguiente acerca de la capacidad de Snapshot antes de usar Snapshot:
 +
 ** En la mayoría de los conjuntos de datos, una capacidad adicional del 20 % es suficiente para mantener snapshots hasta cuatro semanas. A medida que los datos envejecen, es menos probable que se utilice para restauraciones.

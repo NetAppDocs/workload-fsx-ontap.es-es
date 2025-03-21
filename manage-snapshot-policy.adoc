@@ -45,32 +45,6 @@ Se actualiza la política de instantáneas.
 
 
 
-== Asigne una política de Snapshot a un volumen
-
-Es posible asignar una política de Snapshot a un solo volumen para crear Snapshot programadas para el volumen.
-
-.Antes de empezar
-Debe link:manage-links.html["asocie un enlace"]asignar una política de Snapshot. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Después de asociar el enlace, vuelva a esta operación.
-
-.Pasos
-. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En *Almacenamiento*, selecciona *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos que contiene el volumen al que asignar una política de instantáneas y luego selecciona *Administrar*.
-. En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
-. En la pestaña *VM de almacenamiento*, seleccione el menú de tres puntos para la VM de almacenamiento que contiene el volumen a proteger con instantáneas programadas, luego *Acciones avanzadas* y luego *Administrar políticas de instantáneas*.
-. En la página de administración de políticas Snapshot, seleccione el menú de tres puntos de la política de instantáneas y, a continuación, seleccione *Asignar política al volumen*.
-. En el cuadro de diálogo Assign snapshot policy, seleccione una política de Snapshot para asignar al volumen y revise la programación de políticas.
-+
-Si la política contiene instantáneas inmutables y desea utilizarlas, acepte la declaración.
-
-. Selecciona *Asignar*.
-
-
-.Resultado
-La política de Snapshot está asignada al volumen.
-
-
-
 == Habilite instantáneas inmutables
 
 Bloquee las snapshots para evitar que se eliminen durante el período de retención.
@@ -100,11 +74,60 @@ La instantánea del volumen está bloqueada.
 
 
 
+== Asigne una política de Snapshot a un volumen
+
+Es posible asignar una política de Snapshot a un solo volumen para crear Snapshot programadas para el volumen.
+
+.Antes de empezar
+Debe link:manage-links.html["asocie un enlace"]asignar una política de Snapshot. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Después de asociar el enlace, vuelva a esta operación.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En *Almacenamiento*, selecciona *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos que contiene el volumen al que asignar una política de instantáneas y luego selecciona *Administrar*.
+. En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
+. En la pestaña *VM de almacenamiento*, seleccione el menú de tres puntos para la VM de almacenamiento que contiene el volumen a proteger con instantáneas programadas, luego *Acciones avanzadas* y luego *Administrar políticas de instantáneas*.
+. En la página de administración de políticas Snapshot, seleccione el menú de tres puntos de la política de instantáneas y, a continuación, seleccione *Asignar política al volumen*.
+. En el cuadro de diálogo Assign snapshot policy, seleccione una política de Snapshot para asignar al volumen y revise la programación de políticas.
++
+Si la política contiene instantáneas inmutables y desea utilizarlas, acepte la declaración.
+
+. Selecciona *Asignar*.
+
+
+.Resultado
+La política de Snapshot está asignada al volumen.
+
+
+
+== Quite una política de Snapshot de un volumen
+
+Quite una política de Snapshot de un volumen porque ya no desea que las Snapshot del volumen o porque desea eliminar una política de Snapshot que está asignada a varios volúmenes. A <<Elimine una política de Snapshot,elimine una política de snapshot>>que está asignado a más de un volumen, debe eliminarlo manualmente de todos los volúmenes.
+
+.Antes de empezar
+Para quitar una política de Snapshot, debelink:manage-links.html["asocie un enlace"]. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Después de asociar el enlace, vuelva a esta operación.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En *Almacenamiento*, selecciona *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos que contiene el volumen al que asignar una política de instantáneas y luego selecciona *Administrar*.
+. En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
+. En la pestaña *VM de almacenamiento*, seleccione el menú de tres puntos para la VM de almacenamiento que contiene el volumen a proteger con instantáneas programadas, luego *Acciones avanzadas* y luego *Administrar políticas de instantáneas*.
+. En la página de administración de políticas Snapshot, seleccione el menú de tres puntos de la política de instantáneas y, a continuación, seleccione *Asignar política al volumen*.
+. En el cuadro de diálogo Asignar política de instantáneas, seleccione *Ninguno* para eliminar la política de instantáneas.
+. Selecciona *Asignar*.
+
+
+.Resultado
+Se elimina la política de Snapshot del volumen.
+
+
+
 == Elimine una política de Snapshot
 
 Elimine una política de Snapshot cuando ya no la necesite.
 
-No es posible eliminar una política de snapshot que esté asignada a más de un volumen.
+Cuando se asigna una política de Snapshot a más de un volumen, debe configurarse de forma manual <<Quite una política de Snapshot de un volumen,retírelo>> desde todos los volúmenes para eliminar la política de Snapshot. Como alternativa, también es posible <<Asigne una política de Snapshot a un volumen,asigne una política de snapshot diferente>> acceder a los volúmenes.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .

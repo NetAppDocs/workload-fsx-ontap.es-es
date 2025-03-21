@@ -75,6 +75,18 @@ Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.ht
 * No se pueden eliminar las snapshots.
 * Al replicar un sistema de archivos, todos los volúmenes del sistema de archivos usan la misma política de replicación.
 * Para relaciones de replicación de retención a largo plazo, solo se puede restaurar la última copia Snapshot.
+* Las siguientes funciones no son compatibles con instantáneas inmutables:
++
+** Grupos de consistencia
+** FabricPool
+** Volúmenes de FlexCache
+** SMTape
+** SnapMirror síncrono activo
+** Reglas de políticas de SnapMirror con el parámetro -schedule
+** SnapMirror síncrono
+** Movilidad de datos de SVM (se usa para migrar o reubicar una SVM desde un clúster de origen a un clúster de destino)
+
+
 
 
 
