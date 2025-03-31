@@ -38,8 +38,9 @@ Para asegurarse de que los inodos de volumen aumenten junto con la capacidad de 
 +
 También puede desactivar la función. Si necesita aumentar la capacidad del sistema de archivos, primero debe deshabilitar la gestión automática de capacidad.
 
-.. *Umbral de capacidad*: Ingresa el tamaño máximo para el sistema de archivos FSX for ONTAP.
-.. *Incrementos de aumento de capacidad*: Introduzca el porcentaje para aumentar la capacidad de forma incremental.
+.. * Aumento de umbral*: Ingrese el tamaño máximo para el sistema de archivos FSX for ONTAP.
+.. *Incremento incremental*: Introduzca el porcentaje para aumentar la capacidad de forma incremental.
+.. Opcional: Habilite la gestión automática de inodos para garantizar que la capacidad del archivo por volumen aumente aumentando el número de inodos (archivos) hasta el límite permitido.
 
 
 . Seleccione *aplicar*.

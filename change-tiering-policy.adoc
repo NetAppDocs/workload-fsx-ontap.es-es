@@ -27,12 +27,12 @@ FSX para ONTAP tiene dos niveles para almacenar datos de volúmenes:
 Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html#storage-tiers["Gestión de la capacidad de almacenamiento"^] en la documentación de AWS para FSx para NetApp ONTAP para obtener más información sobre los niveles de almacenamiento.
 
 .Antes de empezar
-Revise las cuatro políticas de organización en niveles disponibles antes de cambiar la política de organización en niveles.
+Revise las políticas de organización en niveles disponibles antes de cambiar la política de organización en niveles.
 
-* *Auto*: Organiza en niveles todos los datos fríos que incluyen datos de usuario y instantáneas al nivel de almacenamiento de la agrupación de capacidad durante un período de tiempo específico.
-* *Solo Snapshot*: Organiza en niveles solo los datos de instantánea en el nivel de almacenamiento de la agrupación de capacidad.
-* *Ninguno*: Mantiene todos los datos de su volumen en el nivel de almacenamiento primario.
-* *Todo*: Marca todos los datos del usuario y los datos de instantánea como fríos y los almacena en el nivel de almacenamiento del grupo de capacidad.
+* *Balanced (Auto)*: Política de organización en niveles predeterminada al crear un volumen usando la interfaz de usuario. Mantiene los datos a los que se accede con frecuencia en el nivel de almacenamiento de unidades de estado sólido y organiza en niveles las instantáneas y los datos a los que se accede con poca frecuencia en el nivel de almacenamiento del pool de capacidad una vez que finaliza el período de enfriamiento. Recomendado para cargas de trabajo principales generales.
+* *Cost-Optimized (All)*: Organiza en niveles todas las instantáneas y los datos en el nivel de almacenamiento del pool de capacidad. Recomendado para destinos secundarios.
+* *Rendimiento optimizado (solo instantáneas)*: Organiza en niveles solo los datos de instantánea en el nivel de almacenamiento de la agrupación de capacidad. Se recomienda para cargas de trabajo de baja latencia, como bases de datos críticas.
+* *Ninguno*: Mantiene los datos de volumen en el nivel de almacenamiento SSD, evitando que se muevan al nivel de almacenamiento del pool de capacidad.
 
 
 Tenga en cuenta que algunas políticas de organización en niveles tienen asociado un período de enfriamiento mínimo que establece el tiempo, o _días de enfriamiento_, los datos de usuario en un volumen deben permanecer inactivos para que los datos se consideren inactivos y se muevan al nivel de almacenamiento del pool de capacidad. El período de enfriamiento comienza cuando los datos se escriben en el disco.
@@ -44,12 +44,12 @@ Tenga en cuenta que algunas políticas de organización en niveles tienen asocia
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
 . En la pestaña Volumes, seleccione el menú de tres puntos del volumen para cambiar la política de organización en niveles.
 . Selecciona *Acciones avanzadas*, luego *Cambiar política de niveles*.
-. En la página Change Tiering policy, seleccione una de las siguientes políticas de organización en niveles:
+. En la página Change Tiering policy, seleccione para copiar la política de organización en niveles del volumen de origen o seleccione una de las siguientes políticas de organización en niveles:
 +
-** *Auto*: Ingrese el número de días de enfriamiento.
-** *Solo instantánea*: Introduzca el número de días de enfriamiento.
+** *Balanced (Auto)*: Introduce el número de días de enfriamiento.
+** *Costo optimizado (todos)*
+** *Rendimiento optimizado (solo instantáneas)*: Ingrese el número de días de enfriamiento.
 ** *Ninguno*
-** *Todo*
 
 
 . Seleccione *aplicar*.

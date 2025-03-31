@@ -198,7 +198,7 @@ NOTE: Las horas de las instantáneas se basan en la zona horaria del sistema de 
 
 .. *Política de niveles*: Seleccione la política de organización en niveles para los datos almacenados en el volumen.
 +
-Auto es la política predeterminada de organización en niveles cuando se crea un volumen con la interfaz de usuario de. Para obtener más información sobre las políticas de organización en niveles de volúmenes, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^] la documentación de AWS FSx para NetApp ONTAP.
+_Balanced (Auto)_ es la política de organización en niveles predeterminada al crear un volumen con la consola de cargas de trabajo de fábrica. Para obtener más información sobre las políticas de organización en niveles de volúmenes, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^] la documentación de AWS FSx para NetApp ONTAP. Tenga en cuenta que la fábrica de carga de trabajo utiliza nombres basados en casos de uso en la consola de fábrica de cargas de trabajo para las políticas de organización en niveles e incluye los nombres de las políticas de organización en niveles de FSx para ONTAP entre paréntesis.
 
 
 
