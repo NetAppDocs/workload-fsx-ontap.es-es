@@ -14,7 +14,7 @@ summary: Mediante la fábrica de cargas de trabajo de BlueXP  puedes crear un s
 Mediante la fábrica de cargas de trabajo de BlueXP  puedes crear un sistema de archivos FSx para ONTAP para añadir y gestionar volúmenes y servicios de datos adicionales.
 
 .Acerca de esta tarea
-Al crear un sistema de archivos, se crea una máquina virtual de almacenamiento.
+Se crea una máquina virtual de almacenamiento y un grupo de seguridad como parte de la creación del sistema de archivos.
 
 .Antes de empezar
 Antes de crear tu sistema de archivos FSx for ONTAP, necesitarás:
@@ -150,6 +150,9 @@ Para aprovisionar volúmenes de bloque iSCSI en el sistema de archivos, seleccio
 +
 .. *Región y VPC*: Seleccione la región y VPC para el sistema de archivos.
 .. *Grupo de seguridad*: Crea o utiliza un grupo de seguridad existente.
++
+Para obtener un nuevo grupo de seguridad, consulte <<Detalles del grupo de seguridad,detalles del grupo de seguridad>>para obtener una descripción de los protocolos, puertos y roles del grupo de seguridad.
+
 .. *Zonas de disponibilidad*: Seleccione zonas de disponibilidad y subredes.
 +
 *** Para el nodo de configuración de clúster 1: Seleccione una zona de disponibilidad y una subred.
@@ -207,6 +210,119 @@ Si se va a unir a un AD autogestionado, utilice el nombre del grupo en su AD. El
 Si creaste el sistema de archivos, ahora puedes ver el sistema de archivos FSX for ONTAP en la página *Inventario*.
 
 --
+====
+
+
+== Detalles del grupo de seguridad
+
+La siguiente tabla proporciona detalles de grupo de seguridad, incluidos protocolos, puertos y roles.
+
+[]
+====
+[cols="2,2,4a"]
+|===
+| Protocolo | Puerto | Función 
+
+
+| SSH | 22  a| 
+Acceso SSH a la dirección IP de administración del clúster LIF o una LIF de gestión de nodos
+
+
+
+| TCP | 80  a| 
+Acceso de la página web a la dirección IP de la LIF de administración del clúster
+
+
+
+| TCP/UDP | 111  a| 
+Llamada a procedimiento remoto para NFS
+
+
+
+| TCP/UDP | 135  a| 
+Llamada a procedimiento remoto para CIFS
+
+
+
+| UDP | 137  a| 
+Resolución de nombres NetBIOS para CIFS
+
+
+
+| TCP/UDP | 139  a| 
+Sesión de servicio NetBIOS para CIFS
+
+
+
+| TCP | 443  a| 
+Acceso de la API REST de ONTAP a la dirección IP de la LIF de gestión del clúster o una LIF de gestión de SVM
+
+
+
+| TCP | 445  a| 
+Microsoft SMB/CIFS sobre TCP con trama NetBIOS
+
+
+
+| TCP/UDP | 635  a| 
+Montaje NFS
+
+
+
+| TCP | 749  a| 
+Kerberos
+
+
+
+| TCP/UDP | 2049  a| 
+Daemon del servidor NFS
+
+
+
+| TCP | 3260  a| 
+Acceso iSCSI mediante la LIF de datos iSCSI
+
+
+
+| TCP/UDP | 4045  a| 
+Daemon de bloqueo NFS
+
+
+
+| TCP/UDP | 4046  a| 
+Supervisor de estado de red para NFS
+
+
+
+| UDP | 4049  a| 
+Protocolo de cuota NFS
+
+
+
+| TCP | 10000  a| 
+Protocolo de gestión de datos de red (NDMP) y comunicación entre clústeres de NetApp SnapMirror
+
+
+
+| TCP | 11104  a| 
+Gestión de la comunicación entre clústeres de NetApp SnapMirror
+
+
+
+| TCP | 11105  a| 
+Transferencia de datos de SnapMirror mediante LIF de interconexión de clústeres
+
+
+
+| TCP/UDP | 161-162  a| 
+Protocolo simple de gestión de red (SNMP)
+
+
+
+| Todos los ICMP | Todo  a| 
+Hacer ping a la instancia
+
+|===
 ====
 .El futuro
 Con un sistema de archivos en tu inventario de almacenamiento, puedes link:create-volume.html["cree volúmenes"]hacer que tu sistema de archivos FSx for ONTAP y configurar link:data-protection-overview.html["protección de datos"] tus recursos.
