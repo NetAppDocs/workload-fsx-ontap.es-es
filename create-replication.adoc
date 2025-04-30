@@ -55,6 +55,17 @@ Puede replicar un volumen de origen (lectura/escritura) o un volumen de protecci
 
 
 *** Otros
++
+Además, la selección de casos de uso determina la política de replicación o la política de SnapMirror (ONTAP). Los términos utilizados para describir las políticas de replicación provienen de link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["Documentación de ONTAP 9"^].
+
++
+**** Para la migración y otro tipo, la política de replicación se denomina _MirrorAllSnapshots_. _MirrorAllSnapshots_ es una política asíncrona para reflejar todas las instantáneas y el último sistema de archivos activo.
+**** Para la recuperación ante desastres caliente, fría o de archivado, la política de replicación se denomina _MirrorAndVault_. _MirrorAndVault_ es una política asíncrona y de almacén para reflejar el último sistema de archivos activo y las copias snapshot diarias y semanales.
++
+Para todos los casos de uso, si habilita Snapshot para la retención a largo plazo, la política de replicación predeterminada es _MirrorAndVault_.
+
+
+
 
 
 .. *Política de niveles*: Seleccione la política de organización en niveles para los datos almacenados en el volumen de destino. La política de organización en niveles se establece de forma predeterminada en la política de organización en niveles recomendada para el caso de uso seleccionado.
@@ -127,6 +138,17 @@ NOTE: Se admite una vez la replicación de un volumen de protección de datos.
 
 
 *** Otros
++
+Además, la selección de casos de uso determina la política de replicación o la política de SnapMirror (ONTAP). Los términos utilizados para describir las políticas de replicación provienen de link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["Documentación de ONTAP 9"^].
+
++
+**** Para la migración y otro tipo, la política de replicación se denomina _MirrorAllSnapshots_. _MirrorAllSnapshots_ es una política asíncrona para reflejar todas las instantáneas y el último sistema de archivos activo.
+**** Para la recuperación ante desastres caliente, fría o de archivado, la política de replicación se denomina _MirrorAndVault_. _MirrorAndVault_ es una política asíncrona y de almacén para reflejar el último sistema de archivos activo y las copias snapshot diarias y semanales.
++
+Para todos los casos de uso, si habilita Snapshot para la retención a largo plazo, la política de replicación predeterminada es _MirrorAndVault_.
+
+
+
 
 
 .. *Política de niveles*: Seleccione la política de organización en niveles para los datos almacenados en el volumen de destino. La política de organización en niveles se establece de forma predeterminada en la política de organización en niveles recomendada para el caso de uso seleccionado.

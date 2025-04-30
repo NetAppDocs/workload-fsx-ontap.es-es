@@ -1669,4 +1669,9 @@
   <block id="fbabb5b35538d91f91e0e1d4f56ff5a4" category="paragraph">Hacer ping a la instancia</block>
   <block id="70b2c09de9e176a879c840cb014b8c20" category="inline-link-macro">otorgar permisos _read_</block>
   <block id="e395c91c5c84949d52ffb229805b2f5f" category="paragraph">Para que la fábrica de cargas de trabajo detecte los entornos de almacenamiento de Amazon Elastic Block Store (EBS), Elastic File System (EFS) y FSx para Windows File Server en su cuenta de AWS, asegúrese de hacerlo  en su cuenta <block ref="aa999e6a1b84a9d79249d89f4acbbea1" category="inline-link-macro-rx"></block>de AWS.</block>
+  <block id="c09b5be4c2da04f4040eef1878f258aa" category="inline-link-macro">Documentación de ONTAP 9</block>
+  <block id="3611f3afb9bd4ea20ff757fe165aa678" category="paragraph">Además, la selección de casos de uso determina la política de replicación o la política de SnapMirror (ONTAP). Los términos utilizados para describir las políticas de replicación provienen de <block ref="20dfa0e16eac8597602ade67a04436fd" category="inline-link-macro-rx"></block>.</block>
+  <block id="b5b213ff8da55d939d5b26b2acad4e23" category="list-text">Para la migración y otro tipo, la política de replicación se denomina _MirrorAllSnapshots_. _MirrorAllSnapshots_ es una política asíncrona para reflejar todas las instantáneas y el último sistema de archivos activo.</block>
+  <block id="5fc1e1e4cb63004511e44d8fbb5b04a2" category="list-text">Para la recuperación ante desastres caliente, fría o de archivado, la política de replicación se denomina _MirrorAndVault_. _MirrorAndVault_ es una política asíncrona y de almacén para reflejar el último sistema de archivos activo y las copias snapshot diarias y semanales.</block>
+  <block id="a1eefe5e0a806535abe58cb68a54c9d1" category="paragraph">Para todos los casos de uso, si habilita Snapshot para la retención a largo plazo, la política de replicación predeterminada es _MirrorAndVault_.</block>
 </blocks>
