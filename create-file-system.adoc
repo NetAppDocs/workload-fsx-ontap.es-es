@@ -77,7 +77,10 @@ Para aprovisionar volúmenes de bloque iSCSI en el sistema de archivos, seleccio
 . En *Detalles del sistema de archivos*, proporcione lo siguiente:
 +
 .. *Capacidad de almacenamiento SSD*: Ingrese la capacidad de almacenamiento y seleccione la unidad de capacidad de almacenamiento.
-.. *Credenciales de ONTAP*: Ingrese su nombre de usuario y contraseña de ONTAP.
+.. *Credenciales ONTAP*: Opcional. Introduzca su nombre de usuario y contraseña de ONTAP. La contraseña se puede establecer ahora o más tarde.
++
+Si el usuario que proporcione no es el usuario de fsxadmin, y más tarde necesita restablecer la contraseña de fsxadmin, podrá hacerlo desde la consola de AWS.
+
 .. *Configuración SMB/CIFS*: Opcional. Si piensa utilizar el protocolo SMB/CIFS para acceder a los volúmenes, debe configurar Active Directory para la máquina virtual de almacenamiento durante la creación del sistema de archivos. Proporcione los siguientes detalles para la máquina virtual de almacenamiento que se ha creado para este sistema de archivos.
 +
 ... *Dominio de Active Directory para unirse*: Introduzca el nombre de dominio completo (FQDN) para el Active Directory.
@@ -169,8 +172,11 @@ Para obtener un nuevo grupo de seguridad, consulte <<Detalles del grupo de segur
 .. *Capacidad de almacenamiento SSD*: Ingrese la capacidad de almacenamiento y seleccione la unidad de capacidad de almacenamiento.
 .. *IOPS provisionadas*: Selecciona *Automático* o *Provisioned por el usuario*.
 .. * Capacidad de rendimiento por par de alta disponibilidad*: Seleccione la capacidad de rendimiento por par de alta disponibilidad.
-.. *Credenciales de ONTAP*: Ingrese su nombre de usuario y contraseña de ONTAP.
-.. *Storage VM Credentials*: Introduzca su nombre de usuario. La contraseña puede ser específica de este sistema de archivos o puede utilizar la misma contraseña introducida para las credenciales de ONTAP.
+.. *Credenciales ONTAP*: Opcional. Introduzca su nombre de usuario y contraseña de ONTAP. La contraseña se puede establecer ahora o más tarde.
++
+Si el usuario que proporcione no es el usuario de fsxadmin, y más tarde necesita restablecer la contraseña de fsxadmin, podrá hacerlo desde la consola de AWS.
+
+.. *Storage VM Credentials*: Opcional. Introduzca su nombre de usuario. La contraseña puede ser específica de este sistema de archivos o puede utilizar la misma contraseña introducida para las credenciales de ONTAP. La contraseña se puede establecer ahora o más tarde.
 .. *Configuración SMB/CIFS*: Opcional. Si piensa utilizar el protocolo SMB/CIFS para acceder a los volúmenes, debe configurar Active Directory para la máquina virtual de almacenamiento durante la creación del sistema de archivos. Proporcione los siguientes detalles para la máquina virtual de almacenamiento que se ha creado para este sistema de archivos.
 +
 ... *Dominio de Active Directory para unirse*: Introduzca el nombre de dominio completo (FQDN) para el Active Directory.

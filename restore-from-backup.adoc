@@ -13,6 +13,8 @@ summary: Restaura un volumen a partir de un backup a cualquier sistema de archiv
 [role="lead"]
 En la fábrica de cargas de trabajo de BlueXP , puedes restaurar un volumen a partir de un backup en cualquier sistema de archivos de FSx para ONTAP en tu cuenta de AWS.
 
+La fábrica de cargas de trabajo determina si tiene suficiente capacidad para la restauración y puede añadir automáticamente capacidad del nivel de almacenamiento SSD en caso de que no lo haga.
+
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
@@ -26,6 +28,15 @@ En la fábrica de cargas de trabajo de BlueXP , puedes restaurar un volumen a p
 .. *Target storage VM*: Seleccione la VM de almacenamiento de destino en el menú desplegable.
 .. *Nombre de la copia de seguridad*: Seleccione el nombre de la copia de seguridad en el menú desplegable.
 .. *Nombre del volumen restaurado*: Introduzca el nombre del volumen restaurado.
+
+
+. Verifique la capacidad del sistema de archivos para la operación de restauración.
++
+Cuando la capacidad del sistema de archivos es limitada, se puede producir lo siguiente:
+
++
+** La restauración puede impulsar la capacidad utilizada por encima del umbral especificado. Puede completar la operación de restauración. Considere la posibilidad link:increase-file-system-capacity.html["Adición manual de capacidad del nivel de almacenamiento SSD"] o seleccione una fábrica de cargas de trabajo para añadir automáticamente capacidad del nivel de almacenamiento SSD.
+** La restauración requiere capacidad SSD adicional. Debe seleccionar una fábrica de carga de trabajo para añadir automáticamente capacidad del nivel de almacenamiento SSD para continuar.
 
 
 . Seleccione *Restaurar*.

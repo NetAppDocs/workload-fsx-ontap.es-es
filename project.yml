@@ -38,7 +38,7 @@ sidebar:
       entries:
       - title: Descripción general del enlace
         url: "/links-overview.html"
-      - title: Cree un vínculo
+      - title: Conéctese a un sistema de archivos mediante un enlace
         url: "/create-link.html"
       - title: Gestionar enlaces
         url: "/manage-links.html"
@@ -76,6 +76,8 @@ sidebar:
           url: "/create-replication.html"
         - title: Inicializar una relación de replicación
           url: "/initialize-replication.html"
+      - title: Proteger los datos con Protección autónoma frente al ransomware
+        url: "/ransomware-protection.html"
       - title: Clonar un volumen
         url: "/clone-volume.html"
       - title: Use datos de ONTAP en las instalaciones
@@ -84,6 +86,12 @@ sidebar:
     entries:
     - title: Supervise las operaciones con Tracker
       url: "/monitor-operations.html"
+    - title: Implementar las mejores prácticas del sistema de archivos
+      entries:
+      - title: Análisis de configuración de FSx para ONTAP
+        url: "/configuration-analysis.html"
+      - title: Implemente configuraciones de sistemas de archivos bien diseñadas
+        url: "/improve-configurations.html"
     - title: Administración de volúmenes
       entries:
       - title: Editar el crecimiento automático de volúmenes
@@ -146,6 +154,8 @@ sidebar:
           url: "/manage-backup-schedule.html"
       - title: Replicación
         entries:
+        - title: Replique un volumen de protección de datos
+          url: "/cascade-replication.html"
         - title: Invierta una relación de replicación
           url: "/reverse-replication.html"
         - title: Cambie la programación de replicación de un volumen de origen

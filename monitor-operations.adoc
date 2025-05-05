@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: monitor-operations.html 
-keywords: monitor databases, monitor jobs, track database jobs 
+keywords: monitor databases, monitor jobs, track storage jobs, track jobs 
 summary: Haga un seguimiento de FSx para ONTAP, las credenciales y las operaciones de enlaces, y supervise el progreso de las tareas con el seguimiento en la fábrica de cargas de trabajo de BlueXP  para almacenamiento. 
 ---
 = Supervise las operaciones de almacenamiento con Tracker en la fábrica de cargas de trabajo de BlueXP 
@@ -14,9 +14,11 @@ summary: Haga un seguimiento de FSx para ONTAP, las credenciales y las operacion
 Supervise y realice un seguimiento de la ejecución de FSx para ONTAP, las credenciales y las operaciones de enlace, y supervise el progreso de las tareas con Tracker en la fábrica de cargas de trabajo de BlueXP .
 
 .Acerca de esta tarea
-La fábrica de cargas de trabajo proporciona Tracker, una función de supervisión, para que pueda supervisar y realizar un seguimiento del progreso y el estado de FSx para ONTAP, credenciales y operaciones de enlace, revisar detalles de tareas de operación y subtareas, diagnosticar cualquier problema o fallo, editar parámetros para operaciones fallidas y volver a intentar operaciones fallidas. Puede filtrar trabajos por tipo y estado, buscar trabajos mediante la función de búsqueda y descargar la tabla de trabajos.
+La fábrica de cargas de trabajo ofrece Tracker, una función de supervisión, para que pueda supervisar y realizar un seguimiento del progreso y el estado de FSx para ONTAP, credenciales y operaciones de enlaces, revisar detalles de las tareas operativas y subtareas y diagnosticar cualquier problema o error.
 
-El Tracker admite hasta tres niveles de supervisión dependiendo de la operación. Cada tarea, como el despliegue del sistema de archivos, muestra la descripción de la tarea, el estado, la hora de inicio, la duración de la tarea, el usuario, la región, el recurso proxy, el identificador de tarea y todas las subtareas relacionadas.
+Hay varias acciones disponibles en Tracker. Puede filtrar trabajos por intervalo de tiempo (últimas 24 horas, 7 días, 14 días o 30 días), carga de trabajo, estado y usuario; buscar trabajos con la función de búsqueda; y descargar la tabla de trabajos como archivo CSV. Puede actualizar el rastreador en cualquier momento. Además, es posible volver a intentar una operación que ha fallado o editar parámetros para una operación que ha fallado y volver a intentar la operación.
+
+Tracker admite dos niveles de supervisión dependiendo de la operación. Cada tarea, como el despliegue del sistema de archivos, muestra la descripción de la tarea, el estado, la hora de inicio, la duración de la tarea, el usuario, la región, el recurso proxy, el identificador de tarea y todas las subtareas relacionadas. Puede ver las respuestas de la API para entender lo que ha pasado durante la operación.
 
 Niveles de tareas de Tracker con ejemplos::
 +

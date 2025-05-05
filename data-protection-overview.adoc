@@ -22,13 +22,16 @@ La protección de datos de tus cargas de trabajo ayuda a garantizar que puedas r
 .Snapshot
 Una copia Snapshot crea una imagen de un momento específico de solo lectura de un volumen dentro del volumen de origen como copia Snapshot. Es posible usar la copia Snapshot para recuperar archivos individuales o para restaurar todo el contenido de un volumen. Las copias Snapshot son la base de todos los métodos de backup. La copia Snapshot que se crea en el volumen se usa para mantener el volumen replicado y el archivo de backup sincronizados con los cambios realizados en el volumen de origen.
 
-.Completos
-Puede crear backups de sus datos en el cloud para protegerlos y para su retención a largo plazo. Si es necesario, puede restaurar un volumen, una carpeta o archivos individuales desde la copia de seguridad en el mismo sistema de archivos de trabajo o diferente.
+.Protección autónoma de ransomware
+La protección autónoma contra ransomware (ARP) utiliza análisis de carga de trabajo en entornos NAS (NFS/SMB) con el fin de detectar y advertir sobre la actividad anormal que podría ser un ataque de ransomware. Cuando se sospecha de un ataque, ARP también crea instantáneas nuevas e inmutables, además de la protección existente que proporcionan las instantáneas programadas.
 
 .Replicación
 La replicación crea una copia secundaria de sus datos en otro sistema de archivos FSx para ONTAP y actualiza continuamente los datos secundarios. Los datos estarán actualizados y disponibles siempre que haga falta, como por ejemplo, la recuperación ante desastres.
 
 Puedes elegir crear volúmenes replicados en otro sistema de archivos FSx for ONTAP y archivos de backup en el cloud. O puede elegir simplemente crear volúmenes replicados o archivos de copia de seguridad - es su elección.
+
+.Completos
+Puede crear backups de sus datos en el cloud para protegerlos y para su retención a largo plazo. Si es necesario, puede restaurar un volumen, una carpeta o archivos individuales desde la copia de seguridad en el mismo sistema de archivos de trabajo o diferente.
 
 El siguiente diagrama muestra una representación visual de la protección de datos para el almacenamiento de FSx para ONTAP mediante snapshots, replicación entre regiones y backup en el almacenamiento de objetos.
 
@@ -62,6 +65,12 @@ La replicación de volúmenes crea una copia de los datos más recientes de un v
 
 
 
+== Proteger sus datos de cargas de trabajo con Protección autónoma frente al ransomware
+
+ARP actúa como una importante capa adicional de defensa si el software antivirus no ha podido detectar una intrusión. Al establecer una política ARP, esto lo habilita para todas las máquinas virtuales de almacenamiento y todos los volúmenes existentes y recién creados. Una vez habilitada, ARP detecta y protege todos los volúmenes y equipos virtuales de almacenamiento. Si una extensión de archivo se marca como anormal, debe evaluar la alerta.
+
+
+
 == Recomendaciones para proteger los datos de su carga de trabajo
 
 Tenga en cuenta las siguientes recomendaciones para proteger sus datos de carga de trabajo.
@@ -69,4 +78,6 @@ Tenga en cuenta las siguientes recomendaciones para proteger sus datos de carga 
 * Uso de copias de seguridad de volúmenes junto con instantáneas: El uso de las dos funciones de forma conjunta garantiza la posibilidad de restaurar los archivos a partir de instantáneas y realizar restauraciones completas en caso de pérdida de volumen mediante copias de seguridad.
 * Defina una política de backup de volumen: Asegúrese de que la política de backup satisfaga los requisitos de su empresa en cuanto a antigüedad y frecuencia de backup. Recomendamos conservar un mínimo de dos backups diarios en cada volumen.
 * Definir una programación de Snapshot: Es menos probable que se utilicen copias Snapshot más antiguas para restaurar datos. Se recomienda definir una programación de snapshot que tenga en cuenta la disminución de los retornos de mantener las snapshots más antiguas frente al coste de la capacidad de snapshot adicional.
+* Supervise sus volúmenes para conocer cualquier posible ataque de ransomware.
+* Habilita la política de ARP para tus máquinas virtuales y volúmenes de almacenamiento para añadir una capa adicional de protección para proteger tus datos de ataques de ransomware.
 

@@ -1,28 +1,37 @@
 ---
 sidebar: sidebar 
 permalink: create-link.html 
-keywords: links, add, add links, add link, create link 
+keywords: connect, connection, link, lambda link, associate link, create link, authenticate link 
 summary: Puede crear y gestionar enlaces para proporcionar una relación de confianza y conectividad entre una cuenta de fábrica de cargas de trabajo de BlueXP  y uno o varios sistemas de archivos de FSx para ONTAP. 
 ---
-= Cree un enlace en la fábrica de cargas de trabajo de BlueXP 
+= Conéctese a un sistema de archivos FSx para ONTAP con un enlace Lambda
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Puede crear y gestionar enlaces para proporcionar una relación de confianza y conectividad entre una cuenta de fábrica de cargas de trabajo y uno o varios sistemas de archivos FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP . De este modo, puedes supervisar y gestionar determinadas funciones directamente desde el sistema de archivos FSx para ONTAP que no están disponibles a través de la API de AWS FSx para ONTAP.
+Para realizar operaciones de gestión de ONTAP avanzadas, necesitará establecer conectividad entre su cuenta de fábrica de cargas de trabajo y uno o varios sistemas de archivos FSx para ONTAP. El establecimiento de conectividad incluye la asociación de enlaces Lambda nuevos y existentes, y la autenticación de los enlaces. La asociación de enlaces le permite supervisar y administrar ciertas características directamente desde el sistema de archivos FSx para ONTAP que no están disponibles a través de la API de AWS FSx para ONTAP.
 
 link:links-overview.html["Obtenga más información sobre los enlaces"].
 
 .Acerca de esta tarea
 Los enlaces aprovechan AWS Lambda para ejecutar código en respuesta a eventos y administrar automáticamente los recursos informáticos requeridos por ese código. Los enlaces que cree forman parte de su cuenta de NetApp y están asociados a una cuenta de AWS.
 
-Puedes crear un enlace en tu cuenta al definir un sistema de archivos FSx for ONTAP. Ese enlace se utilizará para ese sistema de archivos, y puede ser utilizado por otros sistemas de archivos FSX for ONTAP.
+Puedes crear un enlace en tu cuenta al definir un sistema de archivos FSx for ONTAP. Ese enlace se utilizará para ese sistema de archivos, y puede ser utilizado por otros sistemas de archivos FSX for ONTAP. También puede asociar un vínculo a un sistema de archivos más adelante.
 
-Tendrás que iniciar una pila de AWS CloudFormation en tu cuenta de AWS para crear el vínculo.
+Los enlaces requieren autenticación. Puede utilizar vínculos auténticos utilizando credenciales almacenadas en el servicio de credenciales de fábrica de cargas de trabajo o con sus credenciales almacenadas en AWS Secrets Manager. Solo se admite un método de autenticación por enlace. Por ejemplo, si selecciona la autenticación de enlaces con AWS Secrets Manager, no podrá cambiar el método de autenticación más adelante.
 
-Tiene dos opciones para crear enlaces - de forma automática o manual.
+
+NOTE: AWS Secrets Manager no es compatible cuando se utiliza un conector.
+
+
+
+== Asocie un nuevo enlace
+
+La asociación de un nuevo enlace incluye la creación y asociación de enlaces.
+
+Tiene dos opciones para crear enlaces - de forma automática o manual. Tendrás que iniciar una pila de AWS CloudFormation en tu cuenta de AWS para crear el vínculo.
 
 * Automáticamente: Crea un enlace con registro automático a través de la fábrica de cargas de trabajo. Un enlace creado automáticamente requiere tokens para la automatización de la fábrica de cargas de trabajo y el código CloudFormation es de corta duración. Solo se puede utilizar durante un máximo de seis horas.
 * Manualmente: Crea un vínculo con registro manual. El código de CloudFormation persiste dándote más tiempo para completar la operación. Esto es útil cuando se trabaja con diferentes equipos como Security y DevOps que podrían necesitar otorgar los permisos necesarios para completar la creación de enlaces.
@@ -30,7 +39,7 @@ Tiene dos opciones para crear enlaces - de forma automática o manual.
 
 .Antes de empezar
 * Deberías considerar qué opción de creación de enlaces usarás.
-* Debe tener credenciales para iniciar sesión en su cuenta de AWS.
+* Debe tener al menos un sistema de archivos FSx for ONTAP en la fábrica de cargas de trabajo. Para detectar o crear sistemas de archivos FSx para ONTAP, debes tener una cuenta de AWS con permisos para instancias de FSx para ONTAP y link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["agregar credenciales en fábrica de carga de trabajo"^] con permisos de solo lectura o de lectura y escritura para la administración de almacenamiento.
 * Debe tener los siguientes permisos en su cuenta de AWS al agregar un enlace usando una pila de CloudFormation:
 +
 [%collapsible]
@@ -80,12 +89,21 @@ Utilice CloudFormation para crear y registrar automáticamente el enlace dentro 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, seleccione el menú de tres puntos del sistema de archivos para asociar un enlace y luego seleccione *Administrar*.
-. En la descripción general del sistema de archivos, seleccione *Enlace asociado*.
+. En la pestaña *FSX for ONTAP*, seleccione el menú de tres puntos del sistema de archivos para asociar un enlace y luego seleccione *Enlace asociado*.
 . En el cuadro de diálogo de enlace Asociado, seleccione *Crear un nuevo enlace* y seleccione *Continuar*.
 . En la página Crear Enlace, proporcione lo siguiente:
 +
 .. *Nombre del enlace*: Introduzca el nombre que desea utilizar para este enlace. El nombre debe ser único dentro de su cuenta.
+.. *AWS Secrets Manager*: Opcional. Permite que la fábrica de cargas de trabajo recupere las credenciales de acceso de FSx para ONTAP desde AWS Secrets Manager.
++
+La pila de despliegue de enlaces agrega el siguiente gestor secreto por defecto ARN regex a la política de permisos de Lambda: `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`.
+
++
+Puede crear secretos en alineación con los permisos predeterminados o asignar sus permisos personalizados para la política de enlaces.
+
++
+*Configurar punto final privado de VPC en AWS Secrets Manager* está desactivado de forma predeterminada. Al seleccionar esta opción, se almacena el secreto mediante el punto final privado de VPC en lugar de almacenarlo localmente.
+
 .. *Etiquetas*: Opcionalmente, agrega cualquier etiqueta que quieras asociar a este enlace para que puedas categorizar más fácilmente tus recursos. Por ejemplo, podría agregar una etiqueta que identifique este enlace como utilizado por FSX para sistemas de archivos ONTAP.
 +
 La cuenta de AWS y la información adicional de la cuenta, la ubicación y el grupo de seguridad se recuperan automáticamente en función del sistema de archivos FSx para ONTAP.
@@ -121,23 +139,118 @@ Puede supervisar el estado de creación del enlace desde la página Eventos. Est
 Con esta opción, extrae el ARN para el enlace de AWS CloudFormation e informa aquí. La fábrica de cargas de trabajo registra manualmente el enlace por usted.
 
 .Pasos
-Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones . . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*. . En la pestaña *FSX for ONTAP*, seleccione el menú de tres puntos del sistema de archivos para asociar un enlace y luego seleccione *Administrar*. . En la descripción general del sistema de archivos, seleccione *Enlace asociado*. . En el cuadro de diálogo de enlace Asociado, seleccione *Crear un nuevo enlace* y seleccione *Continuar*. . En la página Crear Enlace, proporcione lo siguiente: .. *Nombre del enlace*: Introduzca el nombre que desea utilizar para este enlace. El nombre debe ser único dentro de su cuenta. .. *Etiquetas*: Opcionalmente, agrega cualquier etiqueta que quieras asociar a este enlace para que puedas categorizar más fácilmente tus recursos. Por ejemplo, podría agregar una etiqueta que identifique este enlace como utilizado por FSX para sistemas de archivos ONTAP. .. *Registro de enlaces*: Seleccione en la flecha desplegable para ampliar las instrucciones sobre cómo registrar el enlace desde el servicio AWS CloudFormation. Siga las instrucciones.
-
-+ Tenga en cuenta que se otorgan tres permisos a Lambda cuando inicie la plantilla de CloudFormation. La fábrica de cargas de trabajo utiliza estos permisos cuando se utilizan enlaces.
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, seleccione el menú de tres puntos del sistema de archivos para asociar un enlace y luego seleccione *Enlace asociado*.
+. En el cuadro de diálogo de enlace Asociado, seleccione *Crear un nuevo enlace* y seleccione *Continuar*.
+. En la página Crear Enlace, proporcione lo siguiente:
++
+.. *Nombre del enlace*: Introduzca el nombre que desea utilizar para este enlace. El nombre debe ser único dentro de su cuenta.
+.. *AWS Secrets Manager*: Opcional. Permite que la fábrica de cargas de trabajo recupere las credenciales de acceso de FSx para ONTAP desde AWS Secrets Manager.
++
+La pila de despliegue de enlaces agrega el siguiente gestor secreto por defecto ARN regex a la política de permisos de Lambda: `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`.
 
 +
+Puede crear secretos en alineación con los permisos predeterminados o asignar sus permisos personalizados para la política de enlaces.
 
++
+*Configurar punto final privado de VPC en AWS Secrets Manager* está desactivado de forma predeterminada. Al seleccionar esta opción, se almacena el secreto mediante el punto final privado de VPC en lugar de almacenarlo localmente.
+
+.. *Etiquetas*: Opcionalmente, agrega cualquier etiqueta que quieras asociar a este enlace para que puedas categorizar más fácilmente tus recursos. Por ejemplo, podría agregar una etiqueta que identifique este enlace como utilizado por FSX para sistemas de archivos ONTAP.
+.. *Registro de enlaces*: Seleccione en la flecha desplegable para ampliar las instrucciones sobre cómo registrar el enlace desde el servicio AWS CloudFormation. Siga las instrucciones.
++
+Tenga en cuenta que se conceden tres permisos a Lambda al iniciar la plantilla de CloudFormation. La fábrica de cargas de trabajo utiliza estos permisos cuando se utilizan enlaces.
+
++
 [source, json]
 ----
 "lambda:InvokeFunction",
 "lambda:GetFunction",
 "lambda:UpdateFunctionCode"
 ----
-+ Después de crear correctamente la pila, pegue el ARN de Lambda en el cuadro de texto. .. La cuenta de AWS y la información adicional de la cuenta, la ubicación y el grupo de seguridad se recuperan automáticamente en función del sistema de archivos FSx para ONTAP. . Seleccione *Crear*.
++
+Después de crear correctamente la pila, pegue el ARN de Lambda en el cuadro de texto.
 
-+ Puede supervisar el estado de creación del enlace desde la página Eventos. Esto no debería tardar más de 5 minutos. . Vuelva a la interfaz de fábrica de la carga de trabajo y verá que el enlace está asociado con el sistema de archivos FSx para ONTAP.
+.. La cuenta de AWS y la información adicional de la cuenta, la ubicación y el grupo de seguridad se recuperan automáticamente en función del sistema de archivos FSx para ONTAP.
+
+
+. Seleccione *Crear*.
++
+Puede supervisar el estado de creación del enlace desde la página Eventos. Esto no debería tardar más de 5 minutos.
+
+. Vuelva a la interfaz de fábrica de la carga de trabajo y verá que el enlace está asociado con el sistema de archivos FSx para ONTAP.
+
 
 --
 ====
 .Resultado
-El enlace que ha creado está asociado con el sistema de archivos FSX for ONTAP.
+El enlace que ha creado está asociado con el sistema de archivos FSX for ONTAP. Es posible ejecutar operaciones de ONTAP avanzadas.
+
+
+
+== Asocie un enlace existente a un sistema de archivos FSx for ONTAP
+
+Después de crear un enlace, asócielo con uno o más FSX para el sistema de archivos ONTAP.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
+. En la pestaña *FSX for ONTAP*, seleccione el menú de tres puntos del sistema de archivos para asociar un enlace y luego seleccione *Enlace asociado*.
+. En la página de enlace Asociado, seleccione *Asociar un enlace existente*, seleccione el enlace y seleccione *Continuar*.
+. Seleccione el modo de autenticación.
++
+** Workload Factory: Introduzca la contraseña dos veces.
+** AWS Secrets Manager: Introduzca el ARN secreto.
++
+El ARN secreto debe incluir los siguientes pares válidos de clave:
+
++
+*** ID de archivo = FSX_filesystem_id
+*** User = FSX_user
+*** password = user_password
+
+
+
+
+. Seleccione *aplicar*.
+
+
+.Resultado
+El enlace está asociado con el sistema de archivos FSx para ONTAP. Es posible ejecutar operaciones de ONTAP avanzadas.
+
+
+
+== Solución de problemas con la autenticación de enlaces de AWS Secrets Manager
+
+Problema:: El enlace carece de permisos para recuperar el secreto.
++
+--
+*Resolución*: Añade permisos después de que el enlace esté activo. Inicie sesión en la consola de AWS, busque el enlace Lambda y edite la política de permisos adjunta.
+
+--
+Problema:: El secreto no se encuentra.
++
+--
+*Resolución*: Proporcionar el ARN secreto correcto.
+
+--
+Problema:: El secreto no está en el formato correcto.
++
+--
+*Resolución*: Ve a AWS Secrets Manager y edita el formato.
+
+El secreto debe contener los siguientes pares válidos de claves:
+
+* ID de archivo = FSX_filesystem_id
+* User = FSX_user
+* password = user_password
+
+
+--
+Problema:: El secreto no contiene credenciales de ONTAP válidas para la autenticación del sistema de archivos.
++
+--
+*Resolución*: Proporciona credenciales que puedan autenticar los sistemas de archivos FSX for ONTAP en AWS Secrets Manager.
+
+--
+

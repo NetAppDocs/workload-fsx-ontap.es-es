@@ -13,6 +13,12 @@ summary: Invierta una relación de replicación para que el volumen de destino s
 [role="lead"]
 Revierte una relación de replicación en la fábrica de cargas de trabajo de BlueXP  de modo que el volumen de destino se convierte en el volumen de origen.
 
+Las operaciones inversas se admiten para lo siguiente:
+
+* Dos FSx para sistemas de archivos ONTAP
+* Un sistema de archivos FSx para ONTAP y un clúster de ONTAP en las instalaciones
+
+
 Después de detener la replicación y realizar cambios en el volumen objetivo, puede replicar esos cambios de nuevo en el volumen de origen. Este proceso es habitual en una situación de recuperación ante desastres en la que se opera en el volumen de destino durante un tiempo y se desean cambiar roles de los volúmenes.
 
 .Acerca de esta tarea

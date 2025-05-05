@@ -106,6 +106,12 @@ La calculadora de ahorro en almacenamiento no calcula el ahorro de costes si uti
 
 System Manager no admite los enlaces de FSx para la conectividad de ONTAP.
 
+
+
+== Compatibilidad con AWS Secrets Manager
+
+AWS Secrets Manager no es compatible cuando se utiliza un conector.
+
 Nota:
 
 . Se aplica a Amazon FSx para NetApp ONTAP

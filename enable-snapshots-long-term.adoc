@@ -17,6 +17,8 @@ La retención a largo plazo permite que los servicios empresariales continúen f
 
 Los mismos pasos se aplican para habilitar y editar copias Snapshot para una retención a largo plazo.
 
+Cuando un clúster de ONTAP en las instalaciones es el destino de la relación de replicación, no se admite el cambio de snapshots para una retención a largo plazo.
+
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
