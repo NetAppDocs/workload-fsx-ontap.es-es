@@ -51,4 +51,4 @@ Para un análisis completo del sistema de archivos, debe asociar un enlace. La c
 link:create-link.html["Aprende a crear un enlace."]
 
 .El futuro
-link:improve-configurations.html["Mejore las configuraciones para las puestas en marcha de FSx para ONTAP"]
+link:improve-configurations.html["Implemente configuraciones de sistemas de archivos bien diseñadas"]

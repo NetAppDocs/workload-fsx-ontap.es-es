@@ -1101,7 +1101,6 @@
   <block id="2a3b399798aa16ecfbc1425cc560bfad" category="list-text">Casos de uso</block>
   <block id="ef63a3d009f11deff50f4dc327b32173" category="list-text">Tenga en cuenta que el caso de uso principal para la carga de trabajo de GenAI es el foco de esta serie de tareas.</block>
   <block id="809c357d304bbfa1cd4446574b270af8" category="inline-link-macro">Enriquezca las bases de conocimientos sobre IA</block>
-  <block id="9cce19ad5b8f6c533905f11c61df97c8" category="list-text">*Carga de trabajo de GenAI*: Replica los datos de volumen de ONTAP en las instalaciones a un sistema de archivos FSX for ONTAP para que los datos puedan usarse<block ref="f591db1a99ea9ae06218a2a67c7815b6" category="inline-link-macro-rx"></block>.</block>
   <block id="f15192f8afdcf438f7b1ccf0cda2b436" category="list-text">*Copia de seguridad y migración a la nube*: Los datos de volúmenes ONTAP replicados en las instalaciones a un sistema de archivos FSx para ONTAP se pueden usar como copia de seguridad en la nube.</block>
   <block id="5b5a84720ff8905504e8a45fbc52fb73" category="list-text">* Organización en niveles de datos*: Después de la replicación, los datos de volumen ONTAP locales a los que se accede con poca frecuencia se pueden organizar en niveles desde el nivel de almacenamiento SSD hasta el nivel de almacenamiento del pool de capacidad.</block>
   <block id="4185f116d64b1130e6f9ba4250b147fa" category="paragraph">Asegúrese de tener lo siguiente antes de comenzar:</block>
@@ -1719,8 +1718,6 @@
   <block id="8f1eb02f728d9f5ee9934382b0494f93" category="paragraph">Para un análisis completo del sistema de archivos, debe asociar un enlace. La conectividad de enlace permite a la fábrica de cargas de trabajo analizar todas las configuraciones del sistema de archivos, como la protección de datos y el rendimiento.</block>
   <block id="fcc3e7348faefdb90df77848c11a3cd2" category="inline-link-macro">Aprende a crear un enlace.</block>
   <block id="d1d2547b7ef1924a459a05adb0445929" category="paragraph"><block ref="d1d2547b7ef1924a459a05adb0445929" category="inline-link-macro-rx"></block></block>
-  <block id="03ed34f82c3cbad618294be6c94ca447" category="inline-link-macro">Mejore las configuraciones para las puestas en marcha de FSx para ONTAP</block>
-  <block id="906102ec8d33b9c800e95c6b9ee1bbdf" category="paragraph"><block ref="906102ec8d33b9c800e95c6b9ee1bbdf" category="inline-link-macro-rx"></block></block>
   <block id="02f2e108af721f7fc825883d8811e77a" category="list-text">*Credenciales ONTAP*: Opcional. Introduzca su nombre de usuario y contraseña de ONTAP. La contraseña se puede establecer ahora o más tarde.</block>
   <block id="824994853534784eb4495b892e13b1c6" category="paragraph">Si el usuario que proporcione no es el usuario de fsxadmin, y más tarde necesita restablecer la contraseña de fsxadmin, podrá hacerlo desde la consola de AWS.</block>
   <block id="dd34b811cd079417f985f8f56a4f1dca" category="list-text">*Storage VM Credentials*: Opcional. Introduzca su nombre de usuario. La contraseña puede ser específica de este sistema de archivos o puede utilizar la misma contraseña introducida para las credenciales de ONTAP. La contraseña se puede establecer ahora o más tarde.</block>
@@ -1906,4 +1903,6 @@
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">*API REST*: Usa las API REST DE fábrica de cargas de trabajo para implementar y administrar tus sistemas de archivos FSx para ONTAP y otros recursos de AWS.</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">*CloudFormation*: Utilice el código CloudFormation de AWS para realizar las acciones que definió en la consola de la fábrica de cargas de trabajo para modelar, aprovisionar y administrar recursos de AWS y de terceros desde la pila CloudFormation en su cuenta de AWS.</block>
   <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">* Proveedor de fábrica de cargas de trabajo Terraform BlueXP *: Utilice Terraform para crear y administrar flujos de trabajo de infraestructura generados en la consola de la fábrica de cargas de trabajo.</block>
+  <block id="eaaaf380859de755a58a543fbffc3d8a" category="paragraph"><block ref="eaaaf380859de755a58a543fbffc3d8a" category="inline-link-macro-rx"></block></block>
+  <block id="1418bddde60a7d4a1fbd71041ef29d36" category="list-text">*Carga de trabajo de GenAI*: Replica los datos de volumen de ONTAP en las instalaciones a un sistema de archivos FSX for ONTAP para que los datos puedan usarse<block ref="8b94b70e10f0f6c7944c9419ec9922bc" category="inline-link-macro-rx"></block>.</block>
 </blocks>

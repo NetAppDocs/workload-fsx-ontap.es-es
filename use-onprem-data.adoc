@@ -19,7 +19,7 @@ Para utilizar datos de un clúster de ONTAP en las instalaciones, primero tendr�
 Casos de uso:: Tenga en cuenta que el caso de uso principal para la carga de trabajo de GenAI es el foco de esta serie de tareas.
 +
 --
-* *Carga de trabajo de GenAI*: Replica los datos de volumen de ONTAP en las instalaciones a un sistema de archivos FSX for ONTAP para que los datos puedan usarselink:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html["Enriquezca las bases de conocimientos sobre IA"^].
+* *Carga de trabajo de GenAI*: Replica los datos de volumen de ONTAP en las instalaciones a un sistema de archivos FSX for ONTAP para que los datos puedan usarselink:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["Enriquezca las bases de conocimientos sobre IA"^].
 * *Copia de seguridad y migración a la nube*: Los datos de volúmenes ONTAP replicados en las instalaciones a un sistema de archivos FSx para ONTAP se pueden usar como copia de seguridad en la nube.
 * * Organización en niveles de datos*: Después de la replicación, los datos de volumen ONTAP locales a los que se accede con poca frecuencia se pueden organizar en niveles desde el nivel de almacenamiento SSD hasta el nivel de almacenamiento del pool de capacidad.
 
