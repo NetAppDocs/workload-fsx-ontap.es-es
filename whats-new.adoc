@@ -183,7 +183,7 @@ La fábrica de cargas de trabajo ahora admite conjuntos alternativos de credenci
 
 === Terminología de permisos actualizada
 
-La documentación y la interfaz de usuario de fábrica de cargas de trabajo ahora utilizan «de solo lectura» para hacer referencia a los permisos de lectura y «de lectura-escritura» para referirse a los permisos de automatización.
+La interfaz de usuario y la documentación de la fábrica de carga de trabajo ahora usan "solo lectura" para referirse a los permisos de lectura y "lectura/escritura" para referirse a los permisos de automatización.
 
 
 
@@ -259,7 +259,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-immutable-files.htm
 === Mejoras de replicación de datos
 
 * Replicación entre cuentas: La replicación entre dos cuentas de AWS se admite en la consola de fábrica de cargas de trabajo de BlueXP , así como en la administración de replicación.
-* Pausar y reanudar la replicación: Puede pausar (desactivar) las actualizaciones de replicación programadas del volumen de origen al volumen de destino y luego reanudar la programación de replicación cuando esté preparado. Durante la pausa, los volúmenes de origen y destino se vuelven independientes y el volumen de destino pasa de solo lectura a lectura y escritura.
+* Pausar y reanudar la replicación: Puede pausar (desactivar) las actualizaciones de replicación programadas del volumen de origen al volumen de destino y luego reanudar la programación de replicación cuando esté preparado. Durante la pausa, los volúmenes de origen y destino se vuelven independientes, y el volumen de destino pasa de solo lectura a lectura/escritura.
 +
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/pause-resume-replication.html["Pausa y reanuda una relación de replicación"]
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: clone-volume.html 
 keywords: clone volume, clone, clone data 
-summary: Clone un volumen en la fábrica de cargas de trabajo BlueXP  para crear un volumen de lectura y escritura del volumen original para su prueba. 
+summary: Clone un volumen en la fábrica de carga de trabajo de BlueXP para crear un volumen de lectura y escritura del volumen original para realizar pruebas. 
 ---
 = Clonar un volumen en la fábrica de cargas de trabajo BlueXP 
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Clone un volumen en la fábrica de cargas de trabajo BlueXP  para crea
 
 
 [role="lead"]
-Clone un volumen en la fábrica de cargas de trabajo BlueXP  para crear un volumen de lectura y escritura del volumen original para su prueba.
+Clone un volumen en la fábrica de carga de trabajo de BlueXP para crear un volumen de lectura y escritura del volumen original para realizar pruebas.
 
 El clon refleja el estado actual de un momento específico de los datos. También puede utilizar clones para proporcionar a los usuarios adicionales acceso a los datos sin tener que darles acceso a los datos de producción.
 

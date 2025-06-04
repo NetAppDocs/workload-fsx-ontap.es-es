@@ -11,12 +11,12 @@ summary: Pausa y reanuda una relación de replicación para que el volumen objet
 
 
 [role="lead"]
-Pausar una relación de replicación para detener las actualizaciones de replicación programadas del volumen de origen al volumen de destino. El volumen objetivo pasará de solo lectura a lectura y escritura. Ambos volúmenes siguen compartiendo la instantánea de replicación más reciente como nueva base para una resincronización posterior.
+Pausar una relación de replicación para detener las actualizaciones de replicación programadas del volumen de origen al volumen de destino. El volumen objetivo pasará de solo lectura a lectura/escritura. Ambos volúmenes siguen compartiendo la instantánea de replicación más reciente como nueva base para una resincronización posterior.
 
 .Acerca de esta tarea
 Cuando se pausa, la relación de replicación entre el volumen de origen y el volumen objetivo sigue existiendo. Las transferencias de datos se ponen en pausa y los volúmenes pasan a ser independientes. Para volver a habilitar la transferencia de cambios del volumen de origen al volumen de destino, reanude la replicación.
 
-Cuando se reanuda una replicación, todos los cambios realizados en el volumen objetivo se deshacen, y la fábrica de cargas de trabajo de BlueXP  vuelve a habilitar la replicación. El volumen de destino pasa de lectura-escritura a solo lectura y vuelve a recibir actualizaciones del volumen de origen en el intervalo de replicación programado. Cuando se reanuda una relación de replicación, el volumen de destino se revierte a la última instantánea de replicación inicial, momento en el que se vuelve a iniciar el proceso de replicación del volumen.
+Cuando se reanuda una replicación, todos los cambios realizados en el volumen objetivo se deshacen, y la fábrica de cargas de trabajo de BlueXP  vuelve a habilitar la replicación. El volumen de destino pasa de lectura/escritura a solo lectura y recibe actualizaciones del volumen de origen en el intervalo de replicación programado nuevamente. Cuando se reanuda una relación de replicación, el volumen de destino se revierte a la última instantánea de replicación inicial, momento en el que se vuelve a iniciar el proceso de replicación del volumen.
 
 .Antes de empezar
 Si hace una pausa cuando una transferencia está en curso, la transferencia no se ve afectada y la relación pasa a ser “Quiescing” hasta que se complete la transferencia. Si la transferencia actual se cancela, ahora se trata de una transferencia futura y no se reiniciará.

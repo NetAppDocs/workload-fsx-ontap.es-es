@@ -39,7 +39,7 @@ Tiene dos opciones para crear enlaces - de forma automática o manual. Tendrás 
 
 .Antes de empezar
 * Deberías considerar qué opción de creación de enlaces usarás.
-* Debe tener al menos un sistema de archivos FSx for ONTAP en la fábrica de cargas de trabajo. Para detectar o crear sistemas de archivos FSx para ONTAP, debes tener una cuenta de AWS con permisos para instancias de FSx para ONTAP y link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["agregar credenciales en fábrica de carga de trabajo"^] con permisos de solo lectura o de lectura y escritura para la administración de almacenamiento.
+* Debe tener al menos un sistema de archivos FSx for ONTAP en la fábrica de cargas de trabajo. Para descubrir o crear sistemas de archivos FSx para ONTAP, debe tener una cuenta de AWS con permisos para instancias FSx para ONTAP y link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["agregar credenciales en fábrica de carga de trabajo"^] con permisos de _solo lectura_ o de _lectura/escritura_ para la gestión del almacenamiento.
 * Debe tener los siguientes permisos en su cuenta de AWS al agregar un enlace usando una pila de CloudFormation:
 +
 [%collapsible]

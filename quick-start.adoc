@@ -23,13 +23,13 @@ Tendrá que link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"] Agregue credenciales y permisos
 [role="quick-margin-para"]
-Elija entre _BASIC_, _READ_ y _AUTOMATIC_ link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modos de funcionamiento"^]
+Elija entre _básico_, _solo lectura_ y _lectura/escritura_ link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modos de funcionamiento"^]
 
 [role="quick-margin-para"]
 Si elige operar en modo _BASIC_, no necesita ir más allá. Puedes empezar a utilizar la fábrica de cargas de trabajo para FSx para ONTAP a fin de copiar muestras de código parcialmente completadas.
 
 [role="quick-margin-para"]
-Si opera en modo _READ_ o _AUTOMATIC_, necesitará que link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["agregar credenciales a una cuenta manualmente"^]esto incluya seleccionar capacidades de carga de trabajo, como bases de datos e IA, y crear las políticas de IAM para asegurarse de que tiene los permisos correctos para operar en modo _READ_ o _AUTOMATIC_.
+Si opera en modo _solo lectura_ o _lectura/escritura_, necesitará link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["agregar credenciales a una cuenta manualmente"^] Esto incluye la selección de capacidades de carga de trabajo, como bases de datos e IA, y la creación de políticas de IAM para garantizar que tenga los permisos correctos para operar en modo de _solo lectura_ o de _lectura/escritura_.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"] Crear un sistema de archivos
 [role="quick-margin-para"]
