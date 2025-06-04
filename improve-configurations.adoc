@@ -24,8 +24,9 @@ Qué se analiza:: La fábrica de cargas de trabajo analiza el estado bien diseñ
 * Umbral de capacidad de SSD
 * Organización en niveles de los datos
 * Snapshots locales programadas
-* FSX para backups de ONTAP y.
+* FSx para copias de seguridad de ONTAP
 * Replicación de datos remota
+* Eficiencias del almacenamiento
 
 
 --
@@ -57,4 +58,4 @@ Cuando *Ver y corregir* sea una opción, seleccione los volúmenes afectados par
 
 
 .Resultado
-Se inicia el proceso para solucionar el problema. Seleccione la pestaña *Supervisión de trabajos* para ver el estado de la operación.
+Se inicia el proceso para solucionar el problema. Seleccione el menú de configuración de la cuenta y luego seleccione *Rastreador* para ver el estado de la operación.

@@ -70,6 +70,9 @@ Sin un límite, el rendimiento de la red y de las aplicaciones puede disminuir. 
 .. *Intervalo de replicación*: Seleccione la frecuencia con la que se transfieren las instantáneas del volumen de origen al volumen de destino.
 .. *Retención a largo plazo*: Opcionalmente, habilita instantáneas para la retención a largo plazo. La retención a largo plazo permite que los servicios empresariales continúen funcionando incluso si se produce un fallo completo del sitio, compatible con la conmutación por error de forma transparente mediante una copia secundaria.
 +
+Las replicaciones sin retención a largo plazo utilizan la política _MirrorAllSnapshots_. Al habilitar la retención a largo plazo, se asigna la política _MirrorAndVault_ a la replicación.
+
++
 Si habilita la retención a largo plazo, seleccione una política existente o cree una nueva política para definir las snapshots que se replicarán y el número que se retendrá.
 
 +

@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: edit-volume-autogrow.html 
 keywords: volume autogrow, increase volume capacity, enable autogrow 
-summary: Habilite el crecimiento automático de volúmenes para que las cargas de trabajo de BlueXP  gestionen la capacidad de los volúmenes a su medida. Puede deshabilitarla en cualquier momento. 
+summary: Habilite el crecimiento automático del volumen para permitir que la fábrica de carga de trabajo administre la capacidad del volumen por usted. Puede deshabilitarla en cualquier momento. 
 ---
-= Habilite el crecimiento automático de volúmenes en el centro de cargas de trabajo BlueXP 
+= Habilitar el crecimiento automático del volumen en la fábrica de carga de trabajo
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Habilite el crecimiento automático de volúmenes para que las cargas de trabajo de BlueXP  gestionen la capacidad de los volúmenes a su medida. Puede deshabilitarla en cualquier momento.
+Habilite el crecimiento automático del volumen para permitir que la fábrica de carga de trabajo administre la capacidad del volumen por usted. Puede deshabilitarla en cualquier momento.
 
 Opcionalmente, es posible aumentar manualmente la capacidad del volumen de un volumen en cualquier momento mediante el link:increase-volume-capacity.html["función aumentar capacidad del volumen"].
 
@@ -27,7 +27,10 @@ Para habilitar el crecimiento automático de volúmenes, link:manage-links.html[
 . En la pestaña FSX para ONTAP, seleccione el menú de tres puntos del sistema de archivos con el volumen que desea actualizar y, a continuación, seleccione *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
 . En la pestaña Volumes, seleccione el menú de tres puntos para el volumen que desea modificar.
-. Selecciona *Acciones básicas*, luego *Editar crecimiento automático del volumen*.
-. En el cuadro de diálogo Edit autogrow, habilite el crecimiento automático de volúmenes.
+. Seleccione *Acciones básicas* y luego *Establecer crecimiento automático del volumen*.
+. En el cuadro de diálogo "Configurar crecimiento automático", habilite el crecimiento automático del volumen para expandir automáticamente la capacidad del volumen hasta que alcance su tamaño máximo. Esta función se adapta al aumento del uso de datos, garantizando así operaciones ininterrumpidas.
++
+Especifique el tamaño máximo de crecimiento del volumen y la unidad. El tamaño máximo de crecimiento no puede ser menor que el tamaño actual del volumen.
+
 . Seleccione *aplicar*.
 
