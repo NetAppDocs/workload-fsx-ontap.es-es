@@ -27,6 +27,7 @@ Qué se analiza:: La fábrica de cargas de trabajo analiza el estado bien diseñ
 * FSx para copias de seguridad de ONTAP
 * Replicación de datos remota
 * Eficiencias del almacenamiento
+* Gestión de la capacidad automática
 
 
 --
