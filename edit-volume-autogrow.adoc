@@ -19,7 +19,7 @@ Opcionalmente, es posible aumentar manualmente la capacidad del volumen de un vo
 NOTE: No se admite el crecimiento automático de volúmenes para los volúmenes iSCSI.
 
 .Antes de empezar
-Para habilitar el crecimiento automático de volúmenes, link:manage-links.html["asocie un enlace"]debe . Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Después de asociar el enlace, vuelva a esta operación.
+Para habilitar el crecimiento automático del volumen, debe asociar un enlace. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .

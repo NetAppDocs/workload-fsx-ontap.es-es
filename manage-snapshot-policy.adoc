@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-snapshot-policy.html 
 keywords: manage snapshot policy, change snapshot policy, snapshot policies, snapshot schedule, update 
-summary: Gestiona las políticas de copias Snapshot de FSx para ONTAP Volumes en la fábrica de cargas de trabajo de BlueXP . Una política de Snapshot define la manera en que el sistema crea copias de Snapshot para un volumen. 
+summary: Administrar políticas de instantáneas para FSx para volúmenes ONTAP en la fábrica de carga de trabajo. Una política de Snapshot define la manera en que el sistema crea copias de Snapshot para un volumen. 
 ---
 = Permite gestionar políticas Snapshot
 :allow-uri-read: 
@@ -11,12 +11,12 @@ summary: Gestiona las políticas de copias Snapshot de FSx para ONTAP Volumes en
 
 
 [role="lead"]
-Gestiona las políticas de copias Snapshot de FSx para ONTAP Volumes en la fábrica de cargas de trabajo de BlueXP . Una política de Snapshot define la manera en que el sistema crea copias de Snapshot para un volumen.
+Administrar políticas de instantáneas para FSx para volúmenes ONTAP en la fábrica de carga de trabajo. Una política de Snapshot define la manera en que el sistema crea copias de Snapshot para un volumen.
 
 .Acerca de esta tarea
 Las operaciones de gestión de snapshots, como asignar, cambiar y eliminar políticas de snapshots para volúmenes en el sistema de archivos FSx para ONTAP, se gestionan a nivel de máquina virtual de almacenamiento. Las políticas de Snapshot se pueden compartir con una sola máquina virtual de almacenamiento o con todas las máquinas virtuales de almacenamiento.
 
-Algunas tareas de gestión requieren que se link:manage-links.html["asocie un enlace"]conecte al sistema de archivos FSx para ONTAP. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"].
+Algunas tareas de administración requieren que asocie un enlace con el sistema de archivos FSx para ONTAP. link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["Obtenga información sobre los vínculos de fábrica de carga de trabajo"].
 
 De forma predeterminada, cada volumen está asociado con la política de Snapshot del sistema de archivos `default` . Recomendamos usar esta política para la mayoría de las cargas de trabajo.
 
@@ -27,7 +27,7 @@ De forma predeterminada, cada volumen está asociado con la política de Snapsho
 Es posible cambiar el nombre de la política de snapshots, la programación y la cantidad de copias para conservar, y habilitar o deshabilitar snapshots inmutables. No es posible habilitar o deshabilitar el uso compartido de políticas en los equipos virtuales de almacenamiento. Esta opción solo está disponible durante la creación de políticas de Snapshot.
 
 .Antes de empezar
-Para mostrar las políticas de instantáneas existentes, debe asociar un enlace. Para asociar un enlace, seleccione *Enlace asociado* en *Nombre de cuenta*. A continuación, vuelva a esta operación.
+Para mostrar las políticas de instantáneas existentes, debe asociar un vínculo. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -50,7 +50,7 @@ Se actualiza la política de instantáneas.
 Bloquee las snapshots para evitar que se eliminen durante el período de retención.
 
 .Antes de empezar
-link:manage-links.html["asocie un enlace"]Debe habilitar snapshots inmutables. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
+Debe asociar un enlace para habilitar instantáneas inmutables. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -79,7 +79,7 @@ La instantánea del volumen está bloqueada.
 Es posible asignar una política de Snapshot a un solo volumen para crear Snapshot programadas para el volumen.
 
 .Antes de empezar
-Debe link:manage-links.html["asocie un enlace"]asignar una política de Snapshot. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Después de asociar el enlace, vuelva a esta operación.
+Debe asociar un enlace para asignar una política de instantáneas. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -105,7 +105,7 @@ La política de Snapshot está asignada al volumen.
 Quite una política de Snapshot de un volumen porque ya no desea que las Snapshot del volumen o porque desea eliminar una política de Snapshot que está asignada a varios volúmenes. A <<Elimine una política de Snapshot,elimine una política de snapshot>>que está asignado a más de un volumen, debe eliminarlo manualmente de todos los volúmenes.
 
 .Antes de empezar
-Para quitar una política de Snapshot, debelink:manage-links.html["asocie un enlace"]. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Después de asociar el enlace, vuelva a esta operación.
+Debe asociar un enlace para eliminar una política de instantáneas. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .

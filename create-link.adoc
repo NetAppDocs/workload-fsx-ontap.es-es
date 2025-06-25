@@ -40,6 +40,12 @@ Tiene dos opciones para crear enlaces - de forma automática o manual. Tendrás 
 .Antes de empezar
 * Deberías considerar qué opción de creación de enlaces usarás.
 * Debe tener al menos un sistema de archivos FSx for ONTAP en la fábrica de cargas de trabajo. Para descubrir o crear sistemas de archivos FSx para ONTAP, debe tener una cuenta de AWS con permisos para instancias FSx para ONTAP y link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["agregar credenciales en fábrica de carga de trabajo"^] con permisos de _solo lectura_ o de _lectura/escritura_ para la gestión del almacenamiento.
+* Los siguientes puertos deben estar abiertos en el grupo de seguridad asociado con el sistema de archivos FSx para ONTAP para la conectividad del enlace.
++
+** Para la consola de fábrica de carga de trabajo: puerto 443 (HTTPS)
+** Para CloudShell: puerto 22 (SSH)
+
+
 * Debe tener los siguientes permisos en su cuenta de AWS al agregar un enlace usando una pila de CloudFormation:
 +
 [%collapsible]

@@ -21,7 +21,7 @@ FSX para volúmenes de ONTAP utiliza la copia puntual en escritura, de modo que 
 NOTE: Las copias Snapshot no son copias de sus datos. Si desea hacer copias de sus datos, considere la posibilidad de utilizar las funciones de replicación de volúmenes o backups de FSx para ONTAP.
 
 .Antes de empezar
-Debe link:manage-links.html["asocie un enlace"] crear una copia de Snapshot. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Una vez asociado el enlace, vuelva a esta operación.
+Debe asociar un enlace para crear una instantánea manual de un volumen. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .

@@ -79,7 +79,7 @@ Replica datos de volúmenes de un clúster ONTAP on-premises en un sistema de ar
 .Antes de empezar
 * Debe detectar un clúster de ONTAP en las instalaciones para replicar sus datos del volumen.
 * Debe tener disponible un sistema de archivos FSx para ONTAP para que sea el destino de la replicación.
-* Tanto el clúster de ONTAP en las instalaciones como el sistema de archivos FSx para ONTAP que utilizas para la relación de replicación deben tener un enlace asociado. Si uno o los dos clústeres en las instalaciones y FSx para ONTAP no tienen enlaces existentes, link:create-link.html["primero crea un enlace"]. link:manage-links.html["asocie un enlace"]En los sistemas de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Una vez que los asociados del enlace en el clúster de ONTAP en las instalaciones y el sistema de archivos FSx para ONTAP, vuelven a esta operación.
+* Tanto el clúster de ONTAP en las instalaciones como el sistema de archivos FSx para ONTAP que utilizas para la relación de replicación deben tener un enlace asociado. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
 
 
 .Pasos

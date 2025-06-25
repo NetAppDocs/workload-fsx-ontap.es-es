@@ -16,7 +16,7 @@ La gestión del recurso compartido CIFS de un volumen en la fábrica de cargas d
 .Antes de empezar
 Antes de comenzar, haga lo siguiente:
 
-* Para gestionar recursos compartidos CIFS, debe link:manage-links.html["asocie un enlace"]. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Después de asociar el enlace, vuelva a esta operación.
+* Para administrar recursos compartidos CIFS, debe asociar un enlace. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
 * Determine los usuarios o grupos a los que dar acceso y el nivel de permisos para otorgarlos.
 
 

@@ -30,7 +30,7 @@ Revise los siguientes requisitos previos antes de crear un volumen:
 * Debe tener una máquina virtual de almacenamiento.
 * Para acceder al protocolo, complete lo siguiente:
 +
-** Para configurar el acceso al volumen, debe link:manage-links.html["asocie un enlace"]. Si no tienes un enlace existente, link:create-link.html["cree un vínculo"]. Para asociar un enlace en el sistema de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Después de asociar el enlace, vuelva a esta operación.
+** Para configurar el acceso al volumen, debe asociar un enlace. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
 ** Tiene que configurar el acceso para el protocolo que seleccione, ya sea CIFS, NFS o iSCSI.
 
 
@@ -181,7 +181,7 @@ Modo de adición de volúmenes:: No es posible modificar los datos existentes en
 
 .. *Política de instantáneas*: Seleccione la política de instantáneas para especificar la frecuencia y retención de instantáneas.
 +
-Las siguientes son políticas predeterminadas de AWS. Para las políticas de Snapshot personalizadas, debe asociar un enlace.
+Las siguientes son políticas predeterminadas de AWS. Para las políticas de instantáneas personalizadas, debe link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["asocie un enlace"] .
 
 +
 `default`:: Esta política crea Snapshot de forma automática según la siguiente programación, siendo las copias Snapshot más antiguas eliminadas para dejar espacio para las copias más recientes:

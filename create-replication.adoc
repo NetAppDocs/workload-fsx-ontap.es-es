@@ -24,7 +24,7 @@ Los volúmenes replicados en el sistema de archivos de destino son volúmenes de
 Asegúrese de cumplir con los siguientes requisitos previos antes de comenzar.
 
 * Debe tener dos sistemas de archivos disponibles en el inventario de almacenamiento para crear una relación de replicación.
-* Los dos sistemas de archivos que se utilizan para la relación de replicación deben tener un enlace asociado. Si los sistemas de archivos no tienen enlaces existentes, link:create-link.html["primero crea un enlace"]. link:manage-links.html["asocie un enlace"]En los sistemas de archivos, seleccione *Enlace asociado* en *Nombre de cuenta*. Una vez que el enlace se asocia en ambos sistemas de archivos, vuelva a esta operación.
+* Los dos sistemas de archivos que se utilizan para la relación de replicación deben tener un enlace asociado. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
 
 
 Complete los siguientes pasos para replicar seleccionar volúmenes o replicar todos los volúmenes en un sistema de archivos.
