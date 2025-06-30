@@ -20,6 +20,8 @@ Esta operación crea una relación de replicación para uno o todos los volúmen
 
 Los volúmenes replicados en el sistema de archivos de destino son volúmenes de protección de datos (DP) y siguen el formato de nomenclatura `{OriginalVolumeName}_copy`: .
 
+Al replicar un volumen de origen con archivos inmutables, el volumen de destino y el sistema de archivos se bloquean hasta que finaliza el período de retención de los archivos inmutables en el volumen de origen. La función de archivos inmutables está disponible cuando... link:create-volume.html["crear un volumen"] para un sistema de archivos FSx para ONTAP.
+
 .Antes de empezar
 Asegúrese de cumplir con los siguientes requisitos previos antes de comenzar.
 
@@ -47,7 +49,7 @@ En la tabla Volúmenes, seleccione uno o más volúmenes y, a continuación, sel
 . En la página Replicar datos, en Destino de replicación, proporcione lo siguiente:
 +
 .. *FSX para el sistema de archivos ONTAP*: Seleccione credenciales, región y FSX para el nombre del sistema de archivos ONTAP para el sistema de archivos FSX para ONTAP de destino.
-.. *Nombre de VM de almacenamiento*: Seleccione la VM de almacenamiento en el menú desplegable.
+.. *Nombre de VM de almacenamiento*: Seleccione la VM de almacenamiento en el menú desplegable. La máquina virtual de almacenamiento que seleccione es el destino de todos los volúmenes seleccionados en esta relación de replicación.
 .. *Nombre del volumen*: El nombre del volumen de destino se genera automáticamente con el siguiente formato `{OriginalVolumeName}_copy`. Se puede usar el nombre de volumen generado automáticamente o introducir otro nombre de volumen.
 .. *Caso de uso*: Seleccione uno de los siguientes casos de uso para la replicación. En función del caso de uso seleccionado, la fábrica de cargas de trabajo rellena el formulario con los valores recomendados de acuerdo con las mejores prácticas. Puede aceptar los valores recomendados o realizar cambios a medida que complete el formulario.
 +
@@ -102,16 +104,13 @@ NOTE: Las etiquetas de origen y destino coincidentes son necesarias para la rete
 
 +
 *** *Elige una política existente*: Selecciona una política existente en el menú desplegable.
-*** *Crear una nueva política*: Proporcionar lo siguiente:
-+
-**** *Nombre de la política*: Introduzca un nombre de política.
-**** Opcional: Habilitar copias de Snapshot inmutables.
-+
-***** Seleccione *Activar instantáneas inmutables* para evitar que las instantáneas tomadas en esta política se eliminen durante el período de retención.
-***** Establezca el *Período de retención* en número de horas, días, meses o años.
+*** *Crear una nueva política*: ingrese un *nombre de política*.
 
 
-**** *Políticas de instantáneas*: En la tabla, seleccione la frecuencia de la política de instantáneas y el número de copias que se deben retener. Puede seleccionar más de una política de Snapshot.
+.. *Instantáneas inmutables*: Opcional. Seleccione *Activar instantáneas inmutables* para evitar que las instantáneas tomadas en esta política se eliminen durante el período de retención.
++
+*** Establezca el *Período de retención* en número de horas, días, meses o años.
+*** *Políticas de instantáneas*: En la tabla, seleccione la frecuencia de la política de instantáneas y el número de copias que se deben retener. Puede seleccionar más de una política de Snapshot.
 
 
 

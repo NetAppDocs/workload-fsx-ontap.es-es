@@ -38,6 +38,8 @@ NOTE: Al usar Terraform de CodeBox, el código que copie o descargue oculta `fsx
 --
 La creación rápida le permite utilizar una configuración recomendada de mejores prácticas. Puedes cambiar la mayoría de los ajustes después de crear un sistema de archivos FSX for ONTAP.
 
+Los sistemas de archivos FSx para ONTAP de segunda generación son el tipo de implementación predeterminado. El tipo de implementación cambia a primera generación cuando la región no admite sistemas de archivos FSx para ONTAP de segunda generación.
+
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, selecciona *Crear FSX para ONTAP*.
@@ -49,34 +51,30 @@ También puede cargar una configuración guardada.
 +
 .. *Credenciales de AWS*: Seleccione para agregar credenciales de AWS en la fábrica de cargas de trabajo o continuar sin credenciales.
 .. *Nombre del sistema de archivos*: Introduzca un nombre para el sistema de archivos.
-.. *Topología de implementación*: Seleccione una topología de implementación.
-+
-*** La topología de escalado vertical es donde un sistema de archivos se utiliza para la distribución de los datos y puede aumentar su tamaño para responder al crecimiento de los datos.
-*** La topología de escalado horizontal es donde se utiliza más de un sistema de archivos para la distribución de datos.
-
-
-.. * Paredes HA*: Introduzca el número de pares HA.
-+
-*** Para las puestas en marcha de escalado vertical, solo puede tener un par de alta disponibilidad.
-*** Para las puestas en marcha de escalado horizontal, puede tener entre dos y doce parejas de alta disponibilidad.
-+
-Para aprovisionar volúmenes de bloque iSCSI en el sistema de archivos, seleccione un máximo de seis parejas de alta disponibilidad.
-
-
-
+.. *Región y VPC*: Seleccione la región y VPC para el sistema de archivos.
 .. *Tipo de implementación*: Seleccione un tipo de implementación.
 +
 *** Implementación de zona de disponibilidad única (Single-AZ): Proporciona disponibilidad mediante la supervisión de fallos de hardware y la sustitución automática de componentes de la infraestructura en caso de fallo. Logra una alta durabilidad replicando automáticamente sus datos dentro de una zona de disponibilidad para protegerlos frente a fallos de componentes.
-*** Implantación de varias zonas de disponibilidad (Multi-AZ): Proporciona disponibilidad continua a los datos incluso cuando una zona de disponibilidad no está disponible. Los sistemas de archivos Multi-AZ admiten todas las funciones de disponibilidad y durabilidad de los sistemas de archivos Single-AZ. Un sistema de archivos Multi-AZ está diseñado para cargas de trabajo de producción vital para el negocio que requieren alta disponibilidad para los datos de archivos ONTAP compartidos y necesitan almacenamiento con una replicación incorporada en las zonas de disponibilidad.
++
+Esta configuración se recomienda para cargas de trabajo de alto rendimiento o cuando las cargas de trabajo comienzan pequeñas y escalan gradualmente hasta 72 GB/s de rendimiento y 2,4 millones de IOPS.
+
+*** Implantación de varias zonas de disponibilidad (Multi-AZ): Proporciona disponibilidad continua a los datos incluso cuando una zona de disponibilidad no está disponible. Un sistema de archivos Multi-AZ está diseñado para cargas de trabajo de producción vital para el negocio que requieren alta disponibilidad para los datos de archivos ONTAP compartidos y necesitan almacenamiento con una replicación incorporada en las zonas de disponibilidad.
++
+Esta configuración de par HA único se recomienda para cargas de trabajo que requieren hasta 6 GB/s de rendimiento o 200 000 IOPS.
+
 
 
 .. *Etiquetas*: Opcionalmente, puedes añadir hasta 50 etiquetas.
 
 
-. En *Network & security*, en el campo *Region & VPC*, seleccione la región y VPC para el sistema de archivos.
 . En *Detalles del sistema de archivos*, proporcione lo siguiente:
 +
 .. *Capacidad de almacenamiento SSD*: Ingrese la capacidad de almacenamiento y seleccione la unidad de capacidad de almacenamiento.
++
+*** Para las implementaciones de primera generación, no es posible disminuir la capacidad después de la creación del sistema de archivos.
+*** Para las implementaciones de segunda generación, puede aumentar la capacidad después de la creación del sistema de archivos.
+
+
 .. *Credenciales ONTAP*: Opcional. Introduzca su nombre de usuario y contraseña de ONTAP. La contraseña se puede establecer ahora o más tarde.
 +
 Si el usuario que proporcione no es el usuario de fsxadmin, y más tarde necesita restablecer la contraseña de fsxadmin, podrá hacerlo desde la consola de AWS.
@@ -125,53 +123,45 @@ También puede cargar una configuración guardada.
 +
 .. *Credenciales de AWS*: Seleccione para agregar credenciales de AWS en la fábrica de cargas de trabajo o continuar sin credenciales.
 .. *Nombre del sistema de archivos*: Introduzca un nombre para el sistema de archivos.
-.. *Topología de implementación*: Seleccione una topología de implementación.
-+
-*** La topología de escalado vertical es donde un sistema de archivos se utiliza para la distribución de los datos y puede aumentar su tamaño para responder al crecimiento de los datos.
-*** La topología de escalado horizontal es donde se utiliza más de un sistema de archivos para la distribución de datos.
-
-
-.. * Paredes HA*: Introduzca el número de pares HA.
-+
-*** Para las puestas en marcha de escalado vertical, solo puede tener un par de alta disponibilidad.
-*** Para las puestas en marcha de escalado horizontal, puede tener entre dos y doce parejas de alta disponibilidad.
-+
-Para aprovisionar volúmenes de bloque iSCSI en el sistema de archivos, seleccione no más de 6 parejas de alta disponibilidad.
-
-
-
-.. *Tipo de implementación*: Seleccione un tipo de implementación.
+.. *Región y VPC*: Seleccione la región y VPC para el sistema de archivos.
+.. *Tipo de implementación*: seleccione un tipo de implementación y una generación de sistema de archivos.
 +
 *** Implementación de zona de disponibilidad única (Single-AZ): Proporciona disponibilidad mediante la supervisión de fallos de hardware y la sustitución automática de componentes de la infraestructura en caso de fallo. Logra una alta durabilidad replicando automáticamente sus datos dentro de una zona de disponibilidad para protegerlos frente a fallos de componentes.
-*** Implantación de varias zonas de disponibilidad (Multi-AZ): Proporciona disponibilidad continua a los datos incluso cuando una zona de disponibilidad no está disponible. Los sistemas de archivos Multi-AZ admiten todas las funciones de disponibilidad y durabilidad de los sistemas de archivos Single-AZ. Un sistema de archivos Multi-AZ está diseñado para cargas de trabajo de producción vital para el negocio que requieren alta disponibilidad para los datos de archivos ONTAP compartidos y necesitan almacenamiento con una replicación incorporada en las zonas de disponibilidad.
++
+*Generación del sistema de archivos*: Seleccione una de las siguientes opciones: ** *Segunda generación*: Esta configuración se recomienda para cargas de trabajo de alto rendimiento o cuando las cargas de trabajo comienzan pequeñas y escalan gradualmente hasta alcanzar 72 GB/s de rendimiento y 2,4 millones de IOPS. ** *Primera generación*: Esta configuración es ideal para cargas de trabajo que requieren hasta 4 GB/s o 160 000 IOPS. Los sistemas de archivos de primera generación solo pueden aumentar la capacidad.
+
++
+La disponibilidad del sistema de archivos de segunda generación depende de la región seleccionada. Si la región seleccionada no admite sistemas de archivos FSx for ONTAP de segunda generación, el tipo de implementación cambia a primera generación.
+
+*** Implantación de varias zonas de disponibilidad (Multi-AZ): Proporciona disponibilidad continua a los datos incluso cuando una zona de disponibilidad no está disponible. Un sistema de archivos Multi-AZ está diseñado para cargas de trabajo de producción vital para el negocio que requieren alta disponibilidad para los datos de archivos ONTAP compartidos y necesitan almacenamiento con una replicación incorporada en las zonas de disponibilidad.
++
+**** *Segunda generación*: Esta configuración de par de alta disponibilidad (HA) se recomienda para cargas de trabajo que requieren hasta 6 GB/s de rendimiento o 200 000 IOPS. En un sistema de archivos Multi-AZ y de segunda generación, la capacidad puede aumentar o disminuir según las demandas de la carga de trabajo.
+**** *Primera generación*: Esta configuración es ideal para cargas de trabajo que requieren hasta 4 GB/s o 160 000 IOPS. Los sistemas de archivos de primera generación solo pueden aumentar la capacidad.
++
+La disponibilidad del sistema de archivos de segunda generación depende de la región seleccionada. Si la región seleccionada no admite sistemas de archivos FSx for ONTAP de segunda generación, el tipo de implementación cambia a primera generación.
+
+
+
 
 
 .. *Etiquetas*: Opcionalmente, puedes añadir hasta 50 etiquetas.
 
 
-. En Red y seguridad, proporcione lo siguiente:
-+
-.. *Región y VPC*: Seleccione la región y VPC para el sistema de archivos.
-.. *Grupo de seguridad*: Crea o utiliza un grupo de seguridad existente.
-+
-Para obtener un nuevo grupo de seguridad, consulte <<Detalles del grupo de seguridad,detalles del grupo de seguridad>>para obtener una descripción de los protocolos, puertos y roles del grupo de seguridad.
-
-.. *Zonas de disponibilidad*: Seleccione zonas de disponibilidad y subredes.
-+
-*** Para el nodo de configuración de clúster 1: Seleccione una zona de disponibilidad y una subred.
-*** Para el nodo de configuración de clúster 2: Seleccione una zona de disponibilidad y una subred.
-
-
-.. *Tablas de rutas VPC*: Seleccione la tabla de rutas VPC para permitir el acceso del cliente a los volúmenes.
-.. *Rango de direcciones IP de punto final*: Selecciona *Rango de direcciones IP flotante fuera de tu VPC* o *Introduce un rango de direcciones IP* e introduce un rango de direcciones IP.
-.. *Cifrado*: Seleccione el nombre de la clave de cifrado en el menú desplegable.
-
-
 . En Detalles del sistema de archivos, proporcione lo siguiente:
 +
 .. *Capacidad de almacenamiento SSD*: Ingrese la capacidad de almacenamiento y seleccione la unidad de capacidad de almacenamiento.
-.. *IOPS provisionadas*: Selecciona *Automático* o *Provisioned por el usuario*.
-.. * Capacidad de rendimiento por par de alta disponibilidad*: Seleccione la capacidad de rendimiento por par de alta disponibilidad.
++
+*** Para las implementaciones de primera generación, no es posible disminuir la capacidad después de la creación del sistema de archivos.
+*** Para implementaciones de segunda generación, puede ajustar la capacidad.
+
+
+.. Capacidad de rendimiento por par de alta disponibilidad (HA): Seleccione la capacidad de rendimiento por número de pares de HA. Los sistemas de archivos de primera generación solo admiten un par de HA.
+.. *IOPS aprovisionadas*: seleccione una de las siguientes opciones:
++
+*** *Automático*: para que sea automático, por cada GiB creado, se agregan 3 IOPS.
+*** *Aprovisionado por el usuario*: para aprovisionado por el usuario, ingrese el valor de IOPS.
+
+
 .. *Credenciales ONTAP*: Opcional. Introduzca su nombre de usuario y contraseña de ONTAP. La contraseña se puede establecer ahora o más tarde.
 +
 Si el usuario que proporcione no es el usuario de fsxadmin, y más tarde necesita restablecer la contraseña de fsxadmin, podrá hacerlo desde la consola de AWS.
@@ -199,15 +189,32 @@ Si se va a unir a un AD autogestionado, utilice el nombre del grupo en su AD. El
 
 
 
+. En Red y seguridad, proporcione lo siguiente:
++
+.. *Grupo de seguridad*: Crea o utiliza un grupo de seguridad existente.
++
+Para obtener un nuevo grupo de seguridad, consulte <<Detalles del grupo de seguridad,detalles del grupo de seguridad>>para obtener una descripción de los protocolos, puertos y roles del grupo de seguridad.
+
+.. *Zonas de disponibilidad*: Seleccione zonas de disponibilidad y subredes.
++
+*** Para el nodo de configuración de clúster 1: Seleccione una zona de disponibilidad y una subred.
+*** Para el nodo de configuración de clúster 2: Seleccione una zona de disponibilidad y una subred.
+
+
+.. *Tablas de rutas VPC*: Seleccione la tabla de rutas VPC para permitir el acceso del cliente a los volúmenes.
+.. *Rango de direcciones IP de punto final*: Selecciona *Rango de direcciones IP flotante fuera de tu VPC* o *Introduce un rango de direcciones IP* e introduce un rango de direcciones IP.
+.. *Cifrado*: Seleccione el nombre de la clave de cifrado en el menú desplegable.
+
+
 . En Copia de seguridad y mantenimiento, proporcione lo siguiente:
 +
 .. *FSX para copia de seguridad de ONTAP*: Las copias de seguridad automáticas diarias están habilitadas por defecto. Desactívelo si lo desea.
 +
 ... *Período de retención de respaldo automático*: Ingrese el número de días para retener las copias de seguridad automáticas.
 ... *Ventana de copia de seguridad automática diaria*: Seleccione *Sin preferencia* (se selecciona una hora de inicio de copia de seguridad diaria) o *Seleccione la hora de inicio para copias de seguridad diarias* y especifique una hora de inicio.
-... *Ventana de mantenimiento semanal*: Seleccione *Sin preferencia* (se selecciona una hora de inicio de ventana de mantenimiento semanal) o *Seleccione la hora de inicio para la ventana de mantenimiento semanal de 30 minutos* y especifique una hora de inicio.
 
 
+.. *Ventana de mantenimiento semanal*: Seleccione *Sin preferencia* (se selecciona una hora de inicio de ventana de mantenimiento semanal) o *Seleccione la hora de inicio para la ventana de mantenimiento semanal de 30 minutos* y especifique una hora de inicio.
 
 
 . Guarde o cree el sistema de archivos.

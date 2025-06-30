@@ -1,0 +1,68 @@
+= 
+:allow-uri-read: 
+
+
+. *Nombre de VM de almacenamiento*: Seleccione la VM de almacenamiento en el menú desplegable. La máquina virtual de almacenamiento que seleccione es el destino de todos los volúmenes seleccionados en esta relación de replicación.
+. *Nombre del volumen*: El nombre del volumen de destino se genera automáticamente con el siguiente formato `{OriginalVolumeName}_copy`. Se puede usar el nombre de volumen generado automáticamente o introducir otro nombre de volumen.
+. *Caso de uso*: Seleccione uno de los siguientes casos de uso para la replicación. En función del caso de uso seleccionado, la fábrica de cargas de trabajo rellena el formulario con los valores recomendados de acuerdo con las mejores prácticas. Puede aceptar los valores recomendados o realizar cambios a medida que complete el formulario.
++
+** Migración: Transfiere tus datos al sistema de archivos FSx para ONTAP de destino
+** Recuperación ante desastres en caliente: Garantiza una alta disponibilidad y una recuperación ante desastres rápida para cargas de trabajo críticas
+** Recuperación ante desastres en frío o de archivado:
++
+*** Recuperación ante desastres en frío: Utiliza objetivos de tiempo de recuperación (RTO) y objetos de punto de recuperación (RPO) más largos para reducir los costes
+*** Archivado: Replica los datos para un almacenamiento a largo plazo y cumplimiento de normativas
+
+
+** Otros
++
+Además, la selección de casos de uso determina la política de replicación o la política de SnapMirror (ONTAP). Los términos utilizados para describir las políticas de replicación provienen de link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["Documentación de ONTAP 9"^].
+
++
+*** Para la migración y otro tipo, la política de replicación se denomina _MirrorAllSnapshots_. _MirrorAllSnapshots_ es una política asíncrona para reflejar todas las instantáneas y el último sistema de archivos activo.
+*** Para la recuperación ante desastres caliente, fría o de archivado, la política de replicación se denomina _MirrorAndVault_. _MirrorAndVault_ es una política asíncrona y de almacén para reflejar el último sistema de archivos activo y las copias snapshot diarias y semanales.
++
+Para todos los casos de uso, si habilita Snapshot para la retención a largo plazo, la política de replicación predeterminada es _MirrorAndVault_.
+
+
+
+
+
+. *Política de niveles*: Seleccione la política de organización en niveles para los datos almacenados en el volumen de destino. La política de organización en niveles se establece de forma predeterminada en la política de organización en niveles recomendada para el caso de uso seleccionado.
++
+_Balanced (Auto)_ es la política de organización en niveles predeterminada al crear un volumen con la consola de cargas de trabajo de fábrica. Para obtener más información sobre las políticas de organización en niveles de volúmenes, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^] la documentación de AWS FSx para NetApp ONTAP. Tenga en cuenta que la fábrica de carga de trabajo utiliza nombres basados en casos de uso en la consola de fábrica de cargas de trabajo para las políticas de organización en niveles e incluye los nombres de las políticas de organización en niveles de FSx para ONTAP entre paréntesis.
+
++
+Si seleccionó el caso de uso de migración, la fábrica de carga de trabajo selecciona automáticamente copiar la política de organización en niveles del volumen de origen al volumen objetivo. Puede anular la selección para copiar la política de organización en niveles y seleccionar una política de organización en niveles que se aplique al volumen seleccionado para replicación.
+
+. *Tasa de transferencia máxima*: Selecciona *Limited* e introduce el límite máximo de transferencia en MB/s.. Alternativamente, selecciona *Ilimitado*.
++
+Sin un límite, el rendimiento de la red y de las aplicaciones puede disminuir. También recomendamos una tasa de transferencia ilimitada para los sistemas de archivos de FSx for ONTAP para cargas de trabajo cruciales; por ejemplo, aquellas que se usan principalmente para la recuperación ante desastres. . En Configuración de replicación, proporcione lo siguiente:
+
+. *Intervalo de replicación*: Seleccione la frecuencia con la que se transfieren las instantáneas del volumen de origen al volumen de destino.
+. *Retención a largo plazo*: Opcionalmente, habilita instantáneas para la retención a largo plazo. La retención a largo plazo permite que los servicios empresariales continúen funcionando incluso si se produce un fallo completo del sitio, compatible con la conmutación por error de forma transparente mediante una copia secundaria.
++
+Las replicaciones sin retención a largo plazo utilizan la política _MirrorAllSnapshots_. Al habilitar la retención a largo plazo, se asigna la política _MirrorAndVault_ a la replicación.
+
++
+Si habilita la retención a largo plazo, seleccione una política existente o cree una nueva política para definir las snapshots que se replicarán y el número que se retendrá.
+
++
+
+NOTE: Las etiquetas de origen y destino coincidentes son necesarias para la retención a largo plazo. Si lo desea, la fábrica de carga de trabajo puede crear etiquetas que faltan.
+
++
+** *Elige una política existente*: Selecciona una política existente en el menú desplegable.
+** *Crear una nueva política*: ingrese un *nombre de política*.
+
+
+. *Instantáneas inmutables*: Opcional. Seleccione *Activar instantáneas inmutables* para evitar que las instantáneas tomadas en esta política se eliminen durante el período de retención.
++
+** Establezca el *Período de retención* en número de horas, días, meses o años.
+** *Políticas de instantáneas*: En la tabla, seleccione la frecuencia de la política de instantáneas y el número de copias que se deben retener. Puede seleccionar más de una política de Snapshot.
+
+
+
+
+. Seleccione *Crear*.
+

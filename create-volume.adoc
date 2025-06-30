@@ -26,7 +26,7 @@ Los siguientes protocolos pueden usarse para los volúmenes:
 .Antes de empezar
 Revise los siguientes requisitos previos antes de crear un volumen:
 
-* Debe tener un sistema de archivos FSx for ONTAP en la fábrica de cargas de trabajo.
+* Debe tener un sistema de archivos FSx para ONTAP en la consola de fábrica de carga de trabajo.
 * Debe tener una máquina virtual de almacenamiento.
 * Para acceder al protocolo, complete lo siguiente:
 +
@@ -58,7 +58,7 @@ NOTE: Al usar Terraform de CodeBox, el código que copie o descargue oculta `fsx
 El estilo de volumen FlexVol se selecciona de forma predeterminada.
 
 +
-El tamaño del volumen de FlexGroup depende del número de componentes. Se requiere 100 GiB por componente.
+El tamaño del volumen de FlexGroup depende de la cantidad de constituyentes y requiere 100 GiB por constituyente.
 
 .. *Tamaño del volumen*: Introduzca el tamaño del volumen y la unidad.
 +
@@ -66,7 +66,7 @@ Opcionalmente, habilite el crecimiento automático de volúmenes. Esta opción e
 
 .. *Aumento automático del volumen*: Opcionalmente, active el aumento automático del volumen para ampliar automáticamente la capacidad del volumen hasta alcanzar el tamaño máximo. Esta función se adapta al aumento del uso de datos, garantizando así operaciones ininterrumpidas.
 +
-Especifique el tamaño máximo de crecimiento del volumen y la unidad. El tamaño máximo de crecimiento no puede ser menor que el tamaño actual del volumen.
+Especifique el tamaño máximo de crecimiento del volumen y la unidad. No se puede establecer un tamaño de crecimiento máximo menor que el tamaño del volumen actual
 
 .. *Etiquetas*: Opcionalmente, puedes añadir hasta 50 etiquetas.
 
@@ -125,9 +125,35 @@ Complete los siguientes campos para configurar el acceso en bloque al volumen.
 +
 .. *Eficiencia de almacenamiento*: Activada por defecto. Seleccione para desactivar la función.
 +
-La eficiencia del almacenamiento se logra utilizando las funciones de deduplicación y compresión de ONTAP. La deduplicación elimina los bloques de datos duplicados. La compresión de datos comprime los bloques de datos para reducir la cantidad de almacenamiento físico necesaria.
+ONTAP logra eficiencia de almacenamiento utilizando funciones de deduplicación y compresión. La deduplicación elimina los bloques de datos duplicados. La compresión de datos comprime los bloques de datos para reducir la cantidad de almacenamiento físico necesaria.
 
-.. *Archivos inmutables*: Esta función, también conocida como SnapLock, está desactivada por defecto. La habilitación de archivos inmutables impide que se eliminen o sobrescriban los datos durante un periodo de tiempo determinado. Habilitar esta función solo es posible durante la creación del volumen. Una vez habilitada la función, no puede deshabilitarse. Esta es una función premium de FSx para ONTAP que tiene un coste adicional. Para obtener más información, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["Cómo funciona SnapLock"^]en la documentación de Amazon FSx para NetApp ONTAP.
+.. *Política de instantáneas*: Seleccione la política de instantáneas para especificar la frecuencia y retención de instantáneas.
++
+Las siguientes son políticas predeterminadas de AWS. Para las políticas de instantáneas personalizadas, debe link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["asocie un enlace"] .
+
++
+`default`:: Esta política crea Snapshot de forma automática según la siguiente programación, siendo las copias Snapshot más antiguas eliminadas para dejar espacio para las copias más recientes:
++
+--
+*** Un máximo de seis instantáneas cada hora tomadas cinco minutos más allá de la hora.
+*** Un máximo de dos instantáneas diarias tomadas de lunes a sábado a las 10 minutos después de la medianoche.
+*** Un máximo de dos instantáneas semanales tomadas cada domingo a las 15 minutos después de la medianoche.
++
+
+NOTE: Las horas de las instantáneas se basan en la zona horaria del sistema de archivos, que se establece de forma predeterminada en Hora universal coordinada (UTC). Para obtener información sobre cómo cambiar la zona horaria, consulte link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html["Mostrar y configurar la zona horaria del sistema"^] en la documentación de soporte de NetApp.
+
+
+
+--
+`default-1weekly`:: Esta política funciona del mismo modo que la `default` política, excepto que solo conserva una copia de Snapshot de la programación semanal.
+`none`:: Esta política no toma ninguna instantánea. Es posible asignar esta política a los volúmenes para evitar que se tomen Snapshot automáticas.
+
+
+.. *Política de niveles*: Seleccione la política de organización en niveles para los datos almacenados en el volumen.
++
+_Balanced (Auto)_ es la política de organización en niveles predeterminada al crear un volumen con la consola de cargas de trabajo de fábrica. Para obtener más información sobre las políticas de organización en niveles de volúmenes, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^] la documentación de AWS FSx para NetApp ONTAP. Tenga en cuenta que la fábrica de carga de trabajo utiliza nombres basados en casos de uso en la consola de fábrica de cargas de trabajo para las políticas de organización en niveles e incluye los nombres de las políticas de organización en niveles de FSx para ONTAP entre paréntesis.
+
+.. *Archivos inmutables*: Esta función, también conocida como SnapLock, está desactivada por defecto. Habilitar archivos inmutables evita la eliminación o sobrescritura de datos durante un período determinado. Habilitar esta función solo es posible durante la creación del volumen. Una vez habilitada la función, no puede deshabilitarse. Esta es una función premium de FSx para ONTAP que tiene un coste adicional. Para obtener más información, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["Cómo funciona SnapLock"^]en la documentación de Amazon FSx para NetApp ONTAP.
 +
 Al habilitar la función de archivos inmutables, los archivos de este volumen se confirman de forma permanente en un estado WORM inmutable (escritura única lectura múltiple).
 
@@ -147,7 +173,7 @@ NOTA:: Incluso después de que caduque el período de retención, no es posible 
 
 
 --
-Confirmación automática:: Tendrá la opción de activar la función de confirmación automática. La función de compromiso automático confirma un archivo en estado WORM en un volumen SnapLock si el archivo no cambió durante el período de compromiso automático. La función de compromiso automático está deshabilitada de forma predeterminada. Los archivos que desea confirmar automáticamente deben residir en un volumen de SnapLock.
+Confirmación automática:: Tendrá la opción de activar la función de confirmación automática. La función de compromiso automático confirma un archivo en estado WORM en un volumen SnapLock si el archivo no cambió durante el período de compromiso automático. La función de compromiso automático está deshabilitada de forma predeterminada. Debe asegurarse de que los archivos que desea confirmar automáticamente residan en un volumen SnapLock.
 Modo de adición de volúmenes:: No es posible modificar los datos existentes en un archivo protegido CON WORM. Sin embargo, los archivos inmutables le permiten conservar la protección de los datos existentes con archivos que se pueden agregar con WORM. Por ejemplo, puede generar archivos de registro o conservar datos de transmisión de audio o vídeo mientras escribe datos en ellos de forma incremental. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["Obtenga más información sobre el modo de adición de volúmenes"^] En documentación de Amazon FSx para NetApp ONTAP.
 +
 --
@@ -179,31 +205,15 @@ Modo de adición de volúmenes:: No es posible modificar los datos existentes en
 --
 
 
-.. *Política de instantáneas*: Seleccione la política de instantáneas para especificar la frecuencia y retención de instantáneas.
+.. *ARP/AI*: La protección autónoma contra ransomware con IA (ARP/AI) de NetApp está habilitada de forma predeterminada cuando un vínculo está asociado con el sistema de archivos. link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html["Obtenga más información sobre ARP/AI"]. Acepte la sentencia para continuar.
 +
-Las siguientes son políticas predeterminadas de AWS. Para las políticas de instantáneas personalizadas, debe link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["asocie un enlace"] .
+Si la función no está disponible, se debe a una de las siguientes razones:
 
 +
-`default`:: Esta política crea Snapshot de forma automática según la siguiente programación, siendo las copias Snapshot más antiguas eliminadas para dejar espacio para las copias más recientes:
-+
---
-*** Un máximo de seis instantáneas cada hora tomadas cinco minutos más allá de la hora.
-*** Un máximo de dos instantáneas diarias tomadas de lunes a sábado a las 10 minutos después de la medianoche.
-*** Un máximo de dos instantáneas semanales tomadas cada domingo a las 15 minutos después de la medianoche.
-+
+*** Un enlace no está asociado con el sistema de archivos. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
+*** Los volúmenes con archivos inmutables y los volúmenes con protocolos iSCSI y NVMe no son compatibles con ARP/AI.
+*** El sistema de archivos ya tiene una política ARP/AI.
 
-NOTE: Las horas de las instantáneas se basan en la zona horaria del sistema de archivos, que se establece de forma predeterminada en Hora universal coordinada (UTC). Para obtener información sobre cómo cambiar la zona horaria, consulte link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html["Mostrar y configurar la zona horaria del sistema"^] en la documentación de soporte de NetApp.
-
-
-
---
-`default-1weekly`:: Esta política funciona del mismo modo que la `default` política, excepto que solo conserva una copia de Snapshot de la programación semanal.
-`none`:: Esta política no toma ninguna instantánea. Es posible asignar esta política a los volúmenes para evitar que se tomen Snapshot automáticas.
-
-
-.. *Política de niveles*: Seleccione la política de organización en niveles para los datos almacenados en el volumen.
-+
-_Balanced (Auto)_ es la política de organización en niveles predeterminada al crear un volumen con la consola de cargas de trabajo de fábrica. Para obtener más información sobre las políticas de organización en niveles de volúmenes, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^] la documentación de AWS FSx para NetApp ONTAP. Tenga en cuenta que la fábrica de carga de trabajo utiliza nombres basados en casos de uso en la consola de fábrica de cargas de trabajo para las políticas de organización en niveles e incluye los nombres de las políticas de organización en niveles de FSx para ONTAP entre paréntesis.
 
 
 
@@ -218,4 +228,4 @@ _Balanced (Auto)_ es la política de organización en niveles predeterminada al 
 
 
 .Resultado
-Se inicia la creación del volumen. Una vez creado, el nuevo volumen aparecerá en la pestaña Volumes.
+La fábrica de cargas de trabajo inicia la creación del volumen. Una vez creado, el sistema muestra el nuevo volumen en la pestaña Volúmenes.
