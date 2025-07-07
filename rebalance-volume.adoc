@@ -61,7 +61,7 @@ Verifique el equilibrio de los volúmenes FlexVol o FlexGroup en un sistema de a
 ** Volúmenes de FlexGroup
 ** Volúmenes de FlexVol
 +
-Cuando un volumen no está equilibrado, considere <<Rebalance a volume,reequilibrando la tecnología>> .
+Cuando un volumen no está equilibrado, considere <<Reequilibrar la capacidad de volumen,reequilibrando la tecnología>> .
 
 
 

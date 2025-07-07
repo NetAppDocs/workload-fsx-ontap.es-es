@@ -34,7 +34,7 @@ La asociación de un nuevo enlace incluye la creación y asociación de enlaces.
 Tiene dos opciones para crear enlaces en este flujo de trabajo: automáticamente o manualmente. Tendrás que iniciar una pila de AWS CloudFormation en tu cuenta de AWS para crear el vínculo.
 
 * Automáticamente: Crea un enlace con registro automático a través de la fábrica de cargas de trabajo. Un enlace creado automáticamente requiere tokens para la automatización de la fábrica de cargas de trabajo y el código CloudFormation es de corta duración. Solo se puede utilizar durante un máximo de seis horas.
-* Manualmente: Crea un enlace con registro manual mediante CloudFormation o Terraform desde Codebox. El código persiste, lo que le da más tiempo para completar la operación. Esto es útil cuando se trabaja con diferentes equipos como Security y DevOps que podrían necesitar otorgar los permisos necesarios para completar la creación de enlaces.
+* Manualmente: Crea un vínculo con registro manual. El código de CloudFormation persiste dándote más tiempo para completar la operación. Esto es útil cuando se trabaja con diferentes equipos como Security y DevOps que podrían necesitar otorgar los permisos necesarios para completar la creación de enlaces.
 
 
 .Antes de empezar
@@ -161,7 +161,7 @@ Puede supervisar el estado de creación del enlace desde la página Eventos. Est
 --
 .Crear manualmente
 --
-Con esta opción, se extrae el ARN del enlace y se reporta aquí. La fábrica de cargas de trabajo registra manualmente el enlace por usted. Se puede crear un enlace utilizando dos herramientas de Infraestructura como Código (IaC) de Codebox: CloudFormation o Terraform.
+Con esta opción, extrae el ARN para el enlace de AWS CloudFormation e informa aquí. La fábrica de cargas de trabajo registra manualmente el enlace por usted.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -183,7 +183,7 @@ Puede crear secretos en alineación con los permisos predeterminados o asignar s
 
 .. *Permisos de enlace*: seleccione una de las siguientes opciones para los permisos de enlace:
 +
-*** *Automático*: seleccione esta opción para que el código de AWS CloudFormation o Terraform cree automáticamente la política de permisos de Lambda y la función de ejecución.
+*** *Automático*: seleccione esta opción para que el código de AWS CloudFormation cree automáticamente la política de permisos de Lambda y la función de ejecución.
 *** *Proporcionado por el usuario*: Seleccione esta opción para asignar un rol de ejecución de Lambda específico y sus políticas asociadas al enlace de Lambda. Se requieren los siguientes permisos para la política de permisos de Lambda .  `secretsmanager:GetSecretValue` Solo se requiere permiso si habilitó AWS Secrets Manager.
 +
 [source, json]
