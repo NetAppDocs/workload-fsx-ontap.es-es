@@ -102,7 +102,7 @@ sidebar:
         url: "/manage-immutable-files.html"
       - title: Gestione etiquetas de volumen
         url: "/manage-volume-tags.html"
-      - title: Reequilibrar la capacidad de un volumen
+      - title: Reequilibrar la capacidad de volumen
         url: "/rebalance-volume.html"
       - title: Cambie una política de organización en niveles
         url: "/change-tiering-policy.html"

@@ -11,7 +11,7 @@ summary: Mediante la fábrica de cargas de trabajo de BlueXP  puedes crear un s
 
 
 [role="lead"]
-Mediante la fábrica de cargas de trabajo de BlueXP  puedes crear un sistema de archivos FSx para ONTAP para añadir y gestionar volúmenes y servicios de datos adicionales.
+Con la fábrica de carga de trabajo BlueXP puede crear sistemas de archivos FSx para ONTAP de primera y segunda generación para agregar y administrar volúmenes y servicios de datos adicionales.
 
 .Acerca de esta tarea
 Se crea una máquina virtual de almacenamiento y un grupo de seguridad como parte de la creación del sistema de archivos.
@@ -38,7 +38,7 @@ NOTE: Al usar Terraform de CodeBox, el código que copie o descargue oculta `fsx
 --
 La creación rápida le permite utilizar una configuración recomendada de mejores prácticas. Puedes cambiar la mayoría de los ajustes después de crear un sistema de archivos FSX for ONTAP.
 
-Los sistemas de archivos FSx para ONTAP de segunda generación son el tipo de implementación predeterminado. El tipo de implementación cambia a primera generación cuando la región no admite sistemas de archivos FSx para ONTAP de segunda generación.
+Los sistemas de archivos FSx para ONTAP de segunda generación son el tipo de implementación predeterminado para la creación rápida, a menos que la región seleccionada no admita sistemas de archivos FSx para ONTAP de segunda generación.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -124,22 +124,24 @@ También puede cargar una configuración guardada.
 .. *Credenciales de AWS*: Seleccione para agregar credenciales de AWS en la fábrica de cargas de trabajo o continuar sin credenciales.
 .. *Nombre del sistema de archivos*: Introduzca un nombre para el sistema de archivos.
 .. *Región y VPC*: Seleccione la región y VPC para el sistema de archivos.
-.. *Tipo de implementación*: seleccione un tipo de implementación y una generación de sistema de archivos.
+.. *Tipo de implementación*: seleccione un tipo de implementación y una generación de sistema de archivos. La disponibilidad de un sistema de archivos de segunda generación depende de la región seleccionada. Si la región seleccionada no admite sistemas de archivos FSx for ONTAP de segunda generación, el tipo de implementación cambia a primera generación.
 +
 *** Implementación de zona de disponibilidad única (Single-AZ): Proporciona disponibilidad mediante la supervisión de fallos de hardware y la sustitución automática de componentes de la infraestructura en caso de fallo. Logra una alta durabilidad replicando automáticamente sus datos dentro de una zona de disponibilidad para protegerlos frente a fallos de componentes.
 +
-*Generación del sistema de archivos*: Seleccione una de las siguientes opciones: ** *Segunda generación*: Esta configuración se recomienda para cargas de trabajo de alto rendimiento o cuando las cargas de trabajo comienzan pequeñas y escalan gradualmente hasta alcanzar 72 GB/s de rendimiento y 2,4 millones de IOPS. ** *Primera generación*: Esta configuración es ideal para cargas de trabajo que requieren hasta 4 GB/s o 160 000 IOPS. Los sistemas de archivos de primera generación solo pueden aumentar la capacidad.
+*Generación del sistema de archivos*: seleccione una de las siguientes opciones:
 
 +
-La disponibilidad del sistema de archivos de segunda generación depende de la región seleccionada. Si la región seleccionada no admite sistemas de archivos FSx for ONTAP de segunda generación, el tipo de implementación cambia a primera generación.
+**** *Segunda generación*: esta configuración se recomienda para cargas de trabajo de alto rendimiento o cuando las cargas de trabajo comienzan pequeñas y escalan de manera incremental hasta 72 GB/s de rendimiento y 2,4 millones de IOPS.
+**** *Primera generación*: Esta configuración es ideal para cargas de trabajo que requieren hasta 4 GB/s o 160 000 IOPS. Los sistemas de archivos de primera generación solo pueden aumentar la capacidad.
+
 
 *** Implantación de varias zonas de disponibilidad (Multi-AZ): Proporciona disponibilidad continua a los datos incluso cuando una zona de disponibilidad no está disponible. Un sistema de archivos Multi-AZ está diseñado para cargas de trabajo de producción vital para el negocio que requieren alta disponibilidad para los datos de archivos ONTAP compartidos y necesitan almacenamiento con una replicación incorporada en las zonas de disponibilidad.
 +
+*Generación del sistema de archivos*: seleccione una de las siguientes opciones:
+
++
 **** *Segunda generación*: Esta configuración de par de alta disponibilidad (HA) se recomienda para cargas de trabajo que requieren hasta 6 GB/s de rendimiento o 200 000 IOPS. En un sistema de archivos Multi-AZ y de segunda generación, la capacidad puede aumentar o disminuir según las demandas de la carga de trabajo.
 **** *Primera generación*: Esta configuración es ideal para cargas de trabajo que requieren hasta 4 GB/s o 160 000 IOPS. Los sistemas de archivos de primera generación solo pueden aumentar la capacidad.
-+
-La disponibilidad del sistema de archivos de segunda generación depende de la región seleccionada. Si la región seleccionada no admite sistemas de archivos FSx for ONTAP de segunda generación, el tipo de implementación cambia a primera generación.
-
 
 
 

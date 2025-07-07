@@ -112,7 +112,7 @@ Puede crear secretos en alineación con los permisos predeterminados o asignar s
 
 .. *Permisos de enlace*: seleccione una de las siguientes opciones para los permisos de enlace:
 +
-*** *Automático*: seleccione esta opción para que el código de AWS CloudFormation o Terraform cree automáticamente la política de permisos de Lambda y la función de ejecución.
+*** *Automático*: seleccione esta opción para que el código de AWS CloudFormation cree automáticamente la política de permisos de Lambda y la función de ejecución.
 *** *Proporcionado por el usuario*: Seleccione esta opción para asignar un rol de ejecución de Lambda específico y sus políticas asociadas al enlace de Lambda. Se requieren los siguientes permisos para la política de permisos de Lambda .  `secretsmanager:GetSecretValue` Solo se requiere permiso si habilitó AWS Secrets Manager.
 +
 [source, json]

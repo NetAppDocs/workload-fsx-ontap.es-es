@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: rebalance-volume.html 
 keywords: rebalance capacity, volume capacity, redistribute capacity 
-summary: Compruebe y reequilibre la capacidad de un volumen para evitar desequilibrios que se desarrollan a lo largo del tiempo. 
+summary: Verificar y reequilibrar la capacidad de volumen para evitar desequilibrios que se desarrollen con el tiempo. 
 ---
-= Comprobar y reequilibrar la capacidad de un volumen
+= Verificar y reequilibrar la capacidad de volumen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
