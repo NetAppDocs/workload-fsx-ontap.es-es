@@ -63,6 +63,3 @@ NOTE: Las etiquetas de origen y destino coincidentes son necesarias para la rete
 
 
 
-
-. Seleccione *Crear*.
-
