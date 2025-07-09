@@ -21,6 +21,9 @@ indexpage:
       url: "/explore-savings.html"
     - title: Crea un sistema de archivos FSx for ONTAP
       url: "/create-file-system.html"
+    - title: Visualice el estado de buena arquitectura de sus sistemas de archivos
+        FSx para ONTAP
+      url: "/improve-configurations.html"
     - title: Cree un volumen de FSx para ONTAP
       url: "/create-volume.html"
     - title: Proteja sus datos

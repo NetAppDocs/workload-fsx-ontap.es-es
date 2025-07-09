@@ -11,12 +11,14 @@ summary: La fábrica de cargas de trabajo de BlueXP  para bases de datos analiz
 
 
 [role="lead"]
-Mediante información y recomendaciones de análisis de la configuración, aprovecha la fábrica de cargas de trabajo de BlueXP  para implementar las prácticas recomendadas para tus sistemas de archivos FSx para ONTAP. Puede encontrar problemas fácilmente y emprender acciones para mejorar la arquitectura de cualquier sistema que no esté optimizado para ofrecer fiabilidad, seguridad, eficiencia, rendimiento y costos.
+Con la información y las recomendaciones del análisis de configuración, aproveche Workload Factory para implementar las mejores prácticas para sus sistemas de archivos de FSx for ONTAP . Puede revisar fácilmente el estado de la arquitectura, conocer los problemas de sus configuraciones y tomar medidas para mejorar la arquitectura de cualquier sistema que no esté optimizado en términos de confiabilidad, seguridad, eficiencia, rendimiento y costo.
+
+link:configuration-analysis.html["Obtenga información sobre el análisis de configuración y el estado de buena arquitectura en la fábrica de carga de trabajo."]
 
 .Acerca de esta tarea
-BlueXP  analiza a diario las configuraciones de puesta en marcha del sistema de archivos de Amazon FSx para NetApp ONTAP. El análisis diario proporciona información y recomendaciones con opciones para solucionar automáticamente problemas de configuración para que su sistema de archivos cumpla las prácticas recomendadas.
+Workload Factory analiza diariamente las configuraciones de implementación del sistema de archivos de Amazon FSx for NetApp ONTAP . Este análisis diario proporciona el estado de la arquitectura, así como información y recomendaciones, con opciones para corregir automáticamente los problemas de configuración y que su sistema de archivos cumpla con las prácticas recomendadas.
 
-Tiene opciones para revisar las recomendaciones sobre problemas de configuración con los sistemas de archivos y corregir esos problemas desde el inventario de almacenamiento en la consola de fábrica de cargas de trabajo.
+Tiene opciones para revisar las recomendaciones para problemas de configuración con sus sistemas de archivos y solucionar los problemas desde el inventario de almacenamiento dentro de la consola de fábrica de carga de trabajo.
 
 Qué se analiza:: La fábrica de cargas de trabajo analiza el estado bien diseñado de las siguientes configuraciones para los sistemas de archivos FSx para ONTAP:
 +
