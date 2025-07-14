@@ -17,15 +17,27 @@ No es necesario establecer un vínculo para empezar con la fábrica de cargas de
 
 
 
+== Por qué son beneficiosos los enlaces
+
+Los enlaces son beneficiosos porque permiten que la fábrica de cargas de trabajo realice operaciones que no están disponibles de forma nativa a través de la API de Amazon FSx for ONTAP . Los enlaces habilitan capacidades y automatizaciones avanzadas de ONTAP , lo que mejora la gestión de los sistemas de archivos de FSx for ONTAP .
+
+A continuación se muestran algunos beneficios de utilizar enlaces:
+
+* El enlace permite a BlueXP enviar comandos ONTAP directamente a su sistema de archivos FSx para ONTAP , aportando funciones ONTAP avanzadas más allá de lo que AWS ofrece de forma nativa.
+* Los enlaces utilizan AWS Lambda para ejecutar código en respuesta a eventos. Este enfoque sin servidor elimina la dependencia de una instancia ejecutándose en su VPC.
+
+
+
+
 == Cómo funcionan los enlaces
 
 Los enlaces aprovechan AWS Lambda. Lambda ejecuta código en respuesta a eventos y gestiona automáticamente los recursos informáticos requeridos por ese código. Los enlaces que cree forman parte de su cuenta de NetApp y están asociados a una cuenta de AWS.
 
-Después de crear un enlace, puede asociarlo con uno o varios sistemas de archivos FSX for ONTAP. Cada sistema de archivos solo se puede asociar a un enlace en la misma cuenta de NetApp. Si tiene varias cuentas de NetApp, un único sistema de archivos se puede asociar con enlaces adicionales en diferentes cuentas de NetApp.
+Después de crear un enlace, puede asociarlo con uno o muchos sistemas de archivos FSx para ONTAP . Cada sistema de archivos solo se puede asociar a un enlace en la misma cuenta de NetApp. Si tiene varias cuentas de NetApp, un único sistema de archivos se puede asociar con enlaces adicionales en diferentes cuentas de NetApp.
 
-Crea enlaces desde las páginas del sistema de archivos FSx para ONTAP en la fábrica de cargas de trabajo. link:create-link.html["Aprende a crear enlaces"] para obtener más detalles.
+Crea y asocia vínculos desde la carga de trabajo de almacenamiento en la fábrica de cargas de trabajo.
 
-Puede utilizar vínculos auténticos utilizando credenciales almacenadas en el servicio de credenciales de fábrica de cargas de trabajo o con sus credenciales almacenadas en AWS Secrets Manager. La fábrica de cargas de trabajo no admite el cambio de modos de autenticación.
+Puede autenticar enlaces utilizando credenciales almacenadas en el servicio de credenciales de la fábrica de carga de trabajo o con sus credenciales almacenadas en AWS Secrets Manager. La fábrica de cargas de trabajo no admite el cambio de modos de autenticación.
 
 
 
@@ -39,20 +51,21 @@ link:https://aws.amazon.com/lambda/pricing/["Obtenga más información sobre los
 
 == Cuando se requiere un enlace
 
-La fábrica de cargas de trabajo requiere un enlace para mostrar información y realizar algunas tareas. Si intentas realizar una operación que requiere un enlace y no has asociado un enlace con el sistema de archivos FSX for ONTAP, verás un mensaje indicando que la operación requiere un enlace. Puede agregar un nuevo enlace o asociar el sistema de archivos FSx para ONTAP con un enlace existente en ese momento para que pueda realizar la operación.
+La fábrica de cargas de trabajo requiere un enlace para mostrar información y realizar algunas tareas. Si intenta realizar una operación que requiere un vínculo y no ha asociado un vínculo con el sistema de archivos FSx para ONTAP , la fábrica de carga de trabajo le notifica que la operación requiere un vínculo.
 
 Las características que requieren un enlace incluyen:
 
-* Visualización de la versión de ONTAP que está instalada en un sistema de archivos FSx for ONTAP
+* Estado bien diseñado de FSx para configuraciones del sistema de archivos ONTAP para mantenimiento proactivo, confiabilidad y optimización de costo-rendimiento
+* Protección autónoma contra ransomware de NetApp (ARP/IA)
+* Observabilidad de capacidad holística mejorada en FSx para sistemas de archivos ONTAP
+* Replicación, administración y monitoreo de datos de máquinas virtuales de volumen y almacenamiento
+* Acciones SMB/CIFS y aprovisionamiento y gestión de políticas de exportación NFS
 * Gestión de volúmenes iSCSI en un sistema de archivos FSx para ONTAP
-* Función de crecimiento automático para volúmenes
-* Creación y gestión de políticas de Snapshot
-* Configuración de las relaciones de replicación
-* Replicación de volúmenes entre sistemas de archivos FSx para ONTAP
-* Configuración de las relaciones de backup
-* Backups de datos de volúmenes en el almacenamiento en la nube
-* Clones de volúmenes dentro de un sistema de archivos FSx para ONTAP
-* Visualización de métricas adicionales directamente desde ONTAP (las métricas predeterminadas son recopiladas por Amazon CloudWatch)
-* Gestión de las políticas de exportación de NFS
-* Gestión de recursos compartidos CIFS
+* Creación y gestión de políticas de instantáneas para SLA de protección personalizados
+* Mejoras en la gestión de inodos para la gestión automática de la capacidad
+* Crecimiento automático de volumen para escalamiento elástico
+* Creación y gestión de clones para la clonación de datos instantánea e in situ
+* Visualización de métricas adicionales directamente desde ONTAP , como la versión de ONTAP
 
+
+Aprenda a link:create-link.html["conectar un enlace a un sistema de archivos FSx para ONTAP"].
