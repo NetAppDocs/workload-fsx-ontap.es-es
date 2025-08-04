@@ -34,7 +34,7 @@ La asociación de un nuevo enlace incluye la creación y asociación de enlaces.
 Tiene dos opciones para crear enlaces en este flujo de trabajo: automáticamente o manualmente. Tendrás que iniciar una pila de AWS CloudFormation en tu cuenta de AWS para crear el vínculo.
 
 * Automáticamente: crea un vínculo con registro automático a través de la fábrica de carga de trabajo.  Esto requiere tokens para la automatización de la fábrica de carga de trabajo y el código de CloudFormation es de corta duración y se puede utilizar durante hasta seis horas.
-* Manualmente: Crea un vínculo con registro manual. El código de CloudFormation persiste dándote más tiempo para completar la operación. Esto es útil cuando se trabaja con diferentes equipos como Security y DevOps que podrían necesitar otorgar los permisos necesarios para completar la creación de enlaces.
+* Manualmente: crea un enlace con registro manual utilizando CloudFormation o Terraform desde Codebox.  El código persiste dándote más tiempo para completar la operación.  Esto es útil cuando se trabaja con diferentes equipos, como Seguridad y DevOps, que primero podrían necesitar otorgar los permisos necesarios para completar la creación del enlace.
 
 
 .Antes de empezar
@@ -161,14 +161,14 @@ Puede supervisar el estado de creación del enlace en la página Eventos.  Esto 
 --
 .Crear manualmente
 --
-Con esta opción, extrae el ARN para el enlace de AWS CloudFormation e informa aquí. La fábrica de cargas de trabajo registra manualmente el enlace por usted.
+Puede crear un enlace utilizando dos herramientas de Infraestructura como código (IaC) de Codebox: CloudFormation o Terraform.  Con esta opción, extrae el ARN del enlace de AWS CloudFormation y lo informa aquí.  La fábrica de carga de trabajo registra manualmente el enlace para usted.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
 . En la pestaña *FSX for ONTAP*, seleccione el menú de tres puntos del sistema de archivos para asociar un enlace y luego seleccione *Enlace asociado*.
 . En el cuadro de diálogo de enlace Asociado, seleccione *Crear un nuevo enlace* y seleccione *Continuar*.
-. En la página Crear Enlace, proporcione lo siguiente:
+. En la página Crear enlace, seleccione CloudFormation o Terraform en el cuadro de código y luego proporcione lo siguiente:
 +
 .. *Nombre del enlace*: Introduzca el nombre que desea utilizar para este enlace. El nombre debe ser único dentro de su cuenta.
 .. *AWS Secrets Manager*: Opcional. Permite que la fábrica de cargas de trabajo recupere las credenciales de acceso de FSx para ONTAP desde AWS Secrets Manager.
@@ -201,7 +201,7 @@ Ingrese el ARN del rol de ejecución de Lambda en el cuadro de texto.
 
 
 .. *Etiquetas*: Opcionalmente, agrega cualquier etiqueta que quieras asociar a este enlace para que puedas categorizar más fácilmente tus recursos. Por ejemplo, podría agregar una etiqueta que identifique este enlace como utilizado por FSX para sistemas de archivos ONTAP.
-.. *Registro de enlace*: seleccione la flecha desplegable para expandir las instrucciones sobre cómo registrar el enlace desde el servicio AWS CloudFormation o usando Terraform. Siga las instrucciones.
+.. *Registro de enlace*: Seleccione CloudFormation o Terraform para obtener las instrucciones sobre cómo registrar el enlace y siga las instrucciones.
 +
 Tenga en cuenta que se conceden tres permisos a Lambda al iniciar la plantilla de CloudFormation. La fábrica de cargas de trabajo utiliza estos permisos cuando se utilizan enlaces.
 
