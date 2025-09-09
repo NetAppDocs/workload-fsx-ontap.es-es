@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-snapshot-policy.html 
 keywords: create 
-summary: Crear una política de copias Snapshot personalizada para una máquina virtual de almacenamiento en la fábrica de cargas de trabajo de BlueXP . 
+summary: Cree una política de instantáneas personalizada para una máquina virtual de almacenamiento en una fábrica de carga de trabajo. 
 ---
-= Crear una política de copias Snapshot para las máquinas virtuales de almacenamiento en la fábrica de cargas de trabajo de BlueXP 
+= Crear una política de instantáneas para las máquinas virtuales de almacenamiento en la fábrica de carga de trabajo
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Cree una política de snapshots personalizada para máquinas virtuales de almacenamiento en la fábrica de cargas de trabajo de BlueXP . Una política de Snapshot define la forma en que el sistema crea snapshots para una máquina virtual de almacenamiento. Puede crear una política de copias Snapshot para una máquina virtual de almacenamiento en un sistema de archivos FSx para ONTAP. También puede compartir la política en varios equipos virtuales de almacenamiento.
+Cree una política de instantáneas personalizada para las máquinas virtuales de almacenamiento en la fábrica de carga de trabajo para administrar la creación y retención de instantáneas.  Una política de instantáneas define cómo el sistema crea instantáneas para una máquina virtual de almacenamiento.  Puede crear una política de instantáneas para una máquina virtual de almacenamiento en un sistema de archivos FSx para ONTAP .  También puede compartir la política entre varias máquinas virtuales de almacenamiento.
 
 .Acerca de esta tarea
 Puede crear una política de Snapshot personalizada que difiera de las tres políticas de Snapshot incorporadas para FSx para ONTAP:
@@ -65,6 +65,3 @@ Al habilitar snapshots inmutables, todas las snapshots de esta política de snap
 . *Compartir entre VM de almacenamiento*: Habilitado por defecto. Cuando está habilitada, la política de Snapshot se comparte en todas las máquinas virtuales de almacenamiento del sistema de archivos. Deshabilite para crear una política de snapshots para una sola máquina virtual de almacenamiento.
 . Seleccione *Crear*.
 
-
-.Resultado
-Se ha creado la política de Snapshot.

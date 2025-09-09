@@ -29,17 +29,18 @@ Debe asociar un enlace para crear una instantánea manual de un volumen. link:ht
 . En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos que contiene el volumen para crear una instantánea y luego selecciona *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
 . En la pestaña *Volúmenes*, seleccione el menú de tres puntos para el volumen a proteger con instantáneas.
-. Seleccione *Acciones de protección de datos*, *Snapshots* y luego *Crear una instantánea*.
-. En el cuadro de diálogo Crear una instantánea, introduzca un nombre de instantánea en el campo *Nombre de instantánea*.
-. Opcional: Convierta la snapshot en inmutable para evitar que se elimine durante el período de retención.
+. Seleccione *Acciones de protección de datos* y luego *Administrar instantáneas*.
+. Desde la página Administrar instantáneas, seleccione *Crear instantánea*.
+. En el cuadro de diálogo Crear una instantánea, haga lo siguiente:
 +
-.. Habilitar *instantáneas inmutables*.
+.. Introduzca un nombre para la instantánea en el campo *Nombre de la instantánea*.
+.. Opcionalmente, seleccione una etiqueta o cree una nueva etiqueta.
 .. Establezca el *Período de retención* como un número de horas, días, meses o años.
-.. Acepte la declaración sobre instantáneas inmutables.
+.. Opcional: *Hacer que esta instantánea sea inmutable* para evitar que se elimine durante el período de retención.
++
+Acepte la declaración sobre instantáneas inmutables.
+
 
 
 . Seleccione *Crear*.
 
-
-.Resultado
-El volumen tiene una copia Snapshot.

@@ -53,7 +53,7 @@ sidebar:
       entries:
       - title: Información general sobre la protección de datos
         url: "/data-protection-overview.html"
-      - title: Gestionar copias Snapshot
+      - title: Usar instantáneas
         entries:
         - title: Crear una copia de Snapshot
           url: "/create-snapshot.html"
@@ -61,15 +61,13 @@ sidebar:
           url: "/create-snapshot-policy.html"
         - title: Restaurar un volumen a partir de una copia de Snapshot
           url: "/restore-volume-from-snapshot.html"
-        - title: Crear un volumen nuevo a partir de una copia de Snapshot
-          url: "/create-volume-from-snapshot.html"
-      - title: Gestión de backups en el almacenamiento de objetos
+      - title: Utilice copias de seguridad para el almacenamiento de objetos
         entries:
         - title: Cree una copia de seguridad manual
           url: "/create-backup.html"
         - title: Restaurar un volumen desde un backup
           url: "/restore-from-backup.html"
-      - title: Gestionar la replicación
+      - title: Utilizar replicación
         entries:
         - title: Cree una relación de replicación
           url: "/create-replication.html"
@@ -147,6 +145,8 @@ sidebar:
           url: "/manage-snapshot-policy.html"
         - title: Habilite y edite snapshots para retención a largo plazo
           url: "/enable-snapshots-long-term.html"
+        - title: Gestionar copias Snapshot
+          url: "/manage-snapshots.html"
       - title: Completos
         entries:
         - title: Gestione la programación de backups de FSx para ONTAP
