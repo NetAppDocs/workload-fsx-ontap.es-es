@@ -23,7 +23,6 @@ Tenga en cuenta las siguientes limitaciones antes de crear un volumen a partir d
 
 * Solo es posible restaurar un volumen a partir de una copia Snapshot si tiene una copia Snapshot existente del volumen.
 * Cambios en los modelos de permisos: Si utiliza esta operación para cambiar el tipo de protocolo de almacenamiento conectado a la red (NAS), también puede cambiar el modelo de permisos que proporciona el estilo de seguridad. Es posible que experimente problemas de permisos de acceso a archivos, que solo puede corregir manualmente con el acceso de administrador mediante la configuración de herramientas de cliente NAS para permisos.
-* Mayor consumo de volumen: después de crear un volumen a partir de una instantánea, tiene dos volúmenes independientes y ambos consumen capacidad del sistema de archivos del host.  Asegúrese de tener suficiente capacidad para completar esta operación.
 
 
 .Pasos
