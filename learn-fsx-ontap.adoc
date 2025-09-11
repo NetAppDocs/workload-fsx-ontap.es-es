@@ -70,9 +70,17 @@ AWS mantiene tu cuenta de FSx para ONTAP, no la fábrica de cargas de trabajo. C
 
 
 
-== Regiones admitidas
+== Regiones
 
-https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Consulte las regiones de Amazon admitidas."^]
+La fábrica de carga de trabajo es compatible con todas las regiones comerciales donde se admite FSx para ONTAP .link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Consulte las regiones de Amazon admitidas."^]
+
+Las siguientes regiones de AWS no son compatibles:
+
+* regiones de China
+* Regiones de GovCloud (EE. UU.)
+* Nube secreta
+* Nube de alto secreto
+
 
 
 
