@@ -2100,7 +2100,6 @@
   <block id="ad8f55b88a50703984e58a23e36e9026" category="inline-image-macro">Captura de pantalla que muestra la pantalla de administración de instantáneas.</block>
   <block id="404a59509c6a806310ecbd1d601e0ee6" category="paragraph"><block ref="404a59509c6a806310ecbd1d601e0ee6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="52574bdc9ce79e7e568096fa39264d72" category="section-title">Disminución de la capacidad de almacenamiento SSD disponible</block>
-  <block id="0cc6e64eaa35165d8791def1903c483a" category="paragraph">La fábrica de carga de trabajo admite la disminución de la capacidad de la unidad de estado sólido (SSD) de sus sistemas de archivos de primera y segunda generación.  Con la capacidad elástica del sistema de archivos, puede ajustar dinámicamente la capacidad de sus sistemas de archivos para que coincidan con las necesidades de sus cargas de trabajo.</block>
   <block id="298ae1d1e13ebe1f0f22936b7ea9ce33" category="inline-link-macro">Ajustar la capacidad del sistema de archivos</block>
   <block id="6b4be3b501bf6ae8984293c02d4d610b" category="paragraph"><block ref="6b4be3b501bf6ae8984293c02d4d610b" category="inline-link-macro-rx"></block></block>
   <block id="14fc4cc175abaf53d8e3d6a080ba96e8" category="summary">Cree una política de instantáneas personalizada para una máquina virtual de almacenamiento en una fábrica de carga de trabajo.</block>
@@ -2177,4 +2176,6 @@
   <block id="5948f3347ebc02ebc690227c059661e1" category="section-title">Regiones</block>
   <block id="dbd9df55416d4512d3fcb441aced88b3" category="paragraph">La fábrica de carga de trabajo es compatible con todas las regiones comerciales donde se admite FSx para ONTAP .<block ref="c26e1d6730022abf3c378cf0c0cad7af" category="inline-link-macro-rx"></block></block>
   <block id="186585d175a4fff1722ac82a5520c584" category="paragraph">Las siguientes regiones de AWS no son compatibles:</block>
+  <block id="edfbca9622799a953a48987a288fe283" category="paragraph">La fábrica de carga de trabajo admite la disminución de la capacidad de la unidad de estado sólido (SSD) de sus sistemas de archivos de segunda generación. Con la capacidad elástica del sistema de archivos, puede ajustar dinámicamente la capacidad de sus sistemas de archivos para que coincidan con las necesidades de sus cargas de trabajo.</block>
+  <block id="381c6da705f822c3139853781716a57a" category="admonition">La disminución de la capacidad de almacenamiento SSD solo se admite en sistemas de archivos de segunda generación.</block>
 </blocks>

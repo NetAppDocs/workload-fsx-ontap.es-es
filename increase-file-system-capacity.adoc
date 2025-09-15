@@ -17,6 +17,9 @@ Aumente la capacidad de almacenamiento SSD de un sistema de archivos FSx para ON
 
 De forma alternativa, link:enable-auto-capacity-management.html["habilite la función de gestión automática de capacidad"]la fábrica de carga de trabajo gestiona la capacidad del sistema de archivos.
 
+
+NOTE: La disminución de la capacidad de almacenamiento SSD solo se admite en sistemas de archivos de segunda generación.
+
 .Acerca de esta tarea
 Con la capacidad elástica del sistema de archivos, puede ajustar dinámicamente la capacidad de sus sistemas de archivos para que coincidan con las necesidades de sus cargas de trabajo.
 
