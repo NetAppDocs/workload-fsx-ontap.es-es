@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-backup-schedule.html 
 keywords: backup schedule, backup policy, update backups, update backup schedule, FSx for ONTAP backup 
-summary: Gestione la programación de backups de un sistema de archivos FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP  cuando sea necesario. 
+summary: Administre la programación de copias de seguridad de un sistema de archivos FSx para ONTAP en NetApp Workload Factory cuando sea necesario. 
 ---
 = Gestione la programación de backups para un sistema de archivos FSx for ONTAP
 :allow-uri-read: 
@@ -11,12 +11,13 @@ summary: Gestione la programación de backups de un sistema de archivos FSx para
 
 
 [role="lead"]
-Gestione la programación de backups de un sistema de archivos FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP .
+Administre la programación de copias de seguridad de un sistema de archivos FSx para ONTAP en NetApp Workload Factory.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, selecciona *Ir a Inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos para actualizar la programación de copia de seguridad y luego selecciona *Administrar*.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos para el cual desea actualizar la programación de copias de seguridad y luego seleccione *Administrar*.
 . En Información, seleccione el icono del lápiz junto a *FSX for ONTAP Backup*. El icono del lápiz aparece junto a la flecha desplegable cuando el ratón pasa por encima de la fila *FSX for ONTAP BACKUP*.
 . En el cuadro de diálogo *FSX para copia de seguridad de ONTAP*, proporcione lo siguiente:
 +

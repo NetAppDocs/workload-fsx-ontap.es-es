@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: limit-transfer-rate.html 
 keywords: limit max transfer rate, limit transfer rate 
-summary: Limitar la tasa de transferencia máxima de una relación de replicación en la fábrica de cargas de trabajo BlueXP . 
+summary: Limite la tasa de transferencia máxima de una relación de replicación en NetApp Workload Factory. 
 ---
 = Limite la tasa de transferencia máxima de una relación de replicación
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Limitar la tasa de transferencia máxima de una relación de replicaci�
 
 
 [role="lead"]
-Limitar la tasa de transferencia máxima de una relación de replicación en la fábrica de cargas de trabajo BlueXP . Una tasa de transferencia ilimitada puede afectar negativamente al rendimiento de otras aplicaciones y su red.
+Limite la tasa de transferencia máxima de una relación de replicación en NetApp Workload Factory.  Una tasa de transferencia ilimitada podría afectar negativamente el rendimiento de otras aplicaciones y de su red.
 
 .Acerca de esta tarea
 La limitación de la velocidad de transferencia máxima es opcional, pero se recomienda. Sin un límite, el rendimiento de la red y de las aplicaciones puede disminuir.
@@ -23,10 +23,11 @@ Piense en la cantidad de ancho de banda que asignar a la replicación.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el actionsenu del sistema de archivos que desea actualizar y luego seleccione *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Relaciones de replicación*.
-. En la pestaña Relaciones de replicación, seleccione el menú de tres puntos de la relación de replicación para limitar la tasa de transferencia máxima.
+. En la pestaña Relaciones de replicación, seleccione las acciones de la relación de replicación para limitar la velocidad de transferencia máxima.
 . Selecciona *Editar tasa de transferencia máxima*.
 . En el cuadro de diálogo Editar velocidad de transferencia máxima, seleccione *Limited* e introduzca el límite máximo de transferencia en MB/s.
 +

@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: change-tiering-policy.html 
 keywords: tiering policy, change tier, change tiers, tier policy update 
-summary: Cambie la política de organización en niveles en la fábrica de cargas de trabajo BlueXP  para volver a asignar datos del nivel de almacenamiento principal de alto rendimiento al nivel de almacenamiento del pool de capacidad secundario. 
+summary: Cambie la política de niveles en NetApp Workload Factory para reasignar datos del nivel de almacenamiento principal de alto rendimiento al nivel de almacenamiento del grupo de capacidad secundario. 
 ---
-= Cambie la política de organización en niveles de un volumen en la fábrica de cargas de trabajo BlueXP 
+= Cambiar la política de niveles de un volumen en NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-En la fábrica de cargas de trabajo BlueXP , se puede cambiar la política de organización en niveles para volver a asignar datos automáticamente desde el nivel de almacenamiento primario de alto rendimiento al nivel de almacenamiento secundario del pool de capacidad.
+En NetApp Workload Factory, puede cambiar la política de niveles para reasignar automáticamente los datos del nivel de almacenamiento principal de alto rendimiento al nivel de almacenamiento del grupo de capacidad secundario.
 
 .Acerca de esta tarea
 Puede cambiar la política de organización en niveles de un volumen en cualquier momento. La política de organización en niveles se define por volumen.
@@ -39,10 +39,11 @@ Tenga en cuenta que algunas políticas de organización en niveles tienen asocia
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, seleccione el menú de tres puntos del sistema de archivos con el volumen que desea actualizar y luego seleccione *Administrar*.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen a actualizar y luego seleccione *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. En la pestaña Volumes, seleccione el menú de tres puntos del volumen para cambiar la política de organización en niveles.
+. Desde la pestaña Volúmenes, seleccione el menú de acciones del volumen para el cual desea cambiar la política de niveles.
 . Selecciona *Acciones avanzadas*, luego *Cambiar política de niveles*.
 . En la página Change Tiering policy, seleccione para copiar la política de organización en niveles del volumen de origen o seleccione una de las siguientes políticas de organización en niveles:
 +

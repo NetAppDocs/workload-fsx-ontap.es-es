@@ -4,7 +4,7 @@ permalink: delete-volume.html
 keywords: delete volume, volume deletion 
 summary: Elimina un volumen en tu sistema de archivos FSx para ONTAP que ya no sea necesario y para liberar espacio. Esta operación es irreversible. 
 ---
-= Elimine un volumen en la fábrica de carga de trabajo BlueXP 
+= Eliminar un volumen en NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -24,10 +24,11 @@ Considere lo siguiente antes de eliminar un volumen:
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, seleccione el menú de tres puntos del sistema de archivos con el volumen que desea eliminar y luego seleccione *Administrar*.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el actionsenu del sistema de archivos con el volumen que desea eliminar y luego seleccione *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. En la pestaña Volumes, seleccione el menú de tres puntos del volumen que desea eliminar.
+. Desde la pestaña Volúmenes, seleccione el menú de acciones del volumen que desea eliminar.
 . Seleccione *Acciones básicas* y luego *Eliminar volumen*.
 . En el cuadro de diálogo Delete volume, realice lo siguiente:
 +
@@ -37,7 +38,7 @@ La copia de seguridad permanecerá en el sistema de archivos hasta que la elimin
 
 .. Seleccione *continuar*.
 .. Escriba «delete» para eliminar el volumen.
-.. Seleccione *Eliminar*.
+.. Seleccione *Eliminar* para confirmar.
 
 
 

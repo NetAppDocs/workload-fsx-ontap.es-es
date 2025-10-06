@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: discover-cache-volumes.html 
+keywords: discover cache volume, FlexCache technology, ONTAP FlexCache, FSx for ONTAP volume 
+summary: Descubra y visualice los volúmenes de caché asociados con las relaciones de caché sin salir de la consola de NetApp Workload Factory. 
+---
+= Descubra volúmenes de caché en Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Descubra y visualice volúmenes _cache_ asociados con relaciones de caché sin salir de la consola de NetApp Workload Factory.  Las relaciones de caché también se conocen como relaciones ONTAP FlexCache .  Workload Factory descubre relaciones de caché existentes utilizando la tecnología FlexCache , que es la capacidad de almacenamiento en caché remoto de NetApp ONTAP que acelera el acceso a los datos, reduce la latencia de la WAN, el ancho de banda y los costos de las cargas de trabajo de lectura intensiva, especialmente cuando los clientes necesitan acceder a los mismos datos repetidamente.
+
+link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html["Obtenga más información sobre la replicación de datos con FlexCache."^]
+
+.Acerca de esta tarea
+La asociación de enlaces es necesaria para descubrir las relaciones de caché.
+
+Puede existir una relación de caché entre volúmenes en dos sistemas ONTAP , como un sistema de archivos FSx para ONTAP y un sistema Cloud Volumes ONTAP .  Una relación de caché también puede existir dentro de un solo sistema de archivos FSx para ONTAP , de volumen a volumen.
+
+.Antes de empezar
+Tenga en cuenta lo siguiente antes de comenzar.
+
+* Debe asociar un enlace para descubrir relaciones de caché en un sistema de archivos. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"] . Después de asociar el enlace, vuelva a esta operación.
+* Debe tener una relación de caché existente.
+
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx para ONTAP*, seleccione la pestaña *Relaciones de caché*.
+. Sus volúmenes de caché aparecen en la tabla.  La tabla incluye la siguiente información sobre cada volumen de caché:
++
+** *Clúster de origen*: el clúster de origen o fuente de la relación FlexCache .
+** *Volumen de origen*: el volumen de origen o fuente de la relación FlexCache .
+** *VM de almacenamiento de origen*: la VM de almacenamiento de origen o fuente del volumen.
+** *Volumen de caché*: el volumen de caché, o de destino, de la relación FlexCache .
+** *VM de almacenamiento en caché*: la VM de almacenamiento en caché o de destino del volumen.
+** *Estado*: El estado de la relación FlexCache .
+** *Almacenamiento disponible en caché*: la cantidad de almacenamiento disponible en el volumen de caché.
+** *Sistema de archivos de caché*: El sistema de archivos del volumen de caché.
+** *Modos de escritura*: El modo de escritura de la relación FlexCache .
+** *DR cache*: Indica si la relación FlexCache es un caché de recuperación ante desastres (DR).
+** *Política de exportación*: La política de exportación del volumen de caché.
+
+
+

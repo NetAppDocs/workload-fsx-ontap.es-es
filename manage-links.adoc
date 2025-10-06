@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-links.html 
 keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing 
-summary: Puede ver los enlaces asociados a su cuenta, actualizar las contraseñas para la autenticación de enlaces y eliminar un enlace en la fábrica de carga de trabajo de BlueXP. 
+summary: Puede ver los enlaces asociados a su cuenta, actualizar las contraseñas para la autenticación de enlaces y eliminar un enlace en NetApp Workload Factory. 
 ---
-= Administrar vínculos de fábrica de carga de trabajo
+= Administrar enlaces de Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Administre los enlaces asociados a su cuenta de Workload Factory. Puede ver los enlaces asociados a un sistema de archivos de FSx for ONTAP, proporcionar las contraseñas utilizadas para la autenticación de enlaces y eliminar enlaces desde la consola de Workload Factory.
+Administre los enlaces que ha asociado con su cuenta de Workload Factory.  Puede ver los enlaces asociados con un sistema de archivos FSx para ONTAP , proporcionar contraseñas utilizadas para la autenticación de enlaces y eliminar enlaces desde la consola de Workload Factory.
 
 link:links-overview.html["Obtenga más información sobre los enlaces"] o link:create-link.html["crear y asociar un enlace"].
 
@@ -23,11 +23,10 @@ Puede ver los enlaces que están actualmente asociados a su cuenta.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En la página de inicio, seleccione *Links* en el menú.
+. Desde el menú Almacenamiento, seleccione *Administración* y luego *Enlaces*.
 +
-image:screenshot-menu-links.png["Una captura de pantalla que muestra cómo abrir la página de enlaces."]
+Los enlaces existentes aparecen en la página Enlaces.
 
-. Si existe algún enlace, la página de visión general proporciona la información.
 . Para ver los sistemas de archivos FSX for ONTAP asociados a un enlace, seleccione el botón *Ver* en la sección de recursos asociados.
 +
 image:screenshot-view-link-details.png["Una captura de pantalla que muestra los sistemas de archivos de FSx para ONTAP que utilizan un enlace específico."]
@@ -39,7 +38,7 @@ image:screenshot-view-link-details.png["Una captura de pantalla que muestra los 
 
 == Editar un vínculo
 
-No puede editar un enlace desde la interfaz de fábrica de cargas de trabajo. Si necesita realizar un cambio en un enlace, deberá crear un nuevo enlace y, a continuación, asociarlo al sistema de archivos.
+No es posible editar un enlace desde la interfaz de Workload Factory.  Si necesita realizar un cambio en un enlace, deberá crear un nuevo enlace y luego asociarlo a su sistema de archivos.
 
 
 NOTE: Puede editar la configuración de red de Lambda (por ejemplo, VPC, subredes y grupos de seguridad) mediante la consola de AWS y los cambios se reflejarán en la IU de administración de enlaces; sin embargo, estos cambios pueden provocar problemas de conectividad entre Lambda y ONTAP, y no se recomiendan.
@@ -48,17 +47,18 @@ NOTE: Puede editar la configuración de red de Lambda (por ejemplo, VPC, subrede
 
 == Autenticar un enlace
 
-Proporcione una contraseña de usuario administrativo para las credenciales de fábrica de cargas de trabajo o un ARN secreto de AWS Secrets Manager para conectar el enlace a un sistema de archivos FSx for ONTAP.
+Proporcione una contraseña de usuario administrativo para las credenciales de Workload Factory o un ARN secreto de AWS Secrets Manager para conectar el enlace a un sistema de archivos FSx para ONTAP .
 
-AWS Secrets Manager no es compatible cuando se utiliza un conector.
+AWS Secrets Manager no es compatible cuando se utiliza un agente de consola.
 
 
 NOTE: Solo se admite un método de autenticación por enlace. Por ejemplo, si selecciona la autenticación de enlaces con AWS Secrets Manager, no podrá cambiar el método de autenticación más adelante.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, seleccione el menú de tres puntos del sistema de archivos para asociar un enlace y luego seleccione *Administrar*.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos al que desea asociar un enlace y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, seleccione *Autenticar el enlace*.
 . En la página Authenticate link, seleccione un modo Authenticate:
 +
@@ -80,8 +80,9 @@ Cuando la contraseña administrativa no sea válida, actualice la contraseña pa
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, seleccione el menú de tres puntos del sistema de archivos para asociar un enlace y luego seleccione *Administrar*.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos al que desea asociar un enlace y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, seleccione *Actualizar contraseña*.
 . En la página Authenticate link, introduzca la nueva contraseña dos veces.
 . Seleccione *aplicar*.
@@ -96,17 +97,18 @@ La contraseña se actualiza, y el enlace ahora está conectado al sistema de arc
 
 Puede eliminar un enlace que ya no utilice en su entorno. Cualquier sistema de archivos FSX for ONTAP u otros recursos que estuvieran utilizando el enlace no podrán usar ciertas funcionalidades después de que se elimine el enlace.
 
-Tenga en cuenta que el enlace solo se elimina de Workload Factory - no se elimina de su entorno AWS. Debe eliminar la función Lambda de su cuenta de AWS después de eliminar el enlace en la fábrica de cargas de trabajo.
+Tenga en cuenta que el enlace solo se elimina de Workload Factory, no se elimina de su entorno de AWS.  Debes eliminar la función Lambda de tu cuenta de AWS después de eliminar el vínculo en Workload Factory.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En la página de inicio, seleccione *Links* en el menú.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. Desde el menú Almacenamiento, seleccione *Administración* y luego *Enlaces*.
 +
-image:screenshot-menu-links.png["Una captura de pantalla que muestra cómo abrir la página de enlaces."]
+Los enlaces existentes aparecen en la página Enlaces.
 
-. En la página Enlaces, selecciona el botón de menú y selecciona *Eliminar*.
+. Desde la página Enlaces, seleccione el menú de acciones del enlace que desea eliminar y luego seleccione *Eliminar*.
 +
-image:screenshot-remove-link.png["Una captura de pantalla que muestra cómo eliminar un enlace de la fábrica de cargas de trabajo."]
+image:screenshot-remove-link.png["Una captura de pantalla que muestra cómo eliminar un enlace de Workload Factory."]
 
 . Si está seguro, seleccione *Eliminar* de nuevo.
 

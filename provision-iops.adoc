@@ -11,7 +11,7 @@ summary: Aprovisiona automáticamente o aprovisiona manualmente las IOPS de SSD 
 
 
 [role="lead"]
-Aprovisiona automáticamente o aprovisiona manualmente IOPS de SSD para un sistema de archivos FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP .
+Aprovisione automática o manualmente IOPS de SSD para un sistema de archivos FSx para ONTAP en NetApp Workload Factory.
 
 .Acerca de esta tarea
 Puede habilitar el aprovisionamiento automático de IOPS de SSD para un sistema de archivos FSx o aprovisionar IOPS manualmente.
@@ -24,8 +24,9 @@ Para obtener más información sobre los límites de IOPS, consulte link:https:/
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, selecciona *Ir a Inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos para aprovisionar IOPS y luego selecciona *Administrar*.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos para el cual se desea aprovisionar IOPS y luego seleccione *Administrar*.
 . En Información, seleccione el icono de lápiz que aparece junto a la flecha desplegable cuando el ratón pasa por encima de la fila de asignación de IOPS*.
 . En el cuadro de diálogo de IOPS aprovisionado, seleccione *Automático* o *Provisioned por el usuario*.
 . Si selecciona *User Provisioned*, introduzca el valor de *IOPS* deseado.

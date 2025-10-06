@@ -4,21 +4,22 @@ permalink: manage-volume-tags.html
 keywords: volume tags, edit volume tags, edit tags 
 summary: Las etiquetas pueden ayudarte a categorizar tus recursos. Puedes añadir, editar y quitar etiquetas de volúmenes en cualquier momento con FSx para volúmenes de ONTAP. 
 ---
-= Gestione etiquetas de volumen en la fábrica de cargas de trabajo BlueXP 
+= Administrar etiquetas de volumen en NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Las etiquetas pueden ayudarte a categorizar tus recursos. Puedes añadir, editar y quitar etiquetas de volúmenes en cualquier momento para FSx para ONTAP Volumes en la fábrica de cargas de trabajo de BlueXP .
+Las etiquetas pueden ayudarle a categorizar sus recursos.  Puede agregar, editar y eliminar etiquetas de volumen en cualquier momento para los volúmenes FSx for ONTAP en NetApp Workload Factory.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, seleccione el menú de tres puntos del sistema de archivos con el volumen que desea actualizar y luego seleccione *Administrar*.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen a actualizar y luego seleccione *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. En la pestaña Volumes, seleccione el menú de tres puntos para el volumen para modificar etiquetas.
+. Desde la pestaña Volúmenes, seleccione el menú de acciones del volumen para el que desea modificar las etiquetas.
 . Seleccione *Acciones básicas* y luego *Editar etiquetas de volumen*.
 . En la página Editar etiquetas de volumen, agregue, edite o elimine etiquetas.
 +

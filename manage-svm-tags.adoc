@@ -4,21 +4,22 @@ permalink: manage-svm-tags.html
 keywords: edit storage vm tags, vm tags, svm tags 
 summary: Añada, actualice o quite etiquetas de máquinas virtuales de almacenamiento para una máquina virtual de almacenamiento en cualquier momento. 
 ---
-= Gestionar las etiquetas de los equipos virtuales de almacenamiento en la fábrica de cargas de trabajo de BlueXP 
+= Administrar etiquetas de máquinas virtuales de almacenamiento en NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Las etiquetas pueden ayudarte a categorizar tus recursos. Puede añadir, editar y quitar etiquetas para una máquina virtual de almacenamiento en cualquier momento en la fábrica de cargas de trabajo de BlueXP .
+Las etiquetas pueden ayudarle a categorizar sus recursos.  Puede agregar, editar y eliminar etiquetas de una máquina virtual de almacenamiento en cualquier momento en NetApp Workload Factory.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con la VM de almacenamiento para actualizar y luego selecciona *Administrar*.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con la VM de almacenamiento que desea actualizar y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
-. En la pestaña Storage VMs, seleccione el menú de tres puntos de la máquina virtual de almacenamiento para la cual desea editar etiquetas.
+. Desde la pestaña Máquinas virtuales de almacenamiento, seleccione el menú de acciones de la máquina virtual de almacenamiento para la cual desea editar etiquetas.
 . Seleccione *Editar etiquetas de VM de almacenamiento*.
 . En la página Edit storage VM tags, agregue, edite o elimine etiquetas.
 +

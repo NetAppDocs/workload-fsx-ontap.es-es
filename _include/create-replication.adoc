@@ -4,7 +4,7 @@
 
 . *Nombre de VM de almacenamiento*: Seleccione la VM de almacenamiento en el menú desplegable. La máquina virtual de almacenamiento que seleccione es el destino de todos los volúmenes seleccionados en esta relación de replicación.
 . *Nombre del volumen*: El nombre del volumen de destino se genera automáticamente con el siguiente formato `{OriginalVolumeName}_copy`. Se puede usar el nombre de volumen generado automáticamente o introducir otro nombre de volumen.
-. *Caso de uso*: Seleccione uno de los siguientes casos de uso para la replicación. En función del caso de uso seleccionado, la fábrica de cargas de trabajo rellena el formulario con los valores recomendados de acuerdo con las mejores prácticas. Puede aceptar los valores recomendados o realizar cambios a medida que complete el formulario.
+. *Caso de uso*: Seleccione uno de los siguientes casos de uso para la replicación.  Dependiendo del caso de uso seleccionado, Workload Factory completa el formulario con valores recomendados de acuerdo con las mejores prácticas.  Puede aceptar los valores recomendados o realizar cambios a medida que completa el formulario.
 +
 ** Migración: Transfiere tus datos al sistema de archivos FSx para ONTAP de destino
 ** Recuperación ante desastres en caliente: Garantiza una alta disponibilidad y una recuperación ante desastres rápida para cargas de trabajo críticas
@@ -30,10 +30,10 @@ Para todos los casos de uso, si habilita Snapshot para la retención a largo pla
 
 . *Política de niveles*: Seleccione la política de organización en niveles para los datos almacenados en el volumen de destino. La política de organización en niveles se establece de forma predeterminada en la política de organización en niveles recomendada para el caso de uso seleccionado.
 +
-_Balanced (Auto)_ es la política de organización en niveles predeterminada al crear un volumen con la consola de cargas de trabajo de fábrica. Para obtener más información sobre las políticas de organización en niveles de volúmenes, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^] la documentación de AWS FSx para NetApp ONTAP. Tenga en cuenta que la fábrica de carga de trabajo utiliza nombres basados en casos de uso en la consola de fábrica de cargas de trabajo para las políticas de organización en niveles e incluye los nombres de las políticas de organización en niveles de FSx para ONTAP entre paréntesis.
+_Equilibrado (automático)_ es la política de niveles predeterminada al crear un volumen mediante la consola de Workload Factory.  Para obtener más información sobre las políticas de niveles de volumen, consultelink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^] en la documentación de AWS FSx para NetApp ONTAP .  Tenga en cuenta que Workload Factory utiliza nombres basados ​​en casos de uso en la consola de Workload Factory para las políticas de niveles e incluye los nombres de políticas de niveles de FSx para ONTAP entre paréntesis.
 
 +
-Si seleccionó el caso de uso de migración, la fábrica de carga de trabajo selecciona automáticamente copiar la política de organización en niveles del volumen de origen al volumen objetivo. Puede anular la selección para copiar la política de organización en niveles y seleccionar una política de organización en niveles que se aplique al volumen seleccionado para replicación.
+Si seleccionó el caso de uso de migración, Workload Factory selecciona automáticamente copiar la política de niveles del volumen de origen al volumen de destino.  Puede anular la selección para copiar la política de niveles y seleccionar una política de niveles que se aplique al volumen seleccionado para la replicación.
 
 . *Tasa de transferencia máxima*: Selecciona *Limited* e introduce el límite máximo de transferencia en MB/s.. Alternativamente, selecciona *Ilimitado*.
 +

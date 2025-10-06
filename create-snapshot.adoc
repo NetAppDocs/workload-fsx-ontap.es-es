@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-snapshot.html 
 keywords: create snapshot, snapshot 
-summary: Crea una copia Snapshot manual de un volumen de FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP . Las copias Snapshot son versiones puntuales del contenido del volumen. 
+summary: Cree una instantánea manual de un volumen FSx para ONTAP en NetApp Workload Factory.  Las instantáneas son versiones puntuales del contenido de su volumen. 
 ---
 = Cree una snapshot manual de un volumen de FSx para ONTAP
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Crea una copia Snapshot manual de un volumen de FSx para ONTAP en la f�
 
 
 [role="lead"]
-Crea una copia Snapshot manual de un volumen de FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP . Las copias Snapshot son versiones puntuales del contenido del volumen.
+Cree una instantánea manual de un volumen FSx para ONTAP en NetApp Workload Factory.  Las instantáneas son versiones puntuales del contenido de su volumen.
 
 Las Snapshot son recursos de volúmenes y son capturas instantáneas de los datos que solo consumen espacio para los datos modificados. Debido a que los datos cambian con el tiempo, las snapshots suelen consumir más espacio a medida que envejecen.
 
@@ -25,10 +25,11 @@ Debe asociar un enlace para crear una instantánea manual de un volumen. link:ht
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En *Almacenamiento*, selecciona *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos que contiene el volumen para crear una instantánea y luego selecciona *Administrar*.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos que contiene el volumen para el cual se creará una instantánea y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. En la pestaña *Volúmenes*, seleccione el menú de tres puntos para el volumen a proteger con instantáneas.
+. Desde la pestaña *Volúmenes*, seleccione el menú de acciones para el volumen que desea proteger con instantáneas.
 . Seleccione *Acciones de protección de datos* y luego *Administrar instantáneas*.
 . Desde la página Administrar instantáneas, seleccione *Crear instantánea*.
 . En el cuadro de diálogo Crear una instantánea, haga lo siguiente:

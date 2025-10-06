@@ -11,7 +11,7 @@ summary: Habilite snapshots para retención a largo plazo, lo que le permite rep
 
 
 [role="lead"]
-En la fábrica de cargas de trabajo de BlueXP , puede habilitar instantáneas para su retención a largo plazo, lo que le permite replicar snapshots específicas para la recuperación ante desastres a largo plazo.
+En NetApp Workload Factory, puede habilitar instantáneas para retención a largo plazo, lo que le permite replicar instantáneas específicas para la recuperación ante desastres a largo plazo.
 
 La retención a largo plazo permite que los servicios empresariales continúen funcionando incluso en caso de fallas completas del sitio, lo que permite la recuperación tras fallas transparente de aplicaciones mediante una copia secundaria.
 
@@ -21,10 +21,11 @@ Cuando un clúster de ONTAP en las instalaciones es el destino de la relación d
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos para actualizar y luego selecciona *Administrar*.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el actionsenu del sistema de archivos que desea actualizar y luego seleccione *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Relaciones de replicación*.
-. En la pestaña Relaciones de replicación, seleccione el menú de tres puntos de la programación de la relación de replicación que desea cambiar.
+. En la pestaña Relaciones de replicación, seleccione el menú de acciones del programa de relación de replicación que desea cambiar.
 . Seleccione *Editar retención a largo plazo*.
 . En el cuadro de diálogo Editar retención a largo plazo, habilite o deshabilite instantáneas para retención a largo plazo.
 . Si selecciona desactivar las instantáneas para la retención a largo plazo, seleccione *Aplicar* para completar esta operación.

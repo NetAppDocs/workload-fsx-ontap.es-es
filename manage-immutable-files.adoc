@@ -4,7 +4,7 @@ permalink: manage-immutable-files.html
 keywords: enable immutable files, disable immutable files, lock files, unlock files 
 summary: Puede actualizar ciertos ajustes de archivos inmutables cuando la función está activada. 
 ---
-= Gestione archivos inmutables de un volumen en la fábrica de cargas de trabajo de BlueXP 
+= Administrar archivos inmutables para un volumen en NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -17,9 +17,10 @@ Tenga en cuenta que la activación de archivos inmutables solo es posible durant
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. Seleccione la pestaña *Volúmenes*.
-. En la pestaña Volumes, seleccione el menú de tres puntos del volumen que desea clonar.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen a actualizar y luego seleccione *Administrar*.
+. En la pestaña Volúmenes, seleccione el menú de acciones del volumen a clonar.
 . Selecciona *Acciones de protección de datos* y luego *Administrar archivos inmutables*.
 . En la página Gestionar archivos inmutables, puede actualizar lo siguiente:
 +
@@ -35,6 +36,7 @@ Tenga en cuenta que la activación de archivos inmutables solo es posible durant
 
 
 ** *Autocommit*: Habilita o deshabilita la función para confirmar automáticamente archivos A WORM que no se hayan modificado durante el período de autocommit.
+** *Eliminación privilegiada*: habilita o deshabilita la función.  Al habilitar esta función, un administrador de SnapLock puede eliminar un volumen WORM no vencido.  Esta función solo es compatible con el modo de retención empresarial.
 ** *Modo de adición de volumen*: Activa o desactiva la función. Al habilitar el modo de adición de volúmenes, es posible añadir nuevo contenido a los archivos WORM.
 
 

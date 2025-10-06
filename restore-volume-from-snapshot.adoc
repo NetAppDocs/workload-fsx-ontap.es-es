@@ -4,14 +4,14 @@ permalink: restore-volume-from-snapshot.html
 keywords: restore volume, snapshot 
 summary: Restaura un volumen de FSx para ONTAP a partir de una instantánea cuando el volumen contenga archivos dañados o eliminados. 
 ---
-= Restaurar un volumen desde una instantánea en la fábrica de carga de trabajo
+= Restaurar un volumen desde una instantánea en Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-En la fábrica de carga de trabajo, puede restaurar datos desde una instantánea a un volumen existente o a un volumen nuevo.  La operación de restauración permite la recuperación en un punto determinado del tiempo cuando un volumen contiene archivos eliminados o dañados.
+En Workload Factory, puede restaurar datos desde una instantánea a un volumen existente o a un volumen nuevo. La operación de restauración permite la recuperación en un punto determinado del tiempo cuando un volumen contiene archivos eliminados o dañados.
 
 .Acerca de esta tarea
 Tiene la opción de restaurar datos de una instantánea a un volumen existente o a un volumen nuevo.
@@ -27,12 +27,13 @@ Tenga en cuenta las siguientes limitaciones antes de crear un volumen a partir d
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En *Almacenamiento*, selecciona *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*.
+. En *Almacenamiento*, seleccione *Ir a almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. En la pestaña *Volúmenes*, seleccione el menú de tres puntos para que el volumen se restaure desde una instantánea.
+. Desde la pestaña *Volúmenes*, seleccione el menú de acciones para el volumen que desea restaurar desde una instantánea.
 . Seleccione *Acciones de protección de datos* y luego *Administrar instantáneas*.
-. Desde la página Administrar instantáneas, seleccione el menú de tres puntos correspondiente a la instantánea que desea restaurar y, luego, seleccione *Restaurar*.
+. Desde la página Administrar instantáneas, seleccione el menú de acciones para la instantánea que desea restaurar y luego seleccione *Restaurar*.
 . En el cuadro de diálogo Restaurar volumen desde una instantánea, seleccione una de las siguientes opciones:
 +
 ** Cambie para seleccionar *Restaurar como un nuevo volumen*.

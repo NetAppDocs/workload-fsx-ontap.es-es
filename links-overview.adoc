@@ -2,28 +2,28 @@
 sidebar: sidebar 
 permalink: links-overview.html 
 keywords: links, accounts, lambda 
-summary: Un enlace de fábrica de cargas de trabajo crea una relación de confianza y conectividad entre una cuenta de fábrica de cargas de trabajo y uno o varios sistemas de archivos FSx para ONTAP. 
+summary: Un vínculo de Workload Factory crea una relación de confianza y conectividad entre una cuenta de Workload Factory y uno o más sistemas de archivos FSx para ONTAP . 
 ---
-= Obtenga información sobre los enlaces de fábrica de cargas de trabajo de BlueXP 
+= Obtenga más información sobre los enlaces de NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Un enlace de fábrica de cargas de trabajo de BlueXP  crea una relación de confianza y conectividad entre una cuenta de fábrica de cargas de trabajo y uno o varios sistemas de archivos FSx para ONTAP. De este modo, puedes supervisar y gestionar determinadas funciones del sistema de archivos directamente desde las llamadas de la API DE REST DE ONTAP que no están disponibles a través de la API de Amazon FSx para ONTAP.
+Un vínculo de NetApp Workload Factory crea una relación de confianza y conectividad entre una cuenta de Workload Factory y uno o más sistemas de archivos FSx para ONTAP .  Esto le permite monitorear y administrar ciertas características del sistema de archivos directamente desde las llamadas API REST de ONTAP que no están disponibles a través de la API de Amazon FSx para ONTAP .
 
-No es necesario establecer un vínculo para empezar con la fábrica de cargas de trabajo, pero en algunos casos deberá crear un vínculo para desbloquear todas las funciones de fábrica de cargas de trabajo y las capacidades de cargas de trabajo.
+No necesita un enlace para comenzar a usar Workload Factory, pero en algunos casos necesitará crear un enlace para desbloquear todas las funciones y capacidades de carga de trabajo de Workload Factory.
 
 
 
 == Por qué son beneficiosos los enlaces
 
-Los enlaces son beneficiosos porque permiten que la fábrica de cargas de trabajo realice operaciones que no están disponibles de forma nativa a través de la API de Amazon FSx for ONTAP . Los enlaces habilitan capacidades y automatizaciones avanzadas de ONTAP , lo que mejora la gestión de los sistemas de archivos de FSx for ONTAP .
+Los enlaces son beneficiosos porque permiten que Workload Factory realice operaciones que no están disponibles de forma nativa a través de la API de Amazon FSx para ONTAP .  Los enlaces habilitan capacidades y automatizaciones avanzadas de ONTAP , que mejoran la administración de FSx para los sistemas de archivos ONTAP .
 
 A continuación se muestran algunos beneficios de utilizar enlaces:
 
-* El enlace permite a BlueXP enviar comandos ONTAP directamente a su sistema de archivos FSx para ONTAP , aportando funciones ONTAP avanzadas más allá de lo que AWS ofrece de forma nativa.
+* El enlace permite que la consola de NetApp envíe comandos ONTAP directamente a su sistema de archivos FSx para ONTAP , lo que aporta funciones ONTAP avanzadas más allá de lo que AWS ofrece de forma nativa.
 * Los enlaces utilizan AWS Lambda para ejecutar código en respuesta a eventos. Este enfoque sin servidor elimina la dependencia de una instancia ejecutándose en su VPC.
 
 
@@ -35,15 +35,15 @@ Los enlaces aprovechan AWS Lambda. Lambda ejecuta código en respuesta a eventos
 
 Después de crear un enlace, puede asociarlo con uno o muchos sistemas de archivos FSx para ONTAP . Cada sistema de archivos solo se puede asociar a un enlace en la misma cuenta de NetApp. Si tiene varias cuentas de NetApp, un único sistema de archivos se puede asociar con enlaces adicionales en diferentes cuentas de NetApp.
 
-Crea y asocia vínculos desde la carga de trabajo de almacenamiento en la fábrica de cargas de trabajo.
+Crea y asocia vínculos desde la carga de trabajo de almacenamiento en Workload Factory.
 
-Puede autenticar enlaces utilizando credenciales almacenadas en el servicio de credenciales de la fábrica de carga de trabajo o con sus credenciales almacenadas en AWS Secrets Manager. La fábrica de cargas de trabajo no admite el cambio de modos de autenticación.
+Puede autenticar enlaces utilizando credenciales almacenadas en el servicio de credenciales de Workload Factory o con sus credenciales almacenadas en AWS Secrets Manager.  La fábrica de carga de trabajo no admite el cambio de modos de autenticación.
 
 
 
 == Externa
 
-Cada transacción que realiza Lambda incurre en un cargo. Debido a que Lambda actúa como proxy entre los dos sistemas, hay un cargo cuando Lambda envía una solicitud a la API REST DE ONTAP en un sistema de archivos y cuando envía la respuesta de nuevo a la fábrica de cargas de trabajo.
+Cada transacción que realiza Lambda genera un cargo.  Debido a que Lambda actúa como un proxy entre los dos sistemas, existe un cargo cuando Lambda envía una solicitud a la API REST de ONTAP en un sistema de archivos y cuando envía la respuesta a Workload Factory.
 
 link:https://aws.amazon.com/lambda/pricing/["Obtenga más información sobre los costos relacionados con el uso de AWS Lambda"^]
 
@@ -51,7 +51,7 @@ link:https://aws.amazon.com/lambda/pricing/["Obtenga más información sobre los
 
 == Cuando se requiere un enlace
 
-La fábrica de cargas de trabajo requiere un enlace para mostrar información y realizar algunas tareas. Si intenta realizar una operación que requiere un vínculo y no ha asociado un vínculo con el sistema de archivos FSx para ONTAP , la fábrica de carga de trabajo le notifica que la operación requiere un vínculo.
+La fábrica de carga de trabajo requiere un enlace para mostrar cierta información y realizar algunas tareas.  Si intenta realizar una operación que requiere un vínculo y no ha asociado un vínculo con el sistema de archivos FSx para ONTAP , Workload Factory le notifica que la operación requiere un vínculo.
 
 Las características que requieren un enlace incluyen:
 

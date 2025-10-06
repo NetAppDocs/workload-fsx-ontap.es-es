@@ -13,28 +13,27 @@ summary: Verificar y reequilibrar la capacidad de volumen para evitar desequilib
 [role="lead"]
 Verifique el equilibrio de la capacidad del volumen FlexVol o FlexGroup y reequilibre la capacidad del volumen para distribuir los archivos de manera uniforme entre todos los volúmenes FlexVol en un nodo o entre todos los constituyentes, de modo que todos los nodos participen en la carga de trabajo de un solo volumen FlexGroup.
 
-.Acerca de esta tarea
+
+
+== Acerca de esta tarea
+
 Se admite el reequilibrio de la capacidad de volumen para los volúmenes FlexVol y los volúmenes FlexGroup. El reequilibrio de un volumen redistribuye la capacidad cuando se desarrollan desequilibrios con el tiempo debido al aumento de nuevos archivos y archivos. Después de iniciar manualmente la operación de reequilibrio, seleccionamos los archivos y los movemos automáticamente y sin interrupciones. Las operaciones de transferencia de volúmenes consumen recursos del sistema de archivos.
 
 Cada tipo de volumen y operaciones de reequilibrio difieren de la siguiente manera.
 
-Volúmenes de FlexVol:: Los volúmenes FlexVol son contenedores lógicos que ofrecen flexibilidad en la gestión de datos, permitiendo la expansión, contracción, movimiento y copia eficiente. Se pueden utilizar con entornos NAS y SAN.
-+
---
+.Volúmenes de FlexVol
+Los volúmenes FlexVol son contenedores lógicos que ofrecen flexibilidad en la gestión de datos, permitiendo la expansión, contracción, movimiento y copia eficiente. Se pueden utilizar con entornos NAS y SAN.
+
 Un volumen FlexVol se puede equilibrar con respecto a otros volúmenes FlexVol dentro de un nodo en un sistema de archivos de FSx for ONTAP. Si el sistema de archivos solo tiene un volumen FlexVol, no es posible reequilibrarlo. Cuando el sistema de archivos tiene más de un volumen FlexVol por nodo y se selecciona un solo volumen FlexVol, este se equilibra con respecto a todos los FlexVol, pero solo se permite el movimiento del volumen seleccionado.
 
---
-Volúmenes de FlexGroup:: Los volúmenes FlexGroup, por otro lado, son contenedores NAS escalables diseñados para un alto rendimiento y una distribución automática de la carga. Constan de múltiples volúmenes miembros (componentes) que comparten el tráfico de forma transparente. Los volúmenes FlexGroup ofrecen una capacidad masiva, que supera los límites de FlexVol, con hasta 60 PB y 400 000 millones de archivos. Simplifican la gestión al ofrecer un único contenedor de espacio de nombres.
-+
---
+.Volúmenes de FlexGroup
+Los volúmenes FlexGroup, por otro lado, son contenedores NAS escalables diseñados para un alto rendimiento y una distribución automática de la carga. Constan de múltiples volúmenes miembros (componentes) que comparten el tráfico de forma transparente. Los volúmenes FlexGroup ofrecen una capacidad masiva, que supera los límites de FlexVol, con hasta 60 PB y 400 000 millones de archivos. Simplifican la gestión al ofrecer un único contenedor de espacio de nombres.
+
 La capacidad se distribuye entre varios componentes en un sistema de archivos FSx para ONTAP escalable con dos o más pares de alta disponibilidad (HA). Cada componente es un contenedor que dicta el tamaño máximo de archivo único. FSX para ONTAP distribuye los archivos entre todos los componentes de forma uniforme para que todos los nodos participen en la carga de trabajo de un único volumen de FlexGroup.
 
 Cuando los componentes no se distribuyen de manera uniforme entre todos los nodos, el rendimiento del volumen de FlexGroup disminuye.
 
-La comprobación del equilibrio de la capacidad del volumen de FlexGroup incluye la evaluación de la distribución actual de los componentes. Cuando se reequilibra la capacidad del volumen, la fábrica de cargas de trabajo de BlueXP  diseña un nuevo diseño de componentes con un número par de componentes para distribuir los datos de manera uniforme entre todos los pares de alta disponibilidad. El servicio ejecuta el plan de reequilibrio que, a su vez, mejora las operaciones de lectura y escritura.
-
---
-
+Para comprobar el equilibrio de la capacidad de volumen de FlexGroup es necesario evaluar la distribución actual de los componentes.  Al reequilibrar la capacidad del volumen, NetApp Workload Factory diseña un nuevo diseño de constituyentes con una cantidad par de constituyentes para distribuir los datos de manera uniforme entre todos los pares de alta disponibilidad.  El servicio ejecuta el plan de reequilibrio que a su vez mejora las operaciones de lectura y escritura.
 
 
 NOTE: El reequilibrio no es compatible con volúmenes SAN como iSCSI y NVMe.
@@ -52,8 +51,9 @@ Verifique el equilibrio de los volúmenes FlexVol o FlexGroup en un sistema de a
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En *Almacenamiento*, selecciona *Ir al inventario de almacenamiento*.
-. En la pestaña *FSx for ONTAP*, seleccione el menú de tres puntos del sistema de archivos que contiene los volúmenes que desea reequilibrar y luego seleccione *Administrar*.
+. En *Almacenamiento*, seleccione *Ir a almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos que contiene los volúmenes que desea reequilibrar y luego seleccione *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
 . Desde la pestaña Volúmenes, seleccione *Verificar saldo de volumen* en la parte superior de la tabla.
 . En la ventana de saldo de volumen, revise el estado del saldo de:
@@ -74,7 +74,7 @@ Cuando un volumen no está equilibrado, considere <<Reequilibrar la capacidad de
 Vuelva a equilibrar uno o varios volúmenes desequilibrados.
 
 
-NOTE: Un administrador de fábrica de carga de trabajo puede <<Detener una operación de reequilibrio de volumen,dejar de reequilibrar>> Durante la operación.
+NOTE: Un administrador de Workload Factory puede<<Detener una operación de reequilibrio de volumen,dejar de reequilibrar>> Durante la operación.
 
 .Antes de empezar
 * <<Comprueba el saldo de tus volúmenes,Comprobar el equilibrio de un volumen>> antes de reequilibrar volúmenes.
@@ -91,8 +91,9 @@ Un volumen FlexVol se puede equilibrar con respecto a otros volúmenes FlexVol d
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En *Almacenamiento*, selecciona *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos que contiene el volumen a reequilibrar y luego selecciona *Administrar*.
+. En *Almacenamiento*, seleccione *Ir a almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos que contiene el volumen que desea reequilibrar y luego seleccione *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
 . Desde la pestaña Volúmenes, seleccione *Verificar saldo de volumen* en la parte superior de la tabla.
 . En la ventana de balance de volúmenes, seleccione opcionalmente *Distribución de datos* en el resumen de balance de FlexVol para ver la capacidad utilizada por agregado.
@@ -123,8 +124,9 @@ Los datos se redistribuyen por los volúmenes miembro para reequilibrar el volum
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En *Almacenamiento*, selecciona *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos que contiene el volumen a reequilibrar y luego selecciona *Administrar*.
+. En *Almacenamiento*, seleccione *Ir a almacenamiento
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos que contiene el volumen que desea reequilibrar y luego seleccione *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
 . En la pestaña Volúmenes, selecciona *Comprobar balance de FlexGroup* en la parte superior de la tabla.
 . En la ventana Balance de FlexGroup, selecciona *Reequilibrio* para reequilibrar uno o más volúmenes desequilibrados.

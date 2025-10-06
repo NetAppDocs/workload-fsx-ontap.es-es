@@ -63,7 +63,7 @@ Las siguientes regiones admiten una capacidad de rendimiento máxima de hasta 6 
 
 == Máquinas virtuales de almacenamiento
 
-El número de equipos virtuales de almacenamiento es limitado por SKU. No se admite la creación de equipos virtuales de almacenamiento más allá de esta limitación en la fábrica de cargas de trabajo.^1^
+La cantidad de máquinas virtuales de almacenamiento está limitada por SKU.  La creación de máquinas virtuales de almacenamiento más allá del límite no es compatible con Workload Factory.^1^
 
 Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["Gestión de máquinas virtuales de almacenamiento de FSx para ONTAP"^] en la documentación de AWS el número máximo de SVM por sistema de archivos.
 
@@ -117,7 +117,7 @@ System Manager no admite los enlaces de FSx para la conectividad de ONTAP.
 
 == Compatibilidad con AWS Secrets Manager
 
-AWS Secrets Manager no es compatible cuando se utiliza un conector.
+AWS Secrets Manager no es compatible cuando se utiliza un agente de consola.
 
 Nota:
 

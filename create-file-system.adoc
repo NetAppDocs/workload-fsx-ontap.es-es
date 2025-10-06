@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
 permalink: create-file-system.html 
-keywords: create, FSx file system, ONTAP file system, workload factory, storage 
-summary: Mediante la fábrica de cargas de trabajo de BlueXP  puedes crear un sistema de archivos FSx para ONTAP para añadir y gestionar volúmenes y servicios de datos adicionales. 
+keywords: create, FSx file system, ONTAP file system, Workload Factory, storage 
+summary: Con NetApp Workload Factory puede crear un sistema de archivos FSx para ONTAP para agregar y administrar volúmenes y servicios de datos adicionales. 
 ---
-= Crea un sistema de archivos FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP 
+= Cree un sistema de archivos FSx para ONTAP en NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Con la fábrica de carga de trabajo BlueXP puede crear sistemas de archivos FSx para ONTAP de primera y segunda generación para agregar y administrar volúmenes y servicios de datos adicionales.
+Con NetApp Workload Factory puede crear sistemas de archivos FSx para ONTAP de primera y segunda generación para agregar y administrar volúmenes y servicios de datos adicionales.
 
 .Acerca de esta tarea
 Se crea una máquina virtual de almacenamiento y un grupo de seguridad como parte de la creación del sistema de archivos.
@@ -19,7 +19,7 @@ Se crea una máquina virtual de almacenamiento y un grupo de seguridad como part
 .Antes de empezar
 Antes de crear tu sistema de archivos FSx for ONTAP, necesitarás:
 
-* El ARN de un rol de IAM que proporciona a la fábrica de carga de trabajo los permisos necesarios para crear un sistema de archivos FSx para ONTAP. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aprende a otorgar permisos a una cuenta de AWS"^].
+* El ARN de una función de IAM que le otorga a Workload Factory los permisos necesarios para crear un sistema de archivos FSx para ONTAP . link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aprende a otorgar permisos a una cuenta de AWS"^] .
 * La región y la información de VPC para la que creará la instancia de FSX para ONTAP.
 
 
@@ -42,14 +42,14 @@ Los sistemas de archivos FSx para ONTAP de segunda generación son el tipo de im
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, selecciona *Crear FSX para ONTAP*.
+. En el mosaico Almacenamiento, seleccione *Crear FSx para ONTAP*.
 . En la página Crear FSX para ONTAP, selecciona *Creación rápida*.
 +
 También puede cargar una configuración guardada.
 
 . En Configuración general del sistema de archivos, proporcione lo siguiente:
 +
-.. *Credenciales de AWS*: Seleccione para agregar credenciales de AWS en la fábrica de cargas de trabajo o continuar sin credenciales.
+.. *Credenciales de AWS*: seleccione para agregar credenciales de AWS en Workload Factory o continuar sin credenciales.
 .. *Nombre del sistema de archivos*: Introduzca un nombre para el sistema de archivos.
 .. *Región y VPC*: Seleccione la región y VPC para el sistema de archivos.
 .. *Tipo de implementación*: Seleccione un tipo de implementación.
@@ -114,14 +114,14 @@ Con Advanced CREATE, puede establecer todas las opciones de configuración, incl
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, selecciona *Crear FSX para ONTAP*.
+. En el mosaico Almacenamiento, seleccione *Crear FSx para ONTAP*.
 . En la página Crear FSX para ONTAP, selecciona *Crear avanzado*.
 +
 También puede cargar una configuración guardada.
 
 . En Configuración general del sistema de archivos, proporcione lo siguiente:
 +
-.. *Credenciales de AWS*: Seleccione para agregar credenciales de AWS en la fábrica de cargas de trabajo o continuar sin credenciales.
+.. *Credenciales de AWS*: seleccione para agregar credenciales de AWS en Workload Factory o continuar sin credenciales.
 .. *Nombre del sistema de archivos*: Introduzca un nombre para el sistema de archivos.
 .. *Región y VPC*: Seleccione la región y VPC para el sistema de archivos.
 .. *Tipo de implementación*: seleccione un tipo de implementación y una generación de sistema de archivos. La disponibilidad de un sistema de archivos de segunda generación depende de la región seleccionada. Si la región seleccionada no admite sistemas de archivos FSx for ONTAP de segunda generación, el tipo de implementación cambia a primera generación.

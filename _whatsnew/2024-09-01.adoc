@@ -6,7 +6,7 @@
 
 === Compatibilidad con modo lectura para la gestión del almacenamiento
 
-El modo de lectura está disponible para la gestión del almacenamiento en la fábrica de cargas de trabajo. El modo de lectura mejora la experiencia del modo básico al agregar permisos de solo lectura para que las plantillas de infraestructura como código se rellenen con sus variables específicas. Las plantillas de infraestructura como código se pueden ejecutar directamente desde la cuenta de AWS sin necesidad de proporcionar permisos de modificación a la fábrica de cargas de trabajo.
+El modo de lectura está disponible para la gestión de almacenamiento en Workload Factory.  El modo de lectura mejora la experiencia del modo básico al agregar permisos de solo lectura para que las plantillas de Infraestructura como código se llenen con sus variables específicas.  Las plantillas de infraestructura como código se pueden ejecutar directamente desde su cuenta de AWS sin proporcionar ningún permiso de modificación a Workload Factory.
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Más información sobre el modo de lectura"]
 

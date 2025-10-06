@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-snapshot-policy.html 
 keywords: create 
-summary: Cree una política de instantáneas personalizada para una máquina virtual de almacenamiento en una fábrica de carga de trabajo. 
+summary: Cree una política de instantáneas personalizada para una máquina virtual de almacenamiento en Workload Factory. 
 ---
-= Crear una política de instantáneas para las máquinas virtuales de almacenamiento en la fábrica de carga de trabajo
+= Crear una política de instantáneas para máquinas virtuales de almacenamiento en Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Cree una política de instantáneas personalizada para las máquinas virtuales de almacenamiento en la fábrica de carga de trabajo para administrar la creación y retención de instantáneas.  Una política de instantáneas define cómo el sistema crea instantáneas para una máquina virtual de almacenamiento.  Puede crear una política de instantáneas para una máquina virtual de almacenamiento en un sistema de archivos FSx para ONTAP .  También puede compartir la política entre varias máquinas virtuales de almacenamiento.
+Cree una política de instantáneas personalizada para las máquinas virtuales de almacenamiento en Workload Factory para administrar la creación y retención de instantáneas. Una política de instantáneas define cómo el sistema crea instantáneas para una máquina virtual de almacenamiento. Puede crear una política de instantáneas para una máquina virtual de almacenamiento en un sistema de archivos FSx para ONTAP . También puede compartir la política entre varias máquinas virtuales de almacenamiento.
 
 .Acerca de esta tarea
 Puede crear una política de Snapshot personalizada que difiera de las tres políticas de Snapshot incorporadas para FSx para ONTAP:
@@ -38,10 +38,11 @@ La personalización de una política le permite especificar cuándo se deben cre
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En *Almacenamiento*, selecciona *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
-. En la pestaña * Storage VMs*, seleccione el menú de tres puntos para el volumen a proteger con instantáneas programadas, luego *Advanced Actions* y luego *Manage snapshot policies*.
+. Desde la pestaña *Máquinas virtuales de almacenamiento*, seleccione el menú de acciones para el volumen que desea proteger con instantáneas programadas, luego *Acciones avanzadas* y luego *Administrar políticas de instantáneas*.
 . En la página de administración de políticas de Snapshot, seleccione *Crear política de instantáneas*.
 . En el campo *Nombre de la política de instantáneas*, introduzca un nombre para la política de instantáneas.
 . De forma opcional, introduzca una descripción para la política de Snapshot.

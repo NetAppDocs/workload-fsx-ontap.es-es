@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: monitor-operations.html 
 keywords: monitor databases, monitor jobs, track storage jobs, track jobs 
-summary: Haga un seguimiento de FSx para ONTAP, las credenciales y las operaciones de enlaces, y supervise el progreso de las tareas con el seguimiento en la fábrica de cargas de trabajo de BlueXP  para almacenamiento. 
+summary: Realice un seguimiento de FSx para ONTAP, las credenciales y las operaciones de enlace y monitoree el progreso del trabajo con Tracker en NetApp Workload Factory for Storage. 
 ---
-= Supervise las operaciones de almacenamiento con Tracker en la fábrica de cargas de trabajo de BlueXP 
+= Supervise las operaciones de almacenamiento con Tracker en NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Supervise y realice un seguimiento de la ejecución de FSx para ONTAP, las credenciales y las operaciones de enlace, y supervise el progreso de las tareas con Tracker en la fábrica de cargas de trabajo de BlueXP .
+Supervise y realice un seguimiento de la ejecución de FSx para ONTAP, credenciales y operaciones de enlace, y supervise el progreso de las tareas con Tracker en NetApp Workload Factory.
 
 .Acerca de esta tarea
 La fábrica de cargas de trabajo ofrece Tracker, una función de supervisión, para que pueda supervisar y realizar un seguimiento del progreso y el estado de FSx para ONTAP, credenciales y operaciones de enlaces, revisar detalles de las tareas operativas y subtareas y diagnosticar cualquier problema o error.
@@ -42,12 +42,12 @@ Retención de eventos:: Los eventos se conservan en la interfaz de usuario duran
 
 == Seguimiento y supervisión de operaciones
 
-Rastree y supervise las operaciones en BlueXP  con el Rastreador.
+Realice un seguimiento y monitoree las operaciones en la consola de NetApp con Tracker.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, selecciona *Ir a Inventario de almacenamiento*.
-. Desde el inventario de almacenamiento, seleccione el menú de configuración de la cuenta y luego seleccione *Rastreador*.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. Desde el menú Almacenamiento, seleccione *Administración* y luego *Enlaces*.
 +
 image:screenshot-menu-tracker-option.png["Una captura de pantalla del menú de configuración de la cuenta con la opción Rastreador resaltada."]
 
@@ -62,7 +62,7 @@ Vea la solicitud API en CodeBox para una tarea en Tracker.
 
 .Pasos
 . En Rastreador, seleccione una tarea.
-. Seleccione el menú de tres puntos y luego seleccione *Ver solicitud de API*.
+. Seleccione el menú de acciones y luego seleccione *Ver solicitud de API*.
 
 
 
@@ -76,7 +76,7 @@ NOTE: Solo se permite el número x de reintentos para una operación fallida.
 
 .Pasos
 . En Tracker, seleccione una operación fallida.
-. Seleccione el menú de tres puntos y luego seleccione *Reintentar*.
+. Seleccione el menú de acciones y luego seleccione *Reintentar*.
 
 
 .Resultado
@@ -90,7 +90,7 @@ Edite los parámetros de la operación fallida y vuelva a intentar la operación
 
 .Pasos
 . En Tracker, seleccione una operación fallida.
-. Seleccione el menú de tres puntos y luego seleccione *Editar y volver a intentarlo*.
+. Seleccione el menú de acciones y luego seleccione *Editar y reintentar*.
 +
 Se le redirigirá a la página de operaciones, donde puede editar los parámetros y volver a intentar la operación.
 

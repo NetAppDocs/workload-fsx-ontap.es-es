@@ -4,7 +4,7 @@ permalink: increase-file-system-capacity.html
 keywords: adjust capacity, elastic file system capacity, increase file system capacity, increase FSx capacity, decrease file system capacity, decrease FSx capacity 
 summary: Ajuste manualmente la capacidad de almacenamiento SSD de un sistema de archivos FSx para ONTAP para satisfacer las necesidades de sus cargas de trabajo basadas en proyectos con diferentes conjuntos de trabajo activos. 
 ---
-= Ajustar la capacidad del sistema de archivos en la fábrica de carga de trabajo
+= Ajustar la capacidad del sistema de archivos en Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -15,7 +15,7 @@ Ajuste manualmente la capacidad de almacenamiento de la unidad de estado sólido
 
 Aumente la capacidad de almacenamiento SSD de un sistema de archivos FSx para ONTAP cuando la cantidad de capacidad de almacenamiento SSD utilizada exceda un umbral que usted especifique o disminuya la capacidad de almacenamiento SSD cuando los conjuntos de trabajo estén inactivos para mejorar la rentabilidad.
 
-De forma alternativa, link:enable-auto-capacity-management.html["habilite la función de gestión automática de capacidad"]la fábrica de carga de trabajo gestiona la capacidad del sistema de archivos.
+Alternativamente, puedeslink:enable-auto-capacity-management.html["habilite la función de gestión automática de capacidad"] De esta manera, Workload Factory administra la capacidad del sistema de archivos por usted.
 
 
 NOTE: La disminución de la capacidad de almacenamiento SSD solo se admite en sistemas de archivos de segunda generación.
@@ -36,7 +36,7 @@ Para ajustar la capacidad de un sistema de archivos, primero debelink:enable-aut
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, selecciona *Ir a Inventario de almacenamiento*.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
 . Desde el Panel de Control, seleccione *Ajustar capacidad SSD*.
 . Seleccione el sistema de archivos cuya capacidad desea ajustar y luego seleccione *Continuar*.
 +

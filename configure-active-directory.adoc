@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: configure-active-directory.html 
 keywords: configure AD, configure active directory, update ad, edit active directory 
-summary: Configura y actualiza Active Directory para una máquina virtual de almacenamiento en un sistema de archivos FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP . 
+summary: Configurar y actualizar Active Directory para una máquina virtual de almacenamiento en un sistema de archivos FSx para ONTAP en NetApp Workload Factory. 
 ---
 = Configure y actualice Active Directory para una máquina virtual de almacenamiento
 :allow-uri-read: 
@@ -11,17 +11,18 @@ summary: Configura y actualiza Active Directory para una máquina virtual de alm
 
 
 [role="lead"]
-Configura y actualiza Active Directory para una máquina virtual de almacenamiento en un sistema de archivos FSx para ONTAP en la fábrica de cargas de trabajo de BlueXP .
+Configurar y actualizar Active Directory para una máquina virtual de almacenamiento en un sistema de archivos FSx para ONTAP en NetApp Workload Factory.
 
 .Acerca de esta tarea
 Los mismos pasos se aplican para configurar y actualizar Active Directory para una máquina virtual de almacenamiento.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con la VM de almacenamiento para actualizar y luego selecciona *Administrar*.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con la VM de almacenamiento que desea actualizar y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
-. En la pestaña Storage VMs, seleccione el menú de tres puntos de la máquina virtual de almacenamiento para configurar Active Directory.
+. Desde la pestaña Máquinas virtuales de almacenamiento, seleccione el menú de acciones de la máquina virtual de almacenamiento para la cual desea configurar Active Directory.
 . Seleccione *Administrar configuración de AD*.
 . En la página Gestionar configuración de AD, proporcione lo siguiente:
 +

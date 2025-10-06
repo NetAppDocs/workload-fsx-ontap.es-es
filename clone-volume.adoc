@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: clone-volume.html 
 keywords: clone volume, clone, clone data 
-summary: Clone un volumen en la fábrica de carga de trabajo de BlueXP para crear un volumen de lectura y escritura del volumen original para realizar pruebas. 
+summary: Clone un volumen en NetApp Workload Factory para crear un volumen de lectura y escritura del volumen original para realizar pruebas. 
 ---
-= Clonar un volumen en la fábrica de cargas de trabajo BlueXP 
+= Clonar un volumen en NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Clone un volumen en la fábrica de carga de trabajo de BlueXP para crear un volumen de lectura y escritura del volumen original para realizar pruebas.
+Clone un volumen en NetApp Workload Factory para crear un volumen de lectura y escritura del volumen original para realizar pruebas.
 
 El clon refleja el estado actual de un momento específico de los datos. También puede utilizar clones para proporcionar a los usuarios adicionales acceso a los datos sin tener que darles acceso a los datos de producción.
 
@@ -24,10 +24,11 @@ Para que un volumen clonado contenga todos los datos del volumen principal y tod
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, selecciona *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos FSX for ONTAP que contiene el volumen a clonar y luego selecciona *Administrar*.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos FSx for ONTAP que contiene el volumen a clonar y luego seleccione *Administrar*.
 . En la pestaña Descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. En la pestaña Volumes, seleccione el menú de tres puntos del volumen que desea clonar.
+. En la pestaña Volúmenes, seleccione el menú de acciones del volumen a clonar.
 . Seleccione *Acciones de protección de datos*, luego *Clonar volumen*.
 . En el cuadro de diálogo Clone volume, escriba un nombre para el clon del volumen.
 . Seleccione *Clonar*.

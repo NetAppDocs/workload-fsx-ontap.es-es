@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-snapshots.html 
 keywords: snapshot, snapshots, manage snapshots, edit snapshots, access snapshots, delete snapshots, remove snapshots 
-summary: Edite la configuración de instantáneas, habilite el acceso al directorio y elimine instantáneas para administrar sus instantáneas y la protección de datos en la fábrica de carga de trabajo. 
+summary: Edite la configuración de instantáneas, habilite el acceso al directorio y elimine instantáneas para administrar sus instantáneas y la protección de datos en Workload Factory. 
 ---
 = Administrar instantáneas de un volumen FSx for ONTAP
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Edite la configuración de instantáneas, habilite el acceso al directo
 
 
 [role="lead"]
-Edite la configuración de instantáneas, habilite el acceso al directorio y elimine instantáneas para administrar sus instantáneas y la protección de datos en la fábrica de carga de trabajo.
+Edite la configuración de instantáneas, habilite el acceso al directorio y elimine instantáneas para administrar sus instantáneas y la protección de datos en Workload Factory.
 
 
 
@@ -21,12 +21,13 @@ Editar el nombre, la etiqueta y el período de retención de una instantánea.  
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En *Almacenamiento*, selecciona *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*.
+. En *Almacenamiento*, seleccione *Ir a almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. Desde la pestaña *Volúmenes*, seleccione el menú de tres puntos del volumen con la instantánea que desea editar.
+. Desde la pestaña *Volúmenes*, seleccione el menú de acciones para el volumen con la instantánea que desea editar.
 . Seleccione *Acciones de protección de datos* y luego *Administrar instantáneas*.
-. Desde la página Administrar instantáneas, seleccione el menú de tres puntos correspondiente a la instantánea que desea editar y, luego, seleccione *Editar*.
+. Desde la página Administrar instantáneas, seleccione el menú de acciones para la instantánea que desea editar y luego seleccione *Editar*.
 . En el cuadro de diálogo Editar una instantánea, puede editar lo siguiente:
 +
 .. Cambiar el nombre.
@@ -52,12 +53,13 @@ Habilite el acceso al directorio de instantáneas para brindarles a los usuarios
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En *Almacenamiento*, selecciona *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*.
+. En *Almacenamiento*, seleccione *Ir a almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. Desde la pestaña *Volúmenes*, seleccione el menú de tres puntos correspondiente al volumen con la instantánea al que desea acceder.
+. Desde la pestaña *Volúmenes*, seleccione el menú de acciones para el volumen con la instantánea al que desea acceder.
 . Seleccione *Acciones de protección de datos* y luego *Administrar instantáneas*.
-. Desde la página Administrar instantáneas, seleccione el menú de tres puntos para la instantánea a la que desea acceder y luego seleccione *Acceso*.
+. Desde la página Administrar instantáneas, seleccione el menú de acciones para la instantánea a la que desea acceder y luego seleccione *Acceso*.
 . En el cuadro de diálogo Acceder a instantánea, seleccione *Habilitar acceso al directorio de instantáneas* para acceder a esta instantánea de volumen y a todas las instantáneas del volumen.
 +
 ** Para volúmenes NFS: seleccione *Ruta de acceso NFS* para ver la ruta NFS de la instantánea.
@@ -86,12 +88,13 @@ Las instantáneas inmutables no se pueden eliminar hasta que finalice el períod
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En *Almacenamiento*, selecciona *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*.
+. En *Almacenamiento*, seleccione *Ir a almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. Desde la pestaña *Volúmenes*, seleccione el menú de tres puntos del volumen con la instantánea que desea eliminar.
+. Desde la pestaña *Volúmenes*, seleccione el menú de acciones para el volumen con la instantánea que desea eliminar.
 . Seleccione *Acciones de protección de datos* y luego *Administrar instantáneas*.
-. Desde la página Administrar instantáneas, seleccione el menú de tres puntos correspondiente a la instantánea que desea eliminar y, luego, seleccione *Eliminar*.
+. Desde la página Administrar instantáneas, seleccione el menú de acciones para la instantánea que desea eliminar y luego seleccione *Eliminar*.
 . En el cuadro de diálogo Eliminar instantánea, escriba "eliminar".
 . Seleccione *Eliminar* para confirmar la eliminación.
 

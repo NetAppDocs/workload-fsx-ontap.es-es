@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: configuration-analysis.html 
 keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
-summary: La fábrica de cargas de trabajo de BlueXP  analiza regularmente las configuraciones del sistema de archivos de Amazon FSx para NetApp ONTAP para determinar si hay algún problema. 
+summary: NetApp Workload Factory analiza periódicamente las configuraciones del sistema de archivos Amazon FSx for NetApp ONTAP para determinar si hay algún problema. 
 ---
 = Análisis de configuración para sistemas de archivos FSx para ONTAP
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: La fábrica de cargas de trabajo de BlueXP  analiza regularmente las c
 
 
 [role="lead"]
-La fábrica de cargas de trabajo de BlueXP  analiza regularmente las configuraciones del sistema de archivos de Amazon FSx para NetApp ONTAP para determinar si hay algún problema. Cuando se encuentran los problemas, la fábrica de cargas de trabajo le muestra cuáles son los problemas y explica qué hay que cambiar para garantizar que el almacenamiento del sistema de archivos alcance el máximo rendimiento, la rentabilidad y el cumplimiento de las prácticas recomendadas.
+NetApp Workload Factory analiza periódicamente las configuraciones del sistema de archivos Amazon FSx for NetApp ONTAP para determinar si hay algún problema.  Cuando se detectan problemas, Workload Factory le muestra cuáles son y le explica qué debe cambiar para garantizar que el almacenamiento de su sistema de archivos alcance el máximo rendimiento, rentabilidad y cumplimiento de las mejores prácticas.
 
 Estas son algunas funcionalidades clave:
 
@@ -26,7 +26,7 @@ Estas son algunas funcionalidades clave:
 
 == Estado bien diseñado
 
-En la consola de fábrica de cargas de trabajo, a nivel del sistema de archivos, se enumera el estado bien diseñado para todos los sistemas de archivos FSx para ONTAP. Los estados bien diseñados se clasifican como “problemas”, “no analizados” o “bien diseñados”. La selección del estado bien diseñado le redirige a la pestaña de estado bien diseñada dentro del sistema de archivos, donde puede encontrar la puntuación bien diseñada, las categorías de configuración y todas las configuraciones para el sistema de archivos.
+En la consola de Workload Factory, en el nivel del sistema de archivos, se muestra el estado de buena arquitectura para todos los sistemas de archivos FSx para ONTAP .  Los estados bien diseñados se clasifican como "problemas", "no analizados" o "bien diseñados".  Al seleccionar el estado de buena arquitectura, se le redirige a la pestaña de estado de buena arquitectura dentro del sistema de archivos, donde puede encontrar el puntaje de buena arquitectura, las categorías de configuración y todas las configuraciones para el sistema de archivos.
 
 Partitura bien diseñada:: La puntuación incluye todas las configuraciones analizadas actualmente y aparece como un porcentaje. Una puntuación del 25 % significa que el 25 % de las configuraciones del sistema de archivos tienen una arquitectura adecuada.
 Categorías de configuración:: Las configuraciones del sistema de archivos se organizan en categorías alineadas con los cinco pilares siguientes del marco de AWS Well-Architected Framework.
@@ -46,7 +46,7 @@ Categorías de configuración:: Las configuraciones del sistema de archivos se o
 
 == Requisitos de análisis
 
-Para un análisis completo del sistema de archivos, debe asociar un enlace. La conectividad de enlace permite a la fábrica de cargas de trabajo analizar todas las configuraciones del sistema de archivos, como la protección de datos y el rendimiento.
+Para un análisis completo del sistema de archivos, debe asociar un enlace.  La conectividad de enlace permite a Workload Factory analizar todas las configuraciones del sistema de archivos, como la protección de datos y el rendimiento.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"].
 

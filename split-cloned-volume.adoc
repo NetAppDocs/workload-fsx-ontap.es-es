@@ -4,14 +4,14 @@ permalink: split-cloned-volume.html
 keywords: split clone volume, FlexVol volume 
 summary: Divida un FlexVol volume de clones de su volumen principal para que el clon sea una FlexVol volume de lectura/escritura normal. 
 ---
-= Divida un volumen clonado en la fábrica de cargas de trabajo de BlueXP 
+= Dividir un volumen clonado en NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Divida un FlexVol volume clonado de su volumen principal para que el clon sea un FlexVol volume de lectura/escritura normal en la fábrica de cargas de trabajo BlueXP .
+Divida un FlexVol volume clonado de su volumen principal para convertir el clon en un FlexVol volume de lectura/escritura normal en NetApp Workload Factory.
 
 Se puede acceder a los datos en el clon y en el elemento principal durante la división. El proceso de división solo actualiza los metadatos y requiere una E/S mínima. No se copian bloques de datos.
 
@@ -35,9 +35,11 @@ Tenga en cuenta lo siguiente antes de dividir un volumen clonado:
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. Seleccione la pestaña *Volúmenes*.
-. En la pestaña Volumes, seleccione el menú de tres puntos del volumen con el volumen clonado que se va a dividir.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen clonado a dividir y luego seleccione *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. En la pestaña Volúmenes, seleccione el menú de acciones del volumen con el volumen clonado que desea dividir.
 . Seleccione *Acciones de protección de datos*, luego *Dividir volumen clonado*.
 . En el cuadro de diálogo Dividir volumen, seleccione *Eliminar*.
 

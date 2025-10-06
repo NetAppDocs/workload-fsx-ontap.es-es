@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-backup.html 
 keywords: create backup, volume backup, back up a volume 
-summary: Crear un backup manual de un volumen en la fábrica de cargas de trabajo BlueXP  sin backups programados regularmente. 
+summary: Cree una copia de seguridad manual de un volumen en NetApp Workload Factory fuera de las copias de seguridad programadas regularmente. 
 ---
-= Cree un backup manual de un volumen en la fábrica de cargas de trabajo BlueXP 
+= Crear una copia de seguridad manual de un volumen en NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Crear un backup manual de un volumen fuera de los backups programados regularmente en la fábrica de cargas de trabajo de BlueXP .
+Cree una copia de seguridad manual de un volumen fuera de las copias de seguridad programadas regularmente en NetApp Workload Factory.
 
 .Acerca de esta tarea
 Los backups de FSx para ONTAP se realizan por volumen, por lo que cada backup solo contiene los datos de un volumen concreto.
@@ -23,10 +23,11 @@ Para realizar backups de los volúmenes, tanto el volumen como el sistema de arc
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En Almacenamiento, seleccione *Ir al inventario de almacenamiento*.
-. En la pestaña *FSX for ONTAP*, selecciona el menú de tres puntos del sistema de archivos con el volumen y luego selecciona *Administrar*.
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. En la pestaña *Volúmenes*, selecciona el menú de tres puntos para que el volumen haga una copia de seguridad.
+. Desde la pestaña *Volúmenes*, seleccione las acciones del volumen que desea respaldar.
 . Seleccione *Acciones de protección de datos*, *FSX para copia de seguridad de ONTAP* y luego *Copia de seguridad manual*.
 . En el cuadro de diálogo Manual backup, escriba un nombre para el backup.
 . Seleccione *Back up*.

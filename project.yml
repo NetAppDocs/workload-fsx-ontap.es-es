@@ -41,6 +41,8 @@ sidebar:
         url: "/create-link.html"
       - title: Gestionar enlaces
         url: "/manage-links.html"
+    - title: Descubra y visualice los volúmenes de caché
+      url: "/discover-cache-volumes.html"
     - title: Gestione los volúmenes
       entries:
       - title: Cree un volumen
@@ -115,7 +117,7 @@ sidebar:
         url: "/delete-volume.html"
     - title: Administración del sistema de archivos
       entries:
-      - title: Aumente la capacidad del sistema de archivos
+      - title: Ajustar la capacidad del sistema de archivos
         url: "/increase-file-system-capacity.html"
       - title: Permita la gestión automática de la capacidad
         url: "/enable-auto-capacity-management.html"
@@ -193,5 +195,5 @@ sidebar:
   - title: Avisos legales
     url: "/legal-notices.html"
 product-family:
-  name: BlueXP workload factory
+  name: NetApp Workload Factory
   repo: workload-family
