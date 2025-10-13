@@ -124,7 +124,7 @@ Los datos se redistribuyen por los volúmenes miembro para reequilibrar el volum
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En *Almacenamiento*, seleccione *Ir a almacenamiento
+. En *Almacenamiento*, seleccione *Ir a almacenamiento*
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
 . Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos que contiene el volumen que desea reequilibrar y luego seleccione *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
