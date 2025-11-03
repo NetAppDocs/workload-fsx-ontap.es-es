@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: create-cyber-vault.html 
+keywords: create cyber vault, volume cyber vault, protect data cyber vault, cyber vault setup 
+summary: Obtenga información sobre las bóvedas cibernéticas de NetApp y cómo implementar una arquitectura de bóveda cibernética para proteger sus datos del ransomware y las amenazas cibernéticas. 
+---
+= Proteja sus datos con una bóveda cibernética.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Un volumen de bóveda cibernética es una ubicación de almacenamiento aislada y segura que se utiliza para almacenar copias de seguridad de sus datos, protegiéndolos de ataques de ransomware y otras amenazas cibernéticas.  Como parte de la creación del almacén, creará un volumen de almacén cibernético, deshabilitará todos los protocolos de cliente, establecerá una relación de replicación entre el volumen de origen y el volumen del almacén cibernético y creará instantáneas inmutables en el volumen del almacén cibernético.
+
+.¿Qué es una bóveda cibernética?
+Una bóveda cibernética es una técnica específica de protección de datos que implica almacenar datos críticos en un entorno aislado, separado de la infraestructura de TI principal.
+
+La bóveda cibernética es un repositorio de datos "aislado de la red", inmutable e indeleble, inmune a las amenazas que afectan a la red principal, como el malware, el ransomware o incluso las amenazas internas.  Una bóveda cibernética se puede lograr con instantáneas inmutables e indelebles.
+
+Las copias de seguridad con espacio de aire que utilizan métodos tradicionales implican la creación de espacio y la separación física de los medios primarios y secundarios. Al trasladar los medios fuera del sitio y/o cortar la conectividad, los actores maliciosos no tienen acceso a los datos. Esto protege los datos pero puede generar tiempos de recuperación más lentos.
+
+.FSx para bóvedas cibernéticas ONTAP
+Amazon FSx for NetApp ONTAP es compatible como origen y destino de la bóveda cibernética.
+
+.Implementación
+Workload Factory ofrece asistencia en la creación de una arquitectura de bóveda cibernética.  Después de que usted se ponga en contacto con NetApp para expresar su interés en implementar una bóveda cibernética, un especialista de NetApp se pondrá en contacto con usted para analizar sus requisitos.
+
+Envía un correo electrónico a ng-FSx-CyberVault@netapp.com para comenzar.
+
+.Información relacionada
+Para obtener más información sobre las bóvedas cibernéticas y cómo configurar esta arquitectura, consulte el siguiente documento:link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["Documentación de la bóveda cibernética de ONTAP"^] .

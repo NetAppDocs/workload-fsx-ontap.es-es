@@ -46,9 +46,17 @@ Categorías de configuración:: Las configuraciones del sistema de archivos se o
 
 == Requisitos de análisis
 
-Para un análisis completo del sistema de archivos, debe asociar un enlace.  La conectividad de enlace permite a Workload Factory analizar todas las configuraciones del sistema de archivos, como la protección de datos y el rendimiento.
+Para un análisis completo del sistema de archivos, debe hacer lo siguiente:
 
+* Asociar un enlace.  La conectividad de enlaces permite a Workload Factory analizar todas las configuraciones del sistema de archivos, como la protección de datos y el rendimiento.
++
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"].
+
+* Otorgue permisos de _visualización, planificación y análisis_ en su cuenta de AWS.
++
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aprende a otorgar permisos a una cuenta de AWS"^]
+
+
 
 .El futuro
 link:improve-configurations.html["Implemente configuraciones de sistemas de archivos bien diseñadas"]

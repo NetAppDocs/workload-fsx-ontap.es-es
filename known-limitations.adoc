@@ -73,6 +73,7 @@ Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.ht
 
 * El protocolo iSCSI solo está disponible para volúmenes FlexVol. 1
 * Solo se puede configurar un único LUN por volumen.
+* La reducción del tamaño del volumen no es compatible con volúmenes iSCSI.
 
 
 

@@ -13,7 +13,7 @@ summary: Habilite el crecimiento automático del volumen para permitir que Workl
 [role="lead"]
 Habilite el crecimiento automático del volumen para permitir que Workload Factory administre la capacidad del volumen por usted.  Puedes desactivarlo en cualquier momento.
 
-Opcionalmente, es posible aumentar manualmente la capacidad del volumen de un volumen en cualquier momento mediante el link:increase-volume-capacity.html["función aumentar capacidad del volumen"].
+Opcionalmente, puede aumentar manualmente la capacidad de volumen de un volumen en cualquier momento utilizando lalink:adjust-volume-capacity.html["Función de ajuste de capacidad de volumen"] .
 
 
 NOTE: No se admite el crecimiento automático de volúmenes para los volúmenes iSCSI.

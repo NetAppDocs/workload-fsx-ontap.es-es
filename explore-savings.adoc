@@ -116,7 +116,7 @@ Para cambiar a FSX para ONTAP, siga las instrucciones a <<Pon en marcha FSx para
 == Explore el ahorro para los entornos de almacenamiento detectados
 
 .Antes de empezar
-Para que Workload Factory detecte los entornos de almacenamiento de Amazon Elastic Block Store (EBS), Elastic File System (EFS) y FSx para Windows File Server en su cuenta de AWS, asegúrese delink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["conceder permisos de _solo lectura_"^] en su cuenta de AWS.
+Para que Workload Factory detecte los entornos de almacenamiento de Amazon Elastic Block Store (EBS), Elastic File System (EFS) y FSx para Windows File Server en su cuenta de AWS, asegúrese de quelink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos de _visualización, planificación y análisis_"^] en su cuenta de AWS.
 
 
 NOTE: Esta opción de calculadora no admite cálculos para las instantáneas de EBS y las copias redundantes de FSx para Windows File Server. Al analizar el ahorro mediante la personalización, puedes proporcionar detalles de copias Snapshot de EBS y FSx para el servidor de archivos de Windows.

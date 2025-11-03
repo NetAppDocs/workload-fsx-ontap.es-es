@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: adjust-volume-capacity.html 
+keywords: increase capacity, volume capacity 
+summary: Ajuste manualmente la capacidad de volumen de un volumen en NetApp Workload Factory en cualquier momento. 
+---
+= Ajuste la capacidad de volumen en NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ajuste manualmente la capacidad de volumen de un volumen en cualquier momento desde la consola de NetApp Workload Factory .
+
+Opcionalmente, puedeslink:edit-volume-autogrow.html["habilite la función crecimiento automático"] para permitir que Workload Factory administre la capacidad de volumen por usted.
+
+.Acerca de esta tarea
+Puede ajustar la capacidad del volumen aumentando o disminuyendo el tamaño aprovisionado de un volumen.  La siguiente tabla muestra los tamaños de volumen mínimo y máximo por tipo de volumen:
+
+[cols="1,1,1"]
+|===
+| Tipo de volumen | Tamaño mínimo | Tamaño máximo 
+
+
+| Volumen FlexVol | 20 MiB | 300 TiB 
+
+
+| Volumen FlexGroup | 800 GiB | 2 PiB 
+|===
+Para una LUN iSCSI, aumentar el tamaño del volumen también aumenta el tamaño de la LUN del host.  Después de aumentar la capacidad del volumen, siga el procedimiento proporcionado por su sistema operativo host para descubrir el nuevo tamaño del LUN y expandir el sistema de archivos del LUN.
+
+La reducción del tamaño del volumen solo es compatible con volúmenes NFS y SMB/CIFS.
+
+.Antes de empezar
+Para ajustar la capacidad de volumen, debe asociar un enlace. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen a actualizar y luego seleccione *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. Desde la pestaña Volúmenes, seleccione el menú de acciones del volumen cuya capacidad desea ajustar.
+. Seleccione *Acciones básicas*, luego *Ajustar capacidad de volumen*.
+. En el cuadro de diálogo Ajustar capacidad de volumen, configure la *Capacidad aprovisionada* y la unidad.
+. Seleccione *Ajustar* para aplicar los cambios.
+
+
+.Información relacionada
+* link:edit-volume-autogrow.html["Habilitar el crecimiento automático del volumen en Workload Factory"]
+* link:rebalance-volume.html["Reequilibrar un volumen en Workload Factory"]
+

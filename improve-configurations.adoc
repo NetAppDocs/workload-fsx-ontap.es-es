@@ -30,8 +30,8 @@ Debido a que los requisitos para las configuraciones de almacenamiento varían, 
 La fábrica de cargas de trabajo analiza el estado bien diseñado de las siguientes configuraciones para los sistemas de archivos FSx para ONTAP:
 
 * Confiabilidad: umbral de capacidad SSD, instantáneas locales programadas, FSx para copias de seguridad de ONTAP , replicación de datos remota y confiabilidad de datos para retención a largo plazo
-* Seguridad: Protección autónoma contra ransomware de NetApp con IA (ARP/AI)
-* Excelencia operativa: eficiencia de almacenamiento, gestión automática de la capacidad y umbral de utilización de la capacidad de archivos de volumen
+* Seguridad: Protección autónoma contra ransomware de NetApp con IA (ARP/IA) y acceso no autorizado a volúmenes.
+* Excelencia operativa: gestión automática de la capacidad, umbral de utilización de la capacidad del archivo de volumen y utilización del volumen casi al máximo.
 * Optimización de costes: eficiencias de almacenamiento y niveles de datos
 
 
@@ -42,7 +42,7 @@ La fábrica de cargas de trabajo analiza el estado bien diseñado de las siguien
 Puede solucionar problemas de configuración para un sistema de archivos FSx para ONTAP o para volúmenes seleccionados en un sistema de archivos.  Puede seleccionar una o más configuraciones para corregirlas.
 
 .Antes de empezar
-* Debe tener credenciales con permisos de _solo lectura_ o de _lectura/escritura_. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aprende a otorgar permisos en tu cuenta de AWS"^].
+* Usted debelink:link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos de _operaciones y remediación_"^] en su cuenta de AWS.
 * El proceso de remediación puede provocar tiempos de inactividad de las instancias o interrupciones del servicio. Asegúrese de revisar cada recomendación cuidadosamente antes de seleccionar solucionar un problema de configuración.
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conectarse a un sistema de archivos FSx para ONTAP mediante un enlace"]para el análisis más completo de los recursos de su sistema de archivos.
 
