@@ -29,4 +29,4 @@ Workload Factory ofrece asistencia en la creación de una arquitectura de bóved
 Envía un correo electrónico a ng-FSx-CyberVault@netapp.com para comenzar.
 
 .Información relacionada
-Para obtener más información sobre las bóvedas cibernéticas y cómo configurar esta arquitectura, consulte el siguiente documento:link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["Documentación de la bóveda cibernética de ONTAP"^] .
+Para obtener más información sobre las bóvedas cibernéticas y cómo configurar esta arquitectura, consulte el link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["Documentación de la bóveda cibernética de ONTAP"^].
