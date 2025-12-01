@@ -32,7 +32,8 @@ La fábrica de cargas de trabajo analiza el estado bien diseñado de las siguien
 * Confiabilidad: umbral de capacidad SSD, instantáneas locales programadas, FSx para copias de seguridad de ONTAP , replicación de datos remota y confiabilidad de datos para retención a largo plazo
 * Seguridad: Protección autónoma contra ransomware de NetApp con IA (ARP/IA) y acceso no autorizado a volúmenes.
 * Excelencia operativa: gestión automática de la capacidad, umbral de utilización de la capacidad del archivo de volumen y utilización del volumen casi al máximo.
-* Optimización de costes: eficiencias de almacenamiento y niveles de datos
+* Optimización de costos: eficiencia de almacenamiento, niveles de datos y eliminación innecesaria de instantáneas
+* Optimización del rendimiento: reequilibrio de volúmenes de FlexGroup
 
 
 

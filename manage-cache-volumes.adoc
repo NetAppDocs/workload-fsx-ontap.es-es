@@ -4,17 +4,17 @@ permalink: manage-cache-volumes.html
 keywords: cache volumes, manage cache, FSx for ONTAP cache 
 summary: Administre los volúmenes de caché para un sistema de archivos FSx para ONTAP en NetApp Workload Factory cuando sea necesario. 
 ---
-= Administrar los volúmenes de caché para un sistema de archivos FSx para ONTAP
+= Administre los volúmenes de caché de FSx para ONTAP con NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Desde la consola de NetApp Workload Factory , puede administrar los volúmenes de caché para sus sistemas de archivos FSx para ONTAP .  Las tareas de administración incluyen editar el nombre de la caché, aumentar la capacidad de la caché, editar la política de exportación, cambiar el método de almacenamiento en caché, precargar la caché y eliminar el volumen de la caché cuando ya no sea necesario.
+Utilice la consola NetApp Workload Factory para administrar los volúmenes de caché de los sistemas de archivos FSx para ONTAP .  El almacenamiento en caché, un método para almacenar datos temporalmente, mejora el rendimiento del acceso a los datos al reducir el tiempo de recuperación.  Puede editar el nombre de la caché, ajustar la capacidad, cambiar la política de exportación, seleccionar un método de almacenamiento en caché, rellenar previamente la caché o eliminar volúmenes de caché.
 
 .Acerca de esta tarea
-Puede administrar los volúmenes de caché asociados con relaciones de caché sin salir de la consola de NetApp Workload Factory .
+Puede administrar los volúmenes de caché que están asociados con las relaciones de caché en la consola de NetApp Workload Factory .
 
 .Antes de empezar
 * Debes asociar un enlace para gestionar los volúmenes y las relaciones de la caché. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
@@ -39,9 +39,9 @@ Puede cambiar el nombre de un volumen de caché existente en cualquier momento.
 
 
 
-== Aumentar la capacidad de un volumen de caché
+== Ajustar la capacidad de un volumen de caché
 
-Si necesita aumentar la capacidad de un volumen de caché existente, puede hacerlo en cualquier momento.
+Puede ajustar la capacidad de un volumen de caché existente en cualquier momento.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -49,8 +49,8 @@ Si necesita aumentar la capacidad de un volumen de caché existente, puede hacer
 . Desde el menú Almacenamiento, seleccione FSx para ONTAP.
 . Desde FSx para ONTAP, seleccione el menú de acciones del sistema de archivos con el volumen de caché y luego seleccione *Administrar*.
 . Desde la vista general del sistema de archivos, seleccione la pestaña *Relaciones de caché*.
-. Seleccione el menú de acciones del volumen de caché que desea modificar y, a continuación, seleccione *Aumentar la capacidad de la caché*.
-. En el cuadro de diálogo *Aumentar la capacidad de la caché*, ingrese la nueva capacidad para el volumen de la caché en porcentaje o en unidad y luego seleccione *Aplicar*.
+. Seleccione el menú de acciones para el volumen de caché que desea modificar y luego seleccione *Ajustar capacidad de caché*.
+. En el cuadro de diálogo *Ajustar capacidad de caché*, ingrese la nueva capacidad para el volumen de caché por porcentaje o por unidad y luego seleccione *Aplicar*.
 
 
 
@@ -74,7 +74,7 @@ Cambie la ruta de montaje o la política de exportación asignada a un volumen d
 
 == Cambie el método de almacenamiento en caché para un volumen de caché.
 
-Cambie el método o modo de almacenamiento en caché de un volumen de caché existente a escritura directa o escritura diferida.
+Puede cambiar el modo en que funciona el caché de un volumen de caché existente para escribir alternativamente o escribir de manera diferida.
 
 Obtenga más información sobrelink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html["modos de escritura"^] .
 
@@ -92,7 +92,7 @@ Obtenga más información sobrelink:https://docs.aws.amazon.com/fsx/latest/ONTAP
 
 == Precargar un volumen de caché
 
-Precarga un volumen de caché con datos del volumen de origen antes de solicitarlos para acelerar el acceso a los datos almacenados en caché.
+Llene el volumen de caché con datos del volumen de origen antes de usarlo para que los datos almacenados en caché estén disponibles más rápido.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -108,7 +108,7 @@ Precarga un volumen de caché con datos del volumen de origen antes de solicitar
 
 == Eliminar un volumen de caché
 
-Eliminar un volumen de caché elimina la relación de caché entre el volumen de origen y el volumen de caché.  Tras su eliminación, los datos almacenados en caché ya no están disponibles.
+Cuando elimina un volumen de caché, elimina su relación de caché.  Los datos almacenados en caché ya no están disponibles.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .

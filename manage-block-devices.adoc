@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: manage-block-devices.html 
+keywords: block devices, manage luns, manage iscsi 
+summary: Administre dispositivos de bloque para un sistema de archivos FSx para ONTAP en NetApp Workload Factory. 
+---
+= Administrar los dispositivos de bloque para un sistema de archivos FSx para ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Desde la consola de NetApp Workload Factory , puede administrar los dispositivos de bloque para sus sistemas de archivos FSx para ONTAP .  Las tareas de administración incluyen la visualización de los detalles del dispositivo de bloque y el aumento de la capacidad.
+
+.Acerca de esta tarea
+Los dispositivos de bloque, o LUN (números de unidad lógica), son volúmenes que contienen sistemas de archivos en un entorno SAN y a los que los hosts pueden acceder a través de una red.
+
+Puede administrar dispositivos de bloque para sistemas de archivos FSx para ONTAP que utilizan el protocolo iSCSI.
+
+.Antes de empezar
+* Debe asociar un enlace para administrar dispositivos de bloque. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"].  Después de asociar el enlace, vuelva a esta operación.
+* Debe tener un dispositivo de bloque existente para verlo y administrarlo.
+
+
+
+
+== Ver detalles del dispositivo de bloque
+
+Ver detalles de un dispositivo de bloque existente en cualquier momento.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione la pestaña *Dispositivos de bloque*.
+. Navegue hasta el menú de acciones del dispositivo de bloque y luego seleccione *Ver detalles*.
++
+Se muestran detalles generales, información de consumo, acceso y protección del dispositivo de bloque.
+
+
+
+
+
+== Aumentar la capacidad de un dispositivo de bloque
+
+Aumente la capacidad de un dispositivo de bloque existente en cualquier momento.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione la pestaña *Dispositivos de bloque*.
+. Navegue hasta el menú de acciones del dispositivo de bloque y luego seleccione *Aumentar capacidad*.
+. Ingrese la nueva capacidad para el dispositivo de bloque y seleccione la unidad.
+. Seleccione *Aumentar* para aplicar los cambios.
+
+
+
+NOTE: Después de aumentar el tamaño del dispositivo de bloque, siga el procedimiento proporcionado por su sistema operativo host para descubrir el nuevo tamaño del dispositivo de bloque y expandir el sistema de archivos en él.

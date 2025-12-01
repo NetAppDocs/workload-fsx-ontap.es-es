@@ -23,7 +23,7 @@ Necesitaráslink:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"] Agregue credenciales y permisos
 [role="quick-margin-para"]
-Elige ellink:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["políticas de permisos"^] para satisfacer sus necesidades.
+Elige ellink:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["políticas de permisos"^] para satisfacer sus necesidades.
 
 [role="quick-margin-para"]
 Si decide no otorgar permisos, puede comenzar a usar Workload Factory para FSx para ONTAP para copiar ejemplos de código parcialmente completados.

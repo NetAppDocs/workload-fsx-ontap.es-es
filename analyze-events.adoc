@@ -1,0 +1,108 @@
+---
+sidebar: sidebar 
+permalink: analyze-events.html 
+keywords: analyze events, events, FSx for ONTAP events, troubleshoot FSx for ONTAP 
+summary: Analice eventos EMS dentro de NetApp Workload Factory para FSx para ONTAP. 
+---
+= Analizar FSx para eventos de ONTAP EMS en NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilice el analizador de eventos inteligente para extraer y analizar automáticamente eventos del Sistema de gestión de eventos (EMS) para los sistemas de archivos FSx para ONTAP en NetApp Workload Factory para que pueda identificar y resolver problemas rápidamente. El análisis basado en IA de Agentic requiere la integración de Amazon Bedrock.
+
+
+
+== Acerca de esta tarea
+
+Los administradores de almacenamiento a menudo responden a los eventos de FSx for ONTAP EMS solo después de quejas de los clientes o mediante la creación de scripts y alarmas personalizados.  Este enfoque reactivo ralentiza la solución de problemas, aumenta el tiempo de inactividad y hace que las operaciones sean menos eficientes.
+
+El analizador de eventos extrae eventos de FSx for ONTAP EMS y los analiza para ayudarlo a mantener la salud y el rendimiento de los sistemas de archivos de FSx for ONTAP .
+
+Los beneficios clave incluyen:
+
+* Solución de problemas avanzada: aprovecha la IA para detectar y analizar eventos de forma proactiva, proporcionando pasos de resolución claros para los eventos de ONTAP EMS que requieren atención.
+* Solución recomendada: proporciona pasos claros para solucionar problemas de FSx para ONTAP, según su entorno, para que cualquiera pueda resolverlos.
+
+
+Al utilizar el analizador de eventos, usted mantiene un control total sobre su entorno mientras se beneficia del análisis avanzado de IA.
+
+Para utilizar el analizador de eventos, debe activar Amazon Bedrock, seleccionar el modelo que utiliza Workload Factory, crear un punto final privado para conectarse a Amazon Bedrock, agregar permisos y crear una licencia empresarial.
+
+link:https://aws.amazon.com/bedrock/pricing/["Precios de Amazon Bedrock"^]
+
+
+
+=== Privacidad y seguridad de los datos
+
+La función garantiza la privacidad y seguridad de los datos con las siguientes medidas:
+
+.Soberanía de datos
+Los datos y las agregaciones permanecen dentro de su cuenta de AWS, comunicados a través de un punto final de VPC privado (Amazon Bedrock), lo que garantiza que no haya exposición a Internet público.
+
+.Sin entrenamiento de IA
+Los datos del cliente no se utilizan para entrenar o mejorar los modelos.  Amazon Bedrock procesa eventos en tiempo real, pero no se entrena con sus datos.  Los resultados se almacenan en su entorno solo como referencia.  Para más detalles, consulte lalink:https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html["Documentación de protección de datos de Amazon Bedrock"^] .
+
+
+
+== Antes de empezar
+
+Para utilizar el analizador de eventos, debe cumplir los siguientes requisitos previos:
+
+* Usted debelink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos de _visualización, planificación y análisis_"^] en su cuenta de AWS para ver eventos de los sistemas de archivos FSx para ONTAP .
+* Usted debelink:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Conectarse a un sistema de archivos FSx para ONTAP mediante un enlace"] para utilizar el analizador de eventos EMS.
+* También deberá cumplir los siguientes requisitos:  El sistema le solicita que complete estos pasos cuando analiza errores de registro.
++
+** *Activación de Amazon Bedrock*
++
+El analizador de eventos utiliza las API de Amazon Bedrock para proporcionar información basada en IA para eventos de FSx para ONTAP .
+
++
+Modelo recomendado: Modelo Amazon Bedrock (anthropic.claude-sonnet-4-20250514-v1:0).  Debe proporcionar el ARN del perfil de inferencia para este modelo en la región seleccionada.
+
+** *Enlace de Workload Factory*
++
+Debe crear y asociar un enlace con un sistema de archivos FSx para ONTAP para habilitar el análisis de eventos impulsado por IA.  Este vínculo crea una relación de confianza entre Workload Factory y uno o más sistemas de archivos FSx para ONTAP y aprovecha AWS Lambda.
+
++
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
+
+** *Permisos de AWS IAM*
++
+Debe agregar los siguientes permisos a la política asociada al rol IAM de Workload Factory.
+
++
+*** Permisos: `bedrock:InvokeModel` y `bedrock:InvokeModelWithResponseStream`
++
+Estos permisos permiten que Workload Factory invoque modelos Bedrock para realizar investigaciones proactivas de errores y obtener orientación para su remediación. Este perfil también garantiza un acceso seguro a la IA para obtener información personalizada.
+
+*** Credenciales de AWS asociadas con Workload Factory: `bedrock:GetFoundationModelAvailability` y `bedrock:ListInferenceProfiles` permisos
++
+Estos permisos verifican la disponibilidad del modelo.
+
+
+
+
+
+
+
+
+
+== Ver y analizar eventos EMS para FSx para ONTAP
+
+Utilice la consola Workload Factory para ver y analizar eventos EMS para sistemas de archivos FSx para ONTAP .
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. Desde el menú Almacenamiento, seleccione *Análisis*.
+. Desde la pantalla Análisis, seleccione las cuentas, credenciales y regiones de AWS que contienen los sistemas de archivos FSx for ONTAP que desea analizar.
++
+Sólo FSx para sistemas de archivos ONTAP con eventos mostrados en la pantalla.
+
+. Si es necesario, complete los *requisitos de configuración del análisis de IA* siguiendo las instrucciones en pantalla para cumplir con los requisitos previos faltantes.
+. Busque el sistema de archivos FSx for ONTAP que desea analizar y luego seleccione *Ver eventos*.
+. Revise la información detallada del evento.
+
