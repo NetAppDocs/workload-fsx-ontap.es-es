@@ -120,6 +120,12 @@ System Manager no admite los enlaces de FSx para la conectividad de ONTAP.
 
 AWS Secrets Manager no es compatible cuando se utiliza un agente de consola.
 
+
+
+== Limitación de los puntos de acceso de Amazon S3
+
+El límite para la cantidad de puntos de acceso S3 por máquina virtual de almacenamiento es 4000.
+
 Nota:
 
 . Se aplica a Amazon FSx para NetApp ONTAP
