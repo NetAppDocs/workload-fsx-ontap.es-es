@@ -1,0 +1,65 @@
+= 
+:allow-uri-read: 
+
+
+. En la página Crear FSX para ONTAP, selecciona *Creación rápida*.
++
+También puede cargar una configuración guardada.
+
+. En Configuración general del sistema de archivos, proporcione lo siguiente:
++
+.. *Credenciales de AWS*: seleccione para agregar credenciales de AWS en Workload Factory o continuar sin credenciales.
+.. *Nombre del sistema de archivos*: Introduzca un nombre para el sistema de archivos.
+.. *Región y VPC*: Seleccione la región y VPC para el sistema de archivos.
+.. *Tipo de implementación*: Seleccione un tipo de implementación.
++
+*** Implementación de zona de disponibilidad única (Single-AZ): Proporciona disponibilidad mediante la supervisión de fallos de hardware y la sustitución automática de componentes de la infraestructura en caso de fallo. Logra una alta durabilidad replicando automáticamente sus datos dentro de una zona de disponibilidad para protegerlos frente a fallos de componentes.
++
+Esta configuración se recomienda para cargas de trabajo de alto rendimiento o cuando las cargas de trabajo comienzan pequeñas y escalan gradualmente hasta 72 GB/s de rendimiento y 2,4 millones de IOPS.
+
+*** Implantación de varias zonas de disponibilidad (Multi-AZ): Proporciona disponibilidad continua a los datos incluso cuando una zona de disponibilidad no está disponible. Un sistema de archivos Multi-AZ está diseñado para cargas de trabajo de producción vital para el negocio que requieren alta disponibilidad para los datos de archivos ONTAP compartidos y necesitan almacenamiento con una replicación incorporada en las zonas de disponibilidad.
++
+Esta configuración de par HA único se recomienda para cargas de trabajo que requieren hasta 6 GB/s de rendimiento o 200 000 IOPS.
+
+
+
+.. *Etiquetas*: Opcionalmente, puedes añadir hasta 50 etiquetas.
+
+
+. En *Detalles del sistema de archivos*, proporcione lo siguiente:
++
+.. *Capacidad de almacenamiento SSD*: Ingrese la capacidad de almacenamiento y seleccione la unidad de capacidad de almacenamiento.
++
+*** Para las implementaciones de primera generación, no es posible disminuir la capacidad después de la creación del sistema de archivos.
+*** Para las implementaciones de segunda generación, puede aumentar la capacidad después de la creación del sistema de archivos.
+
+
+.. *Credenciales ONTAP*: Opcional. Introduzca su nombre de usuario y contraseña de ONTAP. La contraseña se puede establecer ahora o más tarde.
++
+Si el usuario que proporcione no es el usuario de fsxadmin, y más tarde necesita restablecer la contraseña de fsxadmin, podrá hacerlo desde la consola de AWS.
+
+.. *Configuración SMB/CIFS*: Opcional. Si piensa utilizar el protocolo SMB/CIFS para acceder a los volúmenes, debe configurar Active Directory para la máquina virtual de almacenamiento durante la creación del sistema de archivos. Proporcione los siguientes detalles para la máquina virtual de almacenamiento que se ha creado para este sistema de archivos.
++
+... *Dominio de Active Directory para unirse*: Introduzca el nombre de dominio completo (FQDN) para el Active Directory.
+... *Direcciones IP DNS*: Introduzca hasta tres direcciones IP DNS separadas por comas.
+... *Servidor SMB Nombre NetBIOS*: Introduzca el nombre NetBIOS del servidor SMB del objeto de equipo de Active Directory para crear para su VM de almacenamiento. Este es el nombre de esta máquina virtual de almacenamiento en Active Directory.
+... *Nombre de usuario*: Introduzca el nombre de usuario de la cuenta de servicio en su Active Directory existente.
++
+No incluya un prefijo o sufijo de dominio. Para `EXAMPLE\ADMIN`, utilice `ADMIN`.
+
+... *Contraseña*: Introduzca la contraseña de la cuenta de servicio.
+... *Unidad de organización*: De manera opcional, ingresa el nombre de la Unidad organizativa donde pretendes crear la cuenta de computadora para FSX for ONTAP. La unidad organizativa es el nombre de ruta de acceso distinguida de la unidad organizativa a la que desea unirse al sistema de archivos.
+... *Grupo de administradores delegados*: Opcionalmente, introduzca el nombre del grupo en su Active Directory que puede administrar su sistema de archivos.
++
+Si utiliza AWS Managed Microsoft AD, debe especificar un grupo como AWS Delegated FSx Administrators, AWS Delegated Administrators o un grupo personalizado con permisos delegados a la OU.
+
++
+Si se va a unir a un AD autogestionado, utilice el nombre del grupo en su AD. El grupo por defecto es `Domain Admins`.
+
+
+
+
+
+. Abra el *Resumen* para revisar la configuración que definió. Si es necesario, puede cambiar cualquier configuración en este momento antes de guardar o crear el sistema de archivos.
+. Guarde o cree el sistema de archivos.
+

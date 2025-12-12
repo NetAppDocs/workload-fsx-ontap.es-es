@@ -1,0 +1,110 @@
+= 
+:allow-uri-read: 
+
+
+. En la página Crear FSX para ONTAP, selecciona *Crear avanzado*.
++
+También puede cargar una configuración guardada.
+
+. En Configuración general del sistema de archivos, proporcione lo siguiente:
++
+.. *Credenciales de AWS*: seleccione para agregar credenciales de AWS en Workload Factory o continuar sin credenciales.
+.. *Nombre del sistema de archivos*: Introduzca un nombre para el sistema de archivos.
+.. *Región y VPC*: Seleccione la región y VPC para el sistema de archivos.
+.. *Tipo de implementación*: seleccione un tipo de implementación y una generación de sistema de archivos. La disponibilidad de un sistema de archivos de segunda generación depende de la región seleccionada. Si la región seleccionada no admite sistemas de archivos FSx for ONTAP de segunda generación, el tipo de implementación cambia a primera generación.
++
+*** Implementación de zona de disponibilidad única (Single-AZ): Proporciona disponibilidad mediante la supervisión de fallos de hardware y la sustitución automática de componentes de la infraestructura en caso de fallo. Logra una alta durabilidad replicando automáticamente sus datos dentro de una zona de disponibilidad para protegerlos frente a fallos de componentes.
++
+*Generación del sistema de archivos*: seleccione una de las siguientes opciones:
+
++
+**** *Segunda generación*: esta configuración se recomienda para cargas de trabajo de alto rendimiento o cuando las cargas de trabajo comienzan pequeñas y escalan de manera incremental hasta 72 GB/s de rendimiento y 2,4 millones de IOPS.
+**** *Primera generación*: Esta configuración es ideal para cargas de trabajo que requieren hasta 4 GB/s o 160 000 IOPS. Los sistemas de archivos de primera generación solo pueden aumentar la capacidad.
+
+
+*** Implantación de varias zonas de disponibilidad (Multi-AZ): Proporciona disponibilidad continua a los datos incluso cuando una zona de disponibilidad no está disponible. Un sistema de archivos Multi-AZ está diseñado para cargas de trabajo de producción vital para el negocio que requieren alta disponibilidad para los datos de archivos ONTAP compartidos y necesitan almacenamiento con una replicación incorporada en las zonas de disponibilidad.
++
+*Generación del sistema de archivos*: seleccione una de las siguientes opciones:
+
++
+**** *Segunda generación*: Esta configuración de par de alta disponibilidad (HA) se recomienda para cargas de trabajo que requieren hasta 6 GB/s de rendimiento o 200 000 IOPS. En un sistema de archivos Multi-AZ y de segunda generación, la capacidad puede aumentar o disminuir según las demandas de la carga de trabajo.
+**** *Primera generación*: Esta configuración es ideal para cargas de trabajo que requieren hasta 4 GB/s o 160 000 IOPS. Los sistemas de archivos de primera generación solo pueden aumentar la capacidad.
+
+
+
+
+.. *Etiquetas*: Opcionalmente, puedes añadir hasta 50 etiquetas.
+
+
+. En Detalles del sistema de archivos, proporcione lo siguiente:
++
+.. *Capacidad de almacenamiento SSD*: Ingrese la capacidad de almacenamiento y seleccione la unidad de capacidad de almacenamiento.
++
+*** Para las implementaciones de primera generación, no es posible disminuir la capacidad después de la creación del sistema de archivos.
+*** Para implementaciones de segunda generación, puede ajustar la capacidad.
+
+
+.. Capacidad de rendimiento por par de alta disponibilidad (HA): Seleccione la capacidad de rendimiento por número de pares de HA. Los sistemas de archivos de primera generación solo admiten un par de HA.
+.. *IOPS aprovisionadas*: seleccione una de las siguientes opciones:
++
+*** *Automático*: para que sea automático, por cada GiB creado, se agregan 3 IOPS.
+*** *Aprovisionado por el usuario*: para aprovisionado por el usuario, ingrese el valor de IOPS.
+
+
+.. *Credenciales ONTAP*: Opcional. Introduzca su nombre de usuario y contraseña de ONTAP. La contraseña se puede establecer ahora o más tarde.
++
+Si el usuario que proporcione no es el usuario de fsxadmin, y más tarde necesita restablecer la contraseña de fsxadmin, podrá hacerlo desde la consola de AWS.
+
+.. *Storage VM Credentials*: Opcional. Introduzca su nombre de usuario. La contraseña puede ser específica de este sistema de archivos o puede utilizar la misma contraseña introducida para las credenciales de ONTAP. La contraseña se puede establecer ahora o más tarde.
+.. *Configuración SMB/CIFS*: Opcional. Si piensa utilizar el protocolo SMB/CIFS para acceder a los volúmenes, debe configurar Active Directory para la máquina virtual de almacenamiento durante la creación del sistema de archivos. Proporcione los siguientes detalles para la máquina virtual de almacenamiento que se ha creado para este sistema de archivos.
++
+... *Dominio de Active Directory para unirse*: Introduzca el nombre de dominio completo (FQDN) para el Active Directory.
+... *Direcciones IP DNS*: Introduzca hasta tres direcciones IP DNS separadas por comas.
+... *Servidor SMB Nombre NetBIOS*: Introduzca el nombre NetBIOS del servidor SMB del objeto de equipo de Active Directory para crear para su VM de almacenamiento. Este es el nombre de esta máquina virtual de almacenamiento en Active Directory.
+... *Nombre de usuario*: Introduzca el nombre de usuario de la cuenta de servicio en su Active Directory existente.
++
+No incluya un prefijo o sufijo de dominio. Para `EXAMPLE\ADMIN`, utilice `ADMIN`.
+
+... *Contraseña*: Introduzca la contraseña de la cuenta de servicio.
+... *Unidad de organización*: De manera opcional, ingresa el nombre de la Unidad organizativa donde pretendes crear la cuenta de computadora para FSX for ONTAP. La unidad organizativa es el nombre de ruta de acceso distinguida de la unidad organizativa a la que desea unirse al sistema de archivos.
+... *Grupo de administradores delegados*: Opcionalmente, introduzca el nombre del grupo en su Active Directory que puede administrar su sistema de archivos.
++
+Si utiliza AWS Managed Microsoft AD, debe especificar un grupo como AWS Delegated FSx Administrators, AWS Delegated Administrators o un grupo personalizado con permisos delegados a la OU.
+
++
+Si se va a unir a un AD autogestionado, utilice el nombre del grupo en su AD. El grupo por defecto es `Domain Admins`.
+
+
+
+
+
+. En Red y seguridad, proporcione lo siguiente:
++
+.. *Grupo de seguridad*: Crea o utiliza un grupo de seguridad existente.
++
+Para obtener un nuevo grupo de seguridad, consulte <<Detalles del grupo de seguridad,detalles del grupo de seguridad>>para obtener una descripción de los protocolos, puertos y roles del grupo de seguridad.
+
+.. *Zonas de disponibilidad*: Seleccione zonas de disponibilidad y subredes.
++
+*** Para el nodo de configuración de clúster 1: Seleccione una zona de disponibilidad y una subred.
+*** Para el nodo de configuración de clúster 2: Seleccione una zona de disponibilidad y una subred.
+
+
+.. *Tablas de rutas VPC*: Seleccione la tabla de rutas VPC para permitir el acceso del cliente a los volúmenes.
+.. *Rango de direcciones IP de punto final*: Selecciona *Rango de direcciones IP flotante fuera de tu VPC* o *Introduce un rango de direcciones IP* e introduce un rango de direcciones IP.
+.. *Cifrado*: Seleccione el nombre de la clave de cifrado en el menú desplegable.
+
+
+. En Copia de seguridad y mantenimiento, proporcione lo siguiente:
++
+.. *FSX para copia de seguridad de ONTAP*: Las copias de seguridad automáticas diarias están habilitadas por defecto. Desactívelo si lo desea.
++
+... *Período de retención de respaldo automático*: Ingrese el número de días para retener las copias de seguridad automáticas.
+... *Ventana de copia de seguridad automática diaria*: Seleccione *Sin preferencia* (se selecciona una hora de inicio de copia de seguridad diaria) o *Seleccione la hora de inicio para copias de seguridad diarias* y especifique una hora de inicio.
+
+
+.. *Ventana de mantenimiento semanal*: Seleccione *Sin preferencia* (se selecciona una hora de inicio de ventana de mantenimiento semanal) o *Seleccione la hora de inicio para la ventana de mantenimiento semanal de 30 minutos* y especifique una hora de inicio.
+
+
+. Guarde o cree el sistema de archivos.
+
