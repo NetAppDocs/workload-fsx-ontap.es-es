@@ -168,7 +168,7 @@ ONTAP logra eficiencia de almacenamiento utilizando funciones de deduplicación 
 
 .. *Política de instantáneas*: Seleccione la política de instantáneas para especificar la frecuencia y retención de instantáneas.
 +
-Las siguientes son políticas predeterminadas de AWS. Para las políticas de instantáneas personalizadas, debe link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["asocie un enlace"] .
+Las siguientes son políticas predeterminadas de AWS. Para mostrar las políticas de instantáneas existentes, debe link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["asocie un enlace"].
 
 +
 `default`:: Esta política crea Snapshot de forma automática según la siguiente programación, siendo las copias Snapshot más antiguas eliminadas para dejar espacio para las copias más recientes:
@@ -190,7 +190,7 @@ NOTE: Las horas de las instantáneas se basan en la zona horaria del sistema de 
 
 .. *Política de niveles*: Seleccione la política de organización en niveles para los datos almacenados en el volumen.
 +
-_Equilibrado (automático)_ es la política de niveles predeterminada al crear un volumen mediante la consola de Workload Factory.  Para obtener más información sobre las políticas de niveles de volumen, consultelink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^] en la documentación de AWS FSx para NetApp ONTAP .  Tenga en cuenta que Workload Factory utiliza nombres basados ​​en casos de uso en la consola de Workload Factory para las políticas de niveles e incluye los nombres de políticas de niveles de FSx para ONTAP entre paréntesis.
+_Equilibrado (automático)_ es la política de niveles predeterminada al crear un volumen mediante la consola de Workload Factory. Para obtener más información sobre las políticas de niveles de volumen, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^] en la documentación de AWS FSx para NetApp ONTAP . Tenga en cuenta que Workload Factory utiliza nombres basados ​​en casos de uso en la consola de Workload Factory para las políticas de niveles e incluye los nombres de políticas de niveles de FSx para ONTAP entre paréntesis.
 
 .. *Archivos inmutables*: al habilitar la función de archivos inmutables, los archivos de este volumen se comprometen de forma permanente a un estado WORM (escritura única, lectura múltiple) inmutable.  Proporcione los siguientes detalles:
 +

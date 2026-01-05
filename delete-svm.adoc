@@ -25,8 +25,8 @@ Revise lo siguiente antes de eliminar una máquina virtual de almacenamiento:
 . En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
 . Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos a actualizar y luego seleccione *Administrar*.
-. En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
-. En la pestaña Máquinas virtuales de almacenamiento, seleccione el menú de acciones de la máquina virtual de almacenamiento para la cual desea configurar Active Directory.
+. En la descripción general del sistema de archivos, en Máquinas virtuales de almacenamiento, seleccione *Administrar*.
+. En la pantalla Administrar máquinas virtuales de almacenamiento, seleccione el menú de acciones de la máquina virtual de almacenamiento que desea eliminar.
 . Seleccione *Eliminar VM de almacenamiento*.
 . En el cuadro de diálogo Delete storage VM, escriba «delete» para eliminar la máquina virtual de almacenamiento.
 . Seleccione *Eliminar* para confirmar.

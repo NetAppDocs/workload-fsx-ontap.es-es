@@ -21,10 +21,9 @@ Para replicar una máquina virtual de almacenamiento a otro sistema de archivos 
 . En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
 . Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con la VM de almacenamiento que desea replicar y luego seleccione *Administrar*.
-. En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
-. Desde la pestaña Máquinas virtuales de almacenamiento, seleccione el menú de acciones de la máquina virtual de almacenamiento para la cual desea replicar una SVM.
-. Seleccione *Replicar VM de almacenamiento*.
-. En la página Create replication, en Replication target, proporcione lo siguiente:
+. En la descripción general del sistema de archivos, en Máquinas virtuales de almacenamiento, seleccione *Administrar*.
+. En la pantalla Administrar máquinas virtuales de almacenamiento, seleccione el menú de acciones de la máquina virtual de almacenamiento para la cual desea replicar una SVM y, luego, seleccione *Acciones avanzadas* > *Replicar máquina virtual de almacenamiento*.
+. En la página Replicar datos, en Destino de replicación, proporcione lo siguiente:
 +
 .. *FSX para el sistema de archivos ONTAP*: Seleccione credenciales, región y FSX para el nombre del sistema de archivos ONTAP para el sistema de archivos FSX para ONTAP de destino.
 .. *Nombre de VM de almacenamiento*: Seleccione la VM de almacenamiento en el menú desplegable.

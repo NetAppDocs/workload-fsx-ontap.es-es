@@ -21,9 +21,8 @@ Los mismos pasos se aplican para configurar y actualizar Active Directory para u
 . En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
 . Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con la VM de almacenamiento que desea actualizar y luego seleccione *Administrar*.
-. En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
-. Desde la pestaña Máquinas virtuales de almacenamiento, seleccione el menú de acciones de la máquina virtual de almacenamiento para la cual desea configurar Active Directory.
-. Seleccione *Administrar configuración de AD*.
+. En la descripción general del sistema de archivos, en Máquinas virtuales de almacenamiento, seleccione *Administrar*.
+. Desde la pantalla Administrar máquinas virtuales de almacenamiento, seleccione el menú de acciones de la máquina virtual de almacenamiento para la que desea configurar Active Directory y, luego, seleccione *Acciones básicas* > *Administrar configuración de AD*.
 . En la página Gestionar configuración de AD, proporcione lo siguiente:
 +
 .. *Dominio de Active Directory para unirse*: Introduzca el nombre de dominio completo (FQDN) de su Active Directory.
