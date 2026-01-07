@@ -56,6 +56,7 @@ La fábrica de carga de trabajo requiere un enlace para mostrar cierta informaci
 Las características que requieren un enlace incluyen:
 
 * Estado bien diseñado de FSx para configuraciones del sistema de archivos ONTAP para mantenimiento proactivo, confiabilidad y optimización de costo-rendimiento
+* Monitoreo y alerta de eventos de ONTAP EMS
 * Protección autónoma contra ransomware de NetApp (ARP/IA)
 * Observabilidad de capacidad holística mejorada en FSx para sistemas de archivos ONTAP
 * Replicación, administración y monitoreo de datos de máquinas virtuales de volumen y almacenamiento
