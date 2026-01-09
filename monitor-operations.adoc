@@ -46,7 +46,7 @@ Realice un seguimiento y monitoree las operaciones en la consola de NetApp con T
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . Desde el menú Almacenamiento, seleccione *Administración* y luego *Enlaces*.
 +
 image:screenshot-menu-tracker-option.png["Una captura de pantalla del menú de configuración de la cuenta con la opción Rastreador resaltada."]

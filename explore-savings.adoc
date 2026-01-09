@@ -41,7 +41,8 @@ Siga los pasos debajo de la pestaña para su selección de almacenamiento.
 --
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico de Almacenamiento, seleccione *Explorar ahorros* y luego *Amazon Elastic Block Store (EBS)*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *Explorar ahorros* y luego seleccione la pestaña *Amazon Elastic Block Store (EBS)*.
 . En la calculadora de ahorro de almacenamiento, proporcione la siguiente información:
 +
 .. *Caso de uso*: Requerido. Seleccione un caso de uso en el menú desplegable. El caso de uso seleccionado determina las características del sistema de archivos FSx para ONTAP para su comparación.
@@ -62,7 +63,8 @@ Siga los pasos debajo de la pestaña para su selección de almacenamiento.
 --
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Explorar ahorros* y luego * Amazon FSx para Windows File Server*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *Explorar ahorros* y luego seleccione la pestaña *Amazon Elastic Block Store (EBS)*.
 . En la calculadora de ahorro de almacenamiento, proporcione la siguiente información:
 +
 .. *Caso de uso*: Requerido. Seleccione un caso de uso en el menú desplegable. El caso de uso seleccionado determina las características del sistema de archivos FSx para ONTAP para su comparación.
@@ -84,7 +86,8 @@ Siga los pasos debajo de la pestaña para su selección de almacenamiento.
 --
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Explorar ahorros* y luego *Amazon Elastic File System (EFS)*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *Explorar ahorros* y luego seleccione la pestaña *Amazon Elastic Block Store (EBS)*.
 . En la calculadora de ahorro de almacenamiento, proporcione la siguiente información:
 +
 .. *Caso de uso*: Requerido. Seleccione un caso de uso en el menú desplegable. El caso de uso seleccionado determina las características del sistema de archivos FSx para ONTAP para su comparación.
@@ -129,8 +132,8 @@ Siga los pasos debajo de la pestaña para su selección de almacenamiento.
 --
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
-. Desde el menú Almacenamiento, seleccione *Explorar ahorros*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *Explorar ahorros* y luego seleccione la pestaña *Amazon Elastic Block Store (EBS)*.
 . En la pestaña *Tienda de bloques elásticos (EBS)*, selecciona las instancias para comparar con FSX para ONTAP y selecciona *Explorar ahorros*.
 . Aparece la calculadora de ahorro en almacenamiento. Las siguientes características del sistema de almacenamiento se rellenan previamente en función de las instancias seleccionadas:
 +
@@ -148,8 +151,8 @@ Siga los pasos debajo de la pestaña para su selección de almacenamiento.
 --
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
-. Desde el menú Almacenamiento, seleccione *Explorar ahorros*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *Explorar ahorros* y, a continuación, seleccione la pestaña * Amazon FSx para Windows File Server*.
 . En la pestaña *Servidor de archivos de Amazon FSx para Windows*, selecciona las instancias para comparar con FSx para ONTAP y selecciona *Explorar ahorros*.
 . Aparece la calculadora de ahorro en almacenamiento. Las siguientes características del sistema de almacenamiento se rellenan previamente según el tipo de implementación de las instancias seleccionadas:
 +
@@ -167,8 +170,8 @@ Siga los pasos debajo de la pestaña para su selección de almacenamiento.
 --
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
-. Desde el menú Almacenamiento, seleccione *Explorar ahorros*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *Explorar ahorros* y luego seleccione la pestaña *Amazon Elastic File System (EFS)*.
 . En la pestaña *Sistema de archivos elásticos (EFS)*, selecciona las instancias para comparar con FSX para ONTAP y selecciona *Explorar ahorros*.
 . Aparece la calculadora de ahorro en almacenamiento. Las siguientes características del sistema de almacenamiento se rellenan previamente en función de las instancias seleccionadas:
 +

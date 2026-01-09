@@ -38,13 +38,15 @@ Modos de aprendizaje y activos:: ARP/AI opera primero en _modo de aprendizaje_ y
 +
 En el modo activo, si una extensión de archivo se marca como anormal, debe evaluar la alerta. Puede actuar en la alerta para proteger sus datos o puede marcar la alerta como un falso positivo. Al marcar una alerta como falso positivo, se actualiza el perfil de alerta. Por ejemplo, si la alerta se activa con una nueva extensión de archivo y marca la alerta como un falso positivo, no recibirá una alerta la próxima vez que se observe la extensión de archivo.
 
++
+Los volúmenes FlexVol que contienen un dispositivo de bloque inician ARP/AI en modo activo.
+
 
 
 --
 Configuraciones no admitidas:: Las siguientes configuraciones no admiten el uso de ARP/AI.
 +
 --
-* Volúmenes SAN/Bloque
 * Volúmenes iSCSI
 * Volúmenes de NVMe
 
@@ -69,7 +71,7 @@ Para habilitar ARP/AI para un sistema de archivos o un volumen, debe asociar un 
 --
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
 . Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos para habilitar ARP/AI y luego seleccione *Administrar*.
 . En Información, seleccione el ícono de lápiz junto a *Protección autónoma contra ransomware*.  El ícono del lápiz aparece junto a la flecha cuando el mouse pasa sobre la fila *Protección autónoma contra ransomware*.
@@ -90,7 +92,7 @@ Para habilitar ARP/AI para un sistema de archivos o un volumen, debe asociar un 
 --
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
 . Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos para habilitar ARP/AI y luego seleccione *Administrar*.
 . Desde la pestaña Volúmenes, seleccione el menú de acciones del volumen para habilitar ARP/AI, luego *Acciones de protección de datos* y luego *Administrar ARP/AI*.
@@ -114,7 +116,7 @@ Determina si un ataque es una falsa alarma o un incidente de ransomware genuino.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
 . Desde *FSx for ONTAP*, seleccione el sistema de archivos para validar los ataques de ransomware.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
@@ -136,7 +138,7 @@ Con el conocimiento de los ficheros afectados y el tiempo de ataque, es posible 
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
 . Desde *FSx para ONTAP*, seleccione el sistema de archivos para el cual desea recuperar datos.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.

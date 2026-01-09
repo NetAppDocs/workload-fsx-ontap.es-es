@@ -101,11 +101,13 @@ Utilice la consola Workload Factory para ver y analizar eventos EMS para sistema
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
-. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
-. Seleccione el sistema de archivos FSx for ONTAP que desea analizar y luego seleccione *Administrar*.
-. Seleccione la pestaña *Análisis*.
-. Si es necesario, complete los *requisitos de configuración del análisis de IA* siguiendo las instrucciones en pantalla para cumplir con los requisitos previos faltantes.
-. Seleccione *Analizar*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. Desde el menú Almacenamiento, seleccione *Análisis*.
+. Desde la pantalla Análisis, seleccione las cuentas, credenciales y regiones de AWS que contienen los sistemas de archivos FSx for ONTAP que desea analizar.
++
+Sólo FSx para sistemas de archivos ONTAP con eventos mostrados en la pantalla.
+
+. Si es necesario, complete los requisitos de configuración del análisis de IA siguiendo las instrucciones en pantalla para cumplir con los requisitos previos faltantes.
+. Busque el sistema de archivos FSx for ONTAP que desea analizar y luego seleccione *Ver eventos*.
 . Revise la información detallada del evento.
 

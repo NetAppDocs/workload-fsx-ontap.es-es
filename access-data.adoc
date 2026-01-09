@@ -25,8 +25,7 @@ Obtenga el punto de montaje de un volumen para montar un recurso compartido en u
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
-. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen y luego seleccione *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
 . Desde la pestaña Volúmenes, seleccione el menú de acciones para el volumen, luego *Acciones básicas* y luego *Ver comando de montaje*.

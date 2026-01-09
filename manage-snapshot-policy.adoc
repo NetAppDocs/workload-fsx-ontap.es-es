@@ -31,7 +31,7 @@ Para mostrar las políticas de instantáneas existentes, debe asociar un víncul
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En *Almacenamiento*, seleccione *Ir a almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . En la pestaña *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
 . Desde la pestaña *Máquinas virtuales de almacenamiento*, seleccione el menú de acciones para la máquina virtual de almacenamiento que contiene el volumen que desea proteger con instantáneas programadas, luego *Acciones avanzadas* y luego *Administrar políticas de instantáneas*.
@@ -54,7 +54,7 @@ Debe asociar un enlace para habilitar instantáneas inmutables. link:https://doc
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En *Almacenamiento*, seleccione *Ir a almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . En la pestaña *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos que contiene el volumen para el cual desea bloquear instantáneas y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
 . Desde la pestaña *Volúmenes*, seleccione la sección de acciones para el volumen que desee proteger.
@@ -83,7 +83,7 @@ Debe asociar un enlace para asignar una política de instantáneas. link:https:/
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En *Almacenamiento*, seleccione *Ir a almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . En la pestaña *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos que contiene el volumen al cual asignar una política de instantáneas y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
 . Desde la pestaña *Máquinas virtuales de almacenamiento*, seleccione el menú de acciones para la máquina virtual de almacenamiento que contiene el volumen que desea proteger con instantáneas programadas, luego *Acciones avanzadas* y luego *Administrar políticas de instantáneas*.
@@ -109,7 +109,7 @@ Debe asociar un enlace para eliminar una política de instantáneas. link:https:
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En *Almacenamiento*, seleccione *Ir a almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . En la pestaña *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos que contiene el volumen al cual asignar una política de instantáneas y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.
 . Desde la pestaña *Máquinas virtuales de almacenamiento*, seleccione el menú de acciones para la máquina virtual de almacenamiento que contiene el volumen que desea proteger con instantáneas programadas, luego *Acciones avanzadas* y luego *Administrar políticas de instantáneas*.
@@ -131,7 +131,7 @@ Cuando se asigna una política de Snapshot a más de un volumen, debe configurar
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En *Almacenamiento*, seleccione *Ir a almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
 . Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Storage VMs*.

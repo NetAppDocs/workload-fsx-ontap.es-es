@@ -48,7 +48,7 @@ image:screenshot-on-prem-connectivity.png["Captura de pantalla que muestra cómo
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . Seleccione la pestaña *On-premises ONTAP*.
 . Seleccione *Discover*.
 . Revise los requisitos previos y seleccione *Siguiente*.
@@ -84,7 +84,7 @@ Replica datos de volúmenes de un clúster ONTAP on-premises en un sistema de ar
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . En el menú Almacenamiento, seleccione * ONTAP local*.
 . Para buscar volúmenes por VM de almacenamiento, puedes *Seleccionar VM de almacenamiento* en el menú desplegable.
 . Seleccione uno o más volúmenes para replicar y luego seleccione *Replicar*.
@@ -149,7 +149,7 @@ Es necesario link:delete-replication.html["suprimir todas las relaciones de repl
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . En el menú Almacenamiento, seleccione * ONTAP local*.
 . Seleccione el clúster de ONTAP en las instalaciones que desea quitar.
 . Seleccione el menú de acciones y seleccione *Eliminar de Workload Factory*.

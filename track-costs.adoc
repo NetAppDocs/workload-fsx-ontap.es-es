@@ -25,7 +25,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Ot
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . Desde el menú Almacenamiento, seleccione *Costo*.
 . En la página Costo, filtre los datos de costo y capacidad de sus recursos de FSx para ONTAP proporcionando lo siguiente:
 +

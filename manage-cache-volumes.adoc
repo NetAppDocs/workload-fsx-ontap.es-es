@@ -29,7 +29,7 @@ Puede cambiar el nombre de un volumen de caché existente en cualquier momento.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . Desde el menú Almacenamiento, seleccione FSx para ONTAP.
 . Desde FSx para ONTAP, seleccione el menú de acciones del sistema de archivos con el volumen de caché y luego seleccione *Administrar*.
 . Desde la vista general del sistema de archivos, seleccione la pestaña *Relaciones de caché*.
@@ -45,7 +45,7 @@ Puede ajustar la capacidad de un volumen de caché existente en cualquier moment
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . Desde el menú Almacenamiento, seleccione FSx para ONTAP.
 . Desde FSx para ONTAP, seleccione el menú de acciones del sistema de archivos con el volumen de caché y luego seleccione *Administrar*.
 . Desde la vista general del sistema de archivos, seleccione la pestaña *Relaciones de caché*.
@@ -61,7 +61,7 @@ Cambie la ruta de montaje o la política de exportación asignada a un volumen d
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . Desde el menú Almacenamiento, seleccione FSx para ONTAP.
 . Desde FSx para ONTAP, seleccione el menú de acciones del sistema de archivos con el volumen de caché y luego seleccione *Administrar*.
 . Desde la vista general del sistema de archivos, seleccione la pestaña *Relaciones de caché*.
@@ -80,7 +80,7 @@ Obtenga más información sobrelink:https://docs.aws.amazon.com/fsx/latest/ONTAP
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . Desde el menú Almacenamiento, seleccione FSx para ONTAP.
 . Desde FSx para ONTAP, seleccione el menú de acciones del sistema de archivos con el volumen de caché y luego seleccione *Administrar*.
 . Desde la vista general del sistema de archivos, seleccione la pestaña *Relaciones de caché*.
@@ -96,7 +96,7 @@ Llene el volumen de caché con datos del volumen de origen antes de usarlo para 
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . Desde el menú Almacenamiento, seleccione FSx para ONTAP.
 . Desde FSx para ONTAP, seleccione el menú de acciones del sistema de archivos con el volumen de caché y luego seleccione *Administrar*.
 . Desde la vista general del sistema de archivos, seleccione la pestaña *Relaciones de caché*.
@@ -112,7 +112,7 @@ Cuando elimina un volumen de caché, elimina su relación de caché.  Los datos 
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . Desde el menú Almacenamiento, seleccione FSx para ONTAP.
 . Desde FSx para ONTAP, seleccione el menú de acciones del sistema de archivos con el volumen de caché y luego seleccione *Administrar*.
 . Desde la vista general del sistema de archivos, seleccione la pestaña *Relaciones de caché*.
