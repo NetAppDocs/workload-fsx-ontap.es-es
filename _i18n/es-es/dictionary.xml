@@ -1240,7 +1240,6 @@
   <block id="824994853534784eb4495b892e13b1c6" category="paragraph">Si el usuario que proporcione no es el usuario de fsxadmin, y más tarde necesita restablecer la contraseña de fsxadmin, podrá hacerlo desde la consola de AWS.</block>
   <block id="dd34b811cd079417f985f8f56a4f1dca" category="list-text">*Storage VM Credentials*: Opcional. Introduzca su nombre de usuario. La contraseña puede ser específica de este sistema de archivos o puede utilizar la misma contraseña introducida para las credenciales de ONTAP. La contraseña se puede establecer ahora o más tarde.</block>
   <block id="37b002845528ac0296b86d28bb71e5a5" category="doc">Conéctese a un sistema de archivos FSx para ONTAP con un enlace Lambda</block>
-  <block id="3909315ab3cc8353eec0cd02ce0845da" category="admonition">AWS Secrets Manager no es compatible cuando se utiliza un conector.</block>
   <block id="2c1b9e7969c6e96f38bd871fc9f26ae1" category="section-title">Asocie un nuevo enlace</block>
   <block id="05a2e668e80fd3ace12e9585ebc06578" category="paragraph">La asociación de un nuevo enlace incluye la creación y asociación de enlaces.</block>
   <block id="de786693aed7955f1cb538f51e25f7d6" category="paragraph">Puede crear secretos en alineación con los permisos predeterminados o asignar sus permisos personalizados para la política de enlaces.</block>
@@ -2560,4 +2559,5 @@
   <block id="2c77adf5fa1de4ed37a6e14d2212f074" category="list-text">Seleccione *Archivo*.</block>
   <block id="b06e53572a17ccf08cb282ac59af4b93" category="paragraph">Los dispositivos de bloque que ya no están asignados a un cliente o no se utilizan durante siete días consecutivos se clasifican como dispositivos de bloque huérfanos. Esta operación desasigna y elimina el dispositivo de bloque seleccionado. Si el FlexVol volume del host no contiene ningún dispositivo de bloque, Workload Factory también lo elimina.</block>
   <block id="33e155c9d3cab85dd1499ba63bd9d34d" category="paragraph">Los volúmenes FlexVol que contienen un dispositivo de bloque inician ARP/AI en modo activo.</block>
+  <block id="aca2e051b8b58a53ee4cf20a78bdde8a" category="list-text">El enlace debe poder conectarse al siguiente punto final: \ https://api.workloads.netapp.com. La consola basada en web se comunica con este punto final para interactuar con las API de Workload Factory para administrar y operar cargas de trabajo de FSx para ONTAP .</block>
 </blocks>
