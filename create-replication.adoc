@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: create-replication.html 
-keywords: replication, replicate 
+keywords: replication, replicate, data protection, disaster recovery, data loss 
 summary: Crea una relación de replicación para un sistema de archivos FSx para ONTAP para evitar la pérdida de datos en caso de un desastre imprevisto. 
 ---
 = Crear una relación de replicación en NetApp Workload Factory
@@ -11,27 +11,33 @@ summary: Crea una relación de replicación para un sistema de archivos FSx para
 
 
 [role="lead"]
-Cree una relación de replicación para un sistema de archivos FSx para ONTAP en NetApp Workload Factory para evitar la pérdida de datos en caso de un desastre imprevisto.
+Crea una relación de replicación para un sistema de archivos FSx for ONTAP en NetApp Workload Factory para evitar la pérdida de datos en caso de un desastre imprevisto. La replicación es compatible entre dos sistemas de archivos FSx for ONTAP, y entre Cloud Volumes ONTAP o un sistema ONTAP local y un sistema de archivos FSx for ONTAP.
 
 .Acerca de esta tarea
-La replicación es una capa adicional de protección de datos que es esencial en caso de que la región en la que residen los datos experimente un desastre. La pérdida de datos puede evitarse si se utiliza replicación entre regiones.
+La replicación añade protección contra la pérdida de datos si la región donde residen tus datos sufre un desastre.
 
-Esta operación crea una relación de replicación para uno o todos los volúmenes de origen en un sistema de archivos FSx para ONTAP.
+Esta operación crea una relación de replicación para volúmenes de origen en un sistema de archivos FSx for ONTAP, un sistema ONTAP local o un sistema Cloud Volumes ONTAP.
 
 Los volúmenes replicados en el sistema de archivos de destino son volúmenes de protección de datos (DP) y siguen el formato de nomenclatura `{OriginalVolumeName}_copy`: .
 
-Al replicar un volumen de origen con archivos inmutables, el volumen de destino y el sistema de archivos se bloquean hasta que finaliza el período de retención de los archivos inmutables en el volumen de origen. La función de archivos inmutables está disponible cuando... link:create-volume.html["crear un volumen"] para un sistema de archivos FSx para ONTAP.
+Cuando replicas un volumen de origen con archivos inmutables, el volumen de destino y el sistema de archivos permanecen bloqueados hasta que termina el periodo de retención de los archivos inmutables en el volumen de origen. La función de archivos inmutables está disponible cuando link:create-volume.html["crear un volumen"] para un sistema de archivos FSx for ONTAP.
 
+[NOTE]
+====
+* La replicación no es compatible con volúmenes de bloques que usan los protocolos iSCSI o NVMe.
+* Puede replicar un volumen de origen (lectura/escritura) o un volumen de protección de datos (DP). Se admite la replicación en cascada, pero no un tercer salto. Más información sobre link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["replicación en cascada"^].
+
+
+====
 .Antes de empezar
-Asegúrese de cumplir con los siguientes requisitos previos antes de comenzar.
+Tenga en cuenta lo siguiente antes de comenzar.
 
-* Debe tener dos sistemas de archivos disponibles en su almacenamiento para crear una relación de replicación.
-* Los dos sistemas de archivos que se utilizan para la relación de replicación deben tener un enlace asociado. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
+* Debes tener un sistema de ficheros FSx for ONTAP para usarlo como destino en la relación de replicación.
+* El sistema de ficheros FSx for ONTAP que uses para la relación de replicación debe tener un enlace asociado. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelve a esta operación.
+* Para la replicación desde un sistema ONTAP local a un sistema de archivos FSx for ONTAP, asegúrate de haber detectado el sistema ONTAP local.
 
 
-Complete los siguientes pasos para replicar seleccionar volúmenes o replicar todos los volúmenes en un sistema de archivos.
-
-Puede replicar un volumen de origen (lectura/escritura) o un volumen de protección de datos (DP). Se admite la replicación en cascada, pero no un tercer salto. Más información sobre link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["replicación en cascada"^].
+Sigue estos pasos para replicar volúmenes específicos o todos los volúmenes en un sistema de archivos.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -49,9 +55,6 @@ En la tabla Volúmenes, seleccione uno o más volúmenes y, a continuación, sel
 
 . En la página Replicar datos, en Destino de replicación, proporcione lo siguiente:
 +
-.. *FSX para el sistema de archivos ONTAP*: Seleccione credenciales, región y FSX para el nombre del sistema de archivos ONTAP para el sistema de archivos FSX para ONTAP de destino.
-.. *Nombre de VM de almacenamiento*: Seleccione la VM de almacenamiento en el menú desplegable. La máquina virtual de almacenamiento que seleccione es el destino de todos los volúmenes seleccionados en esta relación de replicación.
-.. *Nombre del volumen*: El nombre del volumen de destino se genera automáticamente con el siguiente formato `{OriginalVolumeName}_copy`. Se puede usar el nombre de volumen generado automáticamente o introducir otro nombre de volumen.
 .. *Caso de uso*: Seleccione uno de los siguientes casos de uso para la replicación.  Dependiendo del caso de uso seleccionado, Workload Factory completa el formulario con valores recomendados de acuerdo con las mejores prácticas.  Puede aceptar los valores recomendados o realizar cambios a medida que completa el formulario.
 +
 *** Migración: Transfiere tus datos al sistema de archivos FSx para ONTAP de destino
@@ -76,6 +79,9 @@ Para todos los casos de uso, si habilita Snapshot para la retención a largo pla
 
 
 
+.. *FSX para el sistema de archivos ONTAP*: Seleccione credenciales, región y FSX para el nombre del sistema de archivos ONTAP para el sistema de archivos FSX para ONTAP de destino.
+.. *Nombre de VM de almacenamiento*: Seleccione la VM de almacenamiento en el menú desplegable. La máquina virtual de almacenamiento que seleccione es el destino de todos los volúmenes seleccionados en esta relación de replicación.
+.. *Nombre del volumen*: El nombre del volumen de destino se genera automáticamente con el siguiente formato `{OriginalVolumeName}_copy`. Se puede usar el nombre de volumen generado automáticamente o introducir otro nombre de volumen.
 .. *Política de niveles*: Seleccione la política de organización en niveles para los datos almacenados en el volumen de destino. La política de organización en niveles se establece de forma predeterminada en la política de organización en niveles recomendada para el caso de uso seleccionado.
 +
 _Equilibrado (automático)_ es la política de niveles predeterminada al crear un volumen mediante la consola de Workload Factory.  Para obtener más información sobre las políticas de niveles de volumen, consultelink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^] en la documentación de AWS FSx para NetApp ONTAP .  Tenga en cuenta que Workload Factory utiliza nombres basados ​​en casos de uso en la consola de Workload Factory para las políticas de niveles e incluye los nombres de políticas de niveles de FSx para ONTAP entre paréntesis.
@@ -114,6 +120,16 @@ NOTE: Las etiquetas de origen y destino coincidentes son necesarias para la rete
 *** *Políticas de instantáneas*: En la tabla, seleccione la frecuencia de la política de instantáneas y el número de copias que se deben retener. Puede seleccionar más de una política de Snapshot.
 
 
+.. *Punto de acceso S3*: de manera opcional, adjunte un punto de acceso S3 para acceder a los datos del sistema de archivos FSx for ONTAP que residen en volúmenes NFS o SMB/CIFS a través de las API de AWS S3. Sólo se admite el tipo de acceso a archivos. Proporcionando los siguientes detalles:
++
+*** *Nombre del punto de acceso S3*: Ingrese el nombre del punto de acceso S3.
+*** *Usuario*: Seleccione un usuario existente con acceso al volumen o cree un nuevo usuario.
+*** *Tipo de usuario*: seleccione *UNIX* o *Windows* como tipo de usuario.
+*** *Configuración de red*: selecciona *Internet* o *Virtual private cloud (VPC)*. El tipo de red que elijas determina si el punto de acceso es accesible desde internet o está restringido a una VPC específica.
+*** *Habilitar metadatos*: habilitar metadatos crea una tabla de S3 que contiene todos los objetos accesibles por el punto de acceso de S3, que puedes usar para auditoría, gobernanza, automática, análisis y optimización. Habilitar metadatos genera costes adicionales de AWS. Consulta link:https://aws.amazon.com/s3/pricing/["Documentación de precios de Amazon S3"^] para más información.
+
+
+.. *Etiquetas de punto de acceso S3*: opcionalmente, puedes añadir hasta 50 etiquetas.
 
 
 

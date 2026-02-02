@@ -146,9 +146,6 @@
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Resultado</block>
   <block id="19b12f8ea4cd395e2a8c4f8e4dbac642" category="summary">Crea una relación de replicación para un sistema de archivos FSx para ONTAP para evitar la pérdida de datos en caso de un desastre imprevisto.</block>
   <block id="ca0c3dd7dca9f636af3209d526098e1e" category="doc">Cree una relación de replicación</block>
-  <block id="43fb2f38eb75c426be46178f1bcecee8" category="paragraph">La replicación es una capa adicional de protección de datos que es esencial en caso de que la región en la que residen los datos experimente un desastre. La pérdida de datos puede evitarse si se utiliza replicación entre regiones.</block>
-  <block id="e9cb9ef1f5a746f51fcf4a92869ed58c" category="paragraph">Esta operación crea una relación de replicación para uno o todos los volúmenes de origen en un sistema de archivos FSx para ONTAP.</block>
-  <block id="584e3ee876c862f377d3d9b7080d32d9" category="paragraph">Asegúrese de cumplir con los siguientes requisitos previos antes de comenzar.</block>
   <block id="4820ffe2fe615fd37fb7932b296c86f1" category="inline-link-macro">asocie un enlace</block>
   <block id="b9a2f47b5bc4bd7fcc8d23d6721ec4c2" category="list-text">En la página Create replication, en Replication target, proporcione lo siguiente:</block>
   <block id="837278414ab16e2a74dfc1b2102bcd54" category="list-text">*FSX para el sistema de archivos ONTAP*: Seleccione credenciales, región y FSX para el nombre del sistema de archivos ONTAP para el sistema de archivos FSX para ONTAP de destino.</block>
@@ -1265,7 +1262,6 @@
   <block id="63659b054a6e69260ce9e4a4634e56e0" category="paragraph">El secreto debe contener los siguientes pares válidos de claves:</block>
   <block id="ecc4c534126952c05eb3829106343643" category="list-text">El secreto no contiene credenciales de ONTAP válidas para la autenticación del sistema de archivos.</block>
   <block id="b94462bb135856834e40d9c982dbbc8b" category="paragraph">*Resolución*: Proporciona credenciales que puedan autenticar los sistemas de archivos FSX for ONTAP en AWS Secrets Manager.</block>
-  <block id="da30e424db71e48c0337ce21841c5562" category="paragraph">Complete los siguientes pasos para replicar seleccionar volúmenes o replicar todos los volúmenes en un sistema de archivos.</block>
   <block id="db02b80a9dd5a7c959ec87fdf41baa91" category="inline-link-macro">replicación en cascada</block>
   <block id="cb7048e2d3bbe74eff8dc77537e6b3cb" category="paragraph">Puede replicar un volumen de origen (lectura/escritura) o un volumen de protección de datos (DP). Se admite la replicación en cascada, pero no un tercer salto. Más información sobre <block ref="70f3f574eb9d2048e3113fc3bf26173a" category="inline-link-macro-rx"></block>.</block>
   <block id="a9349d3c10a82990ac0a1fc539e5f621" category="list-text">Replique todos los volúmenes en un sistema de archivos o replique los volúmenes seleccionados.</block>
@@ -1395,7 +1391,6 @@
   <block id="be8334e3a8f0885af8e03ba816b24537" category="inline-link-macro">Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace</block>
   <block id="3b1785543fb9e9ab18e56f4cf89f47d9" category="paragraph"><block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>.</block>
   <block id="d7a33a9350fbc2bb6f775eabf85866de" category="list-text">Los siguientes puertos deben estar abiertos en el grupo de seguridad asociado con el sistema de archivos FSx para ONTAP para la conectividad del enlace.</block>
-  <block id="b1882f9c170c4d334f1f12e72456f0c6" category="list-text">Los dos sistemas de archivos que se utilizan para la relación de replicación deben tener un enlace asociado. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Después de asociar el enlace, vuelva a esta operación.</block>
   <block id="3cb1fda07c1d6b96bda1c65f1996fc1f" category="list-text">Para crear una política de instantáneas personalizada, debe asociar un vínculo. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Después de asociar el enlace, vuelva a esta operación.</block>
   <block id="d49502975428f953533ab14ab9c02a5b" category="paragraph">Debe asociar un enlace para crear una instantánea manual de un volumen. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Después de asociar el enlace, vuelva a esta operación.</block>
   <block id="6234e99ad9e8c051d4afaa47c5d4ff82" category="list-text">Para configurar el acceso al volumen, debe asociar un enlace. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Después de asociar el enlace, vuelva a esta operación.</block>
@@ -1449,7 +1444,6 @@
   <block id="dd9c72ad3bbeb047b573638ce62d0cc6" category="list-text">*Proporcionado por el usuario*: Seleccione esta opción para asignar un rol de ejecución de Lambda específico y sus políticas asociadas al enlace de Lambda. Se requieren los siguientes permisos para la política de permisos de Lambda . <block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block> Solo se requiere permiso si habilitó AWS Secrets Manager.</block>
   <block id="5f3b3b380e02766e8ad7eca5c6b37840" category="paragraph">Ingrese el ARN del rol de ejecución de Lambda en el cuadro de texto.</block>
   <block id="38adbad92c37166c4ce64da1eb51513b" category="inline-link-macro">crear un volumen</block>
-  <block id="32c902b48618ff09c74311dc0eadacf8" category="paragraph">Al replicar un volumen de origen con archivos inmutables, el volumen de destino y el sistema de archivos se bloquean hasta que finaliza el período de retención de los archivos inmutables en el volumen de origen. La función de archivos inmutables está disponible cuando... <block ref="40da211f809bc6c9e6163aa605349c18" category="inline-link-macro-rx"></block> para un sistema de archivos FSx para ONTAP.</block>
   <block id="1626bc194a1c6fb76d8a47eba39add09" category="paragraph">El tamaño del volumen de FlexGroup depende de la cantidad de constituyentes y requiere 100 GiB por constituyente.</block>
   <block id="f80d67f0a6951b3f6c1185e7c7f39c30" category="paragraph">Especifique el tamaño máximo de crecimiento del volumen y la unidad. No se puede establecer un tamaño de crecimiento máximo menor que el tamaño del volumen actual</block>
   <block id="d932719afe063ca8fcfe0eb63f1b6ec9" category="paragraph">ONTAP logra eficiencia de almacenamiento utilizando funciones de deduplicación y compresión. La deduplicación elimina los bloques de datos duplicados. La compresión de datos comprime los bloques de datos para reducir la cantidad de almacenamiento físico necesaria.</block>
@@ -1604,12 +1598,8 @@
   <block id="a46fab6bb1626887eac54858dc05cb71" category="section-title">Descartar un análisis de configuración</block>
   <block id="1dd413b1d5dbc704e4019462bbd02454" category="paragraph">Descartar para detener un análisis de configuración de forma indefinida para un sistema de archivos FSx para ONTAP o para volúmenes seleccionados en un sistema de archivos.  Puede reiniciar el análisis cuando sea necesario.</block>
   <block id="790f15f2dc58a8507d72b3246a8877ab" category="open-title">Descartar un análisis de configuración para un sistema de archivos</block>
-  <block id="70fa6c43d25e055f9a8a524f00c80978" category="paragraph">Descartar para detener un análisis de configuración de forma indefinida para un sistema de archivos FSx para ONTAP .  Puede reiniciar el análisis cuando sea necesario.</block>
-  <block id="803158473fffdccd802e7a7e4c6d8f56" category="list-text">Navegue desde la descripción general del sistema de archivos FSx for ONTAP a la pestaña *Estado de buena arquitectura*.</block>
-  <block id="f32796540d7a56263a0a741100718a24" category="list-text">En *Configuraciones*, identifique la configuración que desea descartar y seleccione *Descartar*.</block>
   <block id="7efbc096eb8818df22ad0ea26cc99905" category="list-text">Seleccione *Descartar* para detener el análisis de la configuración.</block>
   <block id="894ee870661e494e23b4326cec5b3c29" category="open-title">Descartar un análisis de configuración para un volumen</block>
-  <block id="c4389cda417bf7ff5e8369b4f3c44508" category="list-text">En *Configuraciones*, identifique la configuración que desea descartar para los volúmenes seleccionados y seleccione *Ver y corregir*.</block>
   <block id="dc02d230063197c289b523cd8ff92c94" category="list-text">Identifique los volúmenes que se deben descartar del análisis de configuración.</block>
   <block id="3f889fd8964613c4779327d83f4c785f" category="list-text">Para varios volúmenes: seleccione los volúmenes y luego seleccione *Descartar* junto a Acción masiva.</block>
   <block id="2773330e4a665ad4a0b2217458b38f4d" category="list-text">En el cuadro de diálogo Descartar volúmenes, seleccione *Descartar* para confirmar.</block>
@@ -1618,10 +1608,8 @@
   <block id="61ab3b6f044b76185565a9f1d6db2113" category="section-title">Reactivar un análisis de configuración descartado</block>
   <block id="99206ff00921c00b5d887375a108d167" category="paragraph">Reactivar un análisis de configuración descartado en cualquier momento.  Puede seleccionar una o más configuraciones para reactivarlas.</block>
   <block id="15adceeecdf87115b046ea511022c89f" category="open-title">Reactivar un análisis de configuración para un sistema de archivos</block>
-  <block id="4526abd79091fbcd814fd21ee997ec5f" category="list-text">Junto a *Configuraciones*, seleccione *Configuraciones descartadas*.</block>
   <block id="6cc17f569421e25f5da482d49cdd0b5e" category="list-text">Identifique la configuración que desea reactivar y seleccione *Reactivar*.</block>
   <block id="bdd22c2e5887702579495ffc45a2a208" category="open-title">Reactivar un análisis de configuración para un volumen</block>
-  <block id="cdc86aab74892dbba57c0a518dfdbc49" category="list-text">En *Configuraciones*, identifique la configuración que desea reactivar para los volúmenes seleccionados y seleccione *Ver y corregir*.</block>
   <block id="a6d91f466d4bad114b9a0f88a90da3cd" category="list-text">Identifique el(los) volumen(es) que se reactivarán a partir del análisis de configuración.</block>
   <block id="98962b66e5cd6d68ed29081a50cd1c88" category="list-text">Para varios volúmenes: seleccione los volúmenes y luego seleccione *Reactivar* junto a Acción masiva.</block>
   <block id="a5e6ad8abf9cc43f6580d1982bac3543" category="paragraph">Se reactiva el análisis de configuración.  Cada día se produce un nuevo análisis.</block>
@@ -1852,8 +1840,6 @@
   <block id="7580bfe7832e708a7a254e231956ba42" category="list-text">Regrese a la interfaz de Workload Factory y verá que el enlace está asociado con el sistema de archivos FSx para ONTAP .</block>
   <block id="5886618b54dcea7acc4beb5fbd5a3159" category="list-text">Desde *FSx for ONTAP*, seleccione la sección de acciones del sistema de archivos al cual asociar un enlace y luego seleccione *Asociar enlace*.</block>
   <block id="9a59237abad65536a078f4d904f19bd6" category="doc">Crear una relación de replicación en NetApp Workload Factory</block>
-  <block id="832796d1c53d2bbbb61a3a5b201eec78" category="paragraph">Cree una relación de replicación para un sistema de archivos FSx para ONTAP en NetApp Workload Factory para evitar la pérdida de datos en caso de un desastre imprevisto.</block>
-  <block id="e5b5ff812d6920bba9e93e549f647eef" category="list-text">Debe tener dos sistemas de archivos disponibles en su almacenamiento para crear una relación de replicación.</block>
   <block id="3d607d93b8532423a7bbebf948091168" category="summary">Cree una política de instantáneas personalizada para una máquina virtual de almacenamiento en Workload Factory.</block>
   <block id="0e4f989c75a10776b672b4a9f108bfc9" category="doc">Crear una política de instantáneas para máquinas virtuales de almacenamiento en Workload Factory</block>
   <block id="ab9a6ebd2e1e5562fa11ba5a014fc247" category="paragraph">Cree una política de instantáneas personalizada para las máquinas virtuales de almacenamiento en Workload Factory para administrar la creación y retención de instantáneas. Una política de instantáneas define cómo el sistema crea instantáneas para una máquina virtual de almacenamiento. Puede crear una política de instantáneas para una máquina virtual de almacenamiento en un sistema de archivos FSx para ONTAP . También puede compartir la política entre varias máquinas virtuales de almacenamiento.</block>
@@ -1958,12 +1944,7 @@
   <block id="73b9ca32e75f36a5247f70e0ac6f7034" category="list-text">Confiabilidad: umbral de capacidad SSD, instantáneas locales programadas, FSx para copias de seguridad de ONTAP , replicación de datos remota y confiabilidad de datos para retención a largo plazo</block>
   <block id="f4620ec86c292b6ceff91a8418771488" category="list-text">El proceso de remediación puede provocar tiempos de inactividad de las instancias o interrupciones del servicio. Asegúrese de revisar cada recomendación cuidadosamente antes de seleccionar solucionar un problema de configuración.</block>
   <block id="bdcff0916b9de421b3f836810688eb67" category="list-text"><block ref="f06ee96e93460df1397f1b3b70044a3e" category="inline-link-macro-rx"></block>para el análisis más completo de los recursos de su sistema de archivos.</block>
-  <block id="99647ce863ab632fcdb252345dc9e76b" category="list-text">Opcionalmente, filtre los problemas de configuración por categorías, subcategorías, estado, gravedad y etiquetas.</block>
-  <block id="60752dc8d706d496a59d010b5d4aac94" category="list-text">Seleccione *Ver recomendación* para cualquier configuración.  Asegúrese de revisar la recomendación cuidadosamente.</block>
-  <block id="febe1c91850e3b43ce55b9a9974b2686" category="list-text">Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos y luego *Administrar*.</block>
   <block id="66fc3121113a1126522690fe858e4b3d" category="list-text">Para un volumen: seleccione el menú de acciones y luego seleccione *Descartar volumen*.</block>
-  <block id="7f63140910021b6aec0027d76acdcacb" category="list-text">Desde *FSx for ONTAP*, seleccione el actionsenu del sistema de archivos y luego *Administrar*.</block>
-  <block id="29c336c9b670f37c678bc693dcbf0271" category="list-text">Para un volumen: seleccione actionsenu y luego seleccione *Reactivar volumen*.</block>
   <block id="97ab4fe470265bac6bd7eeb0ab6bda75" category="doc">Ajustar la capacidad del sistema de archivos en Workload Factory</block>
   <block id="e916aa8237833ef72c75def81e289920" category="paragraph">Alternativamente, puedes<block ref="2bbbc5acd5fd256837600f63916b0e57" category="inline-link-macro-rx"></block> De esta manera, Workload Factory administra la capacidad del sistema de archivos por usted.</block>
   <block id="39b152c5585fc0bf22a04de0cc07dff1" category="paragraph">Opcionalmente, puedes<block ref="e5ea0961d6c7f5be0b804e74d995de2b" category="inline-link-macro-rx"></block> para permitir que Workload Factory administre la capacidad de volumen por usted.</block>
@@ -2268,7 +2249,6 @@
   <block id="af7c77855745c2192ad309cfc11ed68c" category="inline-link-macro">otorgar permisos de _visualización, planificación y análisis_</block>
   <block id="00a34d80b9c8f1d9c82e222ff89f622f" category="paragraph">Para que Workload Factory detecte los entornos de almacenamiento de Amazon Elastic Block Store (EBS), Elastic File System (EFS) y FSx para Windows File Server en su cuenta de AWS, asegúrese de que<block ref="74a62493240df6cc0643a248f282a25a" category="inline-link-macro-rx"></block> en su cuenta de AWS.</block>
   <block id="79e27ec6fe4e85288757fae779bab815" category="inline-link-macro">otorgar permisos de _operaciones y remediación_</block>
-  <block id="052dbb930400a0ed10fd9a2369d6e91b" category="list-text">Usted debe<block ref="31bad9d191bee3fabcae484ca4efec82" category="inline-link-macro-rx"></block> en su cuenta de AWS.</block>
   <block id="8397e16109313045973558b01bfb9915" category="list-text">La reducción del tamaño del volumen no es compatible con volúmenes iSCSI.</block>
   <block id="00e4e6045ee76f2899377d5370d56a36" category="summary">Administre los volúmenes de caché para un sistema de archivos FSx para ONTAP en NetApp Workload Factory cuando sea necesario.</block>
   <block id="2923b8d05b469dec564ede3ae38cab32" category="list-text">Debes tener un volumen de caché existente para editarlo.</block>
@@ -2392,7 +2372,6 @@
   <block id="db2c0720daa95b2841a73d2a13c0e539" category="list-text">Vea los *Detalles de costos* de sus recursos FSx para ONTAP .</block>
   <block id="815e75619b370a1b845eccec6979ed74" category="section-title">27 de noviembre de 2025</block>
   <block id="7ba9e316fdb6ba8e077283db064835f0" category="sidebar">Seguimiento y análisis de FSx para los costos de ONTAP</block>
-  <block id="7afacf82c5a68418fd34140a4a69b555" category="sidebar">Administración de dispositivos de bloque</block>
   <block id="b312d49b502ea93d7b1d38b92313f502" category="sidebar">Administrar dispositivos de bloque</block>
   <block id="9f83e27b7a1a59c38fc7d458de16054a" category="sidebar">Administrar etiquetas del sistema de archivos</block>
   <block id="79aceabdc6c99b8ffa443536ee6c3fac" category="list-text">*Modelo Bedrock de Amazon*</block>
@@ -2418,11 +2397,9 @@
   <block id="81cca59ad3bedd27880ab1c747ae8b70" category="list-text"><block ref="81cca59ad3bedd27880ab1c747ae8b70" category="inline-link-macro-rx"></block></block>
   <block id="e89e0732eb8fbeb9c1bb216d5b1fe2c8" category="summary">Administre los puntos de acceso S3 para un volumen en NetApp Workload Factory.</block>
   <block id="7caacaed323c9582bdf146f33b338930" category="doc">Administrar los puntos de acceso S3 para un volumen en NetApp Workload Factory</block>
-  <block id="c03be794767b179eaf0a48a2bc06884b" category="paragraph">Administre los puntos de acceso S3 para un volumen en NetApp Workload Factory. Puede utilizar la consola de Workload Factory para asignar puntos de acceso S3 a volúmenes existentes o eliminar puntos de acceso S3.</block>
   <block id="1f26d72d95cf276540f7a69b509645fe" category="paragraph">Debe tener un volumen existente con un punto de acceso S3.</block>
   <block id="be929bcd251acd28106548a34c8a067b" category="list-text">Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen a actualizar, luego seleccione *Administrar*.</block>
   <block id="7fcc02a075c6d0b859fd9a03f5250e5f" category="list-text">Desde la pestaña Volúmenes, seleccione el menú de acciones del volumen para el cual desea administrar los puntos de acceso S3 y luego seleccione *Acciones avanzadas* y luego *Administrar puntos de acceso S3*.</block>
-  <block id="056da7279a8392afebe1b20256f8656b" category="list-text">En la página Administrar puntos de acceso S3, puede crear y adjuntar puntos de acceso o eliminar puntos de acceso existentes.</block>
   <block id="4dc9fa88ed74bd072e88bad92a1f17c6" category="open-title">Crear y adjuntar puntos de acceso S3 a un volumen existente</block>
   <block id="c57302a0d02305ff8c144fb37bb2fab9" category="list-text">Seleccione *Crear y adjuntar punto de acceso S3*.</block>
   <block id="e979f8982cafd5647560686a5ec74a2a" category="list-text">En el cuadro de diálogo *Crear y adjuntar punto de acceso S3*, proporcione la siguiente información:</block>
@@ -2512,8 +2489,6 @@
   <block id="ac451744a266e36dbad7a3a3b3ade56c" category="list-text">En el menú Almacenamiento, seleccione *Explorar ahorros* y, a continuación, seleccione la pestaña * Amazon FSx para Windows File Server*.</block>
   <block id="17213dc8118fcfe940b37a95d4307e39" category="list-text">En el menú Almacenamiento, seleccione *Explorar ahorros* y luego seleccione la pestaña *Amazon Elastic File System (EFS)*.</block>
   <block id="6cf17777f39e2921315f99c406f682d1" category="list-text">Seguridad: Protección autónoma contra ransomware de NetApp con IA (ARP/AI) deshabilitada y acceso no autorizado a volúmenes</block>
-  <block id="f6dbff00cad9a13361c702ca1a3980cd" category="list-text">Excelencia operativa: gestión automática de la capacidad, umbral de utilización de la capacidad de archivo de volumen, utilización del volumen cercana al máximo y modo de escritura de la relación de caché</block>
-  <block id="7f06d69b865ada29cc7feb022fb704a7" category="list-text">Optimización de costos: eficiencia de almacenamiento, niveles de datos, eliminación innecesaria de instantáneas y copias de seguridad</block>
   <block id="5ebcedbb76a1892d9b52cee0bb9b7b56" category="doc">Administrar los dispositivos de bloque para un sistema de archivos en NetApp Workload Factory</block>
   <block id="560a0dd91469e7b95b2ebbbda4fa6b55" category="paragraph">Desde la consola de NetApp Workload Factory , puede administrar los dispositivos de bloque para sus sistemas de archivos FSx para ONTAP . Las tareas de administración incluyen la visualización de detalles del dispositivo de bloque, el aumento de la capacidad, la administración del acceso del cliente, el archivado de datos del dispositivo de bloque y la eliminación de dispositivos de bloque.</block>
   <block id="c7d27c61cfd9d94c94e936b1785769dd" category="section-title">Administrar el acceso del cliente para un dispositivo de bloque</block>
@@ -2563,4 +2538,129 @@
   <block id="4ba4032fe66a2ab71b90bddc3cde5770" category="paragraph">Agrega también los siguientes permisos para las credenciales de AWS asociadas con Workload Factory:</block>
   <block id="4e736cb1760a43a4bf2b5d861b6deb96" category="list-text"><block ref="fdd997ab8b4252f76acdda855bb7b890" prefix="" category="inline-code"></block></block>
   <block id="71d01806cd25e89067c25b4f03e9a607" category="list-text"><block ref="9aa5a97dfe3f7608d8ee28e7db3c4e2c" prefix="" category="inline-code"></block></block>
+  <block id="acbb57d15a35fb35e9bb5b030da0d855" category="list-text">*Configuración de red*: selecciona *Internet* o *Virtual private cloud (VPC)*. El tipo de red que elijas determina si el punto de acceso es accesible desde internet o está restringido a una VPC específica.</block>
+  <block id="6c7b2c1264a7189632e27a922b67c8b7" category="inline-link-macro">Documentación de precios de Amazon S3</block>
+  <block id="caabcc888415814c29639d089816b5fa" category="list-text">*Habilitar metadatos*: habilitar metadatos crea una tabla de S3 que contiene todos los objetos accesibles por el punto de acceso de S3, que puedes usar para auditoría, gobernanza, automática, análisis y optimización. Habilitar metadatos genera costes adicionales de AWS. Consulta <block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block> para más información.</block>
+  <block id="56573dfcf7d1ac3cf78f2423725ccce8" category="list-text">*Etiquetas de punto de acceso S3*: opcionalmente, puedes añadir hasta 50 etiquetas.</block>
+  <block id="5e3fec4e574658f05a0b92757b364cd9" category="doc">La página de inicio incluye problemas bien diseñados y eventos EMS para Storage</block>
+  <block id="8743ea79d0b29525fd3c69e5e3566399" category="paragraph">La página de inicio de NetApp Workload Factory incluye un mosaico Focus donde aparecen las incidencias bien arquitecturadas y los eventos de FSx for ONTAP Emergency Management System (EMS) para tus cargas de trabajo. Desde ahí, puedes navegar a la carga de trabajo de Storage para ver el estado bien arquitecturado o los eventos de todos los sistemas de archivos FSx for ONTAP en tu entorno de almacenamiento.</block>
+  <block id="ccef8795f7e03f715debeb1aa9f4f09a" category="section-title">Soporte para la replicación de datos en las instalaciones usando un punto de acceso S3</block>
+  <block id="376c2bd6a2c38a02c3dfb4efa6e96674" category="paragraph">Workload Factory admite la replicación de datos ONTAP on-premises en la nube para la integración con AWS GenAI, ML y analytics. Puedes replicar tus datos on-premises en un volumen NFS o SMB/CIFS usando un punto de acceso S3.</block>
+  <block id="b5eeeba16e1b7119307069cbaf3ccdf4" category="inline-link-macro">Replica datos locales usando un punto de acceso S3</block>
+  <block id="4750d90c2cd72e253c7d874bef89beff" category="paragraph"><block ref="4750d90c2cd72e253c7d874bef89beff" category="inline-link-macro-rx"></block></block>
+  <block id="b04638337aac148655a104c2db6c4766" category="section-title">Mejoras del punto de acceso S3 en Storage</block>
+  <block id="f76e736f45740f58cc12ec666b824eb2" category="paragraph">Se han realizado varias mejoras en las capacidades de gestión de puntos de acceso S3 en la carga de trabajo de almacenamiento para NetApp Workload Factory. Puedes introducir detalles de configuración de red para tus puntos de acceso S3 y añadir etiquetas de puntos de acceso S3. Las mejoras adicionales incluyen la posibilidad de ver detalles de los buckets S3 y realizar más acciones para gestionar puntos de acceso S3.</block>
+  <block id="76f77cbc01f0341dffcaaa5f6236eb73" category="section-title">Detalles del bucket S3 disponibles en Storage</block>
+  <block id="c203e76297d071e4d8256e073c93dafb" category="paragraph">Con los metadatos habilitados para los puntos de acceso de S3, NetApp Workload Factory explora automáticamente tus buckets de AWS S3 y rellena las tablas de S3 para darte una instantánea clara de todos los objetos, sus metadatos, atributos y etiquetas. El acceso a estos detalles te ayuda a mantener el control, la visibilidad y la confianza en los datos de los que eres responsable, mientras reduces la sobrecarga operativa.</block>
+  <block id="cc7664945c125a51dd2e69095c8f8200" category="inline-link-macro">Ver detalles de los puntos de acceso S3 en FSx for ONTAP file systems</block>
+  <block id="dd52e33b4320b655cb69fb76bc1e345f" category="paragraph"><block ref="dd52e33b4320b655cb69fb76bc1e345f" category="inline-link-macro-rx"></block></block>
+  <block id="2249107cb1f4c202ef0253c53bcff598" category="section-title">Operaciones de gestión adicionales para puntos de acceso S3</block>
+  <block id="bf44c4671ee3bfbc818d505bb9a0e59a" category="paragraph">NetApp Workload Factory proporciona operaciones de gestión adicionales para los puntos de acceso S3. Puedes ver los detalles de los puntos de acceso, modificar los puntos de acceso S3 existentes y añadir o eliminar etiquetas de puntos de acceso S3 desde la interfaz de NetApp Workload Factory, agilizando tus tareas de gestión del almacenamiento de objetos.</block>
+  <block id="366c32f0cbb2503b337e243eaa8c42b5" category="inline-link-macro">Administra los puntos de acceso S3 en NetApp Workload Factory</block>
+  <block id="d9ec48855b13e13fd489d2442f822e4d" category="paragraph"><block ref="d9ec48855b13e13fd489d2442f822e4d" category="inline-link-macro-rx"></block></block>
+  <block id="e593953aaf04eebecfe2e26326145784" category="list-text">Optimizar el tamaño del volumen de la caché: comprueba si el autodimensionado del volumen y la depuración están activados en los volúmenes de la caché para mantener el tamaño óptimo y centrar la caché en los datos calientes para lograr la máxima eficiencia.</block>
+  <block id="00e21b809963a2e31abfc13c3aea34b6" category="list-text">Dispositivos de bloque huérfanos: recomienda archivar los datos de los dispositivos de bloque o eliminar un dispositivo de bloque si no se ha usado durante siete días seguidos.</block>
+  <block id="a872ae5d7fdb75042465788519d63c35" category="list-text">Informes lógicos de VM de almacenamiento: verifica si la configuración predeterminada de informes para una VM de almacenamiento está establecida en lógica, lo que proporciona mejor visibilidad del uso del almacenamiento a nivel de volumen.</block>
+  <block id="40fbd58cc84d2567a5be7db0e1e48224" category="section-title">Tarjetas adicionales para dispositivos de bloque</block>
+  <block id="e1d58576240df6c3acc0d5f3067d6468" category="paragraph">Se han añadido tres nuevas tarjetas a la pestaña Dispositivos de bloque en la carga de trabajo de almacenamiento para proporcionar información rápida sobre el uso y el estado de protección de los dispositivos de bloque:</block>
+  <block id="2f09b86fd82a1603b2104c3d565e4187" category="list-text">Eficiencia de almacenamiento: muestra la capacidad de almacenamiento utilizada y disponible; la capacidad utilizada se desglosa por niveles de almacenamiento SSD y de pool de capacidad.</block>
+  <block id="075b9a975b25dba22b299c4edaf12834" category="list-text">Dispositivos protegidos: muestra el porcentaje de dispositivos de bloque con instantáneas, replicación remota, NetApp Autonomous Ransomware Protection (ARP/AI) y copias de seguridad.</block>
+  <block id="46dd61e303a77cea00fc631287dfeab6" category="inline-link-macro">reclama espacio para dispositivos de bloque no utilizados</block>
+  <block id="8e8a93bbbd6df5c04a7668748139ce7a" category="list-text">Dispositivos huérfanos: muestra si algún dispositivo de bloque no se ha usado durante siete días seguidos, ayudándote a identificar y gestionar de forma eficaz los recursos que no se están usando. Desde aquí, puedes <block ref="ddc66f326affa5fcec5ab8f0c0c76e68" category="inline-link-macro-rx"></block>.</block>
+  <block id="9ebda12d23b72f4bdda3cbbcd05e0817" category="section-title">Soporte para la creación y gestión de grupos de iniciadores</block>
+  <block id="de002c21193de456c56ce9ccecfc09ab" category="paragraph">NetApp Workload Factory admite crear y gestionar grupos de iniciadores (igroups) para el almacenamiento en bloque en FSx for ONTAP file systems. Los grupos de iniciadores conectan dispositivos de bloque (LUNs) a los recursos de computación que pueden acceder a ellos, proporcionando una capa de permisos para el almacenamiento en bloque en entornos SAN.</block>
+  <block id="e477df666bb45ae0a1fda1f7058551a2" category="inline-link-macro">Crea un grupo iniciador en NetApp Workload Factory</block>
+  <block id="5e85fc9bd832f8bc5366f7ffe4912a99" category="list-text"><block ref="5e85fc9bd832f8bc5366f7ffe4912a99" category="inline-link-macro-rx"></block></block>
+  <block id="8933129f9a07c1370a31a0b9f2e53018" category="inline-link-macro">Administra los grupos de iniciadores existentes en NetApp Workload Factory</block>
+  <block id="b241a4baaecab76fcbba49cd24dc9185" category="list-text"><block ref="b241a4baaecab76fcbba49cd24dc9185" category="inline-link-macro-rx"></block></block>
+  <block id="185698e1c6b71d12cf578fc402c84407" category="summary">Crea grupos de iniciadores para gestionar el acceso del host a los dispositivos de bloque en NetApp Workload Factory.</block>
+  <block id="b99c94539727b97b20142c5b655d47f4" category="doc">Crea un grupo iniciador para un sistema de archivos en NetApp Workload Factory</block>
+  <block id="7fa60554ae8bd6b13d23cabdd189c7c5" category="paragraph">Usa NetApp Workload Factory para crear grupos de iniciadores y gestionar el acceso del host a los dispositivos de bloque SAN.</block>
+  <block id="30ddb2a8f4393c24e7c572caffb658c3" category="paragraph">Los grupos de iniciadores, o igroups, conectan los dispositivos de bloque (LUNs) a los recursos de computación que pueden acceder a ellos. A diferencia de NFS o CIFS, donde un volumen es ampliamente accesible y los permisos de usuario controlan el acceso, los permisos de almacenamiento en bloque operan a nivel de máquina. Normalmente, solo un sistema puede acceder a un dispositivo de bloque a la vez.</block>
+  <block id="e001414c2f2f18ec7a5b8edeac34513d" category="paragraph">Un igroup actúa como una capa de permisos para el almacenamiento en bloque. Cuando un servidor se conecta al sistema de almacenamiento, se identifica usando su iniciador de host iSCSI cualificado (IQN). Si ese IQN pertenece a uno o más igroups, entonces el servidor obtiene acceso a todos los LUN asociados con esos igroups. Tanto un igroup como una conexión de host iSCSI son necesarios para que iSCSI funcione correctamente.</block>
+  <block id="ede6bdf1757b96e1b5471e16e68335ad" category="paragraph">Debes asociar un enlace para crear igroups. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Después de asociar el enlace, regresa a esta operación.</block>
+  <block id="73f3ace4e6e8534569db86fc6aec4c49" category="list-text">Selecciona el tipo de recurso *Create initiator group* y luego selecciona *Create igroup*.</block>
+  <block id="8f70a2f50bfb27046fd5a4178b7197cf" category="list-text">En el cuadro de diálogo *Crear grupo iniciador*, haz lo siguiente:</block>
+  <block id="64247bba5c3763028e72b0194b474327" category="list-text">*igroup name*: Ingresa un nombre para el grupo de iniciadores.</block>
+  <block id="3ca7cdf558789a1447cfd40f1726f160" category="list-text">*igroup description*: (Opcional) Ingresa una descripción para el grupo iniciador.</block>
+  <block id="e02d77f26796bf5e9e7ffa55da567c32" category="list-text">*Nombre de la VM de almacenamiento*: selecciona la VM de almacenamiento para el grupo de iniciadores.</block>
+  <block id="cab281453766ba01226c32a419bd00b4" category="list-text">*Nombre del dispositivo de bloque*: selecciona uno o más dispositivos de bloque para asociar con el grupo de iniciadores. Los dispositivos de bloque que aparecen en la lista son los que aún no se han asignado a un iniciador de host.</block>
+  <block id="54d026e00002c68ee50033dbd7e53e6f" category="list-text">*Tipo de sistema operativo*: selecciona Linux, VMware o Windows para el tipo de sistema operativo.</block>
+  <block id="283119ca74749a876a6dfcb0c6968a8c" category="list-text">*Iniciadores de host*: agrega uno o más iniciadores de host calificados iSCSI (IQN) al grupo de iniciadores.</block>
+  <block id="8298e20d0a9a0a5f92a40700ffa7ff7e" category="inline-link-macro">Administra los igroups de un sistema de archivos FSx for ONTAP</block>
+  <block id="22774fb9e9e4a2ed10c53dba9c6a522f" category="paragraph"><block ref="22774fb9e9e4a2ed10c53dba9c6a522f" category="inline-link-macro-rx"></block></block>
+  <block id="ce4c42b6f5a833fc926c27c3d1ca424a" category="paragraph">Crea una relación de replicación para un sistema de archivos FSx for ONTAP en NetApp Workload Factory para evitar la pérdida de datos en caso de un desastre imprevisto. La replicación es compatible entre dos sistemas de archivos FSx for ONTAP, y entre Cloud Volumes ONTAP o un sistema ONTAP local y un sistema de archivos FSx for ONTAP.</block>
+  <block id="e8d6717f6adc0d18b1ec64c39c57b7be" category="paragraph">La replicación añade protección contra la pérdida de datos si la región donde residen tus datos sufre un desastre.</block>
+  <block id="e481f3e818c1bf548144dff8b6c46360" category="paragraph">Esta operación crea una relación de replicación para volúmenes de origen en un sistema de archivos FSx for ONTAP, un sistema ONTAP local o un sistema Cloud Volumes ONTAP.</block>
+  <block id="578ca57adcfb8fa2a5c899374a2f5732" category="paragraph">Cuando replicas un volumen de origen con archivos inmutables, el volumen de destino y el sistema de archivos permanecen bloqueados hasta que termina el periodo de retención de los archivos inmutables en el volumen de origen. La función de archivos inmutables está disponible cuando <block ref="40da211f809bc6c9e6163aa605349c18" category="inline-link-macro-rx"></block> para un sistema de archivos FSx for ONTAP.</block>
+  <block id="30965461c316b499ed01c7f92f651051" category="list-text">La replicación no es compatible con volúmenes de bloques que usan los protocolos iSCSI o NVMe.</block>
+  <block id="36e75a4b793293fd1dde9fdc618c8431" category="list-text">Debes tener un sistema de ficheros FSx for ONTAP para usarlo como destino en la relación de replicación.</block>
+  <block id="66aa1d91f89810f078327deb1e1fc2c8" category="list-text">El sistema de ficheros FSx for ONTAP que uses para la relación de replicación debe tener un enlace asociado. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Después de asociar el enlace, vuelve a esta operación.</block>
+  <block id="ba1072e8c0845f82f77ef660d46bde4a" category="list-text">Para la replicación desde un sistema ONTAP local a un sistema de archivos FSx for ONTAP, asegúrate de haber detectado el sistema ONTAP local.</block>
+  <block id="4adfd5b32c07b84363bbb8710fc5ee45" category="paragraph">Sigue estos pasos para replicar volúmenes específicos o todos los volúmenes en un sistema de archivos.</block>
+  <block id="45eea8cd3d88c48d8f4826a6be39d707" category="list-text">*Etiquetas de punto de acceso S3*: Opcionalmente, puedes añadir hasta 50 etiquetas o eliminar etiquetas.</block>
+  <block id="66d540c0d4f07e9992cf6e0ac1083e36" category="list-text">Excelencia operativa: gestión automática de la capacidad, umbral de uso de la capacidad de archivos de volumen, uso del volumen cerca del máximo, modo de escritura de la relación de caché, optimizar el tamaño del volumen de caché e informes de la capacidad lógica del volumen</block>
+  <block id="cf0e722b11c4855de7e43d714e007581" category="list-text">Optimización de costes: eficiencias de almacenamiento, organización de datos por niveles, eliminación de instantáneas y copias de seguridad innecesarias, y dispositivos de bloques huérfanos</block>
+  <block id="357d9dd76af15c8aaf8f09990a2846a9" category="list-text">Debes <block ref="6f74e2a9589a6666ba7fdb81dabfc5eb" category="inline-link-macro-rx"></block> en tu cuenta de AWS.</block>
+  <block id="8c8656579a32ab7e80c68b10832337bb" category="list-text">En el menú Storage, selecciona *Well-architected*.</block>
+  <block id="4f5fc99db78476b3b87fbb795ab55b26" category="list-text">Selecciona *Ver problemas* para cualquier configuración. Asegúrate de revisar la recomendación con atención.</block>
+  <block id="7e12ec579b2b712008a0313c32f73260" category="list-text">En Configuraciones, identifica la configuración que no se aplica a tu entorno y luego selecciona *Desestimar*.</block>
+  <block id="448fd8fde4bcc32e3db009c4a666bbfd" category="list-text">En el cuadro de diálogo Dismiss configuration, selecciona *Dismiss* para detener el análisis de la configuración.</block>
+  <block id="fb900cd761e703345ca42d9399cd972d" category="list-text">En Configuraciones, identifica la configuración que quieres descartar para los volúmenes seleccionados y luego selecciona *Ver y corregir*.</block>
+  <block id="e1b530152da44e105ca4a8d377616f64" category="list-text">Selecciona *Configuraciones descartadas*.</block>
+  <block id="bac7c367211d21ad06604f0cd3ce59fd" category="list-text">Para un volumen: selecciona el menú de acciones y luego selecciona *Reactivar volumen*.</block>
+  <block id="f4d2a53dfcd7452de8013a117b37fbeb" category="summary">Administra igroups para un sistema de archivos FSx for ONTAP en NetApp Workload Factory.</block>
+  <block id="1a3c09835da3164c0e4cc6a200df5a45" category="doc">Administra los igrupos de un sistema de archivos en NetApp Workload Factory</block>
+  <block id="2cb43b34bbfbc5888ef0c394a7851dfa" category="paragraph">Usa la consola NetApp Workload Factory para gestionar igroups y controlar el acceso de los clientes a los dispositivos de bloque FSx for ONTAP. Puedes ver los detalles de los igroups, gestionar el acceso de los clientes y eliminar igroups.</block>
+  <block id="bc1c3c9e36135f9757b3dc3c3e193f02" category="list-text">Debes asociar un enlace para gestionar igroups. <block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>. Después de asociar el enlace, vuelve a esta operación.</block>
+  <block id="608f9394164c7de910b74c2003b4eaa9" category="list-text">Debes tener un igroup existente para verlo y gestionarlo.</block>
+  <block id="08cd6b7c5ed112ac93d8c42844793856" category="section-title">Gestiona el acceso de clientes a un igroup</block>
+  <block id="c1a0bdd3f38054982adc32d496209b79" category="paragraph">Puedes gestionar el acceso de clientes para un igroup existente en cualquier momento.</block>
+  <block id="7da430a2703aa373f838f3ca96dbd76a" category="list-text">Selecciona el tipo de recurso *Initiator groups (igroups)* para ver los igroups existentes.</block>
+  <block id="ff1a20fd70e3a7ecfb8b967bada7a3e0" category="list-text">Ve al menú de acciones del dispositivo de bloque y selecciona *Gestionar acceso de clientes*.</block>
+  <block id="ca13293265ec05aedcbfb255da487365" category="list-text">Revisa los detalles de acceso del cliente que se muestran para el igroup.</block>
+  <block id="ed27836bd5f42fdc6914efe86837263a" category="list-text">Para hacer cambios en el acceso de clientes, selecciona *Editar acceso de clientes*.</block>
+  <block id="0070e77c93ebc7a47a46bf7eec91e4d2" category="list-text">En el cuadro de diálogo *Editar acceso de cliente*, puedes editar lo siguiente:</block>
+  <block id="8dd5988a30ad103ded73bf91dbddafe0" category="list-text">*nombre del grupo*</block>
+  <block id="6055c086c62bf421251d9779d1503229" category="list-text">*descripción del igroup*</block>
+  <block id="200a28bb3eecb351f005669c666d5920" category="list-text">*Nombre de la Storage VM*</block>
+  <block id="78018eb97f01d627938101cc91ba05b1" category="list-text">*Nombre del dispositivo de bloque*</block>
+  <block id="5fe1130bd31e3efcac03eae9968f43b2" category="list-text">*Tipo de sistema operativo*</block>
+  <block id="dd3d8ac5ecdcb54f27c2bfa8e8ca2636" category="list-text">*Iniciadores de host*</block>
+  <block id="74066c25b1bbad95426e7c5b36a2a7a6" category="section-title">Eliminar un igroup</block>
+  <block id="76dbfd5e73d0791a63bc92d49eb22f4e" category="paragraph">Puedes eliminar un igroup existente cuando ya no lo necesites.</block>
+  <block id="2a2ff70d842a2e5d60d887e5fcbb0ecf" category="list-text">Ve al menú de acciones del dispositivo de bloque y luego selecciona *Borrar grupo de iniciadores*.</block>
+  <block id="a7d242b126bf6ced54231e71dba71bda" category="list-text">En el cuadro de diálogo Eliminar grupo iniciador (igroup), escribe "delete" para confirmar que quieres eliminar el igroup y luego selecciona *Delete*.</block>
+  <block id="4d7b443b927537bbc33ca3690bbcaed1" category="inline-link-macro">Crea un igroup para un sistema de archivos FSx for ONTAP</block>
+  <block id="34fc9e9b0a58447e45d29d99c376a3ec" category="paragraph"><block ref="34fc9e9b0a58447e45d29d99c376a3ec" category="inline-link-macro-rx"></block></block>
+  <block id="1ef8cc6eec11f56d70880a4ca54620d0" category="paragraph">Administra los puntos de acceso S3 para un volumen en NetApp Workload Factory. Puedes usar la consola de Workload Factory para asignar puntos de acceso S3 a volúmenes existentes, ver detalles de tus buckets S3, hacer cambios en los puntos de acceso existentes o eliminar puntos de acceso S3.</block>
+  <block id="26d7e8128d82da8c5fffb53effe326b6" category="paragraph">Amazon FSx for NetApp ONTAP admite el acceso a datos S3 en sistemas de archivos NFS y SMB, permitiendo su integración con docenas de servicios de AWS basados en S3 como Amazon Bedrock, SageMaker, Athena, AWS Glue y más. Puedes conectar los servicios de AWS a todos tus datos de almacenamiento de objetos.</block>
+  <block id="9632f5fea924b5d501a696d96c8167f8" category="paragraph">Al adjuntar puntos de acceso S3 a volúmenes NFS y SMB en un sistema de archivos FSx for ONTAP, los archivos almacenados en estos volúmenes pueden ser accedidos por cualquier servicio de AWS como si estuvieran en un bucket de S3. Al adjuntar el punto de acceso, defines su id único, especificas el tipo de acceso a archivos (UNIX o Windows) y añades un nombre de usuario para autorizar las solicitudes de acceso a archivos por parte del punto de acceso.</block>
+  <block id="d18507b68b8503d4c213178c33b89e30" category="paragraph">Después de conectar el punto de acceso de S3, aparece en la consola de gestión de AWS y tiene un alias de punto de acceso único. Este alias se usa como el nombre del bucket de S3 que se proporciona a los servicios de AWS a los que quieres conectarte. Por ejemplo, puedes dar el alias a una base de conocimientos de Amazon Bedrock y luego usará los archivos en el volumen de FSx for ONTAP para dar respuestas contextuales a las consultas.</block>
+  <block id="b5059ff136f249234edd477a68d67657" category="paragraph">Puedes adjuntar varios puntos de acceso de S3 a un solo volumen de FSx for ONTAP, cada uno con su propio nivel de acceso único, lo que te permite conectarte a tantos servicios de AWS como necesites.</block>
+  <block id="d33d3fec0d0cc42bf9722d3406ba5aa2" category="paragraph">Asegúrate de cumplir con los siguientes requisitos:</block>
+  <block id="69b8b9524d643674b889fa70c17e1cc8" category="inline-link-macro">conceder credenciales con la política de permisos _operations and remediation_</block>
+  <block id="8c378042ad1ba655fb1f5cd941dc98b6" category="list-text">Debes <block ref="c6ffb720e530188ab1b1bff284837062" category="inline-link-macro-rx"></block> en Workload Factory para completar esta tarea.</block>
+  <block id="f1834a86a3431bfc71aeab4c9747192d" category="paragraph">Crea y adjunta puntos de acceso S3 a un volumen existente en NetApp Workload Factory.</block>
+  <block id="0a76b0d6a11006d8a1c5f62db933ddb6" category="list-text">En *FSx para ONTAP*, selecciona el sistema de ficheros con el volumen que quieres actualizar.</block>
+  <block id="5744cefb66e574df9db55ba88906a34f" category="list-text">*Habilitar catálogo de metadatos*: selecciona para habilitar metadatos en el volumen y generar un inventario de metadatos para todos los objetos accesibles al punto de acceso de S3. Esta función incurre en costes de AWS para las solicitudes de S3.</block>
+  <block id="6e9783376d951cfd780e9fdb67a0f02c" category="section-title">Ver detalles</block>
+  <block id="f32d66c3b5a1aff1e9ffd8d3d0311ffb" category="paragraph">Alias, ARN y S3 URI son detalles disponibles del punto de acceso sin metadata habilitada.</block>
+  <block id="b4e23b89feadd352dcd7a74e16c044a7" category="paragraph">Con los metadatos habilitados en el volumen, puedes ver los detalles del punto de acceso, la tabla de inventario y el bucket de tabla de los puntos de acceso S3 existentes adjuntos al volumen. También se proporciona un enlace a la tabla de inventario en la AWS Management Console.</block>
+  <block id="bcbfeb996f0a5cc808497a1040ac24bf" category="paragraph">Los detalles del punto de acceso se pueden copiar para usarlos en otras aplicaciones.</block>
+  <block id="6210aebae6ddd596486bcb13eb5ef89a" category="list-text">Desde la pantalla *Manage S3 access points*, selecciona el menú de acciones y luego selecciona *Ver detalles*.</block>
+  <block id="6ed5516949fd4560f1570e0f701efbac" category="section-title">Editar punto de acceso</block>
+  <block id="803c8783e877d292e1c22e5a3d7cd78a" category="paragraph">Cambia el usuario y el tipo de usuario para un punto de acceso S3 existente adjunto a un volumen. También puedes activar o desactivar los metadatos para el punto de acceso.</block>
+  <block id="37068c532170e23c2a91d4d23699dd31" category="list-text">Desde la pantalla *Manage S3 access points*, selecciona el menú de acciones y luego selecciona *Edit access point*.</block>
+  <block id="076804dea9fcf3467cf7c699f9811498" category="list-text">Haz las actualizaciones y luego selecciona *Aplicar*.</block>
+  <block id="e41ac5d896a0e6edc27784d233dfbc29" category="section-title">Gestiona las etiquetas de puntos de acceso S3</block>
+  <block id="287f73523996b72469d9fd36d0cb155c" category="paragraph">Agrega o elimina etiquetas para un punto de acceso S3 existente que está adjunto a un volumen.</block>
+  <block id="6e5f33fd29d5f7477e4a80a8769b962b" category="list-text">Desde la pantalla *Manage S3 access points*, selecciona el menú de acciones y luego selecciona *Manage tags*.</block>
+  <block id="3fa8b09c93230485435b89bed0fa2e87" category="list-text">En el cuadro de diálogo Gestionar etiquetas de punto de acceso S3, puedes añadir hasta 50 etiquetas o eliminar etiquetas para el punto de acceso S3.</block>
+  <block id="f6e1df464413e09857979a0ca8b75a4b" category="paragraph">Elimina los puntos de acceso S3 existentes de un volumen en NetApp Workload Factory.</block>
+  <block id="d1fabbd85b7cc34641739e525d26f652" category="section-title">01 de febrero de 2026</block>
+  <block id="2855f13e1a4620842b40a36c5090209b" category="sidebar">Crear recursos de almacenamiento en bloque</block>
+  <block id="d8ad6fc6096c88d41f98b91f0043eebe" category="sidebar">Crear un igroup</block>
+  <block id="9a6576dfb2c795711c67df7e1a5b076a" category="sidebar">Administración de almacenamiento en bloque</block>
+  <block id="e77c03d49e828607828412709552dbd6" category="sidebar">Gestiona igroups</block>
 </blocks>

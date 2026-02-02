@@ -156,8 +156,11 @@ Complete los siguientes campos para configurar el acceso en bloque al volumen.
 *** *Nombre del punto de acceso S3*: Ingrese el nombre del punto de acceso S3.
 *** *Usuario*: Seleccione un usuario existente con acceso al volumen o cree un nuevo usuario.
 *** *Tipo de usuario*: seleccione *UNIX* o *Windows* como tipo de usuario.
+*** *Configuración de red*: selecciona *Internet* o *Virtual private cloud (VPC)*. El tipo de red que elijas determina si el punto de acceso es accesible desde internet o está restringido a una VPC específica.
+*** *Habilitar metadatos*: habilitar metadatos crea una tabla de S3 que contiene todos los objetos accesibles por el punto de acceso de S3, que puedes usar para auditoría, gobernanza, automática, análisis y optimización. Habilitar metadatos genera costes adicionales de AWS. Consulta link:https://aws.amazon.com/s3/pricing/["Documentación de precios de Amazon S3"^] para más información.
 
 
+.. *Etiquetas de punto de acceso S3*: Opcionalmente, puedes añadir hasta 50 etiquetas o eliminar etiquetas.
 
 
 . En Eficiencia y protección, proporcione los siguientes detalles:

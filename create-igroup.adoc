@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: create-igroup.html 
+keywords: create initiator group, create igroup, iscsi protocol 
+summary: Crea grupos de iniciadores para gestionar el acceso del host a los dispositivos de bloque en NetApp Workload Factory. 
+---
+= Crea un grupo iniciador para un sistema de archivos en NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Usa NetApp Workload Factory para crear grupos de iniciadores y gestionar el acceso del host a los dispositivos de bloque SAN.
+
+.Acerca de esta tarea
+Los grupos de iniciadores, o igroups, conectan los dispositivos de bloque (LUNs) a los recursos de computación que pueden acceder a ellos. A diferencia de NFS o CIFS, donde un volumen es ampliamente accesible y los permisos de usuario controlan el acceso, los permisos de almacenamiento en bloque operan a nivel de máquina. Normalmente, solo un sistema puede acceder a un dispositivo de bloque a la vez.
+
+Un igroup actúa como una capa de permisos para el almacenamiento en bloque. Cuando un servidor se conecta al sistema de almacenamiento, se identifica usando su iniciador de host iSCSI cualificado (IQN). Si ese IQN pertenece a uno o más igroups, entonces el servidor obtiene acceso a todos los LUN asociados con esos igroups. Tanto un igroup como una conexión de host iSCSI son necesarios para que iSCSI funcione correctamente.
+
+.Antes de empezar
+Debes asociar un enlace para crear igroups. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, regresa a esta operación.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. En el mosaico Almacenamiento, seleccione *Ir a Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione la pestaña *Dispositivos de bloque*.
+. Selecciona el tipo de recurso *Create initiator group* y luego selecciona *Create igroup*.
+. En el cuadro de diálogo *Crear grupo iniciador*, haz lo siguiente:
++
+** *igroup name*: Ingresa un nombre para el grupo de iniciadores.
+** *igroup description*: (Opcional) Ingresa una descripción para el grupo iniciador.
+** *Nombre de la VM de almacenamiento*: selecciona la VM de almacenamiento para el grupo de iniciadores.
+** *Nombre del dispositivo de bloque*: selecciona uno o más dispositivos de bloque para asociar con el grupo de iniciadores. Los dispositivos de bloque que aparecen en la lista son los que aún no se han asignado a un iniciador de host.
+** *Tipo de sistema operativo*: selecciona Linux, VMware o Windows para el tipo de sistema operativo.
+** *Iniciadores de host*: agrega uno o más iniciadores de host calificados iSCSI (IQN) al grupo de iniciadores.
+
+
+. Seleccione *Crear*.
+
+
+.Información relacionada
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-igroups.html["Administra los igroups de un sistema de archivos FSx for ONTAP"]
