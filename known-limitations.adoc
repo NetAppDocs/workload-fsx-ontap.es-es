@@ -72,7 +72,6 @@ Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.ht
 == Compatibilidad con el protocolo iSCSI
 
 * El protocolo iSCSI solo está disponible para volúmenes FlexVol. 1
-* Solo se puede configurar un único LUN por volumen.
 * La reducción del tamaño del volumen no es compatible con volúmenes iSCSI.
 
 
@@ -107,12 +106,6 @@ La calculadora de ahorro en almacenamiento no calcula el ahorro de costes si uti
 * Almacenamiento de bloques elásticos (EBS): Tipos de volumen estándar, ST1 y sc1
 * Sistema de archivos elásticos (EFS): Modo de rendimiento de repartición
 
-
-
-
-== System Manager
-
-System Manager no admite los enlaces de FSx para la conectividad de ONTAP.
 
 
 

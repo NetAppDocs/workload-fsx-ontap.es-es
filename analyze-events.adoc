@@ -19,7 +19,7 @@ Identifica y resuelve rápidamente los problemas del sistema de archivos FSx par
 
 Los administradores de almacenamiento a menudo responden a los eventos de FSx for ONTAP EMS solo después de quejas de los clientes o manteniendo scripts y alarmas personalizadas. Este enfoque reactivo puede reducir la eficiencia, retrasar la resolución de problemas y aumentar el tiempo de inactividad.
 
-El analizador de eventos extrae automáticamente eventos de error, advertencia y emergencia EMS de FSx para ONTAP file systems. Puedes ver estos eventos por link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["conectarse al sistema de archivos usando un enlace"] y por link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["conceder permisos de _vista, planificación y análisis_"^] en tu cuenta de AWS. Los eventos se muestran durante 72 horas antes de ser eliminados.
+El analizador de eventos extrae automáticamente eventos de error, alertas y eventos EMS de emergencia de los sistemas de archivos FSx para ONTAP. Puedes ver estos eventos por link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["conectarse al sistema de archivos usando un enlace"] y por link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["conceder permisos de _vista, planificación y análisis_"^] en tu cuenta de AWS. Los eventos se muestran durante 72 horas antes de ser eliminados.
 
 Con la integración de Amazon Bedrock, Workload Factory usa IA para analizar eventos y ofrecer información procesable para mantener la salud y el rendimiento de tus sistemas de archivos FSx para ONTAP.
 
