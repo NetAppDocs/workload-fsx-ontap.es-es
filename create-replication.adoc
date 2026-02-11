@@ -11,12 +11,12 @@ summary: Crea una relación de replicación para un sistema de archivos FSx para
 
 
 [role="lead"]
-Crea una relación de replicación para un sistema de archivos FSx for ONTAP en NetApp Workload Factory para evitar la pérdida de datos en caso de un desastre imprevisto. La replicación es compatible entre dos sistemas de archivos FSx for ONTAP, y entre Cloud Volumes ONTAP o un sistema ONTAP local y un sistema de archivos FSx for ONTAP.
+Crea una relación de replicación para un sistema de archivos FSx para ONTAP en NetApp Workload Factory para evitar la pérdida de datos en caso de un desastre imprevisto. La replicación es compatible entre dos sistemas de archivos FSx para ONTAP y entre un sistema ONTAP local y un sistema de archivos FSx para ONTAP.
 
 .Acerca de esta tarea
-La replicación añade protección contra la pérdida de datos si la región donde residen tus datos sufre un desastre.
+La replicación protege tus datos si un desastre afecta tu región.
 
-Esta operación crea una relación de replicación para volúmenes de origen en un sistema de archivos FSx for ONTAP, un sistema ONTAP local o un sistema Cloud Volumes ONTAP.
+Esta operación crea una relación de replicación para volúmenes de origen en un sistema de archivos FSx para ONTAP o un sistema ONTAP local.
 
 Los volúmenes replicados en el sistema de archivos de destino son volúmenes de protección de datos (DP) y siguen el formato de nomenclatura `{OriginalVolumeName}_copy`: .
 
@@ -30,7 +30,7 @@ Cuando replicas un volumen de origen con archivos inmutables, el volumen de dest
 
 ====
 .Antes de empezar
-Tenga en cuenta lo siguiente antes de comenzar.
+Revisa estos requisitos antes de empezar.
 
 * Debes tener un sistema de ficheros FSx for ONTAP para usarlo como destino en la relación de replicación.
 * El sistema de ficheros FSx for ONTAP que uses para la relación de replicación debe tener un enlace asociado. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelve a esta operación.
