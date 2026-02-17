@@ -54,7 +54,7 @@ Workload Factory admite la replicación de migración entre los siguientes siste
 Para migrar los datos de la máquina virtual de almacenamiento y la configuración, tienes que completar dos operaciones.
 
 . <<Cree una relación de replicación,Cree una relación de replicación>>, selecciona *Migración* como caso de uso y selecciona *Replicar la configuración de la máquina virtual de almacenamiento*.
-. <<Cut over replication,transición de la replicación>> para migrar de forma permanente datos y ajustes de configuración del sistema de archivos de origen al sistema de archivos FSx for ONTAP de destino.
+. <<Transición de replicación para casos de migración,Transición de replicación para casos de migración>> para migrar de forma permanente datos y ajustes de configuración del sistema de archivos de origen al sistema de archivos FSx for ONTAP de destino.
 
 
 
