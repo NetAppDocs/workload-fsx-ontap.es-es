@@ -1,0 +1,10 @@
+= 
+:allow-uri-read: 
+
+
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. En *FSx for ONTAP*, selecciona el sistema de archivos que contiene el o los volúmenes que quieres replicar.
+. Selecciona la pestaña *Relaciones de réplica*.
+. En la tabla de relaciones de replicación, selecciona la relación de replicación para hacer la transición y luego selecciona *Transición de replicación*.
+. Revisa la información en el cuadro de diálogo de transición de replicación y luego escribe _cut over_ para confirmar.
+

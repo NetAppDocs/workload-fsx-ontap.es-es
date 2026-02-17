@@ -16,7 +16,7 @@ Invierta una relación de replicación en NetApp Workload Factory para que el vo
 Las operaciones inversas se admiten para lo siguiente:
 
 * Dos FSx para sistemas de archivos ONTAP
-* Un sistema de archivos FSx para ONTAP y un clúster de ONTAP en las instalaciones
+* Un sistema de archivos FSx para ONTAP y un sistema ONTAP local
 
 
 Después de detener la replicación y realizar cambios en el volumen objetivo, puede replicar esos cambios de nuevo en el volumen de origen. Este proceso es habitual en una situación de recuperación ante desastres en la que se opera en el volumen de destino durante un tiempo y se desean cambiar roles de los volúmenes.
@@ -24,9 +24,15 @@ Después de detener la replicación y realizar cambios en el volumen objetivo, p
 .Acerca de esta tarea
 Cuando se invierte y reanuda una replicación, se cambian los roles de origen y objetivo de los volúmenes; el volumen objetivo se convierte en el volumen de origen nuevo y el volumen de origen se convierte en el nuevo volumen objetivo. La operación inversa también sobrescribe el contenido del volumen objetivo nuevo con el contenido del volumen de origen nuevo. Si invierte una replicación dos veces, la dirección de replicación original se restablece.
 
+[]
+====
+Nota:
 
-NOTE: No se conserva ningún dato que se escriba en el volumen de origen original entre la última replicación de datos y la hora en la que se deshabilitó el volumen de origen.
+* No se conserva ningún dato que se escriba en el volumen de origen original entre la última replicación de datos y la hora en la que se deshabilitó el volumen de origen.
+* La reversión de la replicación no está disponible cuando se replican datos y ajustes de configuración de storage VM.
 
+
+====
 .Antes de empezar
 Asegúrese de conocer los roles actuales y futuros de los volúmenes de origen y objetivo, ya que los cambios en el nuevo volumen objetivo se sobrescribirán con el nuevo volumen de origen. Si se utiliza incorrectamente, puede experimentar una pérdida de datos involuntaria.
 

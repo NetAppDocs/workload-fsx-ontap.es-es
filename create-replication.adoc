@@ -4,23 +4,26 @@ permalink: create-replication.html
 keywords: replication, replicate, data protection, disaster recovery, data loss 
 summary: Crea una relación de replicación para un sistema de archivos FSx para ONTAP para evitar la pérdida de datos en caso de un desastre imprevisto. 
 ---
-= Crear una relación de replicación en NetApp Workload Factory
+= Replica datos a FSx para ONTAP en NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Crea una relación de replicación para un sistema de archivos FSx para ONTAP en NetApp Workload Factory para evitar la pérdida de datos en caso de un desastre imprevisto. La replicación es compatible entre dos sistemas de archivos FSx para ONTAP y entre un sistema ONTAP local y un sistema de archivos FSx para ONTAP.
+Crea una relación de replicación para un sistema de archivos FSx para ONTAP en NetApp Workload Factory para evitar la pérdida de datos en caso de un desastre imprevisto. Puedes replicar datos entre dos sistemas de archivos FSx para ONTAP o entre un sistema ONTAP on-premises y un sistema de archivos FSx para ONTAP.
 
-.Acerca de esta tarea
-La replicación protege tus datos si un desastre afecta tu región.
+Para la migración de VM de almacenamiento, debes completar la operación de transición justo después de crear una relación de replicación.
 
-Esta operación crea una relación de replicación para volúmenes de origen en un sistema de archivos FSx para ONTAP o un sistema ONTAP local.
+
+
+== Acerca de esta tarea
+
+La replicación protege tus datos si un desastre afecta tu región; también puede usarse para migración.
 
 Los volúmenes replicados en el sistema de archivos de destino son volúmenes de protección de datos (DP) y siguen el formato de nomenclatura `{OriginalVolumeName}_copy`: .
 
-Cuando replicas un volumen de origen con archivos inmutables, el volumen de destino y el sistema de archivos permanecen bloqueados hasta que termina el periodo de retención de los archivos inmutables en el volumen de origen. La función de archivos inmutables está disponible cuando link:create-volume.html["crear un volumen"] para un sistema de archivos FSx for ONTAP.
+Si replicas un volumen de origen con archivos inmutables, el volumen de destino y el sistema de archivos permanecen bloqueados hasta que termine el periodo de retención del volumen de origen. La función de archivos inmutables está disponible cuando link:create-volume.html["crear un volumen"] para un sistema de archivos FSx for ONTAP.
 
 [NOTE]
 ====
@@ -29,21 +32,52 @@ Cuando replicas un volumen de origen con archivos inmutables, el volumen de dest
 
 
 ====
+
+
+=== Casos de uso de migración
+
+Cuando seleccionas el caso de uso de migración, puedes seleccionar opcionalmente replicar los datos de la VM de almacenamiento y la configuración para una sola VM de almacenamiento. Al migrar datos y ajustes de configuración al mismo tiempo, asegúrate de que la última replicación del volumen se haya completado en las últimas 24 horas. Todos los volúmenes en la misma VM de almacenamiento deben estar seleccionados para usar esta función. La política de niveles para todos los volúmenes se establece por defecto en la política de niveles del volumen de origen, lo cual se recomienda para casos de migración.
+
+Workload Factory admite la replicación de migración entre los siguientes sistemas de almacenamiento.
+
+* Sistemas ONTAP locales y FSx para ONTAP file systems
+* Cloud Volumes ONTAP y FSx para sistemas de archivos ONTAP
+* FSx for ONTAP y sistemas de archivos FSx for ONTAP
++
+** De primera a primera generación
+** De primera a segunda generación
+** De segunda a segunda generación
+
+
+
+
+Para migrar los datos de la máquina virtual de almacenamiento y la configuración, tienes que completar dos operaciones.
+
+. <<Cree una relación de replicación,Cree una relación de replicación>>, selecciona *Migración* como caso de uso y selecciona *Replicar la configuración de la máquina virtual de almacenamiento*.
+. <<Cut over replication,transición de la replicación>> para migrar de forma permanente datos y ajustes de configuración del sistema de archivos de origen al sistema de archivos FSx for ONTAP de destino.
+
+
+
+
+== Cree una relación de replicación
+
+Replica datos entre dos sistemas de archivos FSx for ONTAP, o entre un sistema ONTAP local y un sistema de archivos FSx for ONTAP.
+
 .Antes de empezar
 Revisa estos requisitos antes de empezar.
 
 * Debes tener un sistema de ficheros FSx for ONTAP para usarlo como destino en la relación de replicación.
 * El sistema de ficheros FSx for ONTAP que uses para la relación de replicación debe tener un enlace asociado. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelve a esta operación.
 * Para la replicación desde un sistema ONTAP local a un sistema de archivos FSx for ONTAP, asegúrate de haber detectado el sistema ONTAP local.
+* La replicación no es compatible con volúmenes en un estado distinto de disponible, creado o mal configurado, y cuando la versión de ONTAP no es compatible.
+* Para los casos de uso de migración, asegúrate de que la última replicación para el volumen se haya completado en las últimas 24 horas antes de crear una relación de replicación con los datos y la configuración de la máquina virtual de almacenamiento.
 
-
-Sigue estos pasos para replicar volúmenes específicos o todos los volúmenes en un sistema de archivos.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
-. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos que contiene los volúmenes a replicar y luego seleccione *Administrar*.
+. En *FSx for ONTAP*, selecciona el sistema de archivos que contiene el o los volúmenes que quieres replicar.
 . Replique todos los volúmenes en un sistema de archivos o replique los volúmenes seleccionados.
 +
 ** Para replicar todos los volúmenes en un sistema de archivos: En la descripción general del sistema de archivos, seleccione *Replicar datos*.
@@ -58,6 +92,9 @@ En la tabla Volúmenes, seleccione uno o más volúmenes y, a continuación, sel
 .. *Caso de uso*: Seleccione uno de los siguientes casos de uso para la replicación.  Dependiendo del caso de uso seleccionado, Workload Factory completa el formulario con valores recomendados de acuerdo con las mejores prácticas.  Puede aceptar los valores recomendados o realizar cambios a medida que completa el formulario.
 +
 *** Migración: Transfiere tus datos al sistema de archivos FSx para ONTAP de destino
++
+*Replicar configuración de VM de almacenamiento*: Opcionalmente, selecciona replicar los datos y los ajustes de configuración de la VM de almacenamiento para una sola VM de almacenamiento. Al migrar datos y ajustes de configuración al mismo tiempo, asegúrate de que la última replicación del volumen se haya completado en las últimas 24 horas. Todos los volúmenes en la misma VM de almacenamiento deben estar seleccionados para usar esta función. La política de niveles para todos los volúmenes se establece por defecto en la política de niveles del volumen de origen, lo cual se recomienda para casos de migración.
+
 *** Recuperación ante desastres en caliente: Garantiza una alta disponibilidad y una recuperación ante desastres rápida para cargas de trabajo críticas
 *** Recuperación ante desastres en frío o de archivado:
 +
@@ -139,3 +176,36 @@ NOTE: Las etiquetas de origen y destino coincidentes son necesarias para la rete
 
 .Resultado
 La relación de replicación aparece en la pestaña *Relaciones de replicación* en el sistema de archivos FSX for ONTAP de destino.
+
+Si creaste una relación de replicación con fines de migración, debes realizar la transición de todos los volúmenes y su VM de almacenamiento asociada para completar la migración de los datos de la VM de almacenamiento y los ajustes de configuración al sistema de archivos de destino FSx for ONTAP.
+
+
+
+== Transición de replicación para casos de migración
+
+Después de crear una relación de replicación para un caso de uso de migración, debes realizar la transición de la replicación para completar la migración de los datos y los ajustes de configuración de la máquina virtual de almacenamiento al sistema de archivos FSx for ONTAP de destino. La transición de la replicación migra permanentemente los datos y los ajustes de configuración de la máquina virtual de almacenamiento desde el sistema de archivos de origen al sistema de archivos FSx for ONTAP de destino. Durante la transición, los datos se replican por última vez. El sistema elimina los volúmenes de origen después de que se completa la transición. No puedes deshacer esta acción.
+
+.Antes de empezar
+Revisa estos requisitos antes de empezar.
+
+* Detén cualquier acceso de clientes a tu VM de almacenamiento antes de la transición de la replicación.
+* Asegúrate de que todos los volúmenes de origen no estén sirviendo ningún dato antes de la transición de la replicación.
+* Asegúrate de que los datos estén sincronizados entre los volúmenes de origen y destino antes de realizar la transición de la replicación.
+* El sistema de ficheros FSx for ONTAP que uses para la relación de replicación debe tener un enlace asociado. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelve a esta operación.
+
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. En *FSx for ONTAP*, selecciona el sistema de archivos que contiene el o los volúmenes que quieres replicar.
+. Selecciona la pestaña *Relaciones de réplica*.
+. En la tabla de relaciones de replicación, selecciona la relación de replicación para hacer la transición y luego selecciona *Transición de replicación*.
+. Revisa la información en el cuadro de diálogo de transición de replicación y luego escribe _cut over_ para confirmar.
+
+
+. Selecciona *transición*.
+
+
+.Resultado
+Después de la transición, los volúmenes de origen se eliminan y los volúmenes de destino pasan a ser de lectura/escritura. Puedes link:change-tiering-policy.html["modifica la política de niveles"] para los volúmenes de destino después de la transición.

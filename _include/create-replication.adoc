@@ -5,6 +5,9 @@
 . *Caso de uso*: Seleccione uno de los siguientes casos de uso para la replicación.  Dependiendo del caso de uso seleccionado, Workload Factory completa el formulario con valores recomendados de acuerdo con las mejores prácticas.  Puede aceptar los valores recomendados o realizar cambios a medida que completa el formulario.
 +
 ** Migración: Transfiere tus datos al sistema de archivos FSx para ONTAP de destino
++
+*Replicar configuración de VM de almacenamiento*: Opcionalmente, selecciona replicar los datos y los ajustes de configuración de la VM de almacenamiento para una sola VM de almacenamiento. Al migrar datos y ajustes de configuración al mismo tiempo, asegúrate de que la última replicación del volumen se haya completado en las últimas 24 horas. Todos los volúmenes en la misma VM de almacenamiento deben estar seleccionados para usar esta función. La política de niveles para todos los volúmenes se establece por defecto en la política de niveles del volumen de origen, lo cual se recomienda para casos de migración.
+
 ** Recuperación ante desastres en caliente: Garantiza una alta disponibilidad y una recuperación ante desastres rápida para cargas de trabajo críticas
 ** Recuperación ante desastres en frío o de archivado:
 +
