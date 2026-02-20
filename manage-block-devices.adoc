@@ -86,9 +86,9 @@ Puede administrar el acceso de cliente a un dispositivo de bloque existente en c
 
 
 
-== Archivar los datos de un dispositivo de bloque huérfano
+== Archiva los datos de un dispositivo de bloque inactivo
 
-Los dispositivos de bloque que ya no están asignados a un cliente o no se utilizan durante siete días consecutivos se clasifican como dispositivos de bloque huérfanos. Puede archivar los datos de un dispositivo de bloque huérfano en el nivel de grupo de capacidad para recuperar capacidad SSD.
+Los dispositivos de bloque que ya no están asignados a un cliente o que no se han utilizado durante siete días consecutivos se clasifican como dispositivos de bloque inactivos. Puedes archivar los datos de un dispositivo de bloque inactivo en el nivel del grupo de capacidad para recuperar capacidad SSD.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -104,7 +104,7 @@ Los dispositivos de bloque que ya no están asignados a un cliente o no se utili
 
 == Eliminar un dispositivo de bloque
 
-Los dispositivos de bloque que ya no están asignados a un cliente o no se utilizan durante siete días consecutivos se clasifican como dispositivos de bloque huérfanos. Esta operación desasigna y elimina el dispositivo de bloque seleccionado. Si el FlexVol volume del host no contiene ningún dispositivo de bloque, Workload Factory también lo elimina.
+Los dispositivos de bloque que ya no están asignados a un cliente o que no se usan durante siete días consecutivos se clasifican como dispositivos de bloque inactivos. Esta operación desasigna y elimina el dispositivo de bloque seleccionado. Si el host FlexVol volume no contiene ningún dispositivo de bloque, Workload Factory también lo elimina.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
