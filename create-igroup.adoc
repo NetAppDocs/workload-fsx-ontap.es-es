@@ -41,4 +41,4 @@ Debes asociar un enlace para crear igroups. link:https://docs.netapp.com/us-en/w
 
 
 .Información relacionada
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-igroups.html["Administra los igroups de un sistema de archivos FSx for ONTAP"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html["Administra el almacenamiento de bloques para un sistema de archivos FSx for ONTAP"]

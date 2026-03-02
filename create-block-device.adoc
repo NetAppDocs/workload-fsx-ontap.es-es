@@ -107,4 +107,4 @@ Si la función no está disponible, se debe a una de las siguientes razones:
 
 
 .Información relacionada
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html["Administrar los dispositivos de bloque para un sistema de archivos FSx para ONTAP"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html["Administra el almacenamiento de bloques para un sistema de archivos FSx for ONTAP"]

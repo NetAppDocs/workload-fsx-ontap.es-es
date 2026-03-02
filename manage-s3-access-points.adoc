@@ -14,13 +14,13 @@ summary: Administre los puntos de acceso S3 para un volumen en NetApp Workload F
 Administra los puntos de acceso S3 para un volumen en NetApp Workload Factory. Puedes usar la consola de Workload Factory para asignar puntos de acceso S3 a volúmenes existentes, ver detalles de tus buckets S3, hacer cambios en los puntos de acceso existentes o eliminar puntos de acceso S3.
 
 .Acerca de esta tarea
-Amazon FSx for NetApp ONTAP admite el acceso a datos S3 en sistemas de archivos NFS y SMB, permitiendo su integración con docenas de servicios de AWS basados en S3 como Amazon Bedrock, SageMaker, Athena, AWS Glue y más. Puedes conectar los servicios de AWS a todos tus datos de almacenamiento de objetos.
+Amazon FSx for NetApp ONTAP permite que los sistemas de archivos NFS y SMB accedan a datos de S3 y se conecten a servicios de AWS como Amazon Bedrock, SageMaker, Athena, AWS Glue y más. Puedes conectar servicios de AWS a todos tus datos de almacenamiento de objetos.
 
-Al adjuntar puntos de acceso S3 a volúmenes NFS y SMB en un sistema de archivos FSx for ONTAP, los archivos almacenados en estos volúmenes pueden ser accedidos por cualquier servicio de AWS como si estuvieran en un bucket de S3. Al adjuntar el punto de acceso, defines su id único, especificas el tipo de acceso a archivos (UNIX o Windows) y añades un nombre de usuario para autorizar las solicitudes de acceso a archivos por parte del punto de acceso.
+Adjunta puntos de acceso S3 a volúmenes NFS y SMB en un sistema de archivos FSx for ONTAP para que los servicios de AWS accedan a los archivos como si estuvieran en un bucket S3. Al adjuntar el punto de acceso, define un ID único, selecciona el tipo de acceso a archivos (UNIX o Windows) y añade un nombre de usuario para la autorización de acceso.
 
-Después de conectar el punto de acceso de S3, aparece en la consola de gestión de AWS y tiene un alias de punto de acceso único. Este alias se usa como el nombre del bucket de S3 que se proporciona a los servicios de AWS a los que quieres conectarte. Por ejemplo, puedes dar el alias a una base de conocimientos de Amazon Bedrock y luego usará los archivos en el volumen de FSx for ONTAP para dar respuestas contextuales a las consultas.
+Después de adjuntar el punto de acceso de S3, aparece en la consola de gestión de AWS con un alias único. Usa este alias como el nombre del bucket de S3 para los servicios de AWS, como Amazon Bedrock, para acceder a los archivos en el volumen de FSx for ONTAP.
 
-Puedes adjuntar varios puntos de acceso de S3 a un solo volumen de FSx for ONTAP, cada uno con su propio nivel de acceso único, lo que te permite conectarte a tantos servicios de AWS como necesites.
+Puedes adjuntar varios puntos de acceso S3 a un solo volumen FSx for ONTAP, cada uno con un nivel de acceso único, para conectarte a varios servicios de AWS.
 
 .Antes de empezar
 Asegúrate de cumplir con los siguientes requisitos:
@@ -41,14 +41,18 @@ Crea y adjunta puntos de acceso S3 a un volumen existente en NetApp Workload Fac
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
 . En *FSx para ONTAP*, selecciona el sistema de ficheros con el volumen que quieres actualizar.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. Desde la pestaña Volúmenes, seleccione el menú de acciones del volumen para el cual desea administrar los puntos de acceso S3 y luego seleccione *Acciones avanzadas* y luego *Administrar puntos de acceso S3*.
+. En la pestaña Volúmenes, selecciona el menú de acciones del volumen para el que quieres gestionar los puntos de acceso S3 y luego selecciona *Acciones avanzadas* y después *Gestionar puntos de acceso S3*.
 . Seleccione *Crear y adjuntar punto de acceso S3*.
 . En el cuadro de diálogo *Crear y adjuntar punto de acceso S3*, proporcione la siguiente información:
 +
 ** *Nombre del punto de acceso S3*: Ingrese el nombre del punto de acceso S3.
 ** *Usuario*: Seleccione un usuario existente con acceso al volumen o cree un nuevo usuario.
 ** *Tipo de usuario*: seleccione *UNIX* o *Windows* como tipo de usuario.
-** *Habilitar catálogo de metadatos*: selecciona para habilitar metadatos en el volumen y generar un inventario de metadatos para todos los objetos accesibles al punto de acceso de S3. Esta función incurre en costes de AWS para las solicitudes de S3.
+** *Habilitar tabla de inventario*: cuando habilitas la tabla de inventario en el volumen, el sistema genera metadatos para todos los objetos accesibles al punto de acceso S3 e incurre en costes de solicitud de AWS S3. Consulta link:https://aws.amazon.com/s3/pricing/["Documentación de precios de Amazon S3"^] para más información.
++
+... *Etiquetas de punto de acceso S3*: Opcionalmente, puedes añadir hasta 50 etiquetas o eliminar etiquetas.
+
+
 
 
 . Seleccione *Crear y adjuntar*.
@@ -58,17 +62,17 @@ Crea y adjunta puntos de acceso S3 a un volumen existente en NetApp Workload Fac
 
 == Ver detalles
 
-Alias, ARN y S3 URI son detalles disponibles del punto de acceso sin metadata habilitada.
+Puedes ver el alias, ARN y S3 URI como detalles del punto de acceso cuando la tabla de inventario no está activada.
 
-Con los metadatos habilitados en el volumen, puedes ver los detalles del punto de acceso, la tabla de inventario y el bucket de tabla de los puntos de acceso S3 existentes adjuntos al volumen. También se proporciona un enlace a la tabla de inventario en la AWS Management Console.
+Con la tabla de inventario habilitada en el volumen, puedes ver los detalles del punto de acceso, la tabla de inventario y el bucket de tabla de los puntos de acceso S3 existentes adjuntos al volumen. El sistema también proporciona un enlace a la tabla de inventario en la AWS Management Console.
 
-Los detalles del punto de acceso se pueden copiar para usarlos en otras aplicaciones.
+Puedes copiar los detalles del punto de acceso para usarlos en otras aplicaciones.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
-. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen a actualizar, luego seleccione *Administrar*.
+. En la pestaña Volúmenes, selecciona el menú de acciones del volumen para el que quieres gestionar los puntos de acceso S3, luego selecciona *Acciones avanzadas* y después *Gestionar puntos de acceso S3*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
 . Desde la pestaña Volúmenes, seleccione el menú de acciones del volumen para el cual desea administrar los puntos de acceso S3 y luego seleccione *Acciones avanzadas* y luego *Administrar puntos de acceso S3*.
 . Desde la pantalla *Manage S3 access points*, selecciona el menú de acciones y luego selecciona *Ver detalles*.
@@ -86,7 +90,7 @@ Cambia el usuario y el tipo de usuario para un punto de acceso S3 existente adju
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
 . Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen a actualizar, luego seleccione *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. Desde la pestaña Volúmenes, seleccione el menú de acciones del volumen para el cual desea administrar los puntos de acceso S3 y luego seleccione *Acciones avanzadas* y luego *Administrar puntos de acceso S3*.
+. En la pestaña Volúmenes, selecciona el menú de acciones del volumen para el que quieres gestionar los puntos de acceso S3, luego selecciona *Acciones avanzadas* y después *Gestionar puntos de acceso S3*.
 . Desde la pantalla *Manage S3 access points*, selecciona el menú de acciones y luego selecciona *Edit access point*.
 . Haz las actualizaciones y luego selecciona *Aplicar*.
 
@@ -103,7 +107,7 @@ Agrega o elimina etiquetas para un punto de acceso S3 existente que está adjunt
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
 . Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen a actualizar, luego seleccione *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. Desde la pestaña Volúmenes, seleccione el menú de acciones del volumen para el cual desea administrar los puntos de acceso S3 y luego seleccione *Acciones avanzadas* y luego *Administrar puntos de acceso S3*.
+. En la pestaña Volúmenes, selecciona el menú de acciones del volumen para el que quieres gestionar los puntos de acceso S3, luego selecciona *Acciones avanzadas* y después *Gestionar puntos de acceso S3*.
 . Desde la pantalla *Manage S3 access points*, selecciona el menú de acciones y luego selecciona *Manage tags*.
 . En el cuadro de diálogo Gestionar etiquetas de punto de acceso S3, puedes añadir hasta 50 etiquetas o eliminar etiquetas para el punto de acceso S3.
 . Seleccione *aplicar*.
@@ -121,7 +125,10 @@ Elimina los puntos de acceso S3 existentes de un volumen en NetApp Workload Fact
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
 . Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen a actualizar, luego seleccione *Administrar*.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. Desde la pestaña Volúmenes, seleccione el menú de acciones del volumen para el cual desea administrar los puntos de acceso S3 y luego seleccione *Acciones avanzadas* y luego *Administrar puntos de acceso S3*.
-. Seleccione el menú de acciones para el punto de acceso S3 que desea eliminar y luego seleccione *Desconectar*.
-. En el cuadro de diálogo *Desconectar y quitar un punto de acceso S3*, seleccione *Desconectar y quitar* para eliminar el punto de acceso S3 del volumen.
+. En la pestaña Volúmenes, selecciona el menú de acciones del volumen para el que quieres gestionar los puntos de acceso S3, luego selecciona *Acciones avanzadas* y después *Gestionar puntos de acceso S3*.
+. Selecciona el menú de acciones para el punto de acceso S3 que quieres eliminar y luego selecciona *Eliminar*.
+. En el cuadro de diálogo *Eliminar un punto de acceso S3*, selecciona *Eliminar* para borrar el punto de acceso S3 del volumen.
++
+La consola Workload Factory no elimina metadatos, pero puedes eliminarlos desde la AWS Management Console.
+
 
