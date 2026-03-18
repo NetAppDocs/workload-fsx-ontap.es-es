@@ -22,7 +22,7 @@ La fábrica de cargas de trabajo determina si tiene suficiente capacidad para la
 . Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
 . Desde la pestaña *Volúmenes*, seleccione el menú de acciones para el volumen que desea restaurar desde una copia de seguridad.
-. Seleccione *Acciones de protección de datos*, *FSX para copia de seguridad de ONTAP* y luego *Restaurar desde una copia de seguridad*.
+. Selecciona *Acciones de protección de datos*, *Copias de seguridad de volúmenes* y luego *Restaurar a partir de una copia de seguridad*.
 . En el cuadro de diálogo Restore from a backup, proporcione lo siguiente:
 +
 .. *Sistema de archivos de destino*: Seleccione el sistema de archivos de destino en el menú desplegable.

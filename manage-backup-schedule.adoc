@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: manage-backup-schedule.html 
-keywords: backup schedule, backup policy, update backups, update backup schedule, FSx for ONTAP backup 
+keywords: backup schedule, backup policy, update backups, update backup schedule, volume backups, FSx for ONTAP backups 
 summary: Administre la programación de copias de seguridad de un sistema de archivos FSx para ONTAP en NetApp Workload Factory cuando sea necesario. 
 ---
 = Gestione la programación de backups para un sistema de archivos FSx for ONTAP
@@ -18,8 +18,8 @@ Administre la programación de copias de seguridad de un sistema de archivos FSx
 . Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
 . Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos para el cual desea actualizar la programación de copias de seguridad y luego seleccione *Administrar*.
-. En Información, seleccione el icono del lápiz junto a *FSX for ONTAP Backup*. El icono del lápiz aparece junto a la flecha desplegable cuando el ratón pasa por encima de la fila *FSX for ONTAP BACKUP*.
-. En el cuadro de diálogo *FSX para copia de seguridad de ONTAP*, proporcione lo siguiente:
+. En Información, selecciona el icono del lápiz junto a *Copias de seguridad de volúmenes*. El icono del lápiz aparece junto a la flecha desplegable cuando el ratón pasa por encima de la fila *Copias de seguridad de volúmenes*.
+. En el cuadro de diálogo *Copias de seguridad de volúmenes*, proporciona lo siguiente:
 +
 .. *Copias de seguridad automáticas diarias*: Habilita o deshabilita la función. Si desactiva la función, seleccione *Aplicar*. Si habilita la función, complete los siguientes pasos.
 .. *Período de retención de respaldo automático*: Ingrese el número de días para retener las copias de seguridad automáticas.

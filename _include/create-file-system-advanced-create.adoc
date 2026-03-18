@@ -97,7 +97,7 @@ Para obtener un nuevo grupo de seguridad, consulte <<Detalles del grupo de segur
 
 . En Copia de seguridad y mantenimiento, proporcione lo siguiente:
 +
-.. *FSX para copia de seguridad de ONTAP*: Las copias de seguridad automáticas diarias están habilitadas por defecto. Desactívelo si lo desea.
+.. *Copias de seguridad de volumen*: las copias de seguridad automáticas diarias están activadas por defecto. Desactívalo si quieres.
 +
 ... *Período de retención de respaldo automático*: Ingrese el número de días para retener las copias de seguridad automáticas.
 ... *Ventana de copia de seguridad automática diaria*: Seleccione *Sin preferencia* (se selecciona una hora de inicio de copia de seguridad diaria) o *Seleccione la hora de inicio para copias de seguridad diarias* y especifique una hora de inicio.

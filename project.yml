@@ -173,7 +173,7 @@ sidebar:
           url: "/manage-snapshots.html"
       - title: Completos
         entries:
-        - title: Gestione la programación de backups de FSx para ONTAP
+        - title: Gestiona la programación de backups de volúmenes
           url: "/manage-backup-schedule.html"
       - title: Replicación
         entries:
