@@ -59,7 +59,7 @@ El {uuid} es un identificador aleatorio de 8 caracteres generado al crear la pla
 Para activar la función de tabla de registro en diario, completa estos pasos:
 
 * Tener un volumen existente con un punto de acceso S3. link:create-volume.html["Crear un volumen con un punto de acceso S3"]
-* Establece la configuración de red en *Internet* para el punto de acceso S3. link:edit-s3-access-point.adoc["Editar la configuración de red del punto de acceso S3"].
+* Establece la configuración de red en *Internet* para el punto de acceso S3. link:edit-s3-access-points.html["Editar la configuración de red del punto de acceso S3"].
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Concede los permisos de _operaciones y remediación_"^] a tus credenciales de Workload Factory.
 * Agrega los siguientes permisos de la política de IAM a la cuenta de AWS que usas para ejecutar la implementación de CloudFormation y configurar la tabla Journal.
 +
@@ -201,7 +201,7 @@ Configura la infraestructura para capturar eventos de servicio de AWS desde el p
 . Seleccione *aplicar*.
 
 
-Si alguno de los pasos falla, <<Troubleshoot the infrastructure setup,solucionar problemas de configuración de la infraestructura para la tabla de registro>> o contacta al soporte de NetApp para obtener ayuda.
+Si alguno de los pasos falla, <<Soluciona problemas de la configuración de la infraestructura para la tabla de registro en diario,solucionar problemas de configuración de la infraestructura para la tabla de registro>> o contacta al soporte de NetApp para obtener ayuda.
 
 
 

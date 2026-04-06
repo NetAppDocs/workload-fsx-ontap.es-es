@@ -35,5 +35,5 @@ Los detalles aparecen en cuatro pestañas: *Punto de acceso*, *Tabla de inventar
 
 
 .Información relacionada
-* link:setup-journal-table.html["Configura la infraestructura de la tabla de diarios y soluciona los problemas de configuración de la tabla de diarios en NetApp Workload Factory."]
+* link:setup-journal-table.html["Configura la infraestructura de la tabla de registro en diario"]
 

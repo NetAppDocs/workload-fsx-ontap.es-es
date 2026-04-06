@@ -25,6 +25,6 @@ También puedes habilitar o deshabilitar la *Inventory table* para el punto de a
 . Desde la pantalla *Manage S3 access points*, selecciona el menú de acciones y luego selecciona *Edit access point*.
 . Haz las actualizaciones y luego selecciona *Aplicar*.
 +
-Para configurar la infraestructura para la función de tabla de registro en diario, debes seleccionar *Internet* como configuración de red para el punto de acceso S3. link:setup-journal-table.adoc["Aprende cómo configurar la infraestructura de la tabla Journal para NetApp Workload Factory"].
+Para configurar la infraestructura para la función de tabla de registro en diario, debes seleccionar *Internet* como configuración de red para el punto de acceso S3. link:setup-journal-table.html["Aprende cómo configurar la infraestructura de la tabla Journal para NetApp Workload Factory"].
 
 

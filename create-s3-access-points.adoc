@@ -51,7 +51,7 @@ Completa los siguientes requisitos antes de empezar.
 
 
 .Información relacionada
-Opcionalmente, puedes usar la función de tabla de diario con puntos de acceso S3 en Workload Factory. La infraestructura de la tabla de diario captura y almacena registros de auditoría de eventos de acceso de usuario y operaciones de objetos en todos los puntos de acceso de volumen de Amazon FSx para ONTAP. Para habilitar la función de tabla de diario, debes configurar la infraestructura necesaria de AWS, incluyendo AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, grupos de logs de AWS CloudWatch y roles y políticas de AWS Identity and Access Management (IAM). link:setup-journal-table.adoc["Configura la infraestructura de la tabla de registro en diario para NetApp Workload Factory"^].
+Opcionalmente, puedes usar la función de tabla de diario con puntos de acceso S3 en Workload Factory. La infraestructura de la tabla de diario captura y almacena registros de auditoría de eventos de acceso de usuario y operaciones de objetos en todos los puntos de acceso de volumen de Amazon FSx para ONTAP. Para habilitar la función de tabla de diario, debes configurar la infraestructura necesaria de AWS, incluyendo AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, grupos de logs de AWS CloudWatch y roles y políticas de AWS Identity and Access Management (IAM). link:setup-journal-table.html["Configura la infraestructura de la tabla de registro en diario para NetApp Workload Factory"^].
 
 Otros temas relacionados:
 
