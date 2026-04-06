@@ -135,7 +135,7 @@ Puede administrar el acceso de cliente a un dispositivo de bloque existente en c
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
 . Desde *FSx for ONTAP*, seleccione la pestaña *Dispositivos de bloque*.
 . Navegue hasta el menú de acciones del dispositivo de bloque y luego seleccione *Administrar acceso de cliente*.
-. Si no existe ningún igroup, cree uno nuevo seleccionando *Crear igroup* y luego haga lo siguiente:
+. Si no existe ningún igroup, crea uno nuevo seleccionando *Map igroup > Create igroup*, y luego haz lo siguiente:
 +
 .. *Nombre del dispositivo de bloque*: Ingrese un nombre de dispositivo de bloque. Puede seleccionar varios dispositivos de bloque para asociarlos con el igroup.
 .. *Tipo de sistema operativo*: Seleccione el tipo de sistema operativo.
@@ -145,7 +145,7 @@ Puede administrar el acceso de cliente a un dispositivo de bloque existente en c
 .. Seleccione *Crear*.
 
 
-. Si ya existe un igroup, seleccione *Editar acceso de cliente* para agregar o quitar dispositivos de bloque e iniciadores de host del igroup y luego seleccione *Aplicar*.
+. Si ya existe un igroup, selecciona *Map igroup > Map existing igroup* para añadir o eliminar dispositivos de bloque e iniciadores de host del igroup y luego selecciona *Map*.
 
 
 

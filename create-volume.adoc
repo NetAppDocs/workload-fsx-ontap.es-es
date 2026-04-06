@@ -87,14 +87,16 @@ NOTE: Al usar Terraform de CodeBox, el código que copie o descargue oculta `fsx
 .. *Nombre de VM de almacenamiento*: Opcionalmente, introduzca un nombre de VM de almacenamiento.
 .. *Estilo de volumen*: Selecciona el volumen *FlexVol* o *FlexGroup*.
 +
-El estilo de volumen FlexVol se selecciona de forma predeterminada.
+*** Un volumen _FlexVol_ es un tipo de almacenamiento lógico en ONTAP que te permite gestionar datos. Los volúmenes FlexVol se pueden mover entre agregados o nodos dentro de la misma máquina virtual de almacenamiento (SVM) sin interrumpir el acceso del cliente. El estilo de volumen FlexVol está seleccionado por defecto.
+*** Un volumen _FlexGroup_ es un contenedor NAS de escalado horizontal que proporciona un alto rendimiento junto con una distribución de carga y escalabilidad automáticas. Consta de varios volúmenes miembros (constituyentes), que son volúmenes subyacentes de FlexVol que comparten el tráfico de forma transparente.
 
-+
-El tamaño del volumen de FlexGroup depende de la cantidad de constituyentes y requiere 100 GiB por constituyente.
 
 .. *Tamaño del volumen*: Introduzca el tamaño del volumen y la unidad.
 +
 Opcionalmente, habilite el crecimiento automático de volúmenes. Esta opción está disponible cuando selecciona *Acceso a archivos* como el tipo de acceso por volumen.
+
++
++ El tamaño del volumen FlexGroup depende del número de componentes, requiriendo 100 GiB por componente.
 
 .. *Aumento automático del volumen*: Opcionalmente, active el aumento automático del volumen para ampliar automáticamente la capacidad del volumen hasta alcanzar el tamaño máximo. Esta función se adapta al aumento del uso de datos, garantizando así operaciones ininterrumpidas.
 +
@@ -234,9 +236,10 @@ Si la función no está disponible, se debe a una de las siguientes razones:
 
 
 
-. En Configuración avanzada, proporcione lo siguiente:
+. En Configuración avanzada, introduce los siguientes datos. Los campos de esta sección varían en función del estilo de volumen que selecciones.
 +
 .. *Ruta de unión*: Introduzca la ubicación en el espacio de nombres de la VM de almacenamiento donde se monta el volumen. La ruta de unión predeterminada es `/<volume-name>`.
+.. *Nombre del agregado*: Solo para volúmenes FlexVol. Selecciona el agregado para alojar el nuevo volumen.
 .. *Lista de agregados*: Solo para volúmenes FlexGroup. Añada o quite agregados. El número mínimo de agregados es uno.
 .. *Número de constituyentes*: Solo para volúmenes FlexGroup. Introduzca el número de componentes por agregado. Se requiere 100 GiB por componente.
 

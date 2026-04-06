@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: edit-s3-access-points.html 
+keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
+summary: Edita los puntos de acceso S3 para un volumen en NetApp Workload Factory. 
+---
+= Edita los puntos de acceso S3 para un volumen en NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Actualiza los detalles del punto de acceso S3 y gestiona las etiquetas de un volumen en NetApp Workload Factory.
+
+También puedes habilitar o deshabilitar la *Inventory table* para el punto de acceso. La inventory table genera metadatos para todos los objetos accesibles al punto de acceso S3 e incurre en costes de solicitud de AWS S3. Consulta link:https://aws.amazon.com/s3/pricing/["Documentación de precios de Amazon S3"^] para más información.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen a actualizar, luego seleccione *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. En la pestaña Volúmenes, selecciona el menú de acciones para el volumen para el que quieres editar los puntos de acceso S3, luego selecciona *Acciones avanzadas* y después *Administrar puntos de acceso S3*.
+. Desde la pantalla *Manage S3 access points*, selecciona el menú de acciones y luego selecciona *Edit access point*.
+. Haz las actualizaciones y luego selecciona *Aplicar*.
++
+Para configurar la infraestructura para la función de tabla de registro en diario, debes seleccionar *Internet* como configuración de red para el punto de acceso S3. link:setup-journal-table.adoc["Aprende cómo configurar la infraestructura de la tabla Journal para NetApp Workload Factory"].
+
+

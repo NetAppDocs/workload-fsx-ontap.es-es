@@ -209,4 +209,7 @@ Revisa estos requisitos antes de empezar.
 
 
 .Resultado
-Después de la transición, los volúmenes de origen se eliminan y los volúmenes de destino pasan a ser de lectura/escritura. Puedes link:change-tiering-policy.html["modifica la política de niveles"] para los volúmenes de destino después de la transición.
+Tras la transición, la máquina virtual de almacenamiento de origen se desconecta.
+
+.Información relacionada
+link:change-tiering-policy.html["Modificar la política de niveles"] para el volumen o volúmenes de destino tras la transición.

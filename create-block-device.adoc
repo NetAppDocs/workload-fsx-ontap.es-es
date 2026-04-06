@@ -36,6 +36,7 @@ El tamaño del bloque debe ser menor que el tamaño del FlexVol volume disponibl
 *** Seleccione un volumen existente.
 
 
+.. *Nombre del agregado*: Selecciona el agregado para alojar el nuevo volumen.
 .. *VM de almacenamiento*: seleccione una VM de almacenamiento.
 .. *Estilo de volumen*: El estilo de volumen predeterminado es * FlexVol*.
 .. *Tamaño del volumen*: Ingrese el tamaño del volumen y seleccione la unidad. El tamaño máximo por FlexVol volume es 100 TiB.

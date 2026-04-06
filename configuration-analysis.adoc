@@ -172,6 +172,10 @@ Después de que un dispositivo de bloque no se use durante siete días, Workload
 +
 Un nivel de capacidad SSD infrautilizado puede estar incurriendo en costes innecesarios. Workload Factory recomienda reducir la capacidad del nivel SSD mientras se mantiene un buffer de espacio libre del 20% por encima de la capacidad utilizada actualmente. Una operación de reducción puede tardar de varias horas a varios días, y durante este tiempo no se admiten otras operaciones del sistema de archivos.
 
+* *Volúmenes NAS inactivos*
++
+El análisis de configuración identifica los volúmenes NAS que no se utilizan activamente y recomienda eliminarlos o archivarlos para reducir costes.
+
 
 
 .El futuro

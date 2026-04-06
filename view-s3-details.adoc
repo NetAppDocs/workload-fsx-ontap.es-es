@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: view-s3-details.html 
+keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
+summary: Consulta los detalles de los puntos de acceso S3 para un volumen en NetApp Workload Factory. 
+---
+= Ver los detalles de los puntos de acceso S3 para un volumen en NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ver detalles del punto de acceso S3 como el alias, ARN y S3 URI. Con las tablas de inventario y registro en diario habilitadas, puedes ver metadatos y registros de auditoría de eventos de acceso de usuarios y operaciones de objetos a través de puntos de acceso S3.
+
+.Acerca de esta tarea
+Cuando la tabla de inventario está habilitada en el volumen, puedes ver los detalles del punto de acceso, la tabla de inventario y el bucket de tabla de los puntos de acceso S3 existentes adjuntos al volumen. El sistema también proporciona un enlace a la tabla de inventario en la AWS Management Console.
+
+Cuando la tabla de registro diario está habilitada, Workload Factory genera registros sobre los puntos de acceso en una tabla para tu referencia. La tabla incluye eventos de CloudTrail, rastros (un registro de las actividades de AWS), filtros de CloudTrail, grupos de registro de CloudWatch y más.
+
+Puedes copiar los detalles del punto de acceso para usarlos en otras aplicaciones.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. En *FSx para ONTAP*, selecciona el sistema de ficheros con el volumen para ver los detalles.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. En la pestaña Volúmenes, selecciona el menú de acciones para el volumen del que quieres ver los detalles, luego selecciona *Acciones avanzadas* y después *Ver detalles*.
++
+Los detalles aparecen en cuatro pestañas: *Punto de acceso*, *Tabla de inventario*, *Tabla de diario* y *Tabla de bucket*.
+
+. Si el estado de las tablas de inventario o de registro en diario está activado, pero te falta el permiso `get:Object`, sigue las instrucciones del cuadro de diálogo para añadir el permiso necesario.
+. Cuando el estado de la tabla de registro en diario es pendiente, debes proporcionar el ARN de CloudTrail para conectar la tabla de registro en diario a la infraestructura creada. Sigue las instrucciones para implementar la pila de CloudFormation usando la AWS CLI o la consola de administración de AWS y luego vuelve a la consola de Workload Factory para ingresar el ARN de CloudTrail.
+
+
+.Información relacionada
+* link:setup-journal-table.html["Configura la infraestructura de la tabla de diarios y soluciona los problemas de configuración de la tabla de diarios en NetApp Workload Factory."]
+
