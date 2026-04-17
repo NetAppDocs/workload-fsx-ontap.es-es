@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: manage-cifs-share.html 
-keywords: cifs, smb, SMB/CIFS, cifs share, change, update, modify, delete, create 
+keywords: cifs, smb, SMB, CIFS, cifs share, change, update, modify, delete, create 
 summary: La gestión del recurso compartido SMB o CIFS de un volumen en Workload Factory incluye la creación, la determinación del acceso de usuarios y grupos y la eliminación. 
 ---
 = Administrar el recurso compartido SMB/CIFS para un volumen en Workload Factory
