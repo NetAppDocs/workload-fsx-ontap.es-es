@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: create-replication.html 
-keywords: replication, replicate, data protection, disaster recovery, data loss 
+keywords: replication, replicate, data protection, disaster recovery, data loss, initialize, cut over, cutover, data transfer, sync 
 summary: Crea una relación de replicación para un sistema de archivos FSx para ONTAP para evitar la pérdida de datos en caso de un desastre imprevisto. 
 ---
 = Replica datos a FSx para ONTAP en NetApp Workload Factory
@@ -13,7 +13,7 @@ summary: Crea una relación de replicación para un sistema de archivos FSx para
 [role="lead"]
 Crea una relación de replicación para un sistema de archivos FSx para ONTAP en NetApp Workload Factory para evitar la pérdida de datos en caso de un desastre imprevisto. Puedes replicar datos entre dos sistemas de archivos FSx para ONTAP, o entre un sistema ONTAP local y un sistema de archivos FSx para ONTAP.
 
-Para la migración de VM de almacenamiento, completa la operación de transición inmediatamente después de crear una relación de replicación.
+Al replicar datos de almacenamiento VM y ajustes de configuración, primero debes crear e inicializar la relación de replicación y luego esperar a que los datos se sincronicen al menos una vez antes de completar la operación de transición.
 
 
 
@@ -21,15 +21,15 @@ Para la migración de VM de almacenamiento, completa la operación de transició
 
 La replicación protege tus datos si un desastre afecta tu región; también puede usarse para migración.
 
+La replicación incluye la creación y la inicialización de una relación de replicación. Para configurar la replicación, crea la relación de replicación. Para transferir los datos entre los sistemas de almacenamiento de origen y de destino, inicializa la relación de replicación. Al migrar los datos de VM de almacenamiento y los ajustes de configuración, también debes completar la operación de transición.
+
 Los volúmenes replicados en el sistema de archivos de destino son volúmenes de protección de datos (DP) y siguen el formato de nomenclatura `{OriginalVolumeName}_copy`: .
 
 Si replicas un volumen de origen con archivos inmutables, el volumen de destino y el sistema de archivos permanecen bloqueados hasta que termine el periodo de retención del volumen de origen. La función de archivos inmutables está disponible cuando link:create-volume.html["crear un volumen"] para un sistema de archivos FSx for ONTAP.
 
 [NOTE]
 ====
-* La replicación no es compatible con volúmenes de bloques que usan los protocolos iSCSI o NVMe.
-* Puede replicar un volumen de origen (lectura/escritura) o un volumen de protección de datos (DP). Se admite la replicación en cascada, pero no un tercer salto. Más información sobre link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["replicación en cascada"^].
-
+Puede replicar un volumen de origen (lectura/escritura) o un volumen de protección de datos (DP). Se admite la replicación en cascada, pero no un tercer salto. Más información sobre link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["replicación en cascada"^].
 
 ====
 
@@ -50,15 +50,16 @@ Workload Factory admite la replicación de migración para máquinas virtuales d
 
 
 
-Para migrar los datos de la máquina virtual de almacenamiento y la configuración, tienes que completar dos operaciones.
+Para migrar los datos de la máquina virtual de almacenamiento y los ajustes de configuración, debes completar tres operaciones.
 
-. <<Cree una relación de replicación,Cree una relación de replicación>>, selecciona *Migración* como caso de uso y selecciona *Replicar la configuración de la máquina virtual de almacenamiento*.
-. <<Transición de replicación para casos de migración,Transición de replicación para casos de migración>> para migrar de forma permanente datos y ajustes de configuración del sistema de archivos de origen al sistema de archivos FSx for ONTAP de destino.
+. <<Paso 1: Crear la relación de replicación,Crear la relación de replicación>>, selecciona *Migración* como caso de uso y selecciona *Replicar la configuración de la máquina virtual de almacenamiento*.
+. <<Paso 2: inicializa la relación de replicación,Inicializar la relación de replicación>> transferir los datos del sistema de origen al sistema de almacenamiento de destino.
+. <<Paso 3: transición de la replicación para casos de migración,Transición de replicación para casos de migración>> para migrar de forma permanente datos y ajustes de configuración del sistema de archivos de origen al sistema de archivos FSx for ONTAP de destino.
 
 
 
 
-== Cree una relación de replicación
+== Paso 1: Crear la relación de replicación
 
 Replica datos entre dos sistemas de archivos FSx for ONTAP, o entre un sistema ONTAP local y un sistema de archivos FSx for ONTAP.
 
@@ -181,9 +182,34 @@ Si creaste una relación de replicación con fines de migración, debes realizar
 
 
 
-== Transición de replicación para casos de migración
+== Paso 2: inicializa la relación de replicación
 
-Después de crear una relación de replicación para un caso de uso de migración, debes realizar la transición de la replicación para completar la migración de los datos y los ajustes de configuración de la máquina virtual de almacenamiento al sistema de archivos FSx for ONTAP de destino. La transición de la replicación migra de forma permanente los datos y los ajustes de configuración de la máquina virtual de almacenamiento desde el sistema de archivos de origen al sistema de archivos FSx for ONTAP de destino. Durante la transición, los datos se replican por última vez. La máquina virtual de almacenamiento de origen se desconecta cuando comienza la transición.
+Inicialice una relación de replicación entre los volúmenes de origen y destino para transferir la instantánea y todos los bloques de datos en NetApp Workload Factory.
+
+La inicialización realiza una transferencia _baseline_: Realiza una instantánea del volumen de origen y, a continuación, transfiere la Snapshot y todos los bloques de datos a los que hace referencia al volumen de destino.
+
+.Antes de empezar
+Tenga en cuenta cuándo decide completar esta operación. La inicialización puede requerir mucho tiempo. Puede ser conveniente ejecutar la transferencia básica en horas de menor actividad.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos a actualizar y luego seleccione *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Relaciones de replicación*.
+. En la pestaña Relaciones de replicación, seleccione el menú de acciones de la relación de replicación que desea inicializar.
+. Selecciona *Inicializar*.
+. En el cuadro de diálogo Inicializar relación, seleccione *Inicializar*.
++
+Cuando el estado de replicación muestra *Idle*, la transferencia de datos se ha completado.
+
+
+
+
+
+== Paso 3: transición de la replicación para casos de migración
+
+Después de crear la relación de replicación para un caso de uso de migración, debes realizar la transición de la replicación para completar la migración de los datos y los ajustes de configuración de la máquina virtual de almacenamiento al sistema de archivos FSx for ONTAP de destino. La replicación de transición migra permanentemente los datos y los ajustes de configuración de la máquina virtual de almacenamiento desde el sistema de archivos de origen al sistema de archivos FSx for ONTAP de destino. Durante la transición, los datos se replican por última vez. La máquina virtual de almacenamiento de origen se desconecta cuando comienza la transición.
 
 
 
@@ -191,6 +217,7 @@ Después de crear una relación de replicación para un caso de uso de migració
 
 Ten en cuenta lo siguiente al planificar la operación de transición para los casos de uso de migración.
 
+* *Soporte de la versión de replicación*: los sistemas de almacenamiento de origen y destino deben tener la misma versión principal de ONTAP. Por ejemplo, si el sistema de origen ejecuta ONTAP versión 9.18.1, entonces el sistema de destino también debe ejecutar una versión 9.18.1.
 * *Parámetros de configuración de la máquina virtual de almacenamiento*: La operación de transición no migra todos los parámetros de configuración de la VM de almacenamiento a la VM de almacenamiento de destino. Por ejemplo, iSCSI, MTU de dominio de difusión y los ajustes de DNS no se migran. Actualiza estos parámetros manualmente en la VM de almacenamiento de destino después de la transición. Para más detalles, consulta la sección <<Actualiza los parámetros de configuración después de la transición,Actualiza los parámetros de configuración después de la transición>>.
 * *Clones*: Los clones se migran como volúmenes individuales y, por tanto, consumirán más espacio en el sistema de archivos FSx para ONTAP de destino. Considera eliminar los clones antes de la transición para evitar un aumento de capacidad en el destino.
 * *Volúmenes de caché*: Para ONTAP FlexCache 9.17.x o versiones inferiores. Las máquinas virtuales de almacenamiento de origen que contienen volúmenes de caché no son compatibles con la transición. Elimina la relación de ONTAP FlexCache antes de la transición para evitar fallos en la migración.
@@ -250,6 +277,4 @@ Después de realizar la transición de la replicación para casos de uso de migr
 
 == Información relacionada
 
-* link:initialize-replication.html["Inicializar la replicación"] para una nueva relación de replicación.
-* link:change-tiering-policy.html["Modificar la política de niveles"] para el volumen o volúmenes de destino tras la transición.
-
+link:change-tiering-policy.html["Modificar la política de niveles"] para el volumen o volúmenes de destino tras la transición.
