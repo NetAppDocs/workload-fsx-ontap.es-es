@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: apply-block-device-tags.html 
+keywords: tags, EC2 tags, ONTAP tags, block storage tags, apply tags to block devices 
+summary: Aplica automáticamente etiquetas de nivel ONTAP a tus dispositivos de bloque para la gestión de recursos en NetApp Workload Factory. 
+---
+= Aplica etiquetas a nivel de ONTAP a los dispositivos de bloque en NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Usa el script nativo de datos de usuario de EC2 de NetApp Workload Factory para crear y etiquetar automáticamente dispositivos de bloque durante la implementación de instancias de AWS EC2. Agrega el script de datos de usuario de EC2 a la plantilla del asistente de lanzamiento de instancias cuando implementes una instancia de EC2 desde la consola de AWS EC2. Después de la implementación, Workload Factory usa los metadatos recopilados del script para aplicar etiquetas a nivel de ONTAP a tus dispositivos de bloque. Estas etiquetas te ayudan a ver qué host está consumiendo cada dispositivo de bloque para que puedas correlacionar rápidamente el uso con el host responsable al solucionar problemas o hacer auditorías.
+
+.Acerca de esta tarea
+El script de datos de usuario EC2 crea dispositivos de bloque y aplica etiquetas EC2 de nivel ONTAP a los dispositivos de bloque durante el despliegue de instancias EC2.
+
+La _etiqueta EC2_ que se aplica al dispositivo de bloque contiene el nombre EC2, el ID EC2 y la ruta de montaje para el/los dispositivo(s) de bloque dentro de la instancia EC2.
+
+.Pasos
+. Sigue link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance-wizard.html["las instrucciones de Amazon Elastic Compute Cloud para lanzar una instancia EC2"] usando el asistente de lanzamiento de instancias en la consola de AWS EC2.
+. Agrega el script de datos de usuario de EC2 a la plantilla del asistente de lanzamiento de instancias para crear y etiquetar automáticamente los dispositivos de bloque.
++
+Visita nuestro repositorio de GitHub FSx-ONTAP-sample-scripts para obtener el link:https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/Management-Utilities/ec2-user-data-iscsi-create-and-mount["Script de datos de usuario de EC2"].
+
+. Lanza la instancia.
++
+El script de datos de usuario de EC2 aplica automáticamente etiquetas de nivel ONTAP a los nuevos dispositivos de almacenamiento en bloque alojados en la instancia de EC2.
+
+. Para las instancias EC2 existentes, los scripts de datos de usuario solo surten efecto tras un reinicio.
+
+
+.Resultado
+Las etiquetas EC2 aparecen en la tabla de dispositivos de bloque dentro del sistema de archivos FSx for ONTAP asociado.
+
+.Información relacionada
+* link:create-igroup.html["Crea grupos de iniciadores (igroups) para un sistema de archivos en NetApp Workload Factory"]
+* link:manage-block-storage.html["Administra el almacenamiento en bloque para un sistema de archivos en NetApp Workload Factory"]
+

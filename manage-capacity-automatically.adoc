@@ -27,9 +27,9 @@ La cantidad máxima de capacidad de almacenamiento en SSD para todos los sistema
 
 
 
-== Permita la gestión automática de la capacidad
+== Activar la gestión automática de la capacidad y las notificaciones de capacidad
 
-Habilite la administración automática de capacidad para agregar automáticamente almacenamiento incremental hasta el límite de tamaño máximo para un sistema de archivos FSx para ONTAP .
+Activa la gestión automática de la capacidad para añadir automáticamente almacenamiento incremental hasta el límite de tamaño máximo de un sistema de ficheros FSx para ONTAP. Configura las notificaciones para recibir alertas cuando el sistema de ficheros alcance un determinado umbral de capacidad.
 
 .Antes de empezar
 Considere lo siguiente antes de comenzar:
@@ -43,66 +43,43 @@ Considere lo siguiente antes de comenzar:
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
-. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos para habilitar la administración automática de la capacidad.
-. Seleccione *gestionar*.
-. En Información, selecciona el icono del lápiz que está junto a *Gestión de la capacidad*. El icono del lápiz aparece junto a la flecha desplegable cuando pasas el ratón por encima de la fila *Gestión de la capacidad*.
-. En el cuadro de diálogo *Capacity management*, proporciona lo siguiente:
+. En *FSx para ONTAP*, selecciona el sistema de archivos para el que quieres habilitar la capacidad automática.
+. En la tarjeta de gestión automática de la capacidad, selecciona *Gestionar*.
+. Selecciona el método de gestión de la capacidad. Las opciones son los modos incremental y adaptativo.
 +
-.. *Credenciales*: Seleccione credenciales con permisos _Automate_ en el menú desplegable.
-.. Seleccione el botón de activación para *Activar la gestión automática de la capacidad*.
+** *Incremental*: aumenta la capacidad en una cantidad fija en los umbrales.
 +
-También puede desactivar la función. Si necesita aumentar la capacidad del sistema de archivos, primero debe deshabilitar la gestión automática de capacidad.
+*** *Umbral*: Establece el umbral por debajo del aumento incremental para activar una notificación del servicio de notificación de NetApp Workload Factory. El valor predeterminado es 70%.
++
+El ajuste del umbral solo está disponible si link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Habilitó el servicio de notificaciones de Workload Factory"^].
 
-.. *Modo*: selecciona el modo para gestionar la capacidad automáticamente. Las opciones son los modos incremental y adaptativo.
-+
-*** *Modo incremental*: aumenta la capacidad en una cantidad fija en los umbrales.
-+
-**** *Umbral de advertencia*: Establezca el umbral de advertencia por debajo del umbral de aumento para activar una notificación del servicio de notificaciones de Workload Factory.  El valor predeterminado es del 70%.
-+
-La configuración del umbral de advertencia solo está disponible si ustedlink:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Habilitó el servicio de notificaciones de Workload Factory"^] .
-
-**** *Aumento del umbral*: Introduzca el porcentaje máximo de aumento para el sistema de archivos FSx para ONTAP .  El valor predeterminado es el 80%.
+*** *Incremento incremental*: Ingresa el porcentaje máximo de incremento para el sistema de archivos FSx for ONTAP. El valor predeterminado es 80%.
 +
 Este es el umbral en el que Workload Factory activa un trabajo para aumentar la capacidad. Por ejemplo, si el sistema de archivos alcanza el 80% de capacidad, entonces Workload Factory aumenta la capacidad.
 
 
 
-*** *Modo adaptativo*: predice y cambia la capacidad según los datos históricos.
+** *Adaptativo*: predice y modifica la capacidad en función de los datos históricos.
 +
-**** *Periodo de análisis*: Establece el periodo de análisis en horas para determinar cuántos datos históricos considerar para las predicciones de capacidad. El valor predeterminado es 120 horas.
-**** *Tiempo de buffer previsto*: Establece el tiempo de buffer en horas para asegurarte de que la capacidad se aumente antes de que realmente se necesite. El valor predeterminado es 48 horas.
+*** *Look-back*: Establece el periodo de análisis en horas para determinar cuántos datos históricos se deben tener en cuenta para las predicciones de capacidad. El valor predeterminado es 120 horas.
+*** *Planifica con antelación*: Establece el tiempo de buffer en horas para asegurarte de que la capacidad aumente antes de que realmente se necesite. El valor predeterminado es 48 horas.
 
 
 
 
+. Selecciona *Activar la gestión automática de la capacidad* y los permisos de credenciales _ver, planificar y analizar_.
++
+También puede desactivar la función. Si necesita aumentar la capacidad del sistema de archivos, primero debe deshabilitar la gestión automática de capacidad.
 
+. Selecciona *Activar notificaciones de capacidad* para activar las notificaciones cuando la capacidad alcance el umbral que hayas establecido y cada vez que NetApp Workload Factory realice un aumento automático de la capacidad. El valor predeterminado es 70%.
++
+La configuración de notificación de capacidad solo está disponible si link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Habilitó el servicio de notificaciones de Workload Factory"^] y cuando la gestión automática de capacidad está activada.
 
 . Seleccione *aplicar*.
 
 
 .Resultado
 Se realiza una exploración del sistema de archivos cada 30 minutos para determinar si necesita capacidad adicional.
-
-
-
-== Activar notificaciones de capacidad
-
-Configura notificaciones para recibir avisos cuando el sistema de archivos alcance un cierto umbral de capacidad.
-
-.Antes de empezar
-Debes link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["Habilitar el servicio de notificaciones de Workload Factory"^] para usar esta función.
-
-.Pasos
-. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
-. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
-. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos para habilitar la administración automática de la capacidad.
-. Seleccione *gestionar*.
-. En Información, selecciona el icono del lápiz que está junto a *Gestión de la capacidad*. El icono del lápiz aparece junto a la flecha desplegable cuando pasas el ratón por encima de la fila *Gestión de la capacidad*.
-. En el cuadro de diálogo *Gestión de la capacidad*, selecciona *Habilitar notificaciones de capacidad* para activar las notificaciones cuando la capacidad alcance el umbral y cada vez que Workload Factory realice un aumento automático de la capacidad.
-. Establece el *Umbral de notificación* para recibir notificaciones cuando el sistema de archivos alcance un cierto porcentaje de capacidad. El valor predeterminado es 70%.
-. Seleccione *aplicar*.
-
 
 
 

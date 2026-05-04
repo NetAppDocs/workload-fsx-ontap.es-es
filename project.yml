@@ -43,14 +43,12 @@ sidebar:
         url: "/create-link.html"
       - title: Gestionar enlaces
         url: "/manage-links.html"
+    - title: Cree un volumen
+      url: "/create-volume.html"
     - title: Descubra y visualice los volúmenes de caché
       url: "/discover-cache-volumes.html"
-    - title: Gestione los volúmenes
-      entries:
-      - title: Cree un volumen
-        url: "/create-volume.html"
-      - title: Acceda a sus datos
-        url: "/access-data.html"
+    - title: Acceda a sus datos
+      url: "/access-data.html"
     - title: Crear recursos de almacenamiento en bloque
       entries:
       - title: Crear un igroup
@@ -143,6 +141,8 @@ sidebar:
       entries:
       - title: Gestiona el almacenamiento en bloque
         url: "/manage-block-storage.html"
+      - title: Aplicar etiquetas a dispositivos de bloque
+        url: "/apply-block-device-tags.html"
     - title: Administración del sistema de archivos
       entries:
       - title: Ajusta manualmente la capacidad del sistema de archivos

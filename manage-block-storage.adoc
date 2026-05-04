@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: manage-block-storage.html 
-keywords: block storage, manage block storage, igroups, block devices, client access, delete block device 
+keywords: block storage, manage block storage, igroups, block devices, view details, clone, client access, delete block device 
 summary: Administra el almacenamiento de bloques para un sistema de archivos FSx for ONTAP en NetApp Workload Factory. 
 ---
 = Administra el almacenamiento en bloque para un sistema de archivos en NetApp Workload Factory
@@ -14,7 +14,7 @@ summary: Administra el almacenamiento de bloques para un sistema de archivos FSx
 Usa NetApp Workload Factory para simplificar la gestión de tus recursos de almacenamiento en bloque, incluidos los igroups y los dispositivos de bloque, y controlar el acceso de los clientes a los dispositivos de bloque de FSx for ONTAP para ofrecer un rendimiento óptimo y minimizar los costos.
 
 .Acerca de esta tarea
-Desde la consola de Workload Factory, puedes gestionar grupos de iniciadores (igroups) para controlar el acceso de los clientes a los dispositivos de bloque. También puedes ver los detalles de los dispositivos de bloque, aumentar la capacidad, gestionar el acceso de los clientes, archivar datos de dispositivos de bloque inactivos y eliminar dispositivos de bloque.
+Desde la consola de Workload Factory, puedes gestionar grupos de iniciadores (igroups) para controlar el acceso de los clientes a los dispositivos de bloque. También puedes ver los detalles de los dispositivos de bloque, aumentar la capacidad, hacer clones, gestionar el acceso de los clientes, archivar datos de dispositivos de bloque inactivos y eliminar dispositivos de bloque.
 
 Revisa el diagrama de almacenamiento de bloques para comprobar lo siguiente:
 
@@ -106,25 +106,6 @@ Se muestran detalles generales, información de consumo, acceso y protección de
 
 
 
-=== Aumentar la capacidad de un dispositivo de bloque
-
-Aumente la capacidad de un dispositivo de bloque existente en cualquier momento.
-
-.Pasos
-. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
-. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
-. Desde *FSx for ONTAP*, seleccione la pestaña *Dispositivos de bloque*.
-. Navegue hasta el menú de acciones del dispositivo de bloque y luego seleccione *Aumentar capacidad*.
-. Ingrese la nueva capacidad para el dispositivo de bloque y seleccione la unidad.
-. Seleccione *Aumentar* para aplicar los cambios.
-
-
-
-NOTE: Después de aumentar el tamaño del dispositivo de bloque, sigue el procedimiento que proporciona tu sistema operativo anfitrión para descubrir el nuevo tamaño y expandir el sistema de archivos.
-
-
-
 === Administrar el acceso del cliente para un dispositivo de bloque
 
 Puede administrar el acceso de cliente a un dispositivo de bloque existente en cualquier momento creando igroups y agregando o eliminando dispositivos de bloque e iniciadores de host.
@@ -146,6 +127,54 @@ Puede administrar el acceso de cliente a un dispositivo de bloque existente en c
 
 
 . Si ya existe un igroup, selecciona *Map igroup > Map existing igroup* para añadir o eliminar dispositivos de bloque e iniciadores de host del igroup y luego selecciona *Map*.
+
+
+
+
+=== Aumentar la capacidad de un dispositivo de bloque
+
+Aumente la capacidad de un dispositivo de bloque existente en cualquier momento.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione la pestaña *Dispositivos de bloque*.
+. Navegue hasta el menú de acciones del dispositivo de bloque y luego seleccione *Aumentar capacidad*.
+. Ingrese la nueva capacidad para el dispositivo de bloque y seleccione la unidad.
+. Seleccione *Aumentar* para aplicar los cambios.
+
+
+
+NOTE: Después de aumentar el tamaño del dispositivo de bloque, sigue el procedimiento que proporciona tu sistema operativo anfitrión para descubrir el nuevo tamaño y expandir el sistema de archivos.
+
+
+
+=== Clonar un dispositivo de bloque
+
+Puedes crear un clon de un dispositivo de bloque existente en cualquier momento. Un clon de un dispositivo de bloque es una copia con capacidad de escritura del dispositivo de bloque original que comparte los mismos bloques de datos hasta que se hagan cambios en el original o en el clon. Clonar un dispositivo de bloque es una forma rápida y eficiente de crear copias reutilizables de tus datos sin consumir capacidad de almacenamiento adicional.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione la pestaña *Dispositivos de bloque*.
+. Ve al menú de acciones del dispositivo de bloque y luego selecciona *Clonar dispositivo de bloque*.
+. En el cuadro de diálogo Clonar dispositivo de bloque, introduce un nombre para el dispositivo de bloque clonado.
+. Opcionalmente, activa la eliminación automática para eliminar automáticamente el dispositivo de bloque clonado cuando el volumen tenga poco espacio.
+. *configuración iSCSI*: opcional. Para conectar el clon de dispositivo de bloque a iniciadores de host, crea un nuevo grupo de iniciadores o asígnalo a un grupo de iniciadores existente.
++
+** *Crear un nuevo grupo iniciador*: Selecciona esta opción para crear un nuevo grupo iniciador para el clon del dispositivo de bloque. Introduce los siguientes detalles:
++
+... *Sistema operativo del host*: Selecciona el tipo de sistema operativo del host.
+... *Nombre del grupo iniciador*: Ingresa un nombre de igroup.
+... *Iniciadores de host*: Ingrese uno o más iniciadores de host. Estos iniciadores deben seguir el formato calificado iSCSI (IQN).
+
+
+** *Asignar a un grupo iniciador existente*: Selecciona esta opción para asignar el clon del dispositivo de bloque a un grupo de iniciadores existente. Selecciona uno o varios grupos de iniciadores a los que asignar el dispositivo de bloque.
+
+
+. Selecciona *Clone* para crear el clon del dispositivo de bloque.
 
 
 
