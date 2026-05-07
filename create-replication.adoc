@@ -67,6 +67,7 @@ Replica datos entre dos sistemas de archivos FSx for ONTAP, entre un sistema ONT
 Revisa estos requisitos antes de empezar.
 
 * Asegúrate de que hay un sistema de archivos FSx para ONTAP disponible para usar como destino en la relación de replicación.
+* Asegúrate de abrir los puertos TCP 11105 y 11105 para permitir la transferencia de datos segura y la gestión entre sistemas de almacenamiento.
 * El sistema de ficheros FSx for ONTAP que uses para la relación de replicación debe tener un enlace asociado. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelve a esta operación.
 * Para la replicación desde un sistema ONTAP local a un sistema de archivos FSx for ONTAP, asegúrate de haber detectado el sistema ONTAP local.
 * La replicación no es compatible con volúmenes en un estado distinto de disponible, creado o mal configurado, y cuando la versión de ONTAP no es compatible.
@@ -218,7 +219,12 @@ Después de crear la relación de replicación para un caso de uso de migración
 Ten en cuenta lo siguiente al planificar la operación de transición para los casos de uso de migración.
 
 * *Soporte de la versión de replicación*: los sistemas de almacenamiento de origen y destino deben tener la misma versión principal de ONTAP. Por ejemplo, si el sistema de origen ejecuta ONTAP versión 9.18.1, entonces el sistema de destino también debe ejecutar una versión 9.18.1.
-* *Parámetros de configuración de la máquina virtual de almacenamiento*: La operación de transición no migra todos los parámetros de configuración de la VM de almacenamiento a la VM de almacenamiento de destino. Por ejemplo, iSCSI, MTU de dominio de difusión y los ajustes de DNS no se migran. Actualiza estos parámetros manualmente en la VM de almacenamiento de destino después de la transición. Para más detalles, consulta la sección <<Actualiza los parámetros de configuración después de la transición,Actualiza los parámetros de configuración después de la transición>>.
+* *Ajustes de configuración de la máquina virtual de almacenamiento*:
++
+** La operación de transición no migra todos los ajustes de configuración de la VM de almacenamiento a la VM de almacenamiento de destino. Por ejemplo, los ajustes de iSCSI, MTU de dominio de difusión y DNS no migran. Actualiza estos ajustes manualmente en la VM de almacenamiento de destino después de la transición. Para más detalles, consulta la sección <<Actualiza los parámetros de configuración después de la transición,Actualiza los parámetros de configuración después de la transición>>.
+** Si tu máquina virtual de almacenamiento utiliza autenticación de túnel de dominio, configura y activa un túnel de dominio en el sistema de archivos de destino antes de iniciar la migración.
+
+
 * *Clones*: Los clones se migran como volúmenes individuales y, por tanto, consumirán más espacio en el sistema de archivos FSx para ONTAP de destino. Considera eliminar los clones antes de la transición para evitar un aumento de capacidad en el destino.
 * *Volúmenes de caché*: Para ONTAP FlexCache 9.17.x o versiones inferiores. Las máquinas virtuales de almacenamiento de origen que contienen volúmenes de caché no son compatibles con la transición. Elimina la relación de ONTAP FlexCache antes de la transición para evitar fallos en la migración.
 * *Puntos de acceso S3 de AWS*: La replicación de transición para casos de uso de migración no es compatible con volúmenes con puntos de acceso S3. Elimina los puntos de acceso S3 del volumen de origen para evitar fallos en la migración.
