@@ -26,7 +26,7 @@ Considere lo siguiente antes de comenzar:
 * Tenga en cuenta que los volúmenes que forman parte de una configuración en cascada pueden tardar más en resincronizarse.
 * Si el volumen de origen de la relación es un volumen de protección de datos y el objetivo de otra relación, no se admite revertir la relación de replicación.
 * Se admite una réplica de un volumen de protección de datos (o un segundo salto). No se considera práctica recomendada crear una segunda réplica de un volumen de protección de datos (o un tercer salto).
-* Asegúrate de abrir los puertos TCP 11104 y 11105 para permitir la transferencia de datos segura y la gestión entre sistemas de almacenamiento.
+* Abre los puertos TCP 11104 y 11105 para la transferencia de datos segura y la gestión entre sistemas de almacenamiento. ICMP es opcional, pero puede ayudar con las comprobaciones de red y la resolución de problemas.
 
 
 .Pasos
