@@ -76,7 +76,7 @@ Habilite el acceso al directorio de instantáneas para brindarles a los usuarios
 
 Tiene la opción de restaurar datos de una instantánea a un volumen existente o a un volumen nuevo.
 
-link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_snapshot-mgmt/restore-volume-from-snapshot.html["Restaurar un volumen a partir de una copia de Snapshot"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapshot.html["Restaurar un volumen a partir de una copia de Snapshot"]
 
 
 

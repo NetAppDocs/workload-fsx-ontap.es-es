@@ -77,4 +77,4 @@ Ahora puede crear recursos compartidos SMB/CIFS que apunten a directorios dentro
 
 Para los volúmenes de protección de datos, el flujo de creación de un recurso compartido SMB/CIFS ahora incluye la creación de una ruta de unión al volumen para fines de montaje.
 
-link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_grogu-5684-wa-dismiss/manage-cifs-share.html#create-a-cifs-share-for-a-volume["Cree un recurso compartido CIFS para un volumen"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cifs-share.html#create-a-cifs-share-for-a-volume["Cree un recurso compartido CIFS para un volumen"]

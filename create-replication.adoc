@@ -29,7 +29,7 @@ Si replicas un volumen de origen con archivos inmutables, el volumen de destino 
 
 [NOTE]
 ====
-Puede replicar un volumen de origen (lectura/escritura) o un volumen de protección de datos (DP). Se admite la replicación en cascada, pero no un tercer salto. Más información sobre link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["replicación en cascada"^].
+Puedes replicar un volumen de origen (lectura/escritura) o un volumen de protección de datos (DP). Se admite la replicación en cascada, pero no un tercer salto. Más información sobre link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html["replicación en cascada"].
 
 ====
 
