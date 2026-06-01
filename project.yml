@@ -75,10 +75,8 @@ sidebar:
           url: "/create-backup.html"
         - title: Restaurar un volumen desde un backup
           url: "/restore-from-backup.html"
-      - title: Utilizar replicación
-        entries:
-        - title: Replicar datos
-          url: "/create-replication.html"
+      - title: Replicar datos
+        url: "/create-replication.html"
       - title: Proteger los datos con Protección autónoma frente al ransomware
         url: "/ransomware-protection.html"
       - title: Clonar un volumen
@@ -105,6 +103,8 @@ sidebar:
         url: "/edit-volume-autogrow.html"
       - title: Ajustar la capacidad de volumen
         url: "/adjust-volume-capacity.html"
+      - title: Establecer umbrales de latencia de volumen
+        url: "/set-volume-latency-thresholds.html"
       - title: Reequilibrar la capacidad de volumen
         url: "/rebalance-volume.html"
       - title: Gestionar archivos inmutables
@@ -187,21 +187,10 @@ sidebar:
         entries:
         - title: Replique un volumen de protección de datos
           url: "/cascade-replication.html"
-        - title: Invierta una relación de replicación
-          url: "/reverse-replication.html"
-        - title: Cambie la programación de replicación de un volumen de origen
-          url: "/change-replication-schedule.html"
-        - title: Limite la tasa de transferencia máxima de una relación de replicación
-          url: "/limit-transfer-rate.html"
-        - title: Actualización manual de datos de instantáneas en una relación de
-            replicación
-          url: "/update-snapshot-replication.html"
-        - title: Pausa y reanuda una relación de replicación
-          url: "/pause-resume-replication.html"
-        - title: Detener una relación de replicación
-          url: "/stop-replication.html"
-        - title: Eliminar una relación de replicación
-          url: "/delete-replication.html"
+        - title: Haz un seguimiento de los retrasos en la replicación
+          url: "/track-replication-delays.html"
+        - title: Gestiona las relaciones de replicación
+          url: "/manage-replication.html"
     - title: Administración del rendimiento
       entries:
       - title: Aprovisione IOPS para un sistema de archivos

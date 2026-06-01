@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: track-replication-delays.html 
+keywords: replication, track replication, replication lag, replication delay, delay, monitor replication, replication threshold, lag notification 
+summary: Activa el seguimiento para monitorear los retrasos de todas las relaciones de replicación de tu cuenta. 
+---
+= Haz un seguimiento de los retrasos en la replicación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Activa el seguimiento para supervisar los retrasos de todas las relaciones de replicación de tu cuenta. Workload Factory supervisa la latencia de replicación mediante umbrales. Por defecto, establecemos un umbral del 150% del intervalo de replicación para permitir un tiempo de transferencia normal y evitar alertas positivas falsas. Puedes personalizar el umbral según tu RPO. Puedes recibir notificaciones cuando la latencia supere el umbral.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos a actualizar y luego seleccione *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Relaciones de replicación*.
+. Selecciona *Habilitar seguimiento*.
+. En el cuadro de diálogo Activar historial de retraso de replicación, selecciona *Activar*.
+. De nuevo en el mosaico Historial de retrasos de replicación, selecciona *Personalizar umbral* para establecer el umbral que prefieras.
+. En el cuadro de diálogo Personalizar umbral de tiempo de retardo, introduce el umbral en horas y minutos.
+. Opcionalmente, selecciona *Habilitar notificaciones de tiempo de retardo* para recibir notificaciones cuando los retardos de replicación superen el umbral.
+. Seleccione *aplicar*.
+
+
+.Información relacionada
+link:manage-replication.html["Gestiona las relaciones de replicación"^]

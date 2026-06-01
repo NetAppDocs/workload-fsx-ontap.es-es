@@ -7,7 +7,13 @@
 ** Inteligencia artificial (IA) y aprendizaje automático (ML): replica tus datos ONTAP locales a FSx for ONTAP y crea puntos de acceso S3 para apoyar el entrenamiento de IA y ML en la nube
 ** Migración: Transfiere tus datos al sistema de archivos FSx para ONTAP de destino
 +
-*Replicar configuración de VM de almacenamiento*: Opcionalmente, selecciona replicar los datos y los ajustes de configuración de la VM de almacenamiento para una sola VM de almacenamiento. Al migrar datos y ajustes de configuración al mismo tiempo, asegúrate de que la última replicación del volumen se haya completado en las últimas 24 horas. Todos los volúmenes en la misma VM de almacenamiento deben estar seleccionados para usar esta función. La política de niveles para todos los volúmenes se establece por defecto en la política de niveles del volumen de origen, lo cual se recomienda para casos de migración.
+*Replicar configuración de VM de almacenamiento*: Opcionalmente, selecciona para replicar los datos y los ajustes de configuración de una sola VM de almacenamiento. Al migrar datos y ajustes, todos los volúmenes deben finalizar la replicación en las últimas 24 horas y luego hacer la transición al mismo tiempo.
+
++
+La política de organización en niveles para todos los volúmenes será, por defecto, la política de organización en niveles del volumen de origen, lo cual se recomienda para casos de uso de migración.
+
++
+Durante la migración, los clientes acceden a los datos del sistema de ficheros ONTAP de origen. Después de la transición, los volúmenes están disponibles a través del FSx para ONTAP de destino mediante las direcciones IP del sistema de ficheros. Actualiza cualquier cliente o recurso que todavía use la dirección IP antigua.
 
 ** Recuperación ante desastres en caliente: Garantiza una alta disponibilidad y una recuperación ante desastres rápida para cargas de trabajo críticas
 ** Recuperación ante desastres en frío o de archivado:
@@ -31,7 +37,10 @@ Para todos los casos de uso, si habilita Snapshot para la retención a largo pla
 
 
 . *FSX para el sistema de archivos ONTAP*: Seleccione credenciales, región y FSX para el nombre del sistema de archivos ONTAP para el sistema de archivos FSX para ONTAP de destino.
-. *Nombre de VM de almacenamiento*: Seleccione la VM de almacenamiento en el menú desplegable. La máquina virtual de almacenamiento que seleccione es el destino de todos los volúmenes seleccionados en esta relación de replicación.
+. *Nombre de VM de almacenamiento*: selecciona la VM de almacenamiento. La VM de almacenamiento que selecciones será el destino de todos los volúmenes seleccionados en esta relación de replicación.
++
+Cuando los nombres de las máquinas virtuales de almacenamiento de origen y destino son idénticos, creamos un alias de sistema de archivos para los nombres de las máquinas virtuales de almacenamiento de destino para evitar conflictos de peering.
+
 . *Nombre del volumen*: El nombre del volumen de destino se genera automáticamente con el siguiente formato `{OriginalVolumeName}_copy`. Se puede usar el nombre de volumen generado automáticamente o introducir otro nombre de volumen.
 . *Política de niveles*: Seleccione la política de organización en niveles para los datos almacenados en el volumen de destino. La política de organización en niveles se establece de forma predeterminada en la política de organización en niveles recomendada para el caso de uso seleccionado.
 +
@@ -44,6 +53,10 @@ Si seleccionó el caso de uso de migración, Workload Factory selecciona automá
 +
 Sin un límite, el rendimiento de la red y de las aplicaciones puede disminuir. También recomendamos una tasa de transferencia ilimitada para los sistemas de archivos de FSx for ONTAP para cargas de trabajo cruciales; por ejemplo, aquellas que se usan principalmente para la recuperación ante desastres. . En Configuración de replicación, proporcione lo siguiente:
 
+. *Inicializar relación de replicación*: Elige si quieres inicializar la relación de replicación inmediatamente después de crear la relación de replicación o más tarde. Ten en cuenta que la inicialización puede llevar mucho tiempo y podrías querer ejecutar la transferencia completa en horas de poca actividad.
++
+Para inicializar más tarde manualmente, consulta las instrucciones en <<Paso 2: inicializa la relación de replicación,Paso 2: inicializa la relación de replicación>>.
+
 . *Intervalo de replicación*: Seleccione la frecuencia con la que se transfieren las instantáneas del volumen de origen al volumen de destino.
 . *Retención a largo plazo*: Opcionalmente, habilita instantáneas para la retención a largo plazo. La retención a largo plazo permite que los servicios empresariales continúen funcionando incluso si se produce un fallo completo del sitio, compatible con la conmutación por error de forma transparente mediante una copia secundaria.
 +
@@ -54,10 +67,10 @@ Si habilita la retención a largo plazo, seleccione una política existente o cr
 
 +
 
-NOTE: Las etiquetas de origen y destino coincidentes son necesarias para la retención a largo plazo. Si lo desea, la fábrica de carga de trabajo puede crear etiquetas que faltan.
+NOTE: Las etiquetas de origen y destino coincidentes son necesarias para la conservación a largo plazo. Si lo deseas, Workload Factory puede crear las etiquetas que falten por ti.
 
 +
-** *Elige una política existente*: Selecciona una política existente en el menú desplegable.
+** *Elige una política existente*: selecciona una política existente.
 ** *Crear una nueva política*: ingrese un *nombre de política*.
 
 

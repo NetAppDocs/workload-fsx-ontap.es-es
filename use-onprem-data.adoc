@@ -59,7 +59,12 @@ image:screenshot-on-prem-connectivity.png["Captura de pantalla que muestra cómo
 Si no ha creado un enlace, siga las instrucciones y vuelva a esta operación y seleccione el enlace.
 
 .. *Dirección IP del clúster*: Proporcione la dirección IP para que el clúster de ONTAP en las instalaciones se replique.
-.. *Credenciales de ONTAP*: Introduzca las credenciales de ONTAP para el clúster de ONTAP local. Asegúrese de que el usuario tiene los permisos necesarios.
+.. *Credenciales de ONTAP*: Proporciona lo siguiente:
++
+*** GovCloud accounts: Introduce ARN con las credenciales ONTAP.
+*** Todas las demás cuentas: Introduce las credenciales de ONTAP para el clúster ONTAP local. Asegúrate de que el usuario tiene los permisos necesarios.
+
+
 
 
 . Selecciona *Discover* para iniciar el proceso de detección.

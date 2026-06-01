@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: set-volume-latency-thresholds.html 
+keywords: latency, latency thresholds, alerts, volume latency, read latency, write latency 
+summary: Establece umbrales de latencia para que los volúmenes reciban alertas cuando la latencia de lectura/escritura supere los valores especificados. 
+---
+= Establece umbrales de latencia de volumen en NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Establece umbrales de latencia para que los volúmenes reciban alertas cuando la latencia de lectura/escritura supere los valores especificados.
+
+.Acerca de esta tarea
+Puedes configurar umbrales de latencia por volumen para supervisar el rendimiento y recibir alertas cuando los valores de latencia superen tus límites definidos. Workload Factory supervisa la latencia tanto de lectura como de escritura y genera alertas cuando se supera cualquiera de los dos umbrales.
+
+Cuando estableces umbrales de latencia, Workload Factory supervisa lo siguiente:
+
+* *Latencia de lectura*: Activa una alerta cuando las operaciones de lectura superan el umbral especificado en milisegundos.
+* *Latencia de escritura*: Activa una alerta cuando las operaciones de escritura superan el umbral especificado en milisegundos.
+
+
+La monitorización de la latencia utiliza los siguientes parámetros por defecto:
+
+* *Umbral de IOPS*: 100 IOPS (lectura/escritura)
+* *Intervalo de tiempo*: 10 minutos
+
+
+Se genera una alerta cuando se supera el umbral de latencia y se alcanza el umbral de IOPS en el intervalo de tiempo especificado.
+
+
+NOTE: Puedes ver los eventos de latencia y recibir alertas sin una conexión de enlace. Sin embargo, para analizar los eventos y recibir información y recomendaciones basadas en IA, debes link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["conectarse al sistema de archivos mediante un enlace"].
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx para ONTAP*, selecciona el menú de acciones del sistema de archivos con el volumen que quieres configurar y luego selecciona *Manage*.
+. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
+. En la pestaña Volúmenes, selecciona el menú de acciones del volumen para el que quieres establecer umbrales de latencia.
+. Selecciona *Acciones de alerta* y luego *Establecer umbral de latencia*.
+. En el cuadro de diálogo Establecer umbral de latencia, configura lo siguiente:
++
+.. *Latencia de lectura*: Introduce el valor umbral en milisegundos (ms) para las operaciones de lectura.
+.. *Latencia de escritura*: Ingresa el valor umbral en milisegundos (ms) para las operaciones de escritura.
+
+
+. Selecciona *Guardar* para aplicar los umbrales de latencia.
+
+
+.Resultado
+Workload Factory supervisa el volumen y genera alertas cuando la latencia de lectura o escritura supera los umbrales configurados. Puedes ver los eventos de latencia desde el link:analyze-events.html["Pantalla de análisis"].
+
+.Información relacionada
+* link:analyze-events.html["Analiza los eventos de FSx for ONTAP en NetApp Workload Factory"]
+* link:adjust-volume-capacity.html["Ajustar la capacidad de volumen en Workload Factory"]
+
