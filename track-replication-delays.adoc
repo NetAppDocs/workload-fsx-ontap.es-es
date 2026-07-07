@@ -11,7 +11,7 @@ summary: Activa el seguimiento para monitorear los retrasos de todas las relacio
 
 
 [role="lead"]
-Activa el seguimiento para supervisar los retrasos de todas las relaciones de replicación de tu cuenta. Workload Factory supervisa la latencia de replicación mediante umbrales. Por defecto, establecemos un umbral del 150% del intervalo de replicación para permitir un tiempo de transferencia normal y evitar alertas positivas falsas. Puedes personalizar el umbral según tu RPO. Puedes recibir notificaciones cuando la latencia supere el umbral.
+Activa el seguimiento para supervisar los retrasos en la replicación en toda tu cuenta. Workload Factory te avisa cuando los retrasos superan un umbral establecido. De forma predeterminada, el umbral es del 150 % del intervalo de replicación, para tener en cuenta el tiempo normal de transferencia y reducir las falsas alarmas. Puedes ajustar el umbral para que se adapte a tu RPO y recibir notificaciones cuando los retrasos lo superen. También puedes exportar los datos a un archivo CSV para analizarlos más a fondo.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -24,6 +24,18 @@ Activa el seguimiento para supervisar los retrasos de todas las relaciones de re
 . De nuevo en el mosaico Historial de retrasos de replicación, selecciona *Personalizar umbral* para establecer el umbral que prefieras.
 . En el cuadro de diálogo Personalizar umbral de tiempo de retardo, introduce el umbral en horas y minutos.
 . Opcionalmente, selecciona *Habilitar notificaciones de tiempo de retardo* para recibir notificaciones cuando los retardos de replicación superen el umbral.
++
+Las notificaciones llegan por correo electrónico e incluyen:
+
++
+** Sistema de archivos fuente
+** Volumen de origen
+** Sistema de archivos de destino
+** Volumen objetivo
+** Umbral de tiempo de retraso que se superó
+** Enlace a la relación de replicación
+
+
 . Seleccione *aplicar*.
 
 

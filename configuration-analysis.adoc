@@ -96,6 +96,10 @@ Las etiquetas de la política de instantáneas del volumen de origen y las etiqu
 +
 El umbral de capacidad de archivos debe aumentarse para evitar alcanzar el límite de capacidad del volumen. La baja capacidad de archivos (inodos) impide escribir datos adicionales en el volumen. Workload Factory recomienda mantenerse por debajo del 80% de uso de la capacidad de archivos disponible de forma continua. La capacidad de archivos disponible es necesaria para crear nuevos archivos en el volumen.
 
+* *Conecta el host al nodo de conmutación por error*
++
+Workload Factory recomienda conectar los hosts al nodo de conmutación por error para mantener la conectividad y evitar interrupciones durante los procesos de conmutación por error.
+
 
 
 
@@ -175,6 +179,18 @@ Un nivel de capacidad SSD infrautilizado puede estar incurriendo en costes innec
 * *Volúmenes NAS inactivos*
 +
 El análisis de configuración identifica los volúmenes NAS que no se utilizan activamente y recomienda eliminarlos o archivarlos para reducir costes.
+
+
+
+
+
+=== Eficiencia del rendimiento
+
+La eficiencia en el rendimiento se centra en usar los recursos de TI y de computación de manera eficiente.
+
+* *Conectar el host al nodo preferido*
++
+En un modelo de implementación de FSx para ONTAP de alta disponibilidad, los hosts deben conectarse directamente al nodo que sirve el dispositivo de bloques para garantizar un acceso directo y un rendimiento óptimo.
 
 
 

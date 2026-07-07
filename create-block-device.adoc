@@ -11,7 +11,7 @@ summary: 'Cree dispositivos de bloque para respaldar los requisitos de su aplica
 
 
 [role="lead"]
-Cree dispositivos de bloque para respaldar los requisitos de su aplicación de línea de negocio (LOB).
+Crea dispositivos de bloque para satisfacer los requisitos de tus aplicaciones de línea de negocio (LOB). Puedes crear dispositivos de bloque en un volumen ya existente, crear un nuevo volumen para el nuevo dispositivo de bloque o crear un nuevo volumen a partir de una instantánea para el nuevo dispositivo de bloque.
 
 .Acerca de esta tarea
 Solo los volúmenes FlexVol son compatibles con dispositivos de bloque en NetApp Workload Factory. Puede crear dispositivos de bloque utilizando el protocolo iSCSI.
@@ -34,6 +34,7 @@ El tamaño del bloque debe ser menor que el tamaño del FlexVol volume disponibl
 +
 *** Cree un nuevo volumen e ingrese el nombre del volumen.
 *** Seleccione un volumen existente.
+*** Crear a partir de una instantánea de volumen. Selecciona el nombre del volumen de origen y el nombre de la instantánea. Solo están disponibles los volúmenes sin dispositivos de bloques.
 
 
 .. *Nombre del agregado*: Selecciona el agregado para alojar el nuevo volumen.
