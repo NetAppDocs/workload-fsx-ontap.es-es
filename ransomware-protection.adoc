@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: ransomware-protection.html 
 keywords: ransomware, arp, autonomous protection, protect, security, detect, detection, restore, recover, threat, attack, suspect, anti-ransomware, entropy, abnormal volume activity, anti-ransomware, extension conformity, ransomware protection strategy 
-summary: 'NetApp Autonomous Ransomware Protection with AI (ARP/AI) utiliza el análisis de la carga de trabajo en entornos NAS para detectar y advertir sobre actividad anormal que podría ser un ataque de ransomware.' 
+summary: 'NetApp Autonomous Ransomware Protection con IA (ARP/AI) utiliza el análisis de cargas de trabajo en entornos NAS y SAN para detectar y alertar sobre actividad anómala que podría ser un ataque de ransomware.' 
 ---
 = Proteja sus datos con la protección autónoma contra ransomware de NetApp con IA
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'NetApp Autonomous Ransomware Protection with AI (ARP/AI) utiliza el an
 
 
 [role="lead"]
-Proteja sus datos con NetApp Autonomous Ransomware Protection with AI (ARP/AI), una función que utiliza el análisis de la carga de trabajo en entornos NAS (NFS/SMB) para detectar y advertir sobre actividad anormal que podría ser un ataque de ransomware.  Cuando se sospecha de un ataque, ARP/AI también crea instantáneas nuevas e inmutables desde las que puede restaurar sus datos.
+Protege tus datos con NetApp Autonomous Ransomware Protection with AI (ARP/AI). Supervisa la actividad en entornos NAS (NFS/SMB) y SAN para detectar comportamientos inusuales que puedan indicar un ataque de ransomware. Si se detecta una amenaza, ARP/AI crea automáticamente nuevas instantáneas inmutables para que puedas restaurar tus datos.
 
 .Acerca de esta tarea
 Utilice ARP/AI para protegerse contra ataques de denegación de servicio donde el atacante retiene los datos hasta que se paga un rescate.  ARP/AI ofrece detección de ransomware en tiempo real basada en:
@@ -19,9 +19,9 @@ Utilice ARP/AI para protegerse contra ataques de denegación de servicio donde e
 * Identificación de los datos entrantes como texto cifrado o sin formato.
 * Análisis que detectan:
 +
-** **Entropía**: Una evaluación de la aleatoriedad de los datos en un archivo
-** **Tipos de extensión de archivo**: Una extensión que no se ajusta al tipo de extensión normal
-** **IOPS de archivo**: Un aumento en la actividad de volumen anormal con cifrado de datos
+** **Entropía**: una evaluación del carácter aleatorio de los datos de un archivo (utilizada tanto en entornos NAS como SAN)
+** **Tipos de extensión de archivo**: una extensión que no se ajusta al tipo de extensión habitual (utilizada únicamente en entornos NAS)
+** **IOPS de archivos**: un aumento repentino de la actividad anómala en los volúmenes con cifrado de datos (utilizado únicamente en entornos NAS)
 
 
 
@@ -30,25 +30,26 @@ ARP/AI puede detectar la propagación de la mayoría de los ataques de ransomwar
 
 La función ARP/AI se actualiza automáticamente según la versión de ONTAP que ejecuta Amazon FSx for NetApp ONTAP, por lo que no es necesario realizar actualizaciones manuales.
 
-Modos de aprendizaje y activos:: ARP/AI opera primero en _modo de aprendizaje_ y luego cambia automáticamente al _modo activo_.
+Modos de aprendizaje y activos:: El comportamiento de ARP/AI depende del protocolo y del tipo de volumen:
 +
 --
-* *Modo de aprendizaje*: cuando habilita ARP/AI, se ejecuta en _modo de aprendizaje_. En el modo de aprendizaje, el sistema de archivos FSx para ONTAP desarrolla un perfil de alerta basado en las áreas analíticas: entropía, tipos de extensión de archivo e IOPS de archivo. Después de que el sistema de archivos ejecuta ARP/AI en modo de aprendizaje durante el tiempo suficiente para evaluar las características de la carga de trabajo, Workload Factory cambia automáticamente a ARP/AI en _modo activo_ y comienza a proteger sus datos.
-* *Modo activo*: después de que ARP/AI cambia al _modo activo_, FSx for ONTAP crea instantáneas de ARP/AI para proteger los datos si se detecta una amenaza.
-+
-En el modo activo, si una extensión de archivo se marca como anormal, debe evaluar la alerta. Puede actuar en la alerta para proteger sus datos o puede marcar la alerta como un falso positivo. Al marcar una alerta como falso positivo, se actualiza el perfil de alerta. Por ejemplo, si la alerta se activa con una nueva extensión de archivo y marca la alerta como un falso positivo, no recibirá una alerta la próxima vez que se observe la extensión de archivo.
-
-+
-Los volúmenes FlexVol que contienen un dispositivo de bloque inician ARP/AI en modo activo.
-
+* *Volúmenes NAS (NFS/SMB)*: ARP/AI empieza a funcionar en cuanto lo habilitas. Utiliza un modelo de IA preentrenado para detectar amenazas de ransomware de inmediato.
+* *Volúmenes SAN (a partir de ONTAP 9.17.1)*: ARP/AI ofrece protección inmediata, incluso durante el primer periodo de evaluación. Durante este periodo de entre 2 y 4 semanas, el sistema aprende cuál es la actividad normal de cifrado y establece los umbrales de alerta. Al mismo tiempo, sigue supervisando tus datos, detectando amenazas y enviando alertas.
+* *Modo activo*: Cuando el modo activo está activado, FSx for ONTAP crea instantáneas ARP/AI para ayudar a proteger tus datos cuando detecta una posible amenaza.
 
 
 --
+
+
+Si el sistema señala una extensión de archivo como inusual, revisa la alerta. Puedes responder a la alerta para proteger tus datos o marcarla como falso positivo si la actividad es esperada.
+
+Cuando marcas una alerta como falso positivo, el sistema actualiza su configuración de alertas. Por ejemplo, si una nueva extensión de archivo activa una alerta y la marcas como falso positivo, no recibirás una alerta la próxima vez que el sistema vea esa extensión de archivo.
+
 Configuraciones no admitidas:: Las siguientes configuraciones no admiten el uso de ARP/AI.
 +
 --
-* Volúmenes iSCSI
 * Volúmenes de NVMe
+* Volúmenes iSCSI con versiones de ONTAP anteriores a 9.17.1
 
 
 --
@@ -58,9 +59,9 @@ Configuraciones no admitidas:: Las siguientes configuraciones no admiten el uso 
 
 == Habilitar ARP/AI para un sistema de archivos o un volumen
 
-Habilitar ARP/AI para un sistema de archivos agrega protección para todos los volúmenes NAS existentes y NAS (NFS/SMB) recientemente creados de manera automática.  También puede habilitar ARP/AI para volúmenes individuales.
+Al activar ARP/AI para un sistema de archivos, se protegen automáticamente todos los volúmenes NAS actuales y nuevos (NFS/SMB). A partir de ONTAP 9.17.1, también es compatible con volúmenes SAN (iSCSI). También puedes activar ARP/AI para volúmenes específicos.
 
-Después de habilitar ARP/AI, si ocurre un ataque y usted identifica que el ataque es real, Workload Factory configura automáticamente una política de instantáneas que toma hasta seis instantáneas cada cuatro horas. Cada instantánea queda bloqueada durante 2 a 5 días.
+Si ARP/AI detecta un ataque real tras su activación, Workload Factory crea automáticamente una política de instantáneas. Esta política puede crear hasta seis instantáneas cada cuatro horas. Cada instantánea permanece bloqueada entre 2 y 5 días.
 
 .Antes de empezar
 Para habilitar ARP/AI para un sistema de archivos o un volumen, debe asociar un enlace. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"] .  Después de asociar el enlace, vuelva a esta operación.
@@ -130,11 +131,13 @@ Determina si un ataque es una falsa alarma o un incidente de ransomware genuino.
 
 == Recupere los datos después de un ataque de ransomware
 
-Cuando se sospecha de un ataque, el sistema toma una instantánea del volumen en ese momento y bloquea esa copia.  Si el ataque se confirma más tarde, se pueden restaurar los archivos afectados o el volumen completo utilizando la instantánea ARP/AI.
+Cuando el sistema detecta un posible ataque, crea y bloquea una instantánea del volumen en ese momento.
 
-Las instantáneas bloqueadas no se pueden eliminar hasta que finalice el período de retención. Sin embargo, si más tarde decide marcar el ataque como un falso positivo, la copia bloqueada se eliminará.
+Si posteriormente se confirma el ataque, puedes restaurar los archivos afectados o todo el volumen desde la instantánea.
 
-Con el conocimiento de los ficheros afectados y el tiempo de ataque, es posible recuperar de forma selectiva los ficheros afectados de varias instantáneas, en lugar de simplemente revertir todo el volumen a una de las instantáneas.
+Las instantáneas bloqueadas no se pueden eliminar hasta que expire el periodo de retención. Si después se identifica que el ataque fue una falsa alarma, la instantánea bloqueada se elimina.
+
+Dado que el sistema identifica los archivos afectados y el momento del ataque, puedes recuperar únicamente los archivos afectados a partir de las instantáneas disponibles en lugar de restaurar todo el volumen.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
