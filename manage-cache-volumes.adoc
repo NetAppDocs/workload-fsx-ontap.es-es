@@ -23,6 +23,7 @@ Puede administrar los volúmenes de caché que están asociados con las relacion
 
 
 
+[[edit-the-cache-volume-name]]
 == Edita el nombre del volumen de caché
 
 Puede cambiar el nombre de un volumen de caché existente en cualquier momento.
@@ -39,6 +40,7 @@ Puede cambiar el nombre de un volumen de caché existente en cualquier momento.
 
 
 
+[[adjust-the-capacity-of-a-cache-volume]]
 == Ajustar la capacidad de un volumen de caché
 
 Puede ajustar la capacidad de un volumen de caché existente en cualquier momento.
@@ -55,6 +57,7 @@ Puede ajustar la capacidad de un volumen de caché existente en cualquier moment
 
 
 
+[[edit-the-cache-volume-export-policy]]
 == Edita la política de exportación del volumen de caché.
 
 Cambie la ruta de montaje o la política de exportación asignada a un volumen de caché existente.
@@ -72,6 +75,7 @@ Cambie la ruta de montaje o la política de exportación asignada a un volumen d
 
 
 
+[[change-the-caching-method-for-a-cache-volume]]
 == Cambie el método de almacenamiento en caché para un volumen de caché.
 
 Puede cambiar el modo en que funciona el caché de un volumen de caché existente para escribir alternativamente o escribir de manera diferida.
@@ -90,6 +94,7 @@ Obtenga más información sobrelink:https://docs.aws.amazon.com/fsx/latest/ONTAP
 
 
 
+[[prepopulate-a-cache-volume]]
 == Precargar un volumen de caché
 
 Llene el volumen de caché con datos del volumen de origen antes de usarlo para que los datos almacenados en caché estén disponibles más rápido.
@@ -106,6 +111,7 @@ Llene el volumen de caché con datos del volumen de origen antes de usarlo para 
 
 
 
+[[delete-a-cache-volume]]
 == Eliminar un volumen de caché
 
 Cuando elimina un volumen de caché, elimina su relación de caché.  Los datos almacenados en caché ya no están disponibles.

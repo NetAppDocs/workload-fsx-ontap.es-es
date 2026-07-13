@@ -4,6 +4,7 @@
 
 
 
+[[volume-autogrow-enhancement]]
 === Mejora del crecimiento automático del volumen
 
 Ahora puede configurar el tamaño de crecimiento automático de sus volúmenes para que el tamaño del volumen pueda crecer más allá del tamaño previsto para las necesidades comerciales y los requisitos de la aplicación.
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html[
 
 
 
+[[well-architected-analysis-update]]
 === Actualización de análisis bien diseñada
 
 Workload Factory ahora analiza sus sistemas de archivos de FSx for ONTAP para comprobar si se están utilizando las eficiencias de almacenamiento, como la compactación, compresión y deduplicación de datos. Las eficiencias de almacenamiento miden la eficacia con la que los sistemas de archivos utilizan el espacio disponible.
@@ -20,12 +22,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[storage-dashboard-enhancements]]
 === Mejoras en el panel de almacenamiento
 
 A partir de hoy, cuando abra la carga de trabajo de Almacenamiento desde la consola de Workload Factory, verá el *Panel de control*.  El panel de control de nuevo diseño proporciona una vista integral de sus sistemas FSx para ONTAP , incluida la cantidad de sistemas de archivos, la capacidad total de SSD, la descripción general del estado bien diseñado, la descripción general de la protección de datos y el estado de la relación de replicación.
 
 
 
+[[volumes-tab-enhancements]]
 === Mejoras en la pestaña Volúmenes
 
 La carga de trabajo de almacenamiento realizó mejoras en la pestaña Volúmenes dentro de un sistema de archivos FSx para ONTAP en la consola Workload Factory.  Las mejoras incluyen:
@@ -36,6 +40,7 @@ La carga de trabajo de almacenamiento realizó mejoras en la pestaña Volúmenes
 
 
 
+[[storage-efficiencies-update-for-volume-creation]]
 === Actualización de la eficiencia del almacenamiento para la creación de volúmenes
 
 Al crear un nuevo volumen, las eficiencias de almacenamiento, incluida la compactación, compresión y deduplicación de datos, se habilitan de forma predeterminada.

@@ -15,6 +15,7 @@ Configura la infraestructura de la tabla Journal para capturar y almacenar regis
 
 
 
+[[about-this-task]]
 == Acerca de esta tarea
 
 La función de tabla Journal captura eventos del plano de datos de S3 (PutObject, GetObject, DeleteObject, etc.) para los puntos de acceso a S3 monitorizados de FSx para ONTAP. Utiliza una cadena de servicios de AWS implementados en tu cuenta de AWS. Cuando configuras la infraestructura correctamente, se conecta al punto de acceso al volumen de FSx para ONTAP y establece la canalización que captura los eventos de auditoría de acceso de usuarios y operaciones de objetos en la tabla Journal.
@@ -54,6 +55,7 @@ El {uuid} es un identificador aleatorio de 8 caracteres generado al crear la pla
 
 
 
+[[before-you-begin]]
 == Antes de empezar
 
 Para activar la función de tabla de registro en diario, completa estos pasos:
@@ -172,6 +174,7 @@ Para activar la función de tabla de registro en diario, completa estos pasos:
 
 
 
+[[set-up-the-journal-table-infrastructure]]
 == Configura la infraestructura de la tabla de registro en diario
 
 Configura la infraestructura para capturar eventos de servicio de AWS desde el punto de acceso S3 en la tabla de diario.
@@ -205,6 +208,7 @@ Si alguno de los pasos falla, <<Soluciona problemas de la configuración de la i
 
 
 
+[[troubleshoot-the-infrastructure-setup-for-the-journal-table]]
 == Soluciona problemas de la configuración de la infraestructura para la tabla de registro en diario
 
 Puedes usar la consola de administración de AWS o la CLI de AWS para solucionar fallos durante la implementación de la pila CloudFormation y los recursos que crea.
@@ -213,6 +217,7 @@ Después de resolver el problema, envía de nuevo el ARN de CloudTrail para rein
 
 
 
+[[common-cloudformation-deployment-failures]]
 === Fallos habituales en la implementación de CloudFormation
 
 
@@ -278,6 +283,7 @@ aws iam delete-role \
 ----
 
 
+[[failures-after-journal-table-enablement]]
 === Fallos tras la habilitación de la tabla Journal
 
 Después de enviar el ARN de CloudTrail, Workload Factory valida toda la canalización de recursos enviando un _seed_, o evento de prueba, automáticamente. Si tiene éxito, el evento seed llega a la tabla S3 Tables. La prueba dura aproximadamente 10 minutos.
@@ -348,12 +354,14 @@ Una vez resuelto el problema, vuelve a la consola Workload Factory. Intenta de n
 
 
 
+[[permissions-reference-for-the-journal-table-setup]]
 == Referencia de permisos para la configuración de la tabla de registro en diario
 
 La función de IAM que despliega la pila CloudFormation para habilitar la función de tabla Journal necesita los siguientes permisos. Consulta <<Antes de empezar,Antes de empezar>> para obtener una política JSON copiable con los permisos necesarios.
 
 
 
+[[stack-operations]]
 === Operaciones de pila
 
 [cols="1,1,1"]
@@ -371,6 +379,7 @@ La función de IAM que despliega la pila CloudFormation para habilitar la funci�
 |===
 
 
+[[cloudtrail]]
 === CloudTrail
 
 [cols="1,1,1"]
@@ -394,6 +403,7 @@ La función de IAM que despliega la pila CloudFormation para habilitar la funci�
 |===
 
 
+[[s3]]
 === S3
 
 [cols="1,1,1"]
@@ -411,6 +421,7 @@ La función de IAM que despliega la pila CloudFormation para habilitar la funci�
 |===
 
 
+[[iam]]
 === IAM
 
 [cols="1,1,1"]
@@ -434,6 +445,7 @@ La función de IAM que despliega la pila CloudFormation para habilitar la funci�
 |===
 
 
+[[cloudwatch-logs]]
 === Logs de CloudWatch
 
 [cols="1,1,1"]
@@ -463,6 +475,7 @@ La función de IAM que despliega la pila CloudFormation para habilitar la funci�
 |===
 
 
+[[observabilityadmin]]
 === ObservabilityAdmin
 
 [cols="1,1,1"]
@@ -483,6 +496,7 @@ La función de IAM que despliega la pila CloudFormation para habilitar la funci�
 |===
 
 
+[[s3-tables]]
 === Tablas S3
 
 [cols="1,1,1"]

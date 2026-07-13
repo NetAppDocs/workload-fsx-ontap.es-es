@@ -23,6 +23,7 @@ Comprobar la cantidad de máquinas virtuales de almacenamiento admitida por sist
 
 
 
+[[create-a-storage-vm]]
 == Cree una máquina virtual de almacenamiento
 
 Puede crear una máquina virtual de almacenamiento desde la consola de Workload Factory.  También puede utilizar las siguientes herramientas disponibles en Codebox: API REST, CloudFormation y Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Aprende a usar CodeBox para la automatización"^] .

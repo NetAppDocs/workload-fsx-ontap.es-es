@@ -4,12 +4,14 @@
 
 
 
+[[read-mode-support-for-storage-management]]
 === Compatibilidad con modo lectura para la gestión del almacenamiento
 
 El modo de lectura está disponible para la gestión de almacenamiento en Workload Factory.  El modo de lectura mejora la experiencia del modo básico al agregar permisos de solo lectura para que las plantillas de Infraestructura como código se llenen con sus variables específicas.  Las plantillas de infraestructura como código se pueden ejecutar directamente desde su cuenta de AWS sin proporcionar ningún permiso de modificación a Workload Factory.
 
 
 
+[[backup-before-volume-deletion-support]]
 === Realice backups antes de la eliminación de volúmenes
 
 Ahora puede realizar un backup de un volumen antes de eliminarlo. La copia de seguridad permanecerá en el sistema de archivos hasta que se elimine.

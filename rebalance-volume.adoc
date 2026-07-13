@@ -15,6 +15,7 @@ Verifique el equilibrio de la capacidad del volumen FlexVol o FlexGroup y reequi
 
 
 
+[[about-this-task]]
 == Acerca de esta tarea
 
 Se admite el reequilibrio de la capacidad de volumen para los volúmenes FlexVol y los volúmenes FlexGroup. El reequilibrio de un volumen redistribuye la capacidad cuando se desarrollan desequilibrios con el tiempo debido al aumento de nuevos archivos y archivos. Después de iniciar manualmente la operación de reequilibrio, seleccionamos los archivos y los movemos automáticamente y sin interrupciones. Las operaciones de transferencia de volúmenes consumen recursos del sistema de archivos.
@@ -40,6 +41,7 @@ NOTE: El reequilibrio no es compatible con volúmenes SAN como iSCSI y NVMe.
 
 
 
+[[check-the-balance-of-your-volumes]]
 == Comprueba el saldo de tus volúmenes
 
 Verifique el equilibrio de los volúmenes FlexVol o FlexGroup en un sistema de archivos FSx para ONTAP.
@@ -69,6 +71,7 @@ Cuando un volumen no está equilibrado, considere <<Reequilibrar la capacidad de
 
 
 
+[[rebalance-volume-capacity]]
 == Reequilibrar la capacidad de volumen
 
 Vuelva a equilibrar uno o varios volúmenes desequilibrados.
@@ -158,6 +161,7 @@ Los volúmenes de los miembros de FlexGroup se mueven uno a la vez durante el re
 ====
 
 
+[[stop-a-volume-rebalance-operation]]
 == Detener una operación de reequilibrio de volumen
 
 Detenga una operación de reequilibrio en cualquier momento; no es disruptiva. Detener la operación cancela los movimientos de volumen activos.

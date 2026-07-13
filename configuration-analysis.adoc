@@ -24,6 +24,7 @@ Estas son algunas funcionalidades clave:
 
 
 
+[[how-it-works]]
 == Cómo funciona
 
 Workload Factory analiza tus cargas de trabajo que se ejecutan diariamente en Amazon FSx for NetApp ONTAP file systems deployments. El análisis proporciona estado bien arquitectado, información y recomendaciones.
@@ -34,12 +35,14 @@ Puedes descartar el análisis de configuraciones que no se aplican a tus entorno
 
 
 
+[[why-it-matters]]
 == Por qué es importante
 
 Workload Factory aplica las mejores prácticas a grandes entornos de almacenamiento, bases de datos y VMware combinando la evaluación continua con recomendaciones y correcciones. Las correcciones automatizadas aplicadas en la consola de Workload Factory reducen los errores humanos, garantizan una gestión uniforme y preservan el rendimiento y la fiabilidad en todas tus infraestructuras de cargas de trabajo.
 
 
 
+[[analysis-requirements]]
 == Requisitos de análisis
 
 Para un análisis completo del sistema de archivos, debe hacer lo siguiente:
@@ -56,6 +59,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Ap
 
 
 
+[[best-practices-and-recommendations-for-storage-workloads]]
 == Mejores prácticas y recomendaciones para cargas de trabajo de almacenamiento
 
 Workload Factory evalúa las configuraciones de almacenamiento para proporcionar una visión en profundidad de las mejores prácticas de configuración de ONTAP y para la conformidad con el AWS Well-Architected Framework. La evaluación también recomienda mejoras y correcciones.
@@ -64,6 +68,7 @@ El análisis bien diseñado clasifica las configuraciones en los siguientes pila
 
 
 
+[[reliability]]
 === Fiabilidad
 
 La fiabilidad garantiza que las cargas de trabajo realicen sus funciones previstas de forma correcta y constante, incluso cuando hay interrupciones.
@@ -96,14 +101,11 @@ Las etiquetas de la política de instantáneas del volumen de origen y las etiqu
 +
 El umbral de capacidad de archivos debe aumentarse para evitar alcanzar el límite de capacidad del volumen. La baja capacidad de archivos (inodos) impide escribir datos adicionales en el volumen. Workload Factory recomienda mantenerse por debajo del 80% de uso de la capacidad de archivos disponible de forma continua. La capacidad de archivos disponible es necesaria para crear nuevos archivos en el volumen.
 
-* *Conecta el host al nodo de conmutación por error*
-+
-Workload Factory recomienda conectar los hosts al nodo de conmutación por error para mantener la conectividad y evitar interrupciones durante los procesos de conmutación por error.
 
 
 
 
-
+[[security]]
 === Seguridad
 
 La seguridad enfatiza la protección de datos, sistemas y activos mediante evaluaciones de riesgos y estrategias de mitigación.
@@ -120,6 +122,7 @@ Los volúmenes que sirven datos de aplicación mediante iSCSI no deben permitir 
 
 
 
+[[operational-excellence]]
 === Excelencia operativa
 
 La excelencia operativa se centra en ofrecer la arquitectura y el valor empresarial más óptimos.
@@ -152,6 +155,7 @@ Workload Factory recomienda que la configuración de informes predeterminada se 
 
 
 
+[[cost-optimization]]
 === Optimización de costos
 
 La optimización de costes te ayuda a obtener el máximo valor para tu negocio mientras mantienes los costes bajos.
@@ -179,18 +183,6 @@ Un nivel de capacidad SSD infrautilizado puede estar incurriendo en costes innec
 * *Volúmenes NAS inactivos*
 +
 El análisis de configuración identifica los volúmenes NAS que no se utilizan activamente y recomienda eliminarlos o archivarlos para reducir costes.
-
-
-
-
-
-=== Eficiencia del rendimiento
-
-La eficiencia en el rendimiento se centra en usar los recursos de TI y de computación de manera eficiente.
-
-* *Conectar el host al nodo preferido*
-+
-En un modelo de implementación de FSx para ONTAP de alta disponibilidad, los hosts deben conectarse directamente al nodo que sirve el dispositivo de bloques para garantizar un acceso directo y un rendimiento óptimo.
 
 
 

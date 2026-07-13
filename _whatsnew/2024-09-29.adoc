@@ -4,6 +4,7 @@
 
 
 
+[[link-creation-updates]]
 === Actualizaciones de creación de enlaces
 
 * Visor de Codebox: Codebox ahora está integrado en el proceso de creación de enlaces.  Puede ver y copiar la plantilla de CloudFormation desde Codebox en Workload Factory antes de redirigir a AWS para ejecutar la operación.

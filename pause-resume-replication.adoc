@@ -23,6 +23,7 @@ Si hace una pausa cuando una transferencia está en curso, la transferencia no s
 
 
 
+[[pause-a-replication-relationship]]
 == Pausar una relación de replicación
 
 .Pasos
@@ -41,6 +42,7 @@ La relación se detiene y su estado se muestra como “En pausa”.
 
 
 
+[[resume-a-paused-replication-relationship]]
 == Reanude una relación de replicación pausada
 
 Cuando se reanuda una relación de replicación, se eliminan todos los cambios realizados en el volumen de destino mientras se detuvo la replicación.

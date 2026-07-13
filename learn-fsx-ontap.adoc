@@ -19,6 +19,7 @@ FSx para ONTAP es el componente _Storage_ en Workload Factory.
 
 
 
+[[features]]
 == Funciones
 
 FSX para ONTAP ofrece las siguientes características:
@@ -40,6 +41,7 @@ FSX para ONTAP ofrece las siguientes características:
 
 
 
+[[additional-features-in-workload-factory]]
 == Funciones adicionales en Workload Factory
 
 * *Calculadora de comparación de costos de almacenamiento*: Compara los costos de almacenamiento de tu tienda de bloques elásticos de Amazon (EBS), sistema de archivos elásticos (EFS) y FSX para el servidor de archivos de Windows con FSx para ONTAP. En la calculadora, puede ver cómo las configuraciones de almacenamiento de FSx para ONTAP ofrecen posibles ahorros y planificar la transición a FSx para el almacenamiento de ONTAP.
@@ -49,6 +51,7 @@ FSX para ONTAP ofrece las siguientes características:
 
 
 
+[[tools-to-use-netapp-workload-factory]]
 == Herramientas para utilizar NetApp Workload Factory
 
 Puede utilizar NetApp Workload Factory con las siguientes herramientas:
@@ -64,12 +67,14 @@ Puede utilizar NetApp Workload Factory con las siguientes herramientas:
 
 
 
+[[cost]]
 == Coste
 
 AWS mantiene su cuenta FSx para ONTAP , no Workload Factory. Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Precios para Amazon FSx for NetApp ONTAP"^] .
 
 
 
+[[regions]]
 == Regiones
 
 La fábrica de carga de trabajo es compatible con todas las regiones comerciales donde se admite FSx para ONTAP .link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Consulte las regiones de Amazon admitidas."^]
@@ -83,6 +88,7 @@ Las siguientes regiones de AWS no son compatibles:
 
 
 
+[[getting-help]]
 == Obtener ayuda
 
 Amazon FSX para ONTAP de NetApp es una solución de primera parte de AWS. Para preguntas o problemas de soporte técnico asociados con tu ONTAP sistema de archivos, infraestructura o cualquier solución que use este servicio, usa el Centro de soporte de tu consola de administración de AWS para abrir un caso de soporte con AWS. Seleccione el servicio "FSX for ONTAP" y la categoría adecuada. Proporcione la información restante necesaria para crear su caso de soporte de AWS.

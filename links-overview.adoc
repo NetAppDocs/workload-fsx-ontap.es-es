@@ -17,6 +17,7 @@ No necesita un enlace para comenzar a usar Workload Factory, pero en algunos cas
 
 
 
+[[why-links-are-beneficial]]
 == Por qué son beneficiosos los enlaces
 
 Los enlaces son beneficiosos porque permiten que Workload Factory realice operaciones que no están disponibles de forma nativa a través de la API de Amazon FSx para ONTAP .  Los enlaces habilitan capacidades y automatizaciones avanzadas de ONTAP , que mejoran la administración de FSx para los sistemas de archivos ONTAP .
@@ -29,6 +30,7 @@ A continuación se muestran algunos beneficios de utilizar enlaces:
 
 
 
+[[how-links-work]]
 == Cómo funcionan los enlaces
 
 Los enlaces aprovechan AWS Lambda. Lambda ejecuta código en respuesta a eventos y gestiona automáticamente los recursos informáticos requeridos por ese código. Los enlaces que cree forman parte de su cuenta de NetApp y están asociados a una cuenta de AWS.
@@ -43,6 +45,7 @@ Se admite la conectividad de enlace para cuentas GovCloud. NetApp Workload Facto
 
 
 
+[[costs]]
 == Externa
 
 Cada transacción que realiza Lambda genera un cargo.  Debido a que Lambda actúa como un proxy entre los dos sistemas, existe un cargo cuando Lambda envía una solicitud a la API REST de ONTAP en un sistema de archivos y cuando envía la respuesta a Workload Factory.
@@ -51,6 +54,7 @@ link:https://aws.amazon.com/lambda/pricing/["Obtenga más información sobre los
 
 
 
+[[when-a-link-is-required]]
 == Cuando se requiere un enlace
 
 La fábrica de carga de trabajo requiere un enlace para mostrar cierta información y realizar algunas tareas.  Si intenta realizar una operación que requiere un vínculo y no ha asociado un vínculo con el sistema de archivos FSx para ONTAP , Workload Factory le notifica que la operación requiere un vínculo.

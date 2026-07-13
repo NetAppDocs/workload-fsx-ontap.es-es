@@ -22,6 +22,7 @@ De forma predeterminada, cada volumen está asociado con la política de Snapsho
 
 
 
+[[change-a-snapshot-policy]]
 == Cambiar una política de Snapshot
 
 Es posible cambiar el nombre de la política de snapshots, la programación y la cantidad de copias para conservar, y habilitar o deshabilitar snapshots inmutables. No es posible habilitar o deshabilitar el uso compartido de políticas en los equipos virtuales de almacenamiento. Esta opción solo está disponible durante la creación de políticas de Snapshot.
@@ -45,6 +46,7 @@ Se actualiza la política de instantáneas.
 
 
 
+[[enable-immutable-snapshots]]
 == Habilite instantáneas inmutables
 
 Bloquee las snapshots para evitar que se eliminen durante el período de retención.
@@ -74,6 +76,7 @@ La instantánea del volumen está bloqueada.
 
 
 
+[[assign-a-snapshot-policy-to-a-volume]]
 == Asigne una política de Snapshot a un volumen
 
 Es posible asignar una política de Snapshot a un solo volumen para crear Snapshot programadas para el volumen.
@@ -100,6 +103,7 @@ La política de Snapshot está asignada al volumen.
 
 
 
+[[remove-a-snapshot-policy-from-a-volume]]
 == Quite una política de Snapshot de un volumen
 
 Quite una política de Snapshot de un volumen porque ya no desea que las Snapshot del volumen o porque desea eliminar una política de Snapshot que está asignada a varios volúmenes. A <<Elimine una política de Snapshot,elimine una política de snapshot>>que está asignado a más de un volumen, debe eliminarlo manualmente de todos los volúmenes.
@@ -123,6 +127,7 @@ Se elimina la política de Snapshot del volumen.
 
 
 
+[[delete-a-snapshot-policy]]
 == Elimine una política de Snapshot
 
 Elimine una política de Snapshot cuando ya no la necesite.

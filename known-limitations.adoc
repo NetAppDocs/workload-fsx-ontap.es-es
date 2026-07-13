@@ -15,6 +15,7 @@ Las limitaciones conocidas identifican plataformas, dispositivos o funciones que
 
 
 
+[[region-support]]
 == Soporte regional
 
 Las siguientes regiones de AWS no son compatibles:
@@ -26,6 +27,7 @@ Las siguientes regiones de AWS no son compatibles:
 
 
 
+[[adding-ha-pairs-limitations]]
 == Limitaciones de añadir pares de alta disponibilidad
 
 * Es posible que esta operación tarde aproximadamente 30 minutos en completarse.
@@ -34,22 +36,26 @@ Las siguientes regiones de AWS no son compatibles:
 
 
 
+[[throughput-capacity-region-support]]
 == Soporte regional de capacidad de rendimiento
 
 
 
+[[scale-up-deployments]]
 === Puestas en marcha de escalado vertical
 
 Las configuraciones de escalado vertical se admiten hasta 2 Gb/s en todas las regiones. Las siguientes regiones admiten hasta 4 GB/s de capacidad de rendimiento máxima para implementaciones de escalado vertical: Región del Este de LOS EE. UU. (Ohio), región del Este de los EE. UU. (Norte de Virginia), región del Oeste de los EE. UU. (Oregón) y Europa (Irlanda).
 
 
 
+[[scale-out-deployments]]
 === Puestas en marcha de escalado horizontal
 
 Las siguientes regiones admiten una capacidad de rendimiento máxima de hasta 6 GB/s para implementaciones de escalamiento horizontal: Este de EE. UU. (Norte de Virginia y Ohio), Oeste de EE. UU. (Norte de California y Oregón), Europa (Fráncfort, Irlanda y Estocolmo) y Asia Pacífico (Singapur y Sídney).
 
 
 
+[[capacity-management]]
 == Gestión de la capacidad
 
 * Actualmente, la función de crecimiento automático del volumen no se admite con el protocolo iSCSI.
@@ -60,6 +66,7 @@ Las siguientes regiones admiten una capacidad de rendimiento máxima de hasta 6 
 
 
 
+[[storage-vms]]
 == Máquinas virtuales de almacenamiento
 
 La cantidad de máquinas virtuales de almacenamiento está limitada por SKU.  La creación de máquinas virtuales de almacenamiento más allá del límite no es compatible con Workload Factory.^1^
@@ -68,6 +75,7 @@ Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.ht
 
 
 
+[[iscsi-protocol-support]]
 == Compatibilidad con el protocolo iSCSI
 
 * El protocolo iSCSI solo está disponible para volúmenes FlexVol. 1
@@ -76,6 +84,7 @@ Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.ht
 
 
 
+[[data-protection]]
 == Protección de datos
 
 * No se pueden eliminar las snapshots.
@@ -97,6 +106,7 @@ Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.ht
 
 
 
+[[storage-savings-calculator]]
 == Calculadora del ahorro en almacenamiento
 
 La calculadora de ahorro en almacenamiento no calcula el ahorro de costes si utiliza las siguientes configuraciones:
@@ -108,18 +118,21 @@ La calculadora de ahorro en almacenamiento no calcula el ahorro de costes si uti
 
 
 
+[[aws-secrets-manager-support]]
 == Compatibilidad con AWS Secrets Manager
 
 AWS Secrets Manager no es compatible cuando se utiliza un agente de consola.
 
 
 
+[[amazon-s3-access-points-limitation]]
 == Limitación de los puntos de acceso de Amazon S3
 
 El límite para la cantidad de puntos de acceso S3 por máquina virtual de almacenamiento es 4000.
 
 
 
+[[limitations-for-storage-vm-migration-replication]]
 == Limitaciones para la replicación de la migración de storage VM
 
 * Workload Factory no admite la replicación de migración para máquinas virtuales de almacenamiento entre FSx de primera y segunda generación para sistemas de archivos ONTAP.

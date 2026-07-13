@@ -4,6 +4,7 @@
 
 
 
+[[terraform-support]]
 === Soporte de terraform
 
 Ahora puede utilizar Terraform desde CodeBox para implementar sistemas de archivos y equipos virtuales de almacenamiento.
@@ -15,6 +16,7 @@ Ahora puede utilizar Terraform desde CodeBox para implementar sistemas de archiv
 
 
 
+[[throughput-and-iops-recommendations-in-the-storage-calculator]]
 === Recomendaciones de rendimiento y IOPS en la calculadora de almacenamiento
 
 La calculadora de almacenamiento hace recomendaciones para la configuración del sistema de archivos FSx para ONTAP para el rendimiento e IOPS basadas en las prácticas recomendadas de AWS, lo que proporciona una orientación óptima para sus selecciones.

@@ -19,6 +19,7 @@ Si la calculadora de almacenamiento determina que el almacenamiento más rentabl
 
 
 
+[[calculator-options]]
 == Opciones de calculadora
 
 Hay dos opciones de calculadora disponibles para comparar costes entre tus sistemas y FSx for ONTAP: Personalización y detección automática para tus entornos de almacenamiento de Amazon.
@@ -31,6 +32,7 @@ Además, puede link:https://docs.netapp.com/us-en/workload-setup-admin/add-crede
 
 
 
+[[explore-savings-via-customization]]
 == Explora el ahorro a través de la personalización
 
 Siga los pasos debajo de la pestaña para su selección de almacenamiento.
@@ -116,6 +118,7 @@ Para cambiar a FSX para ONTAP, siga las instrucciones a <<Pon en marcha FSx para
 
 
 
+[[explore-savings-for-detected-storage-environments]]
 == Explore el ahorro para los entornos de almacenamiento detectados
 
 .Antes de empezar
@@ -198,6 +201,7 @@ Además, desplácese hasta la parte inferior de la página para ver el informe s
 
 
 
+[[deploy-fsx-for-ontap-file-systems]]
 == Pon en marcha FSx para sistemas de archivos ONTAP
 
 Si desea cambiar a FSX para ONTAP para obtener ahorros de costos, seleccione *Crear* para crear los sistemas de archivos directamente desde el Asistente para crear un FSX para el sistema de archivos ONTAP o seleccione *Guardar* para guardar las configuraciones recomendadas para más adelante.

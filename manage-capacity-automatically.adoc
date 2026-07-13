@@ -15,6 +15,7 @@ La activación de la gestión de la capacidad permite que NetApp Workload Factor
 
 
 
+[[about-this-task]]
 == Acerca de esta tarea
 
 El sistema escanea el sistema de archivos FSx for ONTAP cada 30 minutos. Comprueba si es necesario añadir almacenamiento incremental y verifica los nodos de información de volumen disponibles. El recuento aumenta según los umbrales automáticos de gestión de capacidad.
@@ -27,6 +28,7 @@ La cantidad máxima de capacidad de almacenamiento en SSD para todos los sistema
 
 
 
+[[enable-automatic-capacity-management-and-capacity-notifications]]
 == Activar la gestión automática de la capacidad y las notificaciones de capacidad
 
 Activa la gestión automática de la capacidad para añadir automáticamente almacenamiento incremental hasta el límite de tamaño máximo de un sistema de ficheros FSx para ONTAP. Configura las notificaciones para recibir alertas cuando el sistema de ficheros alcance un determinado umbral de capacidad.
@@ -83,6 +85,7 @@ Se realiza una exploración del sistema de archivos cada 30 minutos para determi
 
 
 
+[[enable-inode-management-for-a-file-system]]
 == Habilita la gestión de nodos de información para un sistema de archivos
 
 Activa la gestión automática de nodos de información para aumentar el número de nodos de información (archivos) por volumen hasta el límite permitido.

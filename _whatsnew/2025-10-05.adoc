@@ -4,6 +4,7 @@
 
 
 
+[[optimize-savings-in-the-storage-calculator-for-amazon-elastic-block-store-ebs]]
 === Optimice los ahorros en la calculadora de almacenamiento para Amazon Elastic Block Store (EBS)
 
 Workload Factory puede analizar el uso del rendimiento de EBS y luego sugerir la mejor y más rentable configuración de FSx para ONTAP para que pueda ahorrar más al cambiar a FSx para ONTAP.
@@ -12,12 +13,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html#explo
 
 
 
+[[quick-access-to-resource-screen-from-file-system-inventory]]
 === Acceso rápido a la pantalla de recursos desde el inventario del sistema de archivos
 
 Puede navegar rápidamente a una pantalla de recursos del sistema de archivos de FSx para ONTAP seleccionando el nombre del sistema de archivos, ahora un hipervínculo, desde el inventario de FSx para ONTAP .
 
 
 
+[[discover-cache-relationships-in-the-workload-factory-console]]
 === Descubra las relaciones de caché en la consola de Workload Factory
 
 Si tiene relaciones de _caché_ entre el sistema de archivos FSx for ONTAP y otro tipo de almacenamiento ONTAP (sistema local, Cloud Volumes ONTAP y FSx for ONTAP), puede descubrirlas y verlas desde la consola de Workload Factory.  Esto le permite comprender mejor los flujos de datos, optimizar la utilización de la memoria caché y mejorar la eficiencia en entornos distribuidos.
@@ -26,6 +29,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/discover-cache-volumes.htm
 
 
 
+[[well-architected-analysis-update]]
 === Actualización de análisis bien diseñada
 
 La fábrica de carga de trabajo ahora analiza su FSx para sistemas de archivos ONTAP para la siguiente configuración:
@@ -42,6 +46,7 @@ Desde la pestaña *Análisis bien diseñado* en el panel de control de un sistem
 
 
 
+[[additional-notification-for-storage]]
 === Notificación adicional para almacenamiento
 
 El servicio de notificación de NetApp Workload Factory incluye la notificación de problemas de configuración bien diseñados semanalmente.
@@ -50,6 +55,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 
 
+[[immutable-files-support-privileged-delete]]
 === Los archivos inmutables admiten la eliminación privilegiada
 
 Con esta función, puede configurar el acceso de eliminación privilegiado para archivos inmutables en sus sistemas de archivos FSx para ONTAP .  Esto le permite proteger datos críticos contra eliminaciones accidentales o maliciosas y, al mismo tiempo, permitir que los usuarios autorizados anulen el bloqueo y eliminen estos archivos según sea necesario.  La habilitación de la eliminación privilegiada está disponible durante la creación del volumen o para volúmenes existentes.

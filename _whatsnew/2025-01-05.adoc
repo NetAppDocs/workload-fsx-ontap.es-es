@@ -4,6 +4,7 @@
 
 
 
+[[volume-cifs-share-enhancements]]
 === Mejoras de los recursos compartidos CIFS para volúmenes
 
 Se encuentran disponibles las siguientes mejoras para gestionar el recurso compartido CIFS para volúmenes en un sistema de archivos Amazon FSx para ONTAP en fábrica de cargas de trabajo de BlueXP :

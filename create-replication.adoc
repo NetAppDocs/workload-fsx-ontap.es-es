@@ -17,6 +17,7 @@ Al replicar datos de almacenamiento VM y ajustes de configuración, primero debe
 
 
 
+[[about-this-task]]
 == Acerca de esta tarea
 
 La replicación protege tus datos si un desastre afecta tu región; también puede usarse para migración.
@@ -34,6 +35,7 @@ Puedes replicar un volumen de origen (lectura/escritura) o un volumen de protecc
 ====
 
 
+[[migration-use-cases]]
 === Casos de uso de migración
 
 Para la migración, puedes elegir replicar los datos de la VM de almacenamiento y la configuración para una sola VM de almacenamiento. Si migras los datos y la configuración juntos, asegúrate de que la última replicación del volumen haya finalizado en las últimas 24 horas. Debes seleccionar todos los volúmenes en la misma VM de almacenamiento para usar esta función. La política de organización en niveles para todos los volúmenes será, por defecto, la política de organización en niveles del volumen de origen, lo cual se recomienda para casos de uso de migración.
@@ -59,6 +61,7 @@ Para migrar los datos de la máquina virtual de almacenamiento y los ajustes de 
 
 
 
+[[step-1-create-the-replication-relationship]]
 == Paso 1: Crear la relación de replicación
 
 Replica datos entre dos sistemas de archivos FSx for ONTAP, entre un sistema ONTAP local y un sistema de archivos FSx for ONTAP, o entre Cloud Volumes ONTAP y un sistema de archivos FSx for ONTAP.
@@ -196,6 +199,7 @@ Si creaste una relación de replicación con fines de migración, debes realizar
 
 
 
+[[step-2-initialize-the-replication-relationship]]
 == Paso 2: inicializa la relación de replicación
 
 Inicialice una relación de replicación entre los volúmenes de origen y destino para transferir la instantánea y todos los bloques de datos en NetApp Workload Factory.
@@ -221,12 +225,14 @@ Cuando el estado de replicación muestra *Idle*, la transferencia de datos se ha
 
 
 
+[[step-3-cut-over-replication-for-migration-use-cases]]
 == Paso 3: transición de la replicación para casos de migración
 
 Después de crear la relación de replicación para un caso de uso de migración, debes realizar la transición de la replicación para completar la migración de los datos y los ajustes de configuración de la máquina virtual de almacenamiento al sistema de archivos FSx for ONTAP de destino. La replicación de transición migra permanentemente los datos y los ajustes de configuración de la máquina virtual de almacenamiento desde el sistema de archivos de origen al sistema de archivos FSx for ONTAP de destino. Durante la transición, los datos se replican por última vez. La máquina virtual de almacenamiento de origen se desconecta cuando comienza la transición.
 
 
 
+[[plan-for-the-cutover-operation]]
 === Plan para la operación de transición
 
 Ten en cuenta lo siguiente al planificar la operación de transición para los casos de uso de migración.
@@ -276,6 +282,7 @@ Tras iniciar la transición, la máquina virtual de almacenamiento de origen se 
 
 
 
+[[update-configuration-settings-after-cutover]]
 === Actualiza los parámetros de configuración después de la transición
 
 Después de realizar la transición de la replicación para casos de uso de migración, actualiza los siguientes ajustes de configuración de la VM de almacenamiento en la VM de almacenamiento de destino.
@@ -294,6 +301,7 @@ Después de realizar la transición de la replicación para casos de uso de migr
 
 
 
+[[related-information]]
 == Información relacionada
 
 link:change-tiering-policy.html["Modificar la política de niveles"] para el volumen o volúmenes de destino tras la transición.

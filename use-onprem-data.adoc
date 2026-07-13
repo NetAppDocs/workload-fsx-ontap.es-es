@@ -29,6 +29,7 @@ Casos de uso:: Tenga en cuenta que el caso de uso principal para la carga de tra
 
 
 
+[[discover-an-on-premises-ontap-cluster]]
 == Detectar un clúster de ONTAP en las instalaciones
 
 Descubra un clúster ONTAP local en NetApp Workload Factory para que pueda replicar los datos en un sistema de archivos Amazon FSx for NetApp ONTAP .
@@ -77,6 +78,7 @@ Ahora los datos se pueden ver en su clúster de ONTAP en las instalaciones y <<R
 
 
 
+[[replicate-volume-data-from-an-on-premises-ontap-cluster]]
 == Replique datos de volúmenes de un clúster de ONTAP en las instalaciones
 
 Replica datos de volúmenes de un clúster ONTAP on-premises en un sistema de archivos FSx para ONTAP. Después de la replicación, los datos se pueden usar para enriquecer las bases de conocimiento de IA.
@@ -145,6 +147,7 @@ La relación de replicación aparece en la pestaña *Relaciones de replicación*
 
 
 
+[[remove-an-on-premises-ontap-cluster-from-netapp-workload-factory]]
 == Eliminar un clúster ONTAP local de NetApp Workload Factory
 
 Elimine un clúster ONTAP local de NetApp Workload Factory cuando sea necesario.

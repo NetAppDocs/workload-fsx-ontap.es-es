@@ -27,6 +27,7 @@ NOTE: AWS Secrets Manager no es compatible cuando se utiliza un agente de consol
 
 
 
+[[associate-a-new-link]]
 == Asocie un nuevo enlace
 
 La asociación de un nuevo enlace incluye la creación y asociación de enlaces.
@@ -234,6 +235,7 @@ Workload Factory asocia el enlace con el sistema de archivos FSx para ONTAP. Pue
 
 
 
+[[associate-an-existing-link-with-an-fsx-for-ontap-file-system]]
 == Asocie un enlace existente a un sistema de archivos FSx for ONTAP
 
 Después de crear un enlace, asócielo con uno o más FSX para el sistema de archivos ONTAP.
@@ -274,6 +276,7 @@ link:links-overview.html#when-a-link-is-required["Obtenga más información sobr
 
 
 
+[[troubleshoot-issues-with-aws-secrets-manager-link-authentication]]
 == Solución de problemas con la autenticación de enlaces de AWS Secrets Manager
 
 Problema:: El enlace carece de permisos para recuperar el secreto.

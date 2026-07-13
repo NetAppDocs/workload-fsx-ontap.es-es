@@ -4,6 +4,7 @@
 
 
 
+[[well-architected-analysis-updates]]
 === Actualizaciones de análisis bien diseñadas
 
 Workload Factory analiza sus sistemas de archivos FSx for ONTAP para las siguientes configuraciones:
@@ -17,24 +18,28 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[ask-me-ai-assistant-home-page-integration]]
 === Integración de la página de inicio del asistente de IA de Ask Me
 
 La página de inicio de la consola Workload Factory incorpora el asistente de IA Ask me, que le permite hacer preguntas sobre su propio almacenamiento, obtener información personalizada directamente de su entorno y consultar conversaciones anteriores. Puede interactuar con Pregúnteme para comprender sus cargas de trabajo, solucionar problemas y obtener más información sobre Workload Factory, todo sin salir de la consola.
 
 
 
+[[use-of-iam-user-principal-in-lambda-link-resource-based-permission-policies]]
 === Uso del principal de usuario de IAM en políticas de permisos basadas en recursos de enlaces Lambda
 
 Los enlaces Lambda que se utilizan para conectar su cuenta de Workload Factory y uno o más sistemas de archivos FSx for ONTAP para realizar operaciones ONTAP avanzadas, ahora usan el principal de usuario de IAM para permisos de políticas basadas en recursos. Este cambio proporciona una mejor alineación con las mejores prácticas de la industria para el acceso a los recursos de AWS.
 
 
 
+[[analysis-screen-added-for-the-ai-analyzer-for-ems-events]]
 === Se agregó una pantalla de análisis para el analizador de IA para eventos EMS
 
 Se ha agregado una nueva pantalla _Análisis_ al menú Almacenamiento. Desde esta pantalla, puede utilizar la función de analizador de IA para eventos EMS de FSx para ONTAP .
 
 
 
+[[block-device-enhancements-in-netapp-workload-factory]]
 === Mejoras en los dispositivos de bloque en NetApp Workload Factory
 
 Se han realizado las siguientes mejoras para los dispositivos de bloque.

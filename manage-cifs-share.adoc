@@ -22,6 +22,7 @@ Antes de comenzar, haga lo siguiente:
 
 
 
+[[create-an-smbcifs-share-for-a-volume]]
 == Crear un recurso compartido SMB/CIFS para un volumen
 
 Siga los pasos para crear un recurso compartido SMB/CIFS para un volumen.
@@ -63,6 +64,7 @@ Las entradas de ruta válidas para el nombre del recurso compartido, por ejemplo
 
 
 
+[[change-an-smbcifs-share-for-a-volume]]
 == Cambiar un recurso compartido SMB/CIFS por un volumen
 
 Siga los pasos para cambiar la configuración de uso compartido SMB/CIFS de un volumen.
@@ -84,6 +86,7 @@ Los cambios podrían provocar que los usuarios o grupos actuales pierdan el acce
 
 
 
+[[delete-an-smbcifs-share-for-a-volume]]
 == Eliminar un recurso compartido SMB/CIFS para un volumen
 
 Siga los pasos para eliminar un recurso compartido SMB/CIFS de un volumen.

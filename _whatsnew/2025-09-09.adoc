@@ -4,6 +4,7 @@
 
 
 
+[[storage-inventory-report-enhancements]]
 === Mejoras en los informes de inventario de almacenamiento
 
 Workload Factory ha mejorado los datos informados para sus sistemas de archivos FSx para ONTAP .  El informe descargable de la página de inventario de FSx para ONTAP incluye las siguientes columnas nuevas:
@@ -17,6 +18,7 @@ Workload Factory ha mejorado los datos informados para sus sistemas de archivos 
 
 
 
+[[snapshot-management-enhancements]]
 === Mejoras en la gestión de instantáneas
 
 Workload Factory ha realizado varias mejoras para ver los detalles de las instantáneas de volumen y administrarlas.  Estas mejoras le permiten comprender más fácilmente el estado de sus instantáneas y proteger sus datos.
@@ -38,6 +40,7 @@ image:screenshot-manage-snapshots-screen.png["Captura de pantalla que muestra la
 
 
 
+[[ssd-storage-capacity-decrease-available]]
 === Disminución de la capacidad de almacenamiento SSD disponible
 
 La fábrica de carga de trabajo admite la disminución de la capacidad de la unidad de estado sólido (SSD) de sus sistemas de archivos de segunda generación. Con la capacidad elástica del sistema de archivos, puede ajustar dinámicamente la capacidad de sus sistemas de archivos para que coincidan con las necesidades de sus cargas de trabajo.
@@ -46,6 +49,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capac
 
 
 
+[[new-notification-for-storage]]
 === Nueva notificación para Almacenamiento
 
 El servicio de notificación de fábrica de carga de trabajo incluye notificaciones de éxito y error para la gestión automática de la capacidad de almacenamiento.

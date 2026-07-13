@@ -15,6 +15,7 @@ Edite la configuración de instantáneas, habilite el acceso al directorio y eli
 
 
 
+[[edit-a-snapshot]]
 == Editar una instantánea
 
 Editar el nombre, la etiqueta y el período de retención de una instantánea.  Si la instantánea aún no es inmutable, puedes hacerla inmutable.
@@ -47,6 +48,7 @@ Acepte la declaración sobre instantáneas inmutables.
 
 
 
+[[access-a-snapshot]]
 == Acceder a una instantánea
 
 Habilite el acceso al directorio de instantáneas para brindarles a los usuarios la posibilidad de acceder a las instantáneas de forma autónoma.
@@ -72,6 +74,7 @@ Habilite el acceso al directorio de instantáneas para brindarles a los usuarios
 
 
 
+[[restore-data-from-a-snapshot]]
 == Restaurar datos desde una instantánea
 
 Tiene la opción de restaurar datos de una instantánea a un volumen existente o a un volumen nuevo.
@@ -80,6 +83,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapsh
 
 
 
+[[delete-a-snapshot]]
 == Eliminar una instantánea
 
 Eliminar una instantánea para liberar espacio.

@@ -15,6 +15,7 @@ FSx para ONTAP admite instantáneas, protección autónoma contra ransomware de 
 
 
 
+[[types-of-data-protection]]
 == Tipos de protección de datos
 
 La protección de datos de tus cargas de trabajo ayuda a garantizar que puedas recuperarte de cualquier pérdida de datos en cualquier momento. Obtenga más información sobre los tipos de protección de datos antes de seleccionar las funciones que utilizará.
@@ -39,6 +40,7 @@ image:diagram-fsx-data-protection.png["La captura de pantalla muestra la protecc
 
 
 
+[[best-practices-for-protecting-your-workload-data]]
 == Prácticas recomendadas para proteger sus datos de cargas de trabajo
 
 FSX para ONTAP ofrece varias opciones de protección de datos que pueden combinarse para lograr los objetivos seleccionados de punto y tiempo de recuperación. Para obtener la mejor protección posible, se recomienda que se usen tanto snapshots de volúmenes como backups de volúmenes.
@@ -47,30 +49,35 @@ Un objetivo de punto de recuperación (RPO) describe la frecuencia con la que se
 
 
 
+[[protect-your-workload-data-with-snapshots]]
 == Proteger los datos de la carga de trabajo con snapshots
 
 Las snapshots son versiones virtuales puntuales de un volumen que se realizan de forma programada. Puede acceder a las instantáneas utilizando comandos estándar del sistema de archivos. Las snapshots ofrecen un objetivo de punto de recuperación de tan solo una hora. El objetivo de tiempo de recuperación depende de la cantidad de datos que se deben restaurar y está limitado principalmente por el límite de rendimiento del volumen. Las copias Snapshot también permiten a los usuarios restaurar ficheros y directorios específicos, lo que reduce aún más el objetivo de tiempo de recuperación. Las Snapshot solo consumen espacio adicional del volumen para los cambios que se han hecho en el volumen.
 
 
 
+[[protect-your-workload-data-with-netapp-autonomous-ransomware-protection-with-ai]]
 == Proteja los datos de su carga de trabajo con la protección autónoma contra ransomware de NetApp con IA
 
 NetApp Autonomous Ransomware Protection with AI (ARP/AI) actúa como una importante capa adicional de defensa si el software antivirus no ha podido detectar una intrusión.  Al configurar una política ARP/AI, se habilita para todas las máquinas virtuales de almacenamiento y todos los volúmenes existentes y recientemente creados.  Una vez habilitado, ARP/AI detecta y protege todos los volúmenes y máquinas virtuales de almacenamiento.  Si una extensión de archivo está marcada como anormal, debe evaluar la alerta.
 
 
 
+[[protect-your-workload-data-with-volume-replication]]
 == Proteger sus datos de carga de trabajo con replicación de volumen
 
 La replicación de volúmenes crea una copia de los datos más recientes de un volumen que incluye todas sus instantáneas en una región diferente. Si no puede permitirse RTO de varias horas de una operación de restauración de volumen completo desde un backup de volumen, considere la posibilidad de realizar una replicación de volumen. Aunque la replicación de volúmenes garantiza que los datos recientes estén disponibles en una región diferente para que los pueda usar, es necesario ajustar los clientes para que los utilicen en la otra región.
 
 
 
+[[protect-your-workload-data-with-backups]]
 == Proteger sus datos de carga de trabajo con backups
 
 Los backups de volúmenes proporcionan copias puntuales independientes del volumen. Pueden utilizarse para almacenar copias de seguridad antiguas y proporcionar la segunda copia necesaria de sus datos. Los programas de backup diarios, semanales y mensuales permiten alcanzar los objetivos de punto de recuperación desde un día. Los backups de volúmenes solo se pueden restaurar como un conjunto. La creación de un volumen a partir de un backup (RTO) puede tardar horas a muchos días, según el tamaño del backup.
 
 
 
+[[recommendations-for-protecting-your-workload-data]]
 == Recomendaciones para proteger los datos de su carga de trabajo
 
 Tenga en cuenta las siguientes recomendaciones para proteger sus datos de carga de trabajo.

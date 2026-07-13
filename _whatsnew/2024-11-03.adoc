@@ -4,6 +4,7 @@
 
 
 
+[[tab-views-in-storage-inventory]]
 === Vistas de pestañas en el inventario de almacenamiento
 
 El inventario de almacenamiento se ha actualizado a una vista de dos pestañas:
