@@ -45,6 +45,13 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html["
 
 
 
+[[workload-tagging-for-volumes-and-block-devices]]
+=== Etiquetado de carga de trabajo para volúmenes y dispositivos de bloques
+
+Workload Factory ahora identifica y etiqueta volúmenes y dispositivos de bloques según su carga de trabajo o aplicación principal. Puedes asignar etiquetas de carga de trabajo predefinidas como Microsoft SQL Server u Oracle Database, o crear etiquetas personalizadas para tus aplicaciones. Las etiquetas se pueden aplicar a recursos individuales o heredarse por los recursos de almacenamiento conectados. Esto te ayuda a alinear las configuraciones de almacenamiento con los requisitos de la carga de trabajo, entender el impacto de los incidentes y solucionar problemas de manera más eficaz.
+
+
+
 [[31-may-2026]]
 == 31 de mayo de 2026
 
