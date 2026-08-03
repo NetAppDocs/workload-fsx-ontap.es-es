@@ -43,6 +43,9 @@ Para permitir que Workload Factory analice eventos, debes activar Amazon Bedrock
 link:https://aws.amazon.com/bedrock/pricing/["Precios de Amazon Bedrock"^]
 
 
+NOTE: Si el administrador de tu cuenta ha desactivado las funciones de IA, aparecerá un mensaje y no podrás utilizar el análisis de IA. Ponte en contacto con tu administrador o https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["conoce la administración de IA"^].
+
+
 
 [[data-privacy-and-security]]
 === Privacidad y seguridad de los datos
@@ -60,19 +63,11 @@ Para más detalles, consulta la link:https://docs.aws.amazon.com/bedrock/latest/
 [[before-you-begin]]
 == Antes de empezar
 
+Para ver los eventos de latencia debes hacer lo siguiente:
 
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos de _visualización, planificación y análisis_"^] en tu cuenta de AWS.
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["conectarse al sistema de archivos mediante un enlace"].
 
-[[view-events]]
-=== Ver eventos
-
-Para ver los eventos de latencia, debes link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos de _visualización, planificación y análisis_"^] en tu cuenta de AWS.
-
-Para ver los eventos EMS, también tienes que link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["conectarse al sistema de archivos mediante un enlace"].
-
-
-
-[[analyze-events]]
-=== Analiza los eventos
 
 Para analizar los eventos de EMS y latencia y recibir información y recomendaciones basadas en IA, asegúrate de lo siguiente:
 

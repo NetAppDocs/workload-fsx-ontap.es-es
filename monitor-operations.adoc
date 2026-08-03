@@ -14,7 +14,7 @@ summary: Realice un seguimiento de FSx para ONTAP, las credenciales y las operac
 Supervise y realice un seguimiento de la ejecución de FSx para ONTAP, credenciales y operaciones de enlace, y supervise el progreso de las tareas con Tracker en NetApp Workload Factory.
 
 .Acerca de esta tarea
-La fábrica de cargas de trabajo ofrece Tracker, una función de supervisión, para que pueda supervisar y realizar un seguimiento del progreso y el estado de FSx para ONTAP, credenciales y operaciones de enlaces, revisar detalles de las tareas operativas y subtareas y diagnosticar cualquier problema o error.
+Workload Factory ofrece Tracker, una función de supervisión que te permite supervisar y realizar un seguimiento del progreso y el estado de FSx para ONTAP, credenciales y operaciones de enlace, revisar detalles de las tareas y subtareas operativas, y diagnosticar cualquier problema o fallo.
 
 Hay varias acciones disponibles en Tracker. Puede filtrar trabajos por intervalo de tiempo (últimas 24 horas, 7 días, 14 días o 30 días), carga de trabajo, estado y usuario; buscar trabajos con la función de búsqueda; y descargar la tabla de trabajos como archivo CSV. Puede actualizar el rastreador en cualquier momento. Además, es posible volver a intentar una operación que ha fallado o editar parámetros para una operación que ha fallado y volver a intentar la operación.
 

@@ -51,4 +51,4 @@ Haga lo siguiente antes de agregar parejas de alta disponibilidad a un sistema d
 
 
 .Resultado
-La fábrica de carga de trabajo inicia el proceso para agregar los pares de alta disponibilidad al sistema de archivos. El sistema de archivos no está disponible para otras operaciones, como la creación de volúmenes hasta que se añadan las parejas de alta disponibilidad. Puede supervisar el progreso de la operación en la pestaña *Tracker*.
+Workload Factory inicia el proceso para añadir los pares de alta disponibilidad (HA) al sistema de archivos. El sistema de archivos no está disponible para otras operaciones como la creación de volúmenes hasta que se añadan los pares de alta disponibilidad. Puedes supervisar el progreso de la operación en la pestaña *Tracker*.

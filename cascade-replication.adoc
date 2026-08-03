@@ -79,7 +79,7 @@ Si habilita la retención a largo plazo, seleccione una política existente o cr
 
 +
 
-NOTE: Las etiquetas de origen y destino coincidentes son necesarias para la retención a largo plazo. Si lo desea, la fábrica de carga de trabajo puede crear etiquetas que faltan.
+NOTE: Las etiquetas de origen y destino coincidentes son necesarias para la conservación a largo plazo. Si lo deseas, Workload Factory puede crear las etiquetas que falten por ti.
 
 +
 *** *Elige una política existente*: Selecciona una política existente en el menú desplegable.
