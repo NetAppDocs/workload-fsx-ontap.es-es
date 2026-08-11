@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: use-onprem-data.html 
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
-summary: Descubra y replique datos locales de ONTAP en NetApp Workload Factory para que puedan usarse para enriquecer las bases de conocimiento de IA. 
+summary: Descubre y replica los datos de ONTAP locales en NetApp Workload Factory para que puedan usarse como copia de seguridad en la nube. 
 ---
 = Utilice datos de clúster ONTAP locales en NetApp Workload Factory
 :allow-uri-read: 
@@ -11,15 +11,14 @@ summary: Descubra y replique datos locales de ONTAP en NetApp Workload Factory p
 
 
 [role="lead"]
-Descubra y replique datos locales de ONTAP en NetApp Workload Factory para que puedan usarse para enriquecer las bases de conocimiento de IA.
+Descubre y replica los datos de ONTAP locales en NetApp Workload Factory para que puedan usarse como copia de seguridad en la nube.
 
 .Acerca de esta tarea
 Para utilizar datos de un clúster de ONTAP en las instalaciones, primero tendrá que detectar el clúster de ONTAP en las instalaciones. Después de detectar un clúster de ONTAP en las instalaciones, puede usar los datos para cualquiera de los siguientes casos de uso.
 
-Casos de uso:: Tenga en cuenta que el caso de uso principal para la carga de trabajo de GenAI es el foco de esta serie de tareas.
+Casos de uso::
 +
 --
-* *Carga de trabajo de GenAI*: Replica los datos de volumen de ONTAP en las instalaciones a un sistema de archivos FSX for ONTAP para que los datos puedan usarselink:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["Enriquezca las bases de conocimientos sobre IA"^].
 * *Copia de seguridad y migración a la nube*: Los datos de volúmenes ONTAP replicados en las instalaciones a un sistema de archivos FSx para ONTAP se pueden usar como copia de seguridad en la nube.
 * * Organización en niveles de datos*: Después de la replicación, los datos de volumen ONTAP locales a los que se accede con poca frecuencia se pueden organizar en niveles desde el nivel de almacenamiento SSD hasta el nivel de almacenamiento del pool de capacidad.
 

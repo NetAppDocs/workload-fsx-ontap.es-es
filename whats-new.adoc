@@ -88,6 +88,13 @@ Para configurar las notificaciones de eventos de S3, link:https://docs.netapp.co
 
 
 
+[[ontap-features-displayed-in-volumes-explorer]]
+=== Funciones de ONTAP que se muestran en el Explorador de volúmenes
+
+El explorador de volúmenes incluye ahora funciones de ONTAP en la tabla de volúmenes. Estas funciones ofrecen información más detallada sobre la configuración y el estado de tus volúmenes, como la cobertura de protección, el estado de Autonomous Ransomware Protection (ARP/AI), la eficiencia del almacenamiento, la política de tiering y el crecimiento automático de volúmenes.
+
+
+
 [[05-july-2026]]
 == 05 de julio de 2026
 

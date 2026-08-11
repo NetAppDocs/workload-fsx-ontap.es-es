@@ -755,8 +755,6 @@
   <block id="b755b7c9e5db773b9578d24d7b40b61d" category="list-text">Selecciona *Aplicar* para guardar el cambio.</block>
   <block id="124cb3fd3d0a35a1abf1c0f90f37e8a9" category="paragraph">Para utilizar datos de un clúster de ONTAP en las instalaciones, primero tendrá que detectar el clúster de ONTAP en las instalaciones. Después de detectar un clúster de ONTAP en las instalaciones, puede usar los datos para cualquiera de los siguientes casos de uso.</block>
   <block id="2a3b399798aa16ecfbc1425cc560bfad" category="list-text">Casos de uso</block>
-  <block id="ef63a3d009f11deff50f4dc327b32173" category="list-text">Tenga en cuenta que el caso de uso principal para la carga de trabajo de GenAI es el foco de esta serie de tareas.</block>
-  <block id="809c357d304bbfa1cd4446574b270af8" category="inline-link-macro">Enriquezca las bases de conocimientos sobre IA</block>
   <block id="f15192f8afdcf438f7b1ccf0cda2b436" category="list-text">*Copia de seguridad y migración a la nube*: Los datos de volúmenes ONTAP replicados en las instalaciones a un sistema de archivos FSx para ONTAP se pueden usar como copia de seguridad en la nube.</block>
   <block id="5b5a84720ff8905504e8a45fbc52fb73" category="list-text">* Organización en niveles de datos*: Después de la replicación, los datos de volumen ONTAP locales a los que se accede con poca frecuencia se pueden organizar en niveles desde el nivel de almacenamiento SSD hasta el nivel de almacenamiento del pool de capacidad.</block>
   <block id="4185f116d64b1130e6f9ba4250b147fa" category="paragraph">Asegúrese de tener lo siguiente antes de comenzar:</block>
@@ -1289,7 +1287,6 @@
   <block id="897bea1a5ca479178427004f773ee72e" category="list-text">Opcionalmente, puede descargar una lista de movimientos de volúmenes antes de reequilibrar.</block>
   <block id="703547df715082455f8920d78fe90a30" category="list-text">Selecciona *Reequilibrio*.</block>
   <block id="eaaaf380859de755a58a543fbffc3d8a" category="paragraph"><block ref="eaaaf380859de755a58a543fbffc3d8a" category="inline-link-macro-rx"></block></block>
-  <block id="1418bddde60a7d4a1fbd71041ef29d36" category="list-text">*Carga de trabajo de GenAI*: Replica los datos de volumen de ONTAP en las instalaciones a un sistema de archivos FSX for ONTAP para que los datos puedan usarse<block ref="8b94b70e10f0f6c7944c9419ec9922bc" category="inline-link-macro-rx"></block>.</block>
   <block id="7583f12b4559f6687c67d8588da1e2f7" category="doc">Mejora del crecimiento automático del volumen</block>
   <block id="b57fe4f5ee65a0e01f61993297811ebf" category="paragraph">Ahora puede configurar el tamaño de crecimiento automático de sus volúmenes para que el tamaño del volumen pueda crecer más allá del tamaño previsto para las necesidades comerciales y los requisitos de la aplicación.</block>
   <block id="9f1effd9ace68ca00fe9e9e3c024b362" category="inline-link-macro">Habilitar el crecimiento automático del volumen</block>
@@ -1997,7 +1994,6 @@
   <block id="0b81b68aa4b4da3fc81b7541c9557525" category="summary">En NetApp Workload Factory, puede actualizar la configuración de eficiencia de almacenamiento después de la creación del volumen.</block>
   <block id="0254d70b292c2efb3924bc70f603207a" category="summary">Actualice la capacidad de rendimiento de un sistema de archivos FSx para ONTAP en NetApp Workload Factory según sea necesario.</block>
   <block id="5b7dc0f0cef1ddf767dff9731a57d8a4" category="list-text">Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos para el cual desea actualizar la capacidad de rendimiento y luego seleccione *Administrar*.</block>
-  <block id="be31b62eb26bc544ed1c2919a1a354d8" category="summary">Descubra y replique datos locales de ONTAP en NetApp Workload Factory para que puedan usarse para enriquecer las bases de conocimiento de IA.</block>
   <block id="5811115476eeb3b923e56f3b218e8861" category="doc">Utilice datos de clúster ONTAP locales en NetApp Workload Factory</block>
   <block id="5433703774e7ff1a361e7a705d25ba42" category="paragraph">Descubra un clúster ONTAP local en NetApp Workload Factory para que pueda replicar los datos en un sistema de archivos Amazon FSx for NetApp ONTAP .</block>
   <block id="cab5c35909125289d94f24cfb933bb6d" category="list-text">*Enlace*: Seleccione un enlace.  El enlace se asociará con el clúster local para crear conectividad entre el clúster y Workload Factory.</block>
@@ -3152,8 +3148,6 @@
   <block id="8215457eb88ef1fb110b79579b908e3d" category="paragraph">Puedes descartar el análisis de las configuraciones que no se aplican a tus entornos. Así evitas alertas innecesarias y resultados de optimización inexactos.</block>
   <block id="8817b0c6f0795c52cab62044416eee8a" category="inline-link-macro">Obtén más información sobre las reglas personalizadas</block>
   <block id="821af7226458ea25572e88e8ab2026e4" category="paragraph">También puedes crear reglas personalizadas en lenguaje sencillo para validar tus entornos según las normas de tu organización y las mejores prácticas de NetApp. Prueba las reglas con una simulación y luego programa que se ejecuten en todos tus entornos. <block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>.</block>
-  <block id="8be08850265c9930c26a8e5b28183a2e" category="paragraph">También puedes crear reglas personalizadas en lenguaje sencillo para validar tus entornos según las normas de tu organización y las mejores prácticas de NetApp. Prueba las reglas con una simulación y luego programa que se ejecuten en todos tus entornos.</block>
-  <block id="7c24f3892a999a3e8d688cabe068b17a" category="paragraph"><block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>.</block>
   <block id="782a430d789ff1db80e40fbe9c0be819" category="paragraph">El panel de control Well-Architected evalúa las configuraciones de almacenamiento según las mejores prácticas de ONTAP y el marco Well-Architected de AWS. La evaluación también recomienda mejoras y soluciones.</block>
   <block id="790f31a1565b039a710f1ff6cd60e24a" category="list-text">*Copias de seguridad de volúmenes*</block>
   <block id="ca512a483bb26b1b253abc6b2cc463bd" category="list-text">*política de SnapVault*</block>
@@ -3249,4 +3243,7 @@
   <block id="4fd22cd0c1b62f84962ef1e8ffd9c966" category="paragraph">Activa el seguimiento para supervisar los retrasos en la replicación en toda tu cuenta. Workload Factory te avisa cuando los retrasos superan un umbral establecido. De forma predeterminada, el umbral es del 150 % del intervalo de replicación, para tener en cuenta el tiempo normal de transferencia y reducir las falsas alarmas. Puedes ajustar el umbral para que se adapte a tu RPO y recibir notificaciones cuando los retrasos lo superen. También puedes exportar los datos a un archivo CSV para analizarlos más a fondo.</block>
   <block id="adf6bc23c10d536eed25c42f34ba48e8" category="section-title">2 de agosto de 2026</block>
   <block id="bb971caaebe9e5940267caf457500810" category="paragraph"><block ref="247b746a5e5f871115d636673a8fd3a7" category="inline-link-macro-rx"></block>.</block>
+  <block id="935b1e26eff078e94b224d92e0db898a" category="section-title">Funciones de ONTAP que se muestran en el Explorador de volúmenes</block>
+  <block id="2d4406cf931edb2fbd5ab72e7eb07c66" category="paragraph">El explorador de volúmenes incluye ahora funciones de ONTAP en la tabla de volúmenes. Estas funciones ofrecen información más detallada sobre la configuración y el estado de tus volúmenes, como la cobertura de protección, el estado de Autonomous Ransomware Protection (ARP/AI), la eficiencia del almacenamiento, la política de tiering y el crecimiento automático de volúmenes.</block>
+  <block id="5800d9f6c1560d9eaf8bc5fbacb4698b" category="summary">Descubre y replica los datos de ONTAP locales en NetApp Workload Factory para que puedan usarse como copia de seguridad en la nube.</block>
 </blocks>
