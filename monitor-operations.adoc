@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: monitor-operations.html 
-keywords: monitor databases, monitor jobs, track storage jobs, track jobs 
-summary: Realice un seguimiento de FSx para ONTAP, las credenciales y las operaciones de enlace y monitoree el progreso del trabajo con Tracker en NetApp Workload Factory for Storage. 
+keywords: monitor fsx for ontap, monitor jobs, track jobs, tracker 
+summary: Realiza un seguimiento de las operaciones de carga de trabajo y supervisa el progreso de los trabajos con Tracker en NetApp Workload Factory para FSx para ONTAP. 
 ---
-= Supervise las operaciones de almacenamiento con Tracker en NetApp Workload Factory
+= Supervisa las operaciones de FSx para ONTAP con Tracker
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -47,12 +47,9 @@ Realice un seguimiento y monitoree las operaciones en la consola de NetApp con T
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
-. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
-. Desde el menú Almacenamiento, seleccione *Administración* y luego *Enlaces*.
-+
-image:screenshot-menu-tracker-option.png["Una captura de pantalla del menú de configuración de la cuenta con la opción Rastreador resaltada."]
-
-. En la ficha Rastreador, utilice los filtros o busque para restringir los resultados del trabajo. También es posible descargar un informe de trabajos.
+. Selecciona el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego selecciona *Administración*.
+. En el menú Administración, selecciona *Tracker*.
+. En Tracker, utiliza los filtros o la función de búsqueda para acotar los resultados de trabajo. También puedes descargar un informe de trabajos.
 
 
 

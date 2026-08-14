@@ -1,0 +1,54 @@
+= Ver solicitud de API
+:allow-uri-read: 
+
+
+. En Tracker, utiliza los filtros o la función de búsqueda para acotar los resultados de trabajo. También puedes descargar un informe de trabajos.
+
+
+
+
+[[view-api-request]]
+== Ver solicitud de API
+
+Vea la solicitud API en CodeBox para una tarea en Tracker.
+
+.Pasos
+. En Rastreador, seleccione una tarea.
+. Seleccione el menú de acciones y luego seleccione *Ver solicitud de API*.
+
+
+
+
+[[retry-a-failed-operation]]
+== Vuelva a intentar una operación fallida
+
+Vuelva a intentar una operación fallida en Tracker. También puede copiar el mensaje de error de una operación con un error.
+
+
+NOTE: Puedes volver a intentar una operación fallida hasta 10 veces.
+
+.Pasos
+. En Tracker, seleccione una operación fallida.
+. Seleccione el menú de acciones y luego seleccione *Reintentar*.
+
+
+.Resultado
+Se vuelve a iniciar la operación.
+
+
+
+[[edit-and-retry-a-failed-operation]]
+== Edite y vuelva a intentar una operación con errores
+
+Edite los parámetros de la operación fallida y vuelva a intentar la operación fuera de Tracker.
+
+.Pasos
+. En Tracker, seleccione una operación fallida.
+. Seleccione el menú de acciones y luego seleccione *Editar y reintentar*.
++
+Se le redirigirá a la página de operaciones, donde puede editar los parámetros y volver a intentar la operación.
+
+
+
+.Resultado
+Se vuelve a iniciar la operación. Vaya a Rastreador para ver el estado de la operación.
