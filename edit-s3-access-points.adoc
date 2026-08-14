@@ -18,10 +18,8 @@ También puedes habilitar o deshabilitar la *Inventory table* para el punto de a
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
-. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
-. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen a actualizar, luego seleccione *Administrar*.
-. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. En la pestaña Volúmenes, selecciona el menú de acciones para el volumen para el que quieres editar los puntos de acceso S3, luego selecciona *Acciones avanzadas* y después *Administrar puntos de acceso S3*.
+. En el menú de Storage, selecciona *Volumes explorer*.
+. Selecciona el menú de acciones del volumen para el que deseas editar los puntos de acceso a S3, luego selecciona *Acciones avanzadas* y después *Gestionar puntos de acceso a S3*.
 . Desde la pantalla *Manage S3 access points*, selecciona el menú de acciones y luego selecciona *Edit access point*.
 . Haz las actualizaciones y luego selecciona *Aplicar*.
 +

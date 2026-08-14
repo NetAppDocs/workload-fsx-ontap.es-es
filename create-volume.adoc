@@ -83,8 +83,8 @@ NOTE: Al usar Terraform de CodeBox, el código que copie o descargue oculta `fsx
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
-. En el menú Storage, selecciona *Volume explorer*.
-. En *Volume explorer*, selecciona *Create volume*.
+. En el menú de Storage, selecciona *Volumes explorer*.
+. Selecciona *Crear volumen*.
 . En la página Create volume, en General details, proporcione los siguientes detalles:
 +
 .. *Nombre del volumen*: Introduzca un nombre para el volumen.

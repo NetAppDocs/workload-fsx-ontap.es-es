@@ -23,10 +23,8 @@ Los volúmenes utilizan thin provisioning tanto si se habilita como si se deshab
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
-. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
-. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen a actualizar y luego seleccione *Administrar*.
-. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. Desde la pestaña Volúmenes, seleccione el menú de acciones del volumen para el cual desea cambiar la política de niveles.
+. En el menú de Storage, selecciona *Volumes explorer*.
+. Selecciona el menú de acciones del volumen para el que quieras actualizar la configuración de eficiencia de almacenamiento.
 . Seleccione *Acciones avanzadas*, luego *Establecer la eficiencia del almacenamiento*.
 . Seleccione habilitar o deshabilitar la eficiencia del almacenamiento del volumen.
 . Selecciona *Aplicar* para guardar el cambio.

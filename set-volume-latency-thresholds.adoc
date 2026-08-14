@@ -36,10 +36,8 @@ NOTE: Puedes ver los eventos de latencia y recibir alertas sin una conexión de 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
-. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
-. Desde *FSx para ONTAP*, selecciona el menú de acciones del sistema de archivos con el volumen que quieres configurar y luego selecciona *Manage*.
-. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. En la pestaña Volúmenes, selecciona el menú de acciones del volumen para el que quieres establecer umbrales de latencia.
+. En el menú de Storage, selecciona *Volumes explorer*.
+. Selecciona el menú de acciones del volumen para el que quieras establecer los umbrales de latencia.
 . Selecciona *Acciones de alerta* y luego *Establecer umbral de latencia*.
 . En el cuadro de diálogo Establecer umbral de latencia, configura lo siguiente:
 +

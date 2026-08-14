@@ -32,10 +32,8 @@ Completa los siguientes requisitos antes de empezar.
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
-. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
-. En *FSx para ONTAP*, selecciona el sistema de ficheros con el volumen que quieres actualizar.
-. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. En la pestaña Volúmenes, selecciona el menú de acciones para el volumen que quieres usar, luego selecciona *Acciones avanzadas* y después *Gestionar puntos de acceso S3*.
+. En el menú de Storage, selecciona *Volumes explorer*.
+. Selecciona el menú de acciones del volumen que quieras utilizar, luego selecciona *Acciones avanzadas* y después *Gestionar puntos de acceso a S3*.
 . En la página Gestionar puntos de acceso S3, selecciona *Crear y adjuntar punto de acceso S3*.
 . En la página *Crear y adjuntar punto de acceso S3*, proporciona la siguiente información:
 +

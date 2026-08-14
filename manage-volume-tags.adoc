@@ -16,10 +16,8 @@ Las etiquetas pueden ayudarle a categorizar sus recursos.  Puede agregar, editar
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
-. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
-. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen a actualizar y luego seleccione *Administrar*.
-. Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. Desde la pestaña Volúmenes, seleccione el menú de acciones del volumen para el que desea modificar las etiquetas.
+. En el menú de Storage, selecciona *Volumes explorer*.
+. Selecciona el menú de acciones del volumen para modificar las etiquetas.
 . Seleccione *Acciones básicas* y luego *Editar etiquetas de volumen*.
 . En la página Editar etiquetas de volumen, agregue, edite o elimine etiquetas.
 +
