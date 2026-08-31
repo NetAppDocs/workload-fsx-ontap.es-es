@@ -15,6 +15,20 @@ Descubra las novedades de Amazon FSx para NetApp ONTAP.
 
 
 
+[[30-august-2026]]
+== 30 de agosto de 2026
+
+
+
+[[link-creation-available-from-links-page]]
+=== La creación de enlaces está disponible desde la página de Enlaces
+
+Ahora puedes crear enlaces directamente desde la página «Enlaces» del menú «Administración», además de desde la página de inventario de FSx for ONTAP y la página de resumen del sistema de archivos.
+
+link:create-link.html["Más información sobre cómo crear enlaces"].
+
+
+
 [[11-august-2026]]
 == 11 de agosto de 2026
 
