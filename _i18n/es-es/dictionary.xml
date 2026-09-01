@@ -166,7 +166,6 @@
   <block id="dbdb6569199d0b92d1e8203557e17927" category="list-text">Tenga en cuenta lo siguiente acerca de la capacidad de Snapshot antes de usar Snapshot:</block>
   <block id="93500ef3c4b6b914f591d40fa8709533" category="list-text">En la mayoría de los conjuntos de datos, una capacidad adicional del 20 % es suficiente para mantener snapshots hasta cuatro semanas. A medida que los datos envejecen, es menos probable que se utilice para restauraciones.</block>
   <block id="e6b293eb079603bb103c925cf228700c" category="list-text">La sobrescritura de todos los datos de una copia Snapshot consume una capacidad de volumen importante, lo que tiene en cuenta el aprovisionamiento de la capacidad del volumen.</block>
-  <block id="736ef7205c037a078bc461f368c6a21f" category="doc">Cree una snapshot manual de un volumen de FSx para ONTAP</block>
   <block id="5b10cd7d19a8a16358cb05922f38a69e" category="paragraph">Las Snapshot son recursos de volúmenes y son capturas instantáneas de los datos que solo consumen espacio para los datos modificados. Debido a que los datos cambian con el tiempo, las snapshots suelen consumir más espacio a medida que envejecen.</block>
   <block id="bbc11127132b3f6e8be58ad79bf66689" category="paragraph">FSX para volúmenes de ONTAP utiliza la copia puntual en escritura, de modo que cualquier archivo sin modificar en las copias snapshot no consuma ninguna capacidad del volumen.</block>
   <block id="644e775d0497e56fe0475dde3829ce1e" category="doc">Crea una máquina virtual de almacenamiento para un sistema de archivos FSx para ONTAP</block>
@@ -544,7 +543,6 @@
   <block id="cc8b0535948da368f832027c19b7f853" category="list-text">Asegúrese de copiar el número de serie de la cuenta (960xxxx) utilizado anteriormente para el campo de número de serie. Esto agilizará el procesamiento de la cuenta.</block>
   <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">NetApp debería ponerse en contacto con usted durante este proceso. Este es un ejercicio de incorporación puntual para nuevos usuarios.</block>
   <block id="fb4531252f707fbda1308840e3c7d6af" category="summary">Actualizar manualmente los datos Snapshot que se transfieren entre los volúmenes de origen y objetivo en una relación de replicación en cualquier momento.</block>
-  <block id="9ff8251e97123d13337c62b2b74bbe1e" category="doc">Actualizar los datos de snapshot en una relación de replicación</block>
   <block id="fa0604fd5c522ae5ab642bebf836c3d0" category="list-text">Selecciona *Actualizar ahora*.</block>
   <block id="241ea6618170a92484ea213e4cade854" category="doc">Actualice la capacidad de rendimiento de un sistema de archivos</block>
   <block id="6cc2a35072ede8f6e3bef70bce54ed8c" category="paragraph">Para ver los límites de capacidad de rendimiento, consulte <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> la documentación de AWS FSx para NetApp ONTAP.</block>
@@ -742,7 +740,6 @@
   <block id="037fbb0239239f2168489bba99e09b67" category="list-text">*Exportar PDF*</block>
   <block id="10acfa1cd5e4b3b5f4da60bba2257672" category="list-text">*Enviar por correo electrónico*</block>
   <block id="3902a76bb589f831b404ce1ec9865654" category="list-text">*Ver los cálculos*</block>
-  <block id="b31795226510baf520db5a5e2287b56e" category="doc">Actualice la configuración de eficiencia del almacenamiento de un volumen</block>
   <block id="07834469705cb1cae603dc37fac50539" category="paragraph">La función de eficiencia del almacenamiento incluye deduplicación, compresión de datos y compactación de datos para conseguir un ahorro de espacio óptimo en una unidad FlexVol volume. La deduplicación elimina los bloques de datos duplicados. La compresión de datos comprime los bloques de datos para reducir la cantidad de almacenamiento físico necesaria. La compactación de datos almacena más datos en menos espacio para aumentar la eficiencia del almacenamiento.</block>
   <block id="6949ed855da826654fa3e3a2e2a18279" category="paragraph">Si eligió no habilitar la eficiencia de almacenamiento cuando creó un volumen, puede habilitar el ajuste para el posible ahorro de espacio y costes en cualquier momento.</block>
   <block id="3561512c31eaec9705db4d98de971d93" category="paragraph">Los volúmenes utilizan thin provisioning tanto si se habilita como si se deshabilita la eficiencia del almacenamiento.</block>
@@ -1424,7 +1421,6 @@
   <block id="ad25ffa35c681232ceeec02144315aa5" category="paragraph">*Generación del sistema de archivos*: seleccione una de las siguientes opciones:</block>
   <block id="19f3a3d53bb0ae9a377ecb1e961d2155" category="list-text">*Segunda generación*: esta configuración se recomienda para cargas de trabajo de alto rendimiento o cuando las cargas de trabajo comienzan pequeñas y escalan de manera incremental hasta 72 GB/s de rendimiento y 2,4 millones de IOPS.</block>
   <block id="2af62906cede15164d81a343aa2da6a4" category="summary">Verificar y reequilibrar la capacidad de volumen para evitar desequilibrios que se desarrollen con el tiempo.</block>
-  <block id="f778d4dac2542cbef9605e3e41c11ba2" category="doc">Verificar y reequilibrar la capacidad de volumen</block>
   <block id="bfebf248126ee0c8c192d7442b03e1a1" category="sidebar">Visualice el estado de buena arquitectura de sus sistemas de archivos FSx para ONTAP</block>
   <block id="65050310e57f3790fef3c72eb48d33fe" category="section-title">Por qué son beneficiosos los enlaces</block>
   <block id="abca8c391b472ef4e80c6577b5d5eb2a" category="paragraph">A continuación se muestran algunos beneficios de utilizar enlaces:</block>
@@ -1524,7 +1520,6 @@
   <block id="b01b37af09f4438a0edf536fee6ee774" category="paragraph">Siga los pasos para eliminar un recurso compartido SMB/CIFS de un volumen.</block>
   <block id="dc782d3e46ef3bd4b9ae294af16366b0" category="paragraph">Al eliminar el recurso compartido SMB/CIFS, este no estará disponible y no será accesible para ningún usuario que quiera montarlo.</block>
   <block id="73d6e57b628ed920f4ce69e52d8df9d7" category="list-text">En el cuadro de diálogo Eliminar recurso compartido SMB/CIFS, seleccione *Eliminar* para confirmar la eliminación.</block>
-  <block id="998611c020287338b0e962b507511c46" category="doc">Proteja sus datos con la protección autónoma contra ransomware de NetApp con IA</block>
   <block id="1dee40f78f31696a01245dd5be3f3382" category="paragraph">Utilice ARP/AI para protegerse contra ataques de denegación de servicio donde el atacante retiene los datos hasta que se paga un rescate.  ARP/AI ofrece detección de ransomware en tiempo real basada en:</block>
   <block id="87a09ae23e8a5437f45a7f7430ba7565" category="paragraph">ARP/AI puede detectar la propagación de la mayoría de los ataques de ransomware después de que solo se cifra una pequeña cantidad de archivos, tomar medidas automáticamente para proteger los datos y alertarlo de que se está produciendo un ataque sospechoso.</block>
   <block id="3d892826b81878b82d3bd5353e94ce1a" category="paragraph">La función ARP/AI se actualiza automáticamente según la versión de ONTAP que ejecuta Amazon FSx for NetApp ONTAP, por lo que no es necesario realizar actualizaciones manuales.</block>
@@ -1694,7 +1689,6 @@
   <block id="93482e0e05af93f1f57953ff700f65af" category="summary">Configurar y actualizar Active Directory para una máquina virtual de almacenamiento en un sistema de archivos FSx para ONTAP en NetApp Workload Factory.</block>
   <block id="b517cd494437c46f189031b81fe054d1" category="list-text">Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con la VM de almacenamiento que desea actualizar y luego seleccione *Administrar*.</block>
   <block id="e2978ebf10a51b553f9a074316b27b79" category="summary">Cree una copia de seguridad manual de un volumen en NetApp Workload Factory fuera de las copias de seguridad programadas regularmente.</block>
-  <block id="54fe537cb8aa5bbba8b6f2002f13d69c" category="doc">Crear una copia de seguridad manual de un volumen en NetApp Workload Factory</block>
   <block id="4f43be2165dfc12e9cac6220645b9996" category="paragraph">Cree una copia de seguridad manual de un volumen fuera de las copias de seguridad programadas regularmente en NetApp Workload Factory.</block>
   <block id="cc481e5a678e1d84e7207782a75f9a18" category="summary">Con NetApp Workload Factory puede crear un sistema de archivos FSx para ONTAP para agregar y administrar volúmenes y servicios de datos adicionales.</block>
   <block id="9b19e4522ce9145cc667b5fcceaba11d" category="doc">Cree un sistema de archivos FSx para ONTAP en NetApp Workload Factory</block>
@@ -1712,7 +1706,6 @@
   <block id="939a8d22db4ccfbdde48d35119ad37a3" category="list-text">*Administrador de secretos de AWS*: Opcional.  Permite que Workload Factory obtenga credenciales de acceso a FSx para ONTAP desde su AWS Secrets Manager.</block>
   <block id="7580bfe7832e708a7a254e231956ba42" category="list-text">Regrese a la interfaz de Workload Factory y verá que el enlace está asociado con el sistema de archivos FSx para ONTAP .</block>
   <block id="3d607d93b8532423a7bbebf948091168" category="summary">Cree una política de instantáneas personalizada para una máquina virtual de almacenamiento en Workload Factory.</block>
-  <block id="0e4f989c75a10776b672b4a9f108bfc9" category="doc">Crear una política de instantáneas para máquinas virtuales de almacenamiento en Workload Factory</block>
   <block id="ab9a6ebd2e1e5562fa11ba5a014fc247" category="paragraph">Cree una política de instantáneas personalizada para las máquinas virtuales de almacenamiento en Workload Factory para administrar la creación y retención de instantáneas. Una política de instantáneas define cómo el sistema crea instantáneas para una máquina virtual de almacenamiento. Puede crear una política de instantáneas para una máquina virtual de almacenamiento en un sistema de archivos FSx para ONTAP . También puede compartir la política entre varias máquinas virtuales de almacenamiento.</block>
   <block id="ab208b31e3a136f0c6135fb0336e666b" category="list-text">Desde la pestaña *Máquinas virtuales de almacenamiento*, seleccione el menú de acciones para el volumen que desea proteger con instantáneas programadas, luego *Acciones avanzadas* y luego *Administrar políticas de instantáneas*.</block>
   <block id="639d2937555bcb4f73e857db43a5af09" category="summary">Cree una instantánea manual de un volumen FSx para ONTAP en NetApp Workload Factory.  Las instantáneas son versiones puntuales del contenido de su volumen.</block>
@@ -1753,7 +1746,6 @@
   <block id="ce1de3f28d8568be87cdce779516de02" category="doc">Eliminar una máquina virtual de almacenamiento en NetApp Workload Factory</block>
   <block id="d287f4840c4e2956b3e030d276822021" category="doc">Eliminar un volumen en NetApp Workload Factory</block>
   <block id="d3642378f76a85654ded51afcb1ef1e1" category="summary">Descubra y visualice los volúmenes de caché asociados con las relaciones de caché sin salir de la consola de NetApp Workload Factory.</block>
-  <block id="6941de74744e8105d82d9020761bcfab" category="doc">Descubra volúmenes de caché en Workload Factory</block>
   <block id="48a0f6fd350fab8343613dcbe8a68778" category="paragraph">Descubra y visualice volúmenes _cache_ asociados con relaciones de caché sin salir de la consola de NetApp Workload Factory.  Las relaciones de caché también se conocen como relaciones ONTAP FlexCache .  Workload Factory descubre relaciones de caché existentes utilizando la tecnología FlexCache , que es la capacidad de almacenamiento en caché remoto de NetApp ONTAP que acelera el acceso a los datos, reduce la latencia de la WAN, el ancho de banda y los costos de las cargas de trabajo de lectura intensiva, especialmente cuando los clientes necesitan acceder a los mismos datos repetidamente.</block>
   <block id="375aaa96b221ad9d77959705c31cbabf" category="inline-link-macro">Obtenga más información sobre la replicación de datos con FlexCache.</block>
   <block id="3ab5391ad1cf79099e8de83d067b33e6" category="paragraph"><block ref="3ab5391ad1cf79099e8de83d067b33e6" category="inline-link-macro-rx"></block></block>
@@ -1844,7 +1836,6 @@
   <block id="df22e5c72d75cea7ae766daf660bd529" category="summary">Administre la programación de copias de seguridad de un sistema de archivos FSx para ONTAP en NetApp Workload Factory cuando sea necesario.</block>
   <block id="be1c92aa6bef23dd57df3395c46827bb" category="paragraph">Administre la programación de copias de seguridad de un sistema de archivos FSx para ONTAP en NetApp Workload Factory.</block>
   <block id="93ae473ca3e8f97f82687e6f98eab1da" category="list-text">Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos para el cual desea actualizar la programación de copias de seguridad y luego seleccione *Administrar*.</block>
-  <block id="f73fd134806728f0a5ac79982e11ead7" category="doc">Administrar el recurso compartido SMB/CIFS para un volumen en Workload Factory</block>
   <block id="c69f3e9214ff94aa0825993b6fb1b85a" category="paragraph">La administración de un recurso compartido SMB/CIFS de un volumen en Workload Factory incluye la creación de recursos compartidos SMB/CIFS, la determinación de los usuarios y grupos a los que se les dará acceso y el nivel de permisos que se les otorgarán, y la eliminación de recursos compartidos SMB/CIFS.</block>
   <block id="4b898528f057698b461041b6d7447cfe" category="list-text">Desde la pestaña Volúmenes, seleccione el menú de acciones del volumen para el cual desea cambiar el recurso compartido SMB.</block>
   <block id="52b572ba9057fb19fd2333ef3f707bd0" category="list-text">En la pestaña *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con el volumen a actualizar y luego seleccione *Administrar*.</block>
@@ -1852,7 +1843,6 @@
   <block id="0b83e178116e79ce2a76377c2fe4e4ed" category="doc">Administrar archivos inmutables para un volumen en NetApp Workload Factory</block>
   <block id="6dc7abcdf6f4b84a36a87f40f2787a33" category="list-text">*Eliminación privilegiada*: habilita o deshabilita la función.  Al habilitar esta función, un administrador de SnapLock puede eliminar un volumen WORM no vencido.  Esta función solo es compatible con el modo de retención empresarial.</block>
   <block id="a1212a4e5f083322acc45c56b9938112" category="summary">Puede ver los enlaces asociados a su cuenta, actualizar las contraseñas para la autenticación de enlaces y eliminar un enlace en NetApp Workload Factory.</block>
-  <block id="62f72fd04830d29db75ec05c5541e42e" category="doc">Administrar enlaces de Workload Factory</block>
   <block id="83dfd07dca3a04ca19cdc3262cb17df4" category="paragraph">Administre los enlaces que ha asociado con su cuenta de Workload Factory.  Puede ver los enlaces asociados con un sistema de archivos FSx para ONTAP , proporcionar contraseñas utilizadas para la autenticación de enlaces y eliminar enlaces desde la consola de Workload Factory.</block>
   <block id="2042c96024e7e8a46d1497c843c76da6" category="list-text">Desde el menú Almacenamiento, seleccione *Administración* y luego *Enlaces*.</block>
   <block id="50e87fbed332b782c23eefcd063c29f3" category="paragraph">Los enlaces existentes aparecen en la página Enlaces.</block>
@@ -1929,7 +1919,6 @@
   <block id="19002cddfac8e15ce79f8ccad53b74e6" category="paragraph">En NetApp Workload Factory, puede restaurar un volumen desde una copia de seguridad a cualquier sistema de archivos FSx para ONTAP en su cuenta de AWS.</block>
   <block id="e8c0bed13dff2e82ae3fd20a79157041" category="list-text">La restauración puede aumentar la capacidad utilizada por encima del umbral especificado.  Puede completar la operación de restauración.  Considerar<block ref="e41647392a26a0e6b166f921fc9cbdef" category="inline-link-macro-rx"></block> o seleccionar Workload Factory para agregar automáticamente capacidad de nivel de almacenamiento SSD.</block>
   <block id="2235d115064fc8246f43d55ab62b045c" category="list-text">La restauración requiere capacidad SSD adicional.  Debe seleccionar que Workload Factory agregue automáticamente capacidad de nivel de almacenamiento SSD para continuar.</block>
-  <block id="fa6f999947ca23d9e3e71b237b583528" category="doc">Restaurar un volumen desde una instantánea en Workload Factory</block>
   <block id="d3a96b67aa0602273a39c3df984573da" category="paragraph">En Workload Factory, puede restaurar datos desde una instantánea a un volumen existente o a un volumen nuevo. La operación de restauración permite la recuperación en un punto determinado del tiempo cuando un volumen contiene archivos eliminados o dañados.</block>
   <block id="eae1ab715619b3c7c75c3c94c00fe8a7" category="list-text">Desde la pestaña *Volúmenes*, seleccione el menú de acciones para el volumen que desea restaurar desde una instantánea.</block>
   <block id="fd2a512a440fa903a2db9a227f9c67d9" category="list-text">Desde la página Administrar instantáneas, seleccione el menú de acciones para la instantánea que desea restaurar y luego seleccione *Restaurar*.</block>
@@ -2040,7 +2029,6 @@
   <block id="64aefaaa1ffe9f3b50d13850f89ff59a" category="list-text">Otorgue permisos de _visualización, planificación y análisis_ en su cuenta de AWS.</block>
   <block id="582f3532371a870cf4bd6406f93d26de" category="paragraph"><block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block></block>
   <block id="7335bfe9e44aaa30f676443b169c4028" category="summary">Obtenga información sobre las bóvedas cibernéticas de NetApp y cómo implementar una arquitectura de bóveda cibernética para proteger sus datos del ransomware y las amenazas cibernéticas.</block>
-  <block id="82f3873908ce87878ae918ed0d960883" category="doc">Proteja sus datos con una bóveda cibernética.</block>
   <block id="c20c451e413ebde26a765cbbc0c15afc" category="paragraph">Un volumen de bóveda cibernética es una ubicación de almacenamiento aislada y segura que se utiliza para almacenar copias de seguridad de sus datos, protegiéndolos de ataques de ransomware y otras amenazas cibernéticas.  Como parte de la creación del almacén, creará un volumen de almacén cibernético, deshabilitará todos los protocolos de cliente, establecerá una relación de replicación entre el volumen de origen y el volumen del almacén cibernético y creará instantáneas inmutables en el volumen del almacén cibernético.</block>
   <block id="d825eb03b1924c3d41f95d2810515203" category="paragraph-title">¿Qué es una bóveda cibernética?</block>
   <block id="2712d3844c4c3f6fae0cd10b9d646084" category="paragraph">Una bóveda cibernética es una técnica específica de protección de datos que implica almacenar datos críticos en un entorno aislado, separado de la infraestructura de TI principal.</block>
@@ -2446,7 +2434,6 @@
   <block id="df84e5c661ad9c55d4921f236021aac2" category="paragraph"><block ref="df84e5c661ad9c55d4921f236021aac2" category="inline-link-macro-rx"></block></block>
   <block id="3b40a61896ac7bb071b70913553072f1" category="inline-link-macro">Administra el almacenamiento de bloques para un sistema de archivos FSx for ONTAP</block>
   <block id="72a58cc21323626d7784d44077612a4a" category="paragraph"><block ref="72a58cc21323626d7784d44077612a4a" category="inline-link-macro-rx"></block></block>
-  <block id="cfcff7e4ca0a4496f029a99d812c3cb3" category="doc">Ajusta manualmente la capacidad del sistema de archivos en Workload Factory</block>
   <block id="59f5126fcebfa1b4b592a46994a99827" category="paragraph">Aumenta la capacidad de almacenamiento SSD cuando el uso supere tu umbral especificado. Reduce la capacidad de almacenamiento SSD cuando no estés usando los conjuntos de trabajo para ahorrar dinero.</block>
   <block id="eb6c620cfb7e9a2b2d272cbd7de4add5" category="inline-link-macro">habilitar la gestión automática de la capacidad</block>
   <block id="ecc53408400ad50b32a298b084aaab6c" category="paragraph">Alternativamente, puedes <block ref="3b9a1990588be58052dffdfdaa494467" category="inline-link-macro-rx"></block> para que Workload Factory gestione la capacidad del sistema de archivos por ti.</block>
@@ -2469,7 +2456,6 @@
   <block id="6a7ad49263c3fc8c151eb65f1806da11" category="paragraph">Los dispositivos de bloque, o LUN (números de unidad lógica), son volúmenes con sistemas de archivos en un entorno SAN, accesibles para los hosts a través de una red.</block>
   <block id="b8566093dc7e8e13804760276e46227b" category="admonition">Después de aumentar el tamaño del dispositivo de bloque, sigue el procedimiento que proporciona tu sistema operativo anfitrión para descubrir el nuevo tamaño y expandir el sistema de archivos.</block>
   <block id="5604a07573c6d426e93e84ff1a6bd366" category="paragraph">Los dispositivos de bloque que no se asignan a un cliente o que no se usan durante siete días son dispositivos de bloque inactivos. Esta operación desasigna y elimina el dispositivo de bloque seleccionado. Si el volumen FlexVol del host no contiene ningún dispositivo de bloque, Workload Factory lo elimina.</block>
-  <block id="1abbae8f95c05dac2b36d51f50eb87ac" category="doc">Administra la capacidad del sistema de archivos y los nodos de información automáticamente en Workload Factory</block>
   <block id="d5d9ee8255b76e97868c3facadf58360" category="paragraph">La activación de la gestión de la capacidad permite que NetApp Workload Factory añada automáticamente almacenamiento incremental a un sistema de archivos FSx for ONTAP a medida que las necesidades de capacidad cambian con el tiempo. Además, activar esta función elimina la necesidad de supervisar la capacidad manualmente.</block>
   <block id="b5750806a6c2de28360d7b511ba01b0c" category="paragraph">El sistema escanea el sistema de archivos FSx for ONTAP cada 30 minutos. Comprueba si es necesario añadir almacenamiento incremental y verifica los nodos de información de volumen disponibles. El recuento aumenta según los umbrales automáticos de gestión de capacidad.</block>
   <block id="7bdf690b1d068245416e9f5cbb766f44" category="paragraph">La activación de la gestión de nodo de información permite que NetApp Workload Factory agregue automáticamente nodos de información incrementales a un sistema de archivos FSx for ONTAP a medida que cambian las necesidades de capacidad. Esta función elimina la necesidad de supervisar manualmente los nodos de información.</block>
@@ -2526,7 +2512,6 @@
   <block id="8650af0fa3c7b902ba6a94894d28c472" category="list-text">En el cuadro de diálogo *Copias de seguridad de volúmenes*, proporciona lo siguiente:</block>
   <block id="5e9b88efcc8c9692790f512327a22476" category="list-text">Selecciona *Acciones de protección de datos*, *Copias de seguridad de volúmenes* y luego *Restaurar a partir de una copia de seguridad*.</block>
   <block id="6eb18ebccbf4fe18669aca55778990e0" category="sidebar">Gestiona la programación de backups de volúmenes</block>
-  <block id="0961e27231cdfd5dc9ef441903dabe01" category="doc">Limitaciones conocidas de Amazon FSx para NetApp ONTAP en NetApp Workload Factory</block>
   <block id="b6a0b5ebabfe42c8ed27e9b4c0efda76" category="paragraph">Las limitaciones conocidas identifican plataformas, dispositivos o funciones que no son compatibles con esta versión del producto o que no interoperan correctamente con él. Las siguientes limitaciones son específicas de Amazon FSx for NetApp ONTAP en NetApp Workload Factory. Revisa estas limitaciones cuidadosamente.</block>
   <block id="373a2f1d901c2d939efc602830f01830" category="paragraph">La nueva tabla de Inventario explora automáticamente tus buckets de AWS S3 y rellena las tablas de S3 para darte una instantánea clara de todos los objetos, sus metadatos, atributos y etiquetas. El acceso a estos detalles te ayuda a mantener el control, la visibilidad y la confianza en los datos de los que eres responsable, mientras reduces la sobrecarga operativa. Puedes activar la función al crear y adjuntar puntos de acceso de S3 o al editar puntos de acceso existentes.</block>
   <block id="89431b722804b6b5729917d710d8bca9" category="inline-link-macro">Crear y adjuntar un punto de acceso S3 para un volumen en NetApp Workload Factory</block>
@@ -2763,7 +2748,6 @@
   <block id="b0a6eb48f73351a252096302ea696228" category="cell">s3tables:PutTableBucketPolicy</block>
   <block id="b1ad085edd3140c672ff2109d9242452" category="cell">Permitir el acceso a CloudWatch Logs</block>
   <block id="4d565cafb7f83c16708d52b5ab6f97af" category="summary">Consulta los detalles de los puntos de acceso S3 para un volumen en NetApp Workload Factory.</block>
-  <block id="0508a20ce5214e259576cd4e33683ed1" category="doc">Ver los detalles de los puntos de acceso S3 para un volumen en NetApp Workload Factory</block>
   <block id="b83eea7e75edc796e98ee57692e03801" category="paragraph">Ver detalles del punto de acceso S3 como el alias, ARN y S3 URI. Con las tablas de inventario y registro en diario habilitadas, puedes ver metadatos y registros de auditoría de eventos de acceso de usuarios y operaciones de objetos a través de puntos de acceso S3.</block>
   <block id="cf3c11cd7ad93f5d574a0699e780188f" category="paragraph">Cuando la tabla de inventario está habilitada en el volumen, puedes ver los detalles del punto de acceso, la tabla de inventario y el bucket de tabla de los puntos de acceso S3 existentes adjuntos al volumen. El sistema también proporciona un enlace a la tabla de inventario en la AWS Management Console.</block>
   <block id="5a8fb625347b548bdba1297afcb24588" category="paragraph">Cuando la tabla de registro diario está habilitada, Workload Factory genera registros sobre los puntos de acceso en una tabla para tu referencia. La tabla incluye eventos de CloudTrail, rastros (un registro de las actividades de AWS), filtros de CloudTrail, grupos de registro de CloudWatch y más.</block>
@@ -3255,4 +3239,33 @@
   <block id="64c7a4783273d9e14ea971d0631f7ac8" category="paragraph">Comprueba que el ARN secreto contenga los siguientes pares clave-valor, aunque el _filesystemID_ es opcional.</block>
   <block id="669b6152234fe8c12012646b005a7d2f" category="paragraph">El secreto debe contener los siguientes pares clave-valor:</block>
   <block id="1641126472d40ab162e3acf05ac611ba" category="section-title">30 de agosto de 2026</block>
+  <block id="c82db17d9640cb358a39977100613e95" category="section-title">Identificación de la carga de trabajo</block>
+  <block id="9c2440b961ba52df8467b29a146f98ba" category="list-text">Workload Factory ahora identifica las cargas de trabajo de los hosts conectados al almacenamiento FSx for ONTAP implementado en otra región.</block>
+  <block id="c48db719590b6821db48e6238f4be1c4" category="list-text">La lógica mejorada de detección de cargas de trabajo ahora identifica tipos adicionales de cargas de trabajo y mejora la precisión de los resultados.</block>
+  <block id="a5eed3b96d2185e0764ada195a486690" category="doc">Cambia la programación de replicación de un volumen en NetApp Workload Factory</block>
+  <block id="c092c4e03c30c753ec060fe6b2255de4" category="doc">Configura y actualiza AD para una máquina virtual de almacenamiento en NetApp Workload Factory</block>
+  <block id="03fff97f7787377e3e4417517cf7b21e" category="doc">Crea una copia de seguridad bajo demanda de un volumen en NetApp Workload Factory</block>
+  <block id="08d70d11ddeec80d88a5f51591578656" category="doc">Protege tus datos de FSx para ONTAP con un cyber vault</block>
+  <block id="6721f36d179d854ccc58b2ad42c7362f" category="doc">Crea una política de snapshots para las máquinas virtuales de almacenamiento en NetApp Workload Factory</block>
+  <block id="dbf1c63cddd6309b0bc8cc75976dec7b" category="doc">Crea una instantánea bajo demanda de un volumen en NetApp Workload Factory</block>
+  <block id="23d39bde9b08b2c6e975096219600185" category="doc">Descubre volúmenes de caché en NetApp Workload Factory</block>
+  <block id="5c1f913dca6b99f9befa10b536db4492" category="doc">Activa el crecimiento automático de volúmenes en NetApp Workload Factory</block>
+  <block id="d4a67598375b312f4832cf6bab5157bb" category="doc">Habilita la retención a largo plazo de instantáneas en NetApp Workload Factory</block>
+  <block id="b93731800482f89e9948a463e728ef9d" category="doc">Consigue ayuda sobre FSx para ONTAP en NetApp Workload Factory</block>
+  <block id="e8355e7c1132891c80c2af3110068130" category="doc">Implementa configuraciones bien diseñadas del sistema de archivos FSx for ONTAP</block>
+  <block id="098db803ee017e3ecc391b755fd4943a" category="doc">Ajusta manualmente la capacidad del sistema de archivos en NetApp Workload Factory</block>
+  <block id="d57644972c07db4650e08c2e26761651" category="doc">Limitaciones conocidas de FSx para ONTAP en NetApp Workload Factory</block>
+  <block id="ff71316397e1ef17bc15e9784bcb30bd" category="doc">Limitar la tasa de transferencia de la replicación en NetApp Workload Factory</block>
+  <block id="96bbcf50926e08954b634fd05cb51ba4" category="doc">Gestiona automáticamente la capacidad y los inodos en NetApp Workload Factory</block>
+  <block id="9e0ecd128d681936cd0b802126c384d4" category="doc">Gestiona el recurso compartido SMB/CIFS de un volumen en NetApp Workload Factory</block>
+  <block id="a4d45bf93deed5e773f1c470ea181049" category="doc">Gestiona los enlaces de NetApp Workload Factory</block>
+  <block id="c63ba25cc70bb1bddad69971b2178a35" category="doc">Gestiona las políticas de snapshots para volúmenes en NetApp Workload Factory</block>
+  <block id="76bef3b45ffa41a70902eee6a180240d" category="doc">Protege tus datos de FSx para ONTAP con NetApp Autonomous Ransomware Protection con IA</block>
+  <block id="111827ab44a64fef8ee33a4c31d9e746" category="doc">Comprobar y reequilibrar la capacidad de volumen en NetApp Workload Factory</block>
+  <block id="13eb38af096a3b48602b4708c1b1b87c" category="doc">Restaurar un volumen a partir de una instantánea en NetApp Workload Factory</block>
+  <block id="b9be88fc11ad6670dab2c9b28bfeed84" category="doc">Registra tu cuenta de Workload Factory para soporte de NetApp</block>
+  <block id="1154a7e4b2160ee9927e71e327ffc1fc" category="doc">Actualiza los datos de la instantánea de replicación en NetApp Workload Factory</block>
+  <block id="dcd3b5b0b5be83a6428cf8e204033841" category="doc">Actualizar la eficiencia de almacenamiento de volúmenes en NetApp Workload Factory</block>
+  <block id="9f6474fce0b75bbb20e073788d0f7d91" category="doc">Actualiza la capacidad de rendimiento de un sistema de archivos en NetApp Workload Factory</block>
+  <block id="fa9e4ccc5a64e6bc26f23e2983b2ae89" category="doc">Ver los detalles del punto de acceso S3 de un volumen en NetApp Workload Factory</block>
 </blocks>

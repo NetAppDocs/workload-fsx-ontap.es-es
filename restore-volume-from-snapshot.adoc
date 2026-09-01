@@ -4,7 +4,7 @@ permalink: restore-volume-from-snapshot.html
 keywords: restore volume, snapshot 
 summary: Restaura un volumen de FSx para ONTAP a partir de una instantánea cuando el volumen contenga archivos dañados o eliminados. 
 ---
-= Restaurar un volumen desde una instantánea en Workload Factory
+= Restaurar un volumen a partir de una instantánea en NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

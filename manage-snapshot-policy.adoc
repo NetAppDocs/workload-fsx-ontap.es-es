@@ -4,7 +4,7 @@ permalink: manage-snapshot-policy.html
 keywords: manage snapshot policy, change snapshot policy, snapshot policies, snapshot schedule, update 
 summary: Administre políticas de instantáneas para FSx para volúmenes ONTAP en Workload Factory.  Una política de instantáneas define cómo el sistema crea instantáneas para un volumen. 
 ---
-= Permite gestionar políticas Snapshot
+= Gestiona las políticas de snapshots para volúmenes en NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

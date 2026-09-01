@@ -4,7 +4,7 @@ permalink: create-snapshot-policy.html
 keywords: create 
 summary: Cree una política de instantáneas personalizada para una máquina virtual de almacenamiento en Workload Factory. 
 ---
-= Crear una política de instantáneas para máquinas virtuales de almacenamiento en Workload Factory
+= Crea una política de snapshots para las máquinas virtuales de almacenamiento en NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

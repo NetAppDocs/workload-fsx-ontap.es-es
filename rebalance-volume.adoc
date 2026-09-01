@@ -4,7 +4,7 @@ permalink: rebalance-volume.html
 keywords: rebalance capacity, volume capacity, redistribute capacity 
 summary: Verificar y reequilibrar la capacidad de volumen para evitar desequilibrios que se desarrollen con el tiempo. 
 ---
-= Verificar y reequilibrar la capacidad de volumen
+= Comprobar y reequilibrar la capacidad de volumen en NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

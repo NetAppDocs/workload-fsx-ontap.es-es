@@ -4,7 +4,7 @@ permalink: enable-snapshots-long-term.html
 keywords: snapshot long-term retention, enable long-term retention 
 summary: Habilite snapshots para retención a largo plazo, lo que le permite replicar snapshots concretos para recuperación ante desastres a largo plazo. 
 ---
-= Habilite y edite snapshots para retención a largo plazo
+= Habilita la retención a largo plazo de instantáneas en NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

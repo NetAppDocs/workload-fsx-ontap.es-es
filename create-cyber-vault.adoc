@@ -4,7 +4,7 @@ permalink: create-cyber-vault.html
 keywords: create cyber vault, volume cyber vault, protect data cyber vault, cyber vault setup 
 summary: Obtenga información sobre las bóvedas cibernéticas de NetApp y cómo implementar una arquitectura de bóveda cibernética para proteger sus datos del ransomware y las amenazas cibernéticas. 
 ---
-= Proteja sus datos con una bóveda cibernética.
+= Protege tus datos de FSx para ONTAP con un cyber vault
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
