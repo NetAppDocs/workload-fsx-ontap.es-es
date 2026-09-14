@@ -27,96 +27,85 @@ sidebar:
       url: "/learn-fsx-ontap.html"
     - title: Inicio rápido
       url: "/quick-start.html"
-    - title: Crea un sistema de archivos FSx for ONTAP
-      url: "/create-file-system.html"
   - title: Utilice Amazon FSX para ONTAP de NetApp
     entries:
     - title: Explora el ahorro
       url: "/explore-savings.html"
-    - title: Seguimiento y análisis de FSx para los costos de ONTAP
-      url: "/track-costs.html"
-    - title: Utilice los enlaces
+    - title: Crear recursos de almacenamiento
       entries:
-      - title: Conozca los enlaces
-        url: "/links-overview.html"
-      - title: Conéctese a un sistema de archivos mediante un enlace
-        url: "/create-link.html"
-      - title: Gestionar enlaces
-        url: "/manage-links.html"
-    - title: Cree un volumen
-      url: "/create-volume.html"
-    - title: Descubra y visualice los volúmenes de caché
-      url: "/discover-cache-volumes.html"
-    - title: Acceda a sus datos
-      url: "/access-data.html"
-    - title: Crear recursos de almacenamiento en bloque
-      entries:
+      - title: Crea un sistema de archivos FSx for ONTAP
+        url: "/create-file-system.html"
+      - title: Cree una máquina virtual de almacenamiento
+        url: "/create-storage-vm.html"
+      - title: Cree un volumen
+        url: "/create-volume.html"
       - title: Crear un igroup
         url: "/create-igroup.html"
       - title: Crear un dispositivo de bloque
         url: "/create-block-device.html"
-    - title: Cree una máquina virtual de almacenamiento
-      url: "/create-storage-vm.html"
-    - title: Proteja sus datos
+    - title: Conozca los enlaces
+      url: "/learn-about-links.html"
+    - title: Descubra y visualice los volúmenes de caché
+      url: "/discover-cache-volumes.html"
+    - title: Acceda a sus datos
+      url: "/access-data.html"
+  - title: Proteja sus datos
+    entries:
+    - title: Información general sobre la protección de datos
+      url: "/data-protection-overview.html"
+    - title: Utiliza instantáneas para proteger datos
       entries:
-      - title: Información general sobre la protección de datos
-        url: "/data-protection-overview.html"
-      - title: Usar instantáneas
-        entries:
-        - title: Crear una copia de Snapshot
-          url: "/create-snapshot.html"
-        - title: Crear una política de Snapshot
-          url: "/create-snapshot-policy.html"
-        - title: Restaurar un volumen a partir de una copia de Snapshot
-          url: "/restore-volume-from-snapshot.html"
-      - title: Utilice copias de seguridad para el almacenamiento de objetos
-        entries:
-        - title: Cree una copia de seguridad manual
-          url: "/create-backup.html"
-        - title: Restaurar un volumen desde un backup
-          url: "/restore-from-backup.html"
+      - title: Utiliza instantáneas para proteger datos
+        url: "/use-snapshots.html"
+      - title: Permite gestionar políticas Snapshot
+        url: "/manage-snapshot-policy.html"
+      - title: Gestionar copias Snapshot
+        url: "/manage-snapshots.html"
+    - title: Utilice copias de seguridad para el almacenamiento de objetos
+      url: "/use-backups.html"
+    - title: Utiliza la replicación para proteger los datos
+      entries:
       - title: Replicar datos
         url: "/create-replication.html"
-      - title: Proteger los datos con Protección autónoma frente al ransomware
-        url: "/ransomware-protection.html"
-      - title: Clonar un volumen
-        url: "/clone-volume.html"
-      - title: Use datos de ONTAP en las instalaciones
+      - title: Replica datos de ONTAP locales en FSx for ONTAP
         url: "/use-onprem-data.html"
-      - title: Crea una bóveda cibernética para proteger los datos.
-        url: "/create-cyber-vault.html"
-  - title: Administración y supervisión
+      - title: Replicación de un equipo virtual de almacenamiento en otro sistema
+          de archivos
+        url: "/replicate-svm-to-file-system.html"
+      - title: Haz un seguimiento de los retrasos en la replicación
+        url: "/track-replication-delays.html"
+      - title: Gestiona las relaciones de replicación
+        url: "/manage-replication.html"
+    - title: Proteger los datos con Protección autónoma frente al ransomware
+      url: "/ransomware-protection.html"
+    - title: Clonar un volumen
+      url: "/clone-volume.html"
+    - title: Crea una bóveda cibernética para proteger los datos.
+      url: "/create-cyber-vault.html"
+  - title: Gestiona FSx para ONTAP en Workload Factory
     entries:
-    - title: Supervise las operaciones con Tracker
-      url: "/monitor-operations.html"
+    - title: Analizar FSx para eventos de ONTAP EMS
+      url: "/analyze-events.html"
     - title: Implementar las mejores prácticas del sistema de archivos
       entries:
       - title: Análisis de configuración de FSx para ONTAP
         url: "/configuration-analysis.html"
       - title: Implemente configuraciones de sistemas de archivos bien diseñadas
         url: "/improve-configurations.html"
-    - title: Analizar FSx para eventos de ONTAP EMS
-      url: "/analyze-events.html"
-    - title: Administración de volúmenes
+    - title: Seguimiento y análisis de FSx para los costos de ONTAP
+      url: "/track-costs.html"
+    - title: Gestionar volúmenes
       entries:
-      - title: Editar el crecimiento automático de volúmenes
-        url: "/edit-volume-autogrow.html"
-      - title: Ajustar la capacidad de volumen
-        url: "/adjust-volume-capacity.html"
+      - title: Gestiona la capacidad de volumen
+        url: "/manage-volume-capacity.html"
       - title: Establecer umbrales de latencia de volumen
         url: "/set-volume-latency-thresholds.html"
-      - title: Reequilibrar la capacidad de volumen
-        url: "/rebalance-volume.html"
-      - title: Gestionar archivos inmutables
-        url: "/manage-immutable-files.html"
-      - title: Gestione etiquetas de volumen
-        url: "/manage-volume-tags.html"
+      - title: Gestiona la configuración del volumen
+        url: "/manage-volume-settings.html"
       - title: Administrar volúmenes de caché
         url: "/manage-cache-volumes.html"
       - title: Cambie una política de organización en niveles
         url: "/change-tiering-policy.html"
-      - title: Actualice la eficiencia del almacenamiento
-        url: "/update-storage-efficiency.html"
       - title: Gestione las políticas de exportación de NFS
         url: "/manage-nfs-export-policy.html"
       - title: Administrar recursos compartidos SMB/CIFS
@@ -137,66 +126,30 @@ sidebar:
         url: "/split-cloned-volume.html"
       - title: Eliminar un volumen
         url: "/delete-volume.html"
-    - title: Administración de almacenamiento en bloque
+    - title: Gestiona el almacenamiento en bloque
       entries:
       - title: Gestiona el almacenamiento en bloque
         url: "/manage-block-storage.html"
       - title: Aplicar etiquetas a dispositivos de bloque
         url: "/apply-block-device-tags.html"
-    - title: Administración del sistema de archivos
+    - title: Gestiona sistemas de archivos
       entries:
-      - title: Ajusta manualmente la capacidad del sistema de archivos
-        url: "/increase-file-system-capacity.html"
-      - title: Administra automáticamente la capacidad del sistema de archivos
-        url: "/manage-capacity-automatically.html"
-      - title: Administrar etiquetas del sistema de archivos
-        url: "/manage-fsx-tags.html"
-      - title: Restablezca la contraseña de fsxadmin
-        url: "/reset-fsxadmin-password.html"
-      - title: Suprimir un sistema de archivos
-        url: "/delete-file-system.html"
-    - title: Administración de máquinas virtuales de almacenamiento
-      entries:
-      - title: Replicación de un equipo virtual de almacenamiento en otro sistema
-          de archivos
-        url: "/replicate-svm-to-file-system.html"
-      - title: Configure y actualice Active Directory para una máquina virtual de
-          almacenamiento
-        url: "/configure-active-directory.html"
-      - title: Gestionar las etiquetas de equipos virtuales de almacenamiento
-        url: "/manage-svm-tags.html"
-      - title: Restablecer la contraseña de la máquina virtual de almacenamiento
-        url: "/reset-svm-password.html"
-      - title: Eliminar una máquina virtual de almacenamiento
-        url: "/delete-svm.html"
-    - title: Administración de la protección de datos
-      entries:
-      - title: Snapshot
-        entries:
-        - title: Permite gestionar políticas Snapshot
-          url: "/manage-snapshot-policy.html"
-        - title: Habilite y edite snapshots para retención a largo plazo
-          url: "/enable-snapshots-long-term.html"
-        - title: Gestionar copias Snapshot
-          url: "/manage-snapshots.html"
-      - title: Completos
-        entries:
-        - title: Gestiona la programación de backups de volúmenes
-          url: "/manage-backup-schedule.html"
-      - title: Replicación
-        entries:
-        - title: Replique un volumen de protección de datos
-          url: "/cascade-replication.html"
-        - title: Haz un seguimiento de los retrasos en la replicación
-          url: "/track-replication-delays.html"
-        - title: Gestiona las relaciones de replicación
-          url: "/manage-replication.html"
-    - title: Administración del rendimiento
-      entries:
+      - title: Ajustar la capacidad del sistema de archivos
+        url: "/adjust-file-system-capacity.html"
+      - title: Administra la configuración del sistema de archivos
+        url: "/manage-file-system-settings.html"
       - title: Aprovisione IOPS para un sistema de archivos
         url: "/provision-iops.html"
-      - title: Actualice la capacidad de rendimiento de un sistema de archivos
-        url: "/update-throughput-capacity.html"
+      - title: Suprimir un sistema de archivos
+        url: "/delete-file-system.html"
+    - title: Gestiona máquinas virtuales de almacenamiento
+      entries:
+      - title: Administra la configuración de las máquinas virtuales de almacenamiento
+        url: "/manage-svm-settings.html"
+      - title: Eliminar una máquina virtual de almacenamiento
+        url: "/delete-svm.html"
+    - title: Supervise las operaciones con Tracker
+      url: "/monitor-operations.html"
   - title: Referencia
     entries:
     - title: Rendimiento para FSx para ONTAP

@@ -25,7 +25,7 @@ Revisa el diagrama de almacenamiento de bloques para comprobar lo siguiente:
 
 
 .Antes de empezar
-* Debes asociar un enlace para gestionar igroups. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelve a esta operación.
+* Debes asociar un enlace para gestionar igroups. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Después de asociar el enlace, vuelve a esta operación.
 * Debes tener un igroup o dispositivo de bloque existente para verlo y gestionarlo.
 
 

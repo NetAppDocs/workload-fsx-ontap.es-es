@@ -65,7 +65,7 @@ Al activar ARP/AI para un sistema de archivos, se protegen automáticamente todo
 Si ARP/AI detecta un ataque real tras su activación, Workload Factory crea automáticamente una política de instantáneas. Esta política puede crear hasta seis instantáneas cada cuatro horas. Cada instantánea permanece bloqueada entre 2 y 5 días.
 
 .Antes de empezar
-Para habilitar ARP/AI para un sistema de archivos o un volumen, debe asociar un enlace. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"] .  Después de asociar el enlace, vuelva a esta operación.
+Para habilitar ARP/AI en un sistema de archivos o un volumen, debes asociar un enlace. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Una vez asociado el enlace, vuelve a esta operación.
 
 [role="tabbed-block"]
 ====

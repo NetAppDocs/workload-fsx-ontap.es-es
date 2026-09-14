@@ -51,7 +51,11 @@ Si seleccionó el caso de uso de migración, Workload Factory selecciona automá
 
 . *Tasa de transferencia máxima*: Selecciona *Limited* e introduce el límite máximo de transferencia en MB/s.. Alternativamente, selecciona *Ilimitado*.
 +
-Sin un límite, el rendimiento de la red y de las aplicaciones puede disminuir. También recomendamos una tasa de transferencia ilimitada para los sistemas de archivos de FSx for ONTAP para cargas de trabajo cruciales; por ejemplo, aquellas que se usan principalmente para la recuperación ante desastres. . En Configuración de replicación, proporcione lo siguiente:
+Sin un límite, el rendimiento de la red y de las aplicaciones puede disminuir. También recomendamos una tasa de transferencia ilimitada para los sistemas de archivos de FSx for ONTAP para cargas de trabajo cruciales; por ejemplo, aquellas que se usan principalmente para la recuperación ante desastres.
+
++
+.. En Configuración de replicación, proporcione lo siguiente:
+
 
 . *Inicializar relación de replicación*: Elige si quieres inicializar la relación de replicación inmediatamente después de crear la relación de replicación o más tarde. Ten en cuenta que la inicialización puede llevar mucho tiempo y podrías querer ejecutar la transferencia completa en horas de poca actividad.
 +

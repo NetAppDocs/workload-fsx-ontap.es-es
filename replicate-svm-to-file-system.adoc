@@ -14,7 +14,7 @@ summary: Replicar una máquina virtual de almacenamiento a otro sistema de archi
 La replicación de una máquina virtual de almacenamiento a otro sistema de archivos FSx para ONTAP en NetApp Workload Factory proporciona una capa protectora de acceso a datos en caso de pérdida de datos.  Esta operación replica todos los volúmenes de una máquina virtual de almacenamiento a otro sistema de archivos FSx para ONTAP .
 
 .Antes de empezar
-Para replicar una máquina virtual de almacenamiento a otro sistema de archivos FSx para ONTAP, debe asociar un vínculo. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
+Para replicar una máquina virtual de almacenamiento en otro sistema de archivos FSx for ONTAP, debes asociar un enlace. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Una vez asociado el enlace, vuelve a esta operación.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .

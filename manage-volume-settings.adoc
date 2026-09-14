@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: manage-volume-settings.html 
+keywords: volume tags, edit volume tags, edit tags, enable immutable files, disable immutable files, lock files, unlock files, storage efficiency change, update storage efficiency 
+summary: Las etiquetas pueden ayudarte a categorizar tus recursos. Puedes añadir, editar y quitar etiquetas de volúmenes en cualquier momento con FSx para volúmenes de ONTAP. 
+---
+= Gestiona la configuración de volúmenes en NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Personaliza la configuración de volúmenes FSx for ONTAP en NetApp Workload Factory para adaptarla a las necesidades de tu organización. Puedes gestionar las etiquetas de los volúmenes para clasificar los recursos, actualizar la configuración de eficiencia del almacenamiento para optimizar el espacio y el ahorro de costes, y gestionar la configuración de archivos inmutables para controlar la retención de datos y protegerlos frente a cambios no autorizados.
+
+
+
+[[manage-volume-tags]]
+== Gestione etiquetas de volumen
+
+Las etiquetas pueden ayudarle a categorizar sus recursos.  Puede agregar, editar y eliminar etiquetas de volumen en cualquier momento para los volúmenes FSx for ONTAP en NetApp Workload Factory.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú de Storage, selecciona *Volumes explorer*.
+. Selecciona el menú de acciones del volumen para modificar las etiquetas.
+. Seleccione *Acciones básicas* y luego *Editar etiquetas de volumen*.
+. En la página Editar etiquetas de volumen, agregue, edite o elimine etiquetas.
++
+La cantidad máxima de etiquetas que se puede aplicar a un volumen es 50.
+
+. Seleccione *aplicar*.
+
+
+
+
+[[update-volume-storage-efficiency]]
+== Actualizar la eficiencia de almacenamiento por volumen
+
+Actualiza la configuración de eficiencia de almacenamiento después de la creación del volumen.
+
+La función de eficiencia del almacenamiento incluye deduplicación, compresión de datos y compactación de datos para conseguir un ahorro de espacio óptimo en una unidad FlexVol volume. La deduplicación elimina los bloques de datos duplicados. La compresión de datos comprime los bloques de datos para reducir la cantidad de almacenamiento físico necesaria. La compactación de datos almacena más datos en menos espacio para aumentar la eficiencia del almacenamiento.
+
+Si eligió no habilitar la eficiencia de almacenamiento cuando creó un volumen, puede habilitar el ajuste para el posible ahorro de espacio y costes en cualquier momento.
+
+Los volúmenes utilizan thin provisioning tanto si se habilita como si se deshabilita la eficiencia del almacenamiento.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú de Storage, selecciona *Volumes explorer*.
+. Selecciona el menú de acciones del volumen para el que quieras actualizar la configuración de eficiencia de almacenamiento.
+. Seleccione *Acciones avanzadas*, luego *Establecer la eficiencia del almacenamiento*.
+. Seleccione habilitar o deshabilitar la eficiencia del almacenamiento del volumen.
+. Selecciona *Aplicar* para guardar el cambio.
+
+
+
+
+[[manage-immutable-files-for-a-volume-in-netapp-workload-factory]]
+== Administrar archivos inmutables para un volumen en NetApp Workload Factory
+
+Es posible actualizar ciertos ajustes de archivos inmutables de un volumen cuando la función está habilitada, como la política de retención y los períodos, el período de compromiso automático y el modo de adición de volúmenes.
+
+Tenga en cuenta que la activación de archivos inmutables solo es posible durante link:create-volume.html["creación de volúmenes"].
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú de Storage, selecciona *Volumes explorer*.
+. Selecciona el menú de acciones del volumen que deseas actualizar.
+. Selecciona *Acciones de protección de datos* y luego *Administrar archivos inmutables*.
+. En la página Gestionar archivos inmutables, puede actualizar lo siguiente:
++
+** *Período de retención*: Selecciona *Sin especificar* o *Especificar periodo*.
++
+*** *No especificado*: El período mínimo predeterminado es “0” años y el período máximo predeterminado es “30 años”.
+*** *Especificar periodo*: Opción para definir la política de retención, los periodos mínimos y máximos, la función de autoconfirmación y la función de modo de adición de volumen. Proporcione los siguientes detalles:
++
+**** *Política de retención*: Este período debe ser mayor o igual que el período de retención mínimo y menor o igual que el período de retención máximo.
+**** *Periodos mínimos y máximos*: Establece los periodos mínimo y máximo para confirmar archivos en este volumen en un estado de GUSANO inmutable.
+
+
+
+
+** *Autocommit*: Habilita o deshabilita la función para confirmar automáticamente archivos A WORM que no se hayan modificado durante el período de autocommit.
+** *Eliminación privilegiada*: habilita o deshabilita la función.  Al habilitar esta función, un administrador de SnapLock puede eliminar un volumen WORM no vencido.  Esta función solo es compatible con el modo de retención empresarial.
+** *Modo de adición de volumen*: Activa o desactiva la función. Al habilitar el modo de adición de volúmenes, es posible añadir nuevo contenido a los archivos WORM.
+
+
+. Haga clic en *aplicar*.
+
+
+
+
+[[related-information]]
+== Información relacionada
+
+* link:create-volume.html["Crear un volumen en Workload Factory"]
+* link:manage-volume-capacity.html["Gestiona la capacidad de volumen en Workload Factory"]
+* link:change-tiering-policy.html["Cambiar la política de niveles de volumen en Workload Factory"]
+* link:manage-s3-access-points.html["Administrar puntos de acceso S3 en Workload Factory"]
+

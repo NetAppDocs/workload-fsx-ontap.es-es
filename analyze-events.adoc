@@ -22,8 +22,8 @@ Los administradores de almacenamiento a menudo responden a los eventos de FSx pa
 
 El analizador de eventos extrae automáticamente los siguientes tipos de eventos de los sistemas de archivos FSx para ONTAP:
 
-* *Eventos EMS*: Eventos de error, alerta y emergencia del sistema de gestión de eventos ONTAP. Para ver y analizar eventos EMS, tienes que link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["conectarse al sistema de archivos mediante un enlace"].
-* *Eventos de latencia*: Eventos de latencia de lectura/escritura. Los eventos de latencia se pueden ver sin conexión de enlace. Para analizar los eventos de latencia y recibir información impulsada por IA, tienes que link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["conectarse al sistema de archivos mediante un enlace"].
+* *Eventos EMS*: Eventos de error, alerta y emergencia del sistema de gestión de eventos ONTAP. Para ver y analizar eventos EMS, tienes que link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["conectarse al sistema de archivos mediante un enlace"^].
+* *Eventos de latencia*: Eventos de latencia de lectura/escritura. Los eventos de latencia se pueden ver sin conexión de enlace. Para analizar los eventos de latencia y recibir información impulsada por IA, tienes que link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["conectarse al sistema de archivos mediante un enlace"^].
 
 
 Para ver los eventos, tienes que link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos de _visualización, planificación y análisis_"^] en tu cuenta de AWS. Los eventos se muestran durante 72 horas antes de ser eliminados.
@@ -66,13 +66,13 @@ Para más detalles, consulta la link:https://docs.aws.amazon.com/bedrock/latest/
 Para ver los eventos de latencia debes hacer lo siguiente:
 
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos de _visualización, planificación y análisis_"^] en tu cuenta de AWS.
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["conectarse al sistema de archivos mediante un enlace"].
+* link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Conéctate al sistema de archivos mediante un enlace"^].
 
 
 Para analizar los eventos de EMS y latencia y recibir información y recomendaciones basadas en IA, asegúrate de lo siguiente:
 
 * Tienes link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_permisos de operaciones y remediación_"^] en tu cuenta de AWS.
-* Tienes link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["conectado al sistema de archivos mediante un enlace"].
+* Tienes link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["conectado al sistema de archivos mediante un enlace"^].
 * El puerto 22 (SSH) está abierto en el grupo de seguridad asociado a tu sistema de archivos FSx para ONTAP.
 
 
@@ -90,7 +90,7 @@ Modelo recomendado: `anthropic.claude-sonnet-4-20250514-v1:0`. Proporciona el AR
 Crea y asocia un enlace con un sistema de archivos FSx for ONTAP para habilitar el análisis de eventos impulsado por IA. Un enlace establece una relación de confianza entre Workload Factory y uno o más sistemas de archivos FSx for ONTAP y aprovecha AWS Lambda.
 
 +
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html^["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de que se asocie el enlace, vuelve a esta operación.
 
 * *Permisos de AWS IAM*
 +

@@ -23,7 +23,7 @@ Puede existir una relación de caché entre volúmenes en dos sistemas ONTAP , c
 .Antes de empezar
 Tenga en cuenta lo siguiente antes de comenzar.
 
-* Debe asociar un enlace para descubrir relaciones de caché en un sistema de archivos. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"] . Después de asociar el enlace, vuelva a esta operación.
+* Debes asociar un enlace para detectar relaciones de caché en un sistema de archivos. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Una vez asociado el enlace, vuelve a esta operación.
 * Debe tener una relación de caché existente.
 
 

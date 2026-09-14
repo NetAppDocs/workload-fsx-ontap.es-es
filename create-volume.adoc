@@ -64,7 +64,7 @@ Revise los siguientes requisitos previos antes de crear un volumen:
 * Debe tener una máquina virtual de almacenamiento.
 * Para acceder al protocolo, complete lo siguiente:
 +
-** Para configurar el acceso al volumen, debe asociar un enlace. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
+** Para configurar el acceso al volumen, debes asociar un enlace. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Una vez asociado el enlace, vuelve a esta operación.
 ** Debe configurar el acceso para el protocolo que seleccione, ya sea SMB/CIFS, NFS o iSCSI.
 
 
@@ -177,7 +177,7 @@ ONTAP logra eficiencia de almacenamiento utilizando funciones de deduplicación 
 
 .. *Política de instantáneas*: Seleccione la política de instantáneas para especificar la frecuencia y retención de instantáneas.
 +
-Las siguientes son políticas predeterminadas de AWS. Para mostrar las políticas de instantáneas existentes, debe link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["asocie un enlace"].
+A continuación se indican las políticas predeterminadas de AWS. Para mostrar las políticas de snapshot existentes, debes link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["asocie un enlace"^].
 
 +
 `default`:: Esta política crea Snapshot de forma automática según la siguiente programación, siendo las copias Snapshot más antiguas eliminadas para dejar espacio para las copias más recientes:
@@ -233,7 +233,7 @@ _Equilibrado (automático)_ es la política de niveles predeterminada al crear u
 Si la función no está disponible, se debe a una de las siguientes razones:
 
 +
-*** Un enlace no está asociado con el sistema de archivos. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
+*** Un enlace no está asociado al sistema de archivos. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Después de que el enlace se asocie, vuelve a esta operación.
 *** Los volúmenes con archivos inmutables y los volúmenes con el protocolo NVMe no son compatibles con ARP/AI. Los volúmenes iSCSI son compatibles a partir de ONTAP 9.17.1.
 *** El sistema de archivos ya tiene una política ARP/AI.
 
@@ -252,7 +252,7 @@ Si la función no está disponible, se debe a una de las siguientes razones:
 
 
 .Información relacionada
-* link:adjust-volume-capacity.html["Ajustar la capacidad de volumen en Workload Factory"]
+* link:manage-volume-capacity.html["Ajustar la capacidad de volumen en Workload Factory"]
 * link:change-tiering-policy.html["Cambiar la política de niveles de volumen en Workload Factory"]
 * link:manage-s3-access-points.html["Administrar puntos de acceso S3 en Workload Factory"]
 

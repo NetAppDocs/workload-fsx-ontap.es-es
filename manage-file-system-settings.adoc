@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: manage-file-system-settings.html 
+keywords: create fsx tags, create tags, edit fsx tags, fsx tags, reset fsx admin password 
+summary: Agregue, actualice o elimine etiquetas del sistema de archivos FSx for ONTAP para un sistema de archivos en cualquier momento. 
+---
+= Gestiona la configuración del sistema de archivos FSx for ONTAP en NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Gestiona la configuración de un sistema de archivos FSx for ONTAP en NetApp Workload Factory. Puedes gestionar las etiquetas del sistema de archivos, restablecer la contraseña de fsxadmin cuando sea necesario y actualizar la capacidad de rendimiento según sea preciso.
+
+
+
+[[manage-fsx-for-ontap-file-system-tags]]
+== Gestiona las etiquetas del sistema de archivos FSx for ONTAP
+
+Las etiquetas pueden ayudarle a categorizar sus recursos.  Puede agregar, editar y eliminar etiquetas de un sistema de archivos en cualquier momento en NetApp Workload Factory.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos a actualizar y luego seleccione *Administrar etiquetas del sistema de archivos*.
+. En el cuadro de diálogo *Administrar etiquetas del sistema de archivos*, agregue, edite o elimine etiquetas según sea necesario.
++
+El número máximo de etiquetas que puede aplicar a un sistema de archivos es 50.
+
+. Seleccione *aplicar*.
+
+
+
+
+[[reset-the-fsxadmin-password-of-an-fsx-for-ontap-file-system]]
+== Restablece la contraseña de fsxadmin de un sistema de archivos FSx para ONTAP
+
+Restablezca la contraseña fsxadmin en NetApp Workload Factory cuando sea necesario.
+
+Si proporcionó un usuario alternativo durante la creación del sistema de archivos, solo puede restablecer la contraseña de fsxadmin en la consola de AWS.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos para restablecer la contraseña de fsxadmin y luego seleccione *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione el menú de acciones.
++
+image:screenshot-reset-fsxadmin-password.png["Una captura de pantalla del menú de acciones en la pestaña de descripción general de un sistema de archivos."]
+
+. Seleccione *Restablecer contraseña de fsxadmin*.
+. En el cuadro de diálogo Reset fsxadmin password, introduzca una nueva contraseña de fsxadmin y vuelva a introducirla para confirmar.
+. Seleccione *aplicar*.
+
+
+
+
+[[update-throughput-capacity-for-an-fsx-for-ontap-file-system]]
+== Actualiza la capacidad de rendimiento de un sistema de archivos Amazon FSx for NetApp ONTAP
+
+Actualice la capacidad de rendimiento de un sistema de archivos FSx para ONTAP en NetApp Workload Factory según sea necesario.
+
+Para ver los límites de capacidad de rendimiento, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Cuotas"^] la documentación de AWS FSx para NetApp ONTAP.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos para el cual desea actualizar la capacidad de rendimiento y luego seleccione *Administrar*.
+. En Información, seleccione el icono del lápiz junto a *Capacidad de rendimiento*. El icono del lápiz aparece junto a la flecha desplegable cuando el ratón pasa por encima de la fila *Capacidad de rendimiento*.
+. En el cuadro de diálogo Capacidad de rendimiento, seleccione la capacidad de rendimiento que necesita.
+. Selecciona *Aplicar* para guardar los cambios
+

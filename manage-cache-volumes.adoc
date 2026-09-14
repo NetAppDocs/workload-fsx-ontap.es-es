@@ -17,7 +17,7 @@ Utilice la consola NetApp Workload Factory para administrar los volúmenes de ca
 Puede administrar los volúmenes de caché que están asociados con las relaciones de caché en la consola de NetApp Workload Factory .
 
 .Antes de empezar
-* Debes asociar un enlace para gestionar los volúmenes y las relaciones de la caché. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
+* Debes asociar un enlace para gestionar los volúmenes de caché y las relaciones. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Después de asociar el enlace, vuelve a esta operación.
 * Debes tener un volumen de caché existente para editarlo.
 
 

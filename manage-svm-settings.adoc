@@ -1,0 +1,102 @@
+---
+sidebar: sidebar 
+permalink: manage-svm-settings.html 
+keywords: edit storage vm settings, vm tags, svm tags, storage vm settings, storage vm password, svm password 
+summary: Añada, actualice o quite etiquetas de máquinas virtuales de almacenamiento para una máquina virtual de almacenamiento en cualquier momento. 
+---
+= Gestiona la configuración de las máquinas virtuales de almacenamiento en NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Administra la configuración de una máquina virtual de almacenamiento en NetApp Workload Factory. Puedes configurar y actualizar Active Directory para una máquina virtual de almacenamiento, actualizar la contraseña de la máquina virtual y gestionar las etiquetas de la máquina virtual.
+
+
+
+[[configure-and-update-ad-for-a-storage-vm-in-netapp-workload-factory]]
+== Configura y actualiza AD para una máquina virtual de almacenamiento en NetApp Workload Factory
+
+Configurar y actualizar Active Directory para una máquina virtual de almacenamiento en un sistema de archivos FSx para ONTAP en NetApp Workload Factory.
+
+Los mismos pasos se aplican para configurar y actualizar Active Directory para una máquina virtual de almacenamiento.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con la VM de almacenamiento que desea actualizar y luego seleccione *Administrar*.
+. En la descripción general del sistema de archivos, en Máquinas virtuales de almacenamiento, seleccione *Administrar*.
+. Desde la pantalla Administrar máquinas virtuales de almacenamiento, seleccione el menú de acciones de la máquina virtual de almacenamiento para la que desea configurar Active Directory y, luego, seleccione *Acciones básicas* > *Administrar configuración de AD*.
+. En la página Gestionar configuración de AD, proporcione lo siguiente:
++
+.. *Dominio de Active Directory para unirse*: Introduzca el nombre de dominio completo (FQDN) de su Active Directory.
+.. *Direcciones IP DNS*: Introduzca hasta tres direcciones IP separadas por comas.
+.. *Servidor SMB Nombre NetBIOS*: Introduzca el nombre NetBIOS del servidor SMB del objeto de equipo de Active Directory para crear para su VM de almacenamiento. Este es el nombre de esta máquina virtual de almacenamiento SVM en Active Directory.
+.. *Nombre de usuario*: Introduzca el nombre de usuario de la cuenta de servicio en su Active Directory existente.
++
+No incluya un prefijo o sufijo de dominio. Para `EXAMPLE\ADMIN`, utilice `ADMIN`.
+
+.. *Contraseña*: Introduzca la contraseña de la cuenta de servicio.
+.. *Unidad de organización (OU)*: Ingrese la unidad de organización.
++
+La unidad organizativa es el nombre de ruta de acceso distinguida de la unidad organizativa a la que desea unirse al sistema de archivos.
+
+.. *Grupo de administradores delegados*: Opcionalmente, entra en el grupo de administradores del sistema de archivos delegado.
++
+El grupo Delegated administrators es el nombre del grupo de Active Directory que puede administrar el sistema de archivos.
+
++
+Si utiliza AWS Managed Microsoft AD, debe especificar un grupo como AWS Delegated FSx Administrators, AWS Delegated Administrators o un grupo personalizado con permisos delegados a la OU.
+
++
+Si se está conectando a un AD autogestionado, utilice el nombre del grupo en su AD. El grupo por defecto es `Domain Admins`.
+
+
+
+. Seleccione *aplicar*.
+
+
+
+
+[[manage-storage-vm-tags]]
+== Gestionar las etiquetas de equipos virtuales de almacenamiento
+
+Las etiquetas pueden ayudarle a categorizar sus recursos.  Puede agregar, editar y eliminar etiquetas de una máquina virtual de almacenamiento en cualquier momento en NetApp Workload Factory.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con la VM de almacenamiento que desea actualizar y luego seleccione *Administrar*.
+. En la descripción general del sistema de archivos, en Máquinas virtuales de almacenamiento, seleccione *Administrar*.
+. Desde la pantalla Administrar máquinas virtuales de almacenamiento, seleccione el menú de acciones de la máquina virtual de almacenamiento para la cual desea editar etiquetas y luego seleccione *Acciones básicas* > *Editar etiquetas de máquina virtual de almacenamiento*.
+. En la página Edit storage VM tags, agregue, edite o elimine etiquetas.
++
+La cantidad máxima de etiquetas que se pueden aplicar a una máquina virtual de almacenamiento es 50.
+
+. Seleccione *aplicar*.
+
+
+
+
+[[reset-the-storage-vm-password-in-netapp-workload-factory]]
+== Restablecer la contraseña de la máquina virtual de almacenamiento en NetApp Workload Factory
+
+Restablezca la contraseña de una máquina virtual de almacenamiento en NetApp Workload Factory cuando sea necesario.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con la contraseña de la máquina virtual de almacenamiento que desea restablecer y luego seleccione *Administrar*.
+. En la descripción general del sistema de archivos, en Máquinas virtuales de almacenamiento, seleccione *Administrar*.
+. Desde la pantalla Administrar máquinas virtuales de almacenamiento, seleccione el menú de acciones de la máquina virtual de almacenamiento cuya contraseña desea restablecer y, luego, seleccione *Acciones básicas* > *Restablecer contraseña*.
+. En el cuadro de diálogo Reset password, proporcione lo siguiente:
++
+.. *Nueva contraseña*: Introduzca una nueva contraseña para la VM de almacenamiento.
+.. *Confirmar contraseña*: Ingrese la nueva contraseña de nuevo para confirmar.
+
+
+

@@ -1,0 +1,74 @@
+---
+sidebar: sidebar 
+permalink: use-backups.html 
+keywords: create backup, volume backup, back up a volume, FSx for ONTAP backup, manual backup, restore from a backup, restore volume 
+summary: Protege los datos de tu volumen contra el borrado accidental, la corrupción y otros incidentes de pérdida de datos creando y restaurando copias de seguridad en NetApp Workload Factory. 
+---
+= Utiliza copias de seguridad para proteger los datos en NetApp Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Protege los datos de tus volúmenes contra el borrado accidental, la corrupción y otros incidentes de pérdida de datos creando y restaurando copias de seguridad en NetApp Workload Factory. Puedes configurar una programación de copias de seguridad, crear una copia de seguridad bajo demanda de un volumen al margen de tus copias de seguridad programadas habitualmente y restaurar un volumen a partir de una copia de seguridad existente en cualquier sistema de archivos FSx for ONTAP de tu cuenta de AWS.
+
+
+
+[[create-an-on-demand-backup-of-a-volume]]
+== Crear una copia de seguridad bajo demanda de un volumen
+
+Cree una copia de seguridad manual de un volumen fuera de las copias de seguridad programadas regularmente en NetApp Workload Factory.
+
+.Acerca de esta tarea
+Las copias de seguridad de volúmenes son por volumen, así que cada copia de seguridad contiene solo los datos de un volumen en particular.
+
+Las copias de seguridad de volumen son incrementales, lo que significa que solo se guardan los datos del volumen que han cambiado después de tu copia de seguridad más reciente. Esto minimiza el tiempo necesario para crear la copia de seguridad y el almacenamiento requerido para la copia, lo que ahorra en costos de almacenamiento al no duplicar datos.
+
+.Antes de empezar
+Para realizar backups de los volúmenes, tanto el volumen como el sistema de archivos deben tener suficiente capacidad de almacenamiento SSD disponible para almacenar la snapshot de backup. Al realizar una copia Snapshot de backup, la capacidad de almacenamiento adicional que consume la copia de Snapshot no puede provocar que el volumen supere el 98% de la utilización de almacenamiento de las unidades de estado sólido. Si esto sucede, la copia de seguridad fallará.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú de Storage, selecciona *Volumes explorer*.
+. Selecciona el menú de acciones del volumen del que deseas realizar una copia de seguridad.
+. Selecciona *Acciones de protección de datos*, *Copias de seguridad de volumen* y luego *Copia de seguridad manual*.
+. En el cuadro de diálogo Manual backup, escriba un nombre para el backup.
+. Seleccione *Back up*.
+
+
+
+
+[[restore-a-volume-from-a-backup-in-netapp-workload-factory]]
+== Restaurar un volumen desde una copia de seguridad en NetApp Workload Factory
+
+En NetApp Workload Factory, puede restaurar un volumen desde una copia de seguridad a cualquier sistema de archivos FSx para ONTAP en su cuenta de AWS.
+
+Workload Factory determina si tienes suficiente capacidad para la restauración y puede añadir automáticamente capacidad al nivel de almacenamiento SSD si no la tienes.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú de Storage, selecciona *Volumes explorer*.
+. Selecciona el menú de acciones del volumen que deseas restaurar desde una copia de seguridad.
+. Selecciona *Acciones de protección de datos*, *Copias de seguridad de volúmenes* y luego *Restaurar a partir de una copia de seguridad*.
+. En el cuadro de diálogo Restore from a backup, proporcione lo siguiente:
++
+.. *Sistema de archivos de destino*: Seleccione el sistema de archivos de destino en el menú desplegable.
+.. *Target storage VM*: Seleccione la VM de almacenamiento de destino en el menú desplegable.
+.. *Nombre de la copia de seguridad*: Seleccione el nombre de la copia de seguridad en el menú desplegable.
+.. *Nombre del volumen restaurado*: Introduzca el nombre del volumen restaurado.
+
+
+. Verifique la capacidad del sistema de archivos para la operación de restauración.
++
+Cuando la capacidad del sistema de archivos es limitada, se puede producir lo siguiente:
+
++
+** La restauración puede hacer que la capacidad utilizada supere el umbral que hayas especificado. Puedes completar la operación de restauración. Considera link:adjust-file-system-capacity.html["Adición manual de capacidad del nivel de almacenamiento SSD"] o seleccionar Workload Factory para añadir automáticamente capacidad del nivel de almacenamiento SSD.
+** La restauración requiere capacidad SSD adicional.  Debe seleccionar que Workload Factory agregue automáticamente capacidad de nivel de almacenamiento SSD para continuar.
+
+
+. Seleccione *Restaurar*.
+

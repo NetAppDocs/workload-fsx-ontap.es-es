@@ -19,7 +19,7 @@ Los grupos de iniciadores, o igroups, conectan los dispositivos de bloque (LUNs)
 Un igroup actúa como una capa de permisos para el almacenamiento en bloque. Cuando un servidor se conecta al sistema de almacenamiento, se identifica usando su iniciador de host iSCSI cualificado (IQN). Si ese IQN pertenece a uno o más igroups, entonces el servidor obtiene acceso a todos los LUN asociados con esos igroups. Tanto un igroup como una conexión de host iSCSI son necesarios para que iSCSI funcione correctamente.
 
 .Antes de empezar
-Debes asociar un enlace para crear igroups. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, regresa a esta operación.
+Debes asociar un enlace para crear igroups. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Después de asociar el enlace, vuelve a esta operación.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .

@@ -37,7 +37,7 @@ Descubra un clúster ONTAP local en NetApp Workload Factory para que pueda repli
 Asegúrese de tener lo siguiente antes de comenzar:
 
 * Un sistema de archivos FSx para ONTAP para la replicación.
-* Un enlace conectado para asociarse con el clúster local detectado. Si no tienes un enlace, tendrás que hacerlolink:create-link.html["cree uno"].
+* Un enlace activo para asociarlo al clúster local detectado. Si no tienes un enlace, tendrás que link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["cree uno"^].
 * Credenciales de usuario de ONTAP con los permisos requeridos.
 * ONTAP on-premises versión 9,8 y posteriores.
 * Conectividad como se muestra en el siguiente diagrama.
@@ -85,7 +85,7 @@ Replica datos de volúmenes de un clúster ONTAP on-premises en un sistema de ar
 .Antes de empezar
 * Debe detectar un clúster de ONTAP en las instalaciones para replicar sus datos del volumen.
 * Debe tener disponible un sistema de archivos FSx para ONTAP para que sea el destino de la replicación.
-* Tanto el clúster de ONTAP en las instalaciones como el sistema de archivos FSx para ONTAP que utilizas para la relación de replicación deben tener un enlace asociado. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de asociar el enlace, vuelva a esta operación.
+* Tanto el clúster ONTAP local como el sistema de archivos FSx for ONTAP que utilices para la relación de replicación deben tener un enlace asociado. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Una vez que el enlace esté asociado, vuelve a esta operación.
 
 
 .Pasos

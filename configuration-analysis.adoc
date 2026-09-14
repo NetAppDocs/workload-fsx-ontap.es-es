@@ -27,9 +27,9 @@ Estas son algunas funcionalidades clave:
 [[how-it-works]]
 == Cómo funciona
 
-Workload Factory analiza tus cargas de trabajo que se ejecutan diariamente en Amazon FSx for NetApp ONTAP file systems deployments. El análisis proporciona estado bien arquitectado, información y recomendaciones.
+Workload Factory analiza a diario las cargas de trabajo que se ejecutan en las implementaciones de sistemas de almacenamiento en la nube compatibles. El análisis proporciona el estado bien arquitectado, información y recomendaciones.
 
-Después de que se complete el análisis diario, las configuraciones aparecen como "optimizadas" o "no optimizadas" en el panel Well-architected para la implementación. Encontrarás la puntuación total de optimización, los problemas de configuración por categoría y una lista de problemas de configuración y recomendaciones. Puedes revisar las recomendaciones para los problemas de configuración. Algunos problemas pueden solucionarse automáticamente por Workload Factory, mientras que otros requieren intervención manual. En este caso, Workload Factory te da instrucciones detalladas para ayudarte a implementar los cambios recomendados.
+Después de que finaliza el análisis diario, las configuraciones aparecen como "optimizadas" o "no optimizadas" en el panel de Well-architected para la implementación. Encontrarás los problemas de configuración por categoría y una lista de problemas de configuración y recomendaciones. Puedes revisar las recomendaciones para los problemas de configuración. Workload Factory puede solucionar automáticamente algunos problemas; otros requieren intervención manual. En este caso, Workload Factory te da instrucciones detalladas para ayudarte a implementar los cambios recomendados.
 
 Puedes descartar el análisis de las configuraciones que no se aplican a tus entornos. Así evitas alertas innecesarias y resultados de optimización inexactos.
 
@@ -40,7 +40,7 @@ También puedes crear reglas personalizadas en lenguaje sencillo para validar tu
 [[why-it-matters]]
 == Por qué es importante
 
-Workload Factory aplica las mejores prácticas a grandes entornos de almacenamiento, bases de datos y VMware combinando la evaluación continua con recomendaciones y correcciones. Las correcciones automatizadas aplicadas en la consola de Workload Factory reducen los errores humanos, garantizan una gestión uniforme y preservan el rendimiento y la fiabilidad en todas tus infraestructuras de cargas de trabajo.
+Workload Factory aplica las mejores prácticas a grandes entornos de almacenamiento, bases de datos y VMware, combinando una evaluación continua con recomendaciones y medidas correctivas. Las correcciones automatizadas reducen los errores humanos, garantizan una gestión uniforme y mantienen el rendimiento y la fiabilidad en todas tus infraestructuras de cargas de trabajo.
 
 
 
@@ -51,11 +51,11 @@ Para un análisis completo del sistema de archivos, debe hacer lo siguiente:
 
 * Asociar un enlace.  La conectividad de enlaces permite a Workload Factory analizar todas las configuraciones del sistema de archivos, como la protección de datos y el rendimiento.
 +
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"].
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^].
 
 * Otorgue permisos de _visualización, planificación y análisis_ en su cuenta de AWS.
 +
-link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aprende a otorgar permisos a una cuenta de AWS"^]
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Aprende a otorgar permisos a una cuenta de AWS"^].
 
 
 
@@ -135,31 +135,31 @@ Debe activarse la gestión automática de la capacidad para garantizar periódic
 
 * *Espacio libre para el volumen*
 +
-Workload Factory recomienda que el uso de la capacidad del volumen no supere el 80 %. Esto podría afectar las lecturas y escrituras de datos en tu aplicación. El aumento de la capacidad del volumen puede ser manual o automático usando la función de crecimiento automático de volúmenes.
+Mantén la utilización del volumen por debajo del 80 % para evitar posibles problemas de lectura/escritura en las aplicaciones. Puedes aumentar la capacidad manualmente o mediante el crecimiento automático de volúmenes.
 
 * *FlexCache modo de escritura*
 +
-Para un rendimiento óptimo, Workload Factory recomienda el modo de escritura en caché que mejor se adapte a tu carga de trabajo. El modo write-around ofrece un mejor rendimiento para cargas de trabajo con muchas lecturas y archivos pequeños, mientras que el modo write-back ofrece un mejor rendimiento para cargas de trabajo con muchas escrituras y archivos grandes.
+Para obtener un rendimiento óptimo, configura el modo de escritura de la relación de caché de forma que se adapte mejor a tu carga de trabajo. El modo write-around ofrece un mejor rendimiento para cargas de trabajo con un uso intensivo de lectura y archivos pequeños, mientras que el modo write-back ofrece un mejor rendimiento para cargas de trabajo con un uso intensivo de escritura y archivos grandes.
 
 * *Tamaño de la réplica de FlexCache*
 +
-NetApp Workload Factory recomienda activar el autodimensionado de volúmenes y el scrubbing en los volúmenes de caché para mantener un tamaño óptimo y centrar la caché en los datos calientes para lograr la máxima eficiencia.
+Activa el crecimiento automático de volúmenes y la limpieza en los volúmenes de caché para mantener un tamaño óptimo y enfocar la caché en los datos más utilizados para lograr la máxima eficiencia.
 
 * *Informes de capacidad visibles para el host*
 +
-Workload Factory recomienda habilitar los informes de capacidad visibles para el host para ofrecer una mejor visibilidad del uso del almacenamiento a nivel de volumen.
+Activa los informes de capacidad visibles desde el host para ofrecer una mayor visibilidad del uso del almacenamiento a nivel de volumen.
 
 * *Tipo de sistema operativo (SO)*
 +
-Workload Factory recomienda asegurarse de que el valor del tipo de sistema operativo (OS) del LUN de ONTAP coincida con el esquema de partición del sistema operativo para lograr la alineación de I/O. Una configuración incorrecta podría reducir el rendimiento.
+Confirma que el valor del tipo de sistema operativo (SO) del LUN de ONTAP coincida con el esquema de partición del sistema operativo para lograr la alineación de E/S. Una configuración incorrecta podría reducir el rendimiento.
 
 * *Gestión de espacio de los dispositivos de bloque*
 +
-Workload Factory recomienda configurar los parámetros de espacio de los dispositivos de bloque para los LUN utilizados por las instancias de host de bases de datos para evitar errores de escritura y mejorar la eficiencia del espacio en FSx para ONTAP. Esta configuración se aplica a la combinación recomendada de parámetros para volúmenes con Thin-Provisioning: reserva de espacio, asignación de espacio y reserva fraccionaria.
+Configura los parámetros de espacio de los dispositivos de bloque para los LUN utilizados por las instancias del host de la base de datos para evitar errores de escritura y mejorar la eficiencia del espacio en FSx for ONTAP. Esta configuración se aplica a la combinación recomendada de parámetros para volúmenes con Thin-Provisioning: reserva de espacio, asignación de espacio y reserva fraccionaria.
 
 * *Thin-Provisioning*
 +
-Workload Factory recomienda configurar Thin-Provisioning para los volúmenes de FSx para ONTAP que alojan instancias de bases de datos. Este enfoque permite almacenar más datos lógicos de los que hay disponibles físicamente.
+Configura el Thin-Provisioning para los volúmenes de FSx for ONTAP que alojan instancias de bases de datos. Este enfoque permite almacenar más datos lógicos de los que hay disponibles físicamente.
 
 
 
@@ -172,7 +172,7 @@ La optimización de costes te ayuda a obtener el máximo valor para tu negocio m
 
 * *Nivel de datos inactivos*
 +
-Activa la clasificación de datos inactivos para reducir la utilización del nivel de almacenamiento SSD. Workload Factory recomienda aplicar una política de clasificación a todos los volúmenes destinados al almacenamiento de datos generales. En el caso de los volúmenes de bases de datos, recomendamos activar la clasificación de datos inactivos cuando sea adecuado. FSx for ONTAP analiza continuamente los datos en busca de datos inactivos y los traslada al nivel del fondo común de capacidad sin interrupciones.
+Activa la clasificación de datos inactivos para reducir la utilización del nivel de almacenamiento SSD. Aplica una política de clasificación a todos los volúmenes destinados al almacenamiento de datos generales. En el caso de los volúmenes de bases de datos, activa la clasificación de datos inactivos cuando sea pertinente. FSx for ONTAP analiza continuamente los datos en busca de datos inactivos y los traslada al nivel del fondo común de capacidad sin interrupciones.
 
 * *Eficiencia en el almacenamiento*
 +
@@ -180,23 +180,23 @@ Activa las eficiencias de almacenamiento —compactación, compresión y dedupli
 
 * *Caducidad de la copia de seguridad*
 +
-Workload Factory recomienda eliminar cualquier copia de seguridad creada manualmente para los volúmenes que se hayan eliminado, así como cualquier copia de seguridad con más de dos semanas de antigüedad. Estas copias de seguridad no caducan automáticamente, pueden aumentar los costes y añadir complejidad si ya no las necesitas para el SLA o la recuperación.
+Elimina todas las copias de seguridad creadas manualmente para los volúmenes que se hayan eliminado, así como todas aquellas que tengan más de dos semanas de antigüedad. Estas copias de seguridad no caducan automáticamente, pueden aumentar los costes y añadir complejidad si ya no las necesitas para el SLA o la recuperación.
 
 * *Caducidad de la instantánea*
 +
-Workload Factory recomienda eliminar las instantáneas antiguas o creadas manualmente que ya no necesites. Eliminarlas puede reducir los costes y el desorden, sobre todo si no son necesarias para tu SLA o para tus necesidades de recuperación.
+Elimina las instantáneas antiguas o creadas manualmente que ya no necesites. Eliminarlas puede reducir los costes y el desorden, especialmente si no son necesarias para tu SLA o para tus necesidades de recuperación.
 
 * *Dispositivos de bloque inactivos*
 +
-Después de que un dispositivo de bloque no se use durante siete días, Workload Factory recomienda archivar los datos del dispositivo de bloque o eliminar el dispositivo de bloque no utilizado para reducir costos.
+Después de que un dispositivo de bloques no se use durante siete días, archiva los datos del dispositivo de bloques o elimina el dispositivo de bloques sin usar para reducir costes.
 
 * *Capacidad de SSD sobreaprovisionada*
 +
-Un nivel de capacidad de SSD con exceso de aprovisionamiento genera costes innecesarios. Workload Factory recomienda reducir la capacidad del nivel SSD mientras se mantiene un margen de espacio libre del 20%. Una operación de reducción tarda entre varias horas y varios días, y durante ese tiempo no se admiten otras operaciones del sistema de archivos.
+El exceso de capacidad del SSD supone un coste innecesario. Reduce el nivel de SSD manteniendo un margen de espacio libre del 20 %. La operación puede tardar entre horas y días, y durante ese tiempo no se admiten otras operaciones del sistema de archivos.
 
 * *Volúmenes NAS inactivos*
 +
-El análisis de configuración identifica los volúmenes NAS que no se utilizan activamente y recomienda eliminarlos o archivarlos para reducir costes.
+El análisis de configuración identifica los volúmenes NAS que no se utilizan de forma activa y sugiere eliminarlos o archivarlos para reducir los costos.
 
 
 
@@ -209,11 +209,11 @@ La eficiencia en el rendimiento te ayuda a garantizar que tus recursos de almace
 
 * *Reequilibrio de los volúmenes FlexGroup*
 +
-Workload Factory recomienda reequilibrar tus volúmenes de FlexGroup para mejorar la eficiencia. Después de escalar, la capacidad y la actividad de las cargas de trabajo pueden volverse desiguales en todo el volumen.
+Reequilibra tus volúmenes de FlexGroup para mejorar la eficiencia. Después del escalado horizontal, la capacidad y la actividad de las cargas de trabajo pueden volverse desiguales en todo el volumen.
 
 * *FlexVol volúmenes reequilibrados*
 +
-Workload Factory recomienda reequilibrar tus volúmenes FlexVol para mejorar la eficiencia. Después de escalar, la capacidad y la actividad de las cargas de trabajo pueden volverse desiguales en todo el volumen.
+Reequilibra tus volúmenes FlexVol para mejorar la eficiencia. Después de escalar horizontalmente, la capacidad y la actividad de la carga de trabajo pueden volverse desiguales en todo el volumen.
 
 
 

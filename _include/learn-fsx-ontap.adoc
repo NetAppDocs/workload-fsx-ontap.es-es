@@ -1,0 +1,87 @@
+= Funciones
+:allow-uri-read: 
+
+
+Amazon FSx for NetApp ONTAP es un servicio de almacenamiento de datos basado en la nube totalmente administrado que proporciona capacidades avanzadas de administración de datos y un rendimiento altamente escalable.  FSx for ONTAP le permite crear y administrar sistemas de archivos como back-end de almacenamiento para todas sus cargas de trabajo dentro de NetApp Workload Factory.
+
+FSX para ONTAP proporciona las mismas funciones, rendimiento y funcionalidades administrativas que los clientes de NetApp utilizan actualmente en las instalaciones, con la simplicidad, agilidad, seguridad y escalabilidad de un servicio de AWS nativo.
+
+FSx para ONTAP es el componente _Storage_ en Workload Factory.
+
+
+
+[[features]]
+== Funciones
+
+FSX para ONTAP ofrece las siguientes características:
+
+* *Servicio totalmente administrado*: proporciona un servicio totalmente administrado integrado con la consola Workload Factory.
+* * Alta disponibilidad*: Proporciona alta disponibilidad para cada sistema de archivos FSX for ONTAP, compatible con implementaciones de zonas de disponibilidad únicas y múltiples.
+* *Instantáneas automatizadas*: Protege los datos con instantáneas automatizadas y eficientes, que son copias puntuales casi instantáneas y eficientes en el espacio del sistema de archivos o volúmenes.
+* *Replicación de volúmenes*: Proporciona recuperación ante desastres con replicación entre regiones en Amazon Web Services.
+* *Copias de seguridad eficientes*: Añade una capa extra de protección con una copia de los datos en otra región para emergencias.
+* *Clonación rápida*: Acelera el desarrollo de aplicaciones con clonación rápida.
+* *Compatibilidad con varios protocolos*: Admite los protocolos Sistema de archivos de red (NFS), Bloque de mensajes del servidor (SMB) e Interfaz de sistemas informáticos pequeños de Internet (iSCSI).
+* * Alto rendimiento*: Ofrece un alto rendimiento para garantizar latencias bajas para cargas de trabajo que se ejecutan sobre sistemas de archivos FSX para ONTAP.
+* *Caché en memoria y caché NVMe*: Incluye una caché en memoria única y caché NVMe, que aumenta el rendimiento de los datos a los que se accede con frecuencia.
+* *Cientos de miles de IOPS*: Proporciona cientos de miles de IOPS con discos SSD, lo que garantiza que su almacenamiento y cargas de trabajo reciban resultados oportunos.
+* *Thin Provisioning*: Permite el aprovisionamiento de capacidad por adelantado, ahorrando costos hasta que se necesite más capacidad.
+* *Desduplicación y compresión de datos*: Elimina los datos duplicados y comprime los datos para reducir la cantidad de almacenamiento físico que se necesita para los sistemas de archivos FSX para ONTAP, lo que resulta en un ahorro de costes.
+* *Data Tiering*: Permite reducir los costes de almacenamiento al mover los datos a los que se accede con menos frecuencia desde el nivel de almacenamiento primario SSD de alto rendimiento al nivel de almacenamiento secundario del pool de capacidad.
+
+
+
+
+[[additional-features-in-workload-factory]]
+== Funciones adicionales en Workload Factory
+
+* *Calculadora de comparación de costos de almacenamiento*: Compara los costos de almacenamiento de tu tienda de bloques elásticos de Amazon (EBS), sistema de archivos elásticos (EFS) y FSX para el servidor de archivos de Windows con FSx para ONTAP. En la calculadora, puede ver cómo las configuraciones de almacenamiento de FSx para ONTAP ofrecen posibles ahorros y planificar la transición a FSx para el almacenamiento de ONTAP.
+* *Interfaz de usuario de Workload Factory*: Proporciona opciones de modo de implementación _Quick create_ y _Advanced create_. La creación rápida incluye AWS, NetApp y prácticas recomendadas estándar del sector para sus configuraciones de almacenamiento.
+* *CodeBox*: Proporciona a los desarrolladores un visor de código para las operaciones de FSX para ONTAP, plantillas de código para copiar y descargar, y un catálogo de automatización para la reutilización de código.
+
+
+
+
+[[tools-to-use-netapp-workload-factory]]
+== Herramientas para utilizar NetApp Workload Factory
+
+Puede utilizar NetApp Workload Factory con las siguientes herramientas:
+
+* *Consola Workload Factory*: La consola Workload Factory proporciona una vista visual y holística de sus aplicaciones y proyectos.
+* *Consola NetApp *: La consola NetApp proporciona una experiencia de interfaz híbrida para que pueda utilizar Workload Factory junto con otros servicios de datos de NetApp .
+* *Pregúntame*: utiliza el asistente de IA Pregúntame para hacer preguntas y obtener más información sobre Workload Factory sin salir de la consola de Workload Factory. Accede a Pregúntame desde el menú de ayuda de Workload Factory.
+* *CloudShell CLI*: Workload Factory incluye una CLI de CloudShell para administrar y operar entornos de AWS y NetApp en todas las cuentas desde una única CLI basada en navegador. Acceda a CloudShell desde la barra superior de la consola de Workload Factory.
+* *API REST*: utilice las API REST de Workload Factory para implementar y administrar sus sistemas de archivos FSx para ONTAP y otros recursos de AWS.
+* *CloudFormation*: use el código de AWS CloudFormation para realizar las acciones que definió en la consola de Workload Factory para modelar, aprovisionar y administrar recursos de AWS y de terceros desde la pila de CloudFormation en su cuenta de AWS.
+* *Proveedor de Terraform NetApp Workload Factory*: utilice Terraform para crear y administrar flujos de trabajo de infraestructura generados en la consola de Workload Factory.
+
+
+
+
+[[cost]]
+== Coste
+
+AWS mantiene su cuenta FSx para ONTAP , no Workload Factory. Consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Precios para Amazon FSx for NetApp ONTAP"^] .
+
+
+
+[[regions]]
+== Regiones
+
+La fábrica de carga de trabajo es compatible con todas las regiones comerciales donde se admite FSx para ONTAP .link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Consulte las regiones de Amazon admitidas."^]
+
+Las siguientes regiones de AWS no son compatibles:
+
+* regiones de China
+* Nube secreta
+* Nube de alto secreto
+
+
+
+
+[[getting-help]]
+== Obtener ayuda
+
+Amazon FSX para ONTAP de NetApp es una solución de primera parte de AWS. Para preguntas o problemas de soporte técnico asociados con tu ONTAP sistema de archivos, infraestructura o cualquier solución que use este servicio, usa el Centro de soporte de tu consola de administración de AWS para abrir un caso de soporte con AWS. Seleccione el servicio "FSX for ONTAP" y la categoría adecuada. Proporcione la información restante necesaria para crear su caso de soporte de AWS.
+
+Para preguntas generales sobre Workload Factory o las aplicaciones y servicios de Workload Factory, consultelink:get-help.html["Obtenga ayuda para FSx para ONTAP para Workload Factory"] .
