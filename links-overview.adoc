@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: learn-about-links.html 
+permalink: links-overview.html 
 keywords: links, accounts, lambda 
 summary: Un vínculo de Workload Factory crea una relación de confianza y conectividad entre una cuenta de Workload Factory y uno o más sistemas de archivos FSx para ONTAP . 
 ---
