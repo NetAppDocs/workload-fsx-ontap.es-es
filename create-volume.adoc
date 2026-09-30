@@ -88,6 +88,7 @@ NOTE: Al usar Terraform de CodeBox, el código que copie o descargue oculta `fsx
 . En la página Create volume, en General details, proporcione los siguientes detalles:
 +
 .. *Nombre del volumen*: Introduzca un nombre para el volumen.
+.. *Carga de trabajo*: selecciona la carga de trabajo asociada al volumen.
 .. *Nombre de VM de almacenamiento*: Opcionalmente, introduzca un nombre de VM de almacenamiento.
 .. *Estilo de volumen*: Selecciona el volumen *FlexVol* o *FlexGroup*.
 +

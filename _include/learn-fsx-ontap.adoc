@@ -1,16 +1,7 @@
----
-sidebar: sidebar 
-permalink: learn-fsx-ontap.html 
-keywords: Amazon FSx for NetApp ONTAP, FSx, storage, aws 
-summary: Amazon FSx for NetApp ONTAP es un servicio completamente administrado que permite a los clientes lanzar y ejecutar sistemas de archivos como back-end de almacenamiento para sus cargas de trabajo dentro de Workload Factory. 
----
-= Obtenga más información sobre Amazon FSx for NetApp ONTAP en NetApp Workload Factory
+= Funciones
 :allow-uri-read: 
-:icons: font
-:imagesdir: ./media/
 
 
-[role="lead"]
 Amazon FSx for NetApp ONTAP es un servicio de almacenamiento de datos basado en la nube totalmente administrado que proporciona capacidades avanzadas de administración de datos y un rendimiento altamente escalable.  FSx for ONTAP le permite crear y administrar sistemas de archivos como back-end de almacenamiento para todas sus cargas de trabajo dentro de NetApp Workload Factory.
 
 FSX para ONTAP proporciona las mismas funciones, rendimiento y funcionalidades administrativas que los clientes de NetApp utilizan actualmente en las instalaciones, con la simplicidad, agilidad, seguridad y escalabilidad de un servicio de AWS nativo.
@@ -45,7 +36,7 @@ FSX para ONTAP ofrece las siguientes características:
 == Funciones adicionales en Workload Factory
 
 * *Calculadora de comparación de costos de almacenamiento*: Compara los costos de almacenamiento de tu tienda de bloques elásticos de Amazon (EBS), sistema de archivos elásticos (EFS) y FSX para el servidor de archivos de Windows con FSx para ONTAP. En la calculadora, puede ver cómo las configuraciones de almacenamiento de FSx para ONTAP ofrecen posibles ahorros y planificar la transición a FSx para el almacenamiento de ONTAP.
-* *interfaz de usuario de Workload Factory*: ofrece las opciones de modo de implementación _Creación rápida_ y _Creación avanzada_. La opción «Creación rápida» incluye AWS, NetApp y las mejores prácticas estándar del sector para tus configuraciones de almacenamiento. La interfaz también muestra las tendencias de uso de la capacidad de almacenamiento SSD y del rendimiento, resúmenes de las cargas de trabajo y ajustes de configuración detallados que puedes ampliar.
+* *Interfaz de usuario de Workload Factory*: Proporciona opciones de modo de implementación _Quick create_ y _Advanced create_. La creación rápida incluye AWS, NetApp y prácticas recomendadas estándar del sector para sus configuraciones de almacenamiento.
 * *CodeBox*: Proporciona a los desarrolladores un visor de código para las operaciones de FSX para ONTAP, plantillas de código para copiar y descargar, y un catálogo de automatización para la reutilización de código.
 
 

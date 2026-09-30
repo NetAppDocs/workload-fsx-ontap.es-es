@@ -11,7 +11,9 @@ summary: Agregue, actualice o elimine etiquetas del sistema de archivos FSx for 
 
 
 [role="lead"]
-Gestiona la configuración de un sistema de archivos FSx for ONTAP en NetApp Workload Factory. Puedes gestionar las etiquetas del sistema de archivos, restablecer la contraseña de fsxadmin cuando sea necesario y actualizar la capacidad de rendimiento según sea preciso.
+Gestiona la configuración de un sistema de archivos FSx para ONTAP en NetApp Workload Factory para mantener tu sistema de archivos organizado, seguro y con el tamaño adecuado para tu carga de trabajo. Puedes añadir o editar etiquetas, gestionar las credenciales de ONTAP, restablecer la contraseña de fsxadmin y actualizar la capacidad de procesamiento en cualquier momento.
+
+La visión general del sistema de archivos muestra las tendencias de uso de la capacidad y el rendimiento de los SSD, resúmenes generados por IA de las principales cargas de trabajo y detalles ampliables de la configuración del sistema de archivos.
 
 
 
@@ -29,6 +31,44 @@ Las etiquetas pueden ayudarle a categorizar sus recursos.  Puede agregar, editar
 +
 El número máximo de etiquetas que puede aplicar a un sistema de archivos es 50.
 
+. Seleccione *aplicar*.
+
+
+
+
+[[manage-ontap-credentials]]
+== Gestionar las credenciales de ONTAP
+
+Gestiona las credenciales de ONTAP para un sistema de archivos FSx for ONTAP en NetApp Workload Factory. Workload Factory tiene dos tipos de credenciales: primarias y restringidas. De forma predeterminada, el sistema de archivos utiliza las credenciales primarias de ONTAP. Las credenciales restringidas se usan solo para operaciones de IA (AIOps) como Ask Me, Rule builder y paneles personalizados. Opcionalmente, puedes añadir un conjunto de credenciales restringidas y actualizar cualquiera de los dos conjuntos en cualquier momento.
+
+Puedes realizar las siguientes tareas:
+
+* Activa esta opción para añadir un conjunto de credenciales restringidas, ya sea mediante un nombre de usuario y una contraseña o un ARN secreto.
+* Modifica las credenciales existentes, incluido el nombre de usuario y la contraseña, solo la contraseña o el ARN del secreto.
+
+
+Workload Factory permite cambiar entre el servicio de credenciales de Workload Factory (nombre de usuario y contraseña) y AWS Secrets Manager.
+
+Workload Factory gestiona las credenciales restringidas de la siguiente manera:
+
+* Si no has proporcionado credenciales restringidas para un sistema de archivos y luego creas reglas personalizadas o paneles de control, o haces preguntas a Ask Me, Workload Factory crea credenciales de solo lectura de ONTAP para usarlas como el conjunto de credenciales restringidas.
+* Si ya has facilitado credenciales restringidas para un sistema de archivos, esas credenciales se usan para AIOps.
+
+
+.Antes de empezar
+Debes asociar un enlace para gestionar las credenciales de ONTAP. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Después de que se asocie el enlace, vuelve a esta operación.
+
+.Pasos
+. Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
+. Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
+. En el menú Almacenamiento, seleccione *FSx para ONTAP*.
+. Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos para restablecer la contraseña de fsxadmin y luego seleccione *Administrar*.
+. Desde la descripción general del sistema de archivos, seleccione el menú de acciones.
++
+image:screenshot-manage-ontap-credentials.png["Una captura de pantalla del menú de acciones en la pestaña de descripción general de un sistema de archivos."]
+
+. Selecciona *Manage ONTAP credentials*.
+. Actualiza las credenciales principales o restringidas de ONTAP.
 . Seleccione *aplicar*.
 
 

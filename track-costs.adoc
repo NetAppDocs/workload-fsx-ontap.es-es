@@ -11,7 +11,7 @@ summary: Realiza un seguimiento de los costes y genera informes para tus recurso
 
 
 [role="lead"]
-Haz un seguimiento de los costes y el uso del sistema de archivos FSx para ONTAP en una vista consolidada en la consola NetApp Workload Factory. Los datos de costes te ayudan a gestionar presupuestos y optimizar recursos de forma eficaz. Workload Factory también genera informes de costes para tus recursos del sistema de archivos FSx para ONTAP que puedes compartir con las partes interesadas.
+NetApp Workload Factory ofrece una visión consolidada de los costes y el uso de tu sistema de archivos FSx for ONTAP, lo que te ayuda a gestionar presupuestos y optimizar recursos de forma eficaz. También puedes generar informes de costes de los recursos de tu sistema de archivos FSx for ONTAP para compartirlos con las partes interesadas.
 
 
 
@@ -20,15 +20,13 @@ Haz un seguimiento de los costes y el uso del sistema de archivos FSx para ONTAP
 
 Workload Factory realiza un seguimiento de los costes y el uso del sistema de archivos FSx para ONTAP obteniendo los datos de costes de AWS Cost Explorer. Se realiza un seguimiento de los siguientes detalles de costes: tipo de uso, SKU de uso, tipo de implementación, uso y coste total.
 
-Para los recursos únicos, Workload Factory calcula los costes combinando el uso real del nivel de rendimiento, una parte proporcional de los costes del nivel de rendimiento asignados al espacio aprovisionado pero no utilizado, las asignaciones de rendimiento distribuidas por capacidad y el uso del pool de capacidad. Cada componente se multiplica por su precio por unidad para esa dimensión y los resultados se suman para determinar el coste total de cada recurso.
+En el caso de los recursos únicos, Workload Factory calcula los costes combinando el uso real del nivel de rendimiento, una parte proporcional de los costes del nivel de rendimiento asignados al espacio aprovisionado pero no utilizado, las asignaciones de rendimiento distribuidas por capacidad y el uso del pool de capacidad. Workload Factory multiplica cada componente por su precio por unidad para esa dimensión y suma los resultados para determinar el coste total de cada recurso.
 
-En el panel Costes, puedes filtrar los datos de costes y uso por cuentas de AWS, credenciales, una o varias regiones e intervalos de tiempo para que puedas entender el consumo de tu sistema de archivos FSx for ONTAP. Los datos siempre se muestran a una tasa mensual.
+En el panel de control de costes, puedes filtrar los datos de costes y uso por cuentas de AWS, credenciales, una o varias regiones e intervalos de tiempo, para que puedas entender el consumo de tu sistema de archivos FSx for ONTAP. Workload Factory siempre muestra los datos con una tarifa mensual. También puedes filtrar por uno o varios sistemas de archivos y uno o varios volúmenes dentro de un sistema de archivos. Las claves de etiqueta de asignación de costes de AWS y los valores de las claves de etiqueta añaden una capa adicional de filtrado para identificar costes específicos. Una _etiqueta_ consta de una clave y un valor. Para filtrar por claves de etiqueta y valores de claves de etiqueta, asigna etiquetas a tus sistemas de archivos FSx for ONTAP. link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html["Más información sobre las etiquetas de asignación de costes de AWS."^]
 
-Obtenemos los datos de coste y uso de tus recursos del sistema de archivos FSx para ONTAP desde AWS Cost Explorer usando los siguientes permisos: `ce:GetCostAndUsage`and `ce:GetTags`. Calculamos el coste total usando la API de costes de AWS y nuestras estimaciones. `
+Workload Factory obtiene datos sobre costes y uso de los recursos de tu sistema de archivos FSx for ONTAP desde AWS Cost Explorer usando los siguientes permisos: `ce:GetCostAndUsage` y  `ce:GetTags`. Calculamos el coste total usando la API de costes de AWS y nuestras propias estimaciones.
 
-Las claves de etiquetas y los valores de claves de etiquetas de asignación de AWS añaden una capa adicional de filtrado para localizar costes específicos. Una _tag_ consta de una clave y un valor. Para filtrar por claves de etiquetas y valores de claves de etiquetas, asigna etiquetas a tus sistemas de archivos FSx para ONTAP. link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html["Más información sobre las etiquetas de asignación de costes de AWS."^]
-
-Además de los datos de costes que aparecen en el panel de costes, puedes generar informes de costes para tus recursos de sistemas de archivos FSx para ONTAP. Los datos del informe de costes muestran información para sistemas de archivos y volúmenes específicos. El informe es un archivo PDF descargable que puedes compartir con las personas interesadas.
+Además de los datos de costes del panel de control de costes, el resumen ejecutivo de costes muestra los costes de tu sistema de archivos FSx for ONTAP y los patrones de gasto de tu organización. También puedes generar informes de costes para los recursos de tu sistema de archivos FSx for ONTAP. El informe es un archivo CSV descargable que puedes compartir con las partes interesadas.
 
 
 
@@ -38,10 +36,10 @@ Además de los datos de costes que aparecen en el panel de costes, puedes genera
 Los costes mostrados en la consola Workload Factory en el panel Cost se basan en los datos de AWS Cost Explorer, que se actualizan cada 24 horas.
 
 .Antes de empezar
-Asegúrate de cumplir con los siguientes requisitos:
+Comprueba que cumples los siguientes requisitos:
 
 * Debes link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Conceder credenciales con la política de permisos de _visualización, planificación y análisis_"^] en Workload Factory para hacer un seguimiento de los costes de FSx para ONTAP.
-* Para filtrar por etiquetas de asignación de AWS, asegúrate de que tus sistemas de archivos FSx para ONTAP tienen etiquetas asignadas.
+* Para filtrar por etiquetas de asignación de AWS, comprueba que tus sistemas de archivos FSx for ONTAP tengan etiquetas asignadas.
 
 
 .Pasos
@@ -79,4 +77,4 @@ Genera informes de costes para recursos específicos del sistema de archivos FSx
 
 
 .Resultado
-Se genera un informe en PDF que puede descargarse.
+Se genera un informe en CSV que puede descargarse.
