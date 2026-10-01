@@ -90,7 +90,7 @@ Modelo recomendado: `anthropic.claude-sonnet-4-20250514-v1:0`. Proporciona el AR
 Crea y asocia un enlace con un sistema de archivos FSx for ONTAP para habilitar el análisis de eventos impulsado por IA. Un enlace establece una relación de confianza entre Workload Factory y uno o más sistemas de archivos FSx for ONTAP y aprovecha AWS Lambda.
 
 +
-link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html^["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"]. Después de que se asocie el enlace, vuelve a esta operación.
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Después de que se asocie el enlace, vuelve a esta operación.
 
 * *Permisos de AWS IAM*
 +

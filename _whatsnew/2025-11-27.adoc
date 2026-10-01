@@ -49,7 +49,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-costs.html["Seguimie
 
 Administre fácilmente sus etiquetas FSx para un sistema de archivos directamente desde la consola de NetApp Workload Factory .  Esta función le permite agregar, editar o eliminar etiquetas, lo que permite una mejor organización y categorización de sus sistemas de archivos FSx para ONTAP .
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-fsx-tags.html["Administrar etiquetas FSx en Workload Factory"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-file-system-settings.html["Administrar etiquetas FSx en Workload Factory"]
 
 
 
