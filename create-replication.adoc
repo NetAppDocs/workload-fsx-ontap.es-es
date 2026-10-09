@@ -245,7 +245,7 @@ Ten en cuenta lo siguiente al planificar la operación de transición para los c
 
 
 * *Clones*: Los clones se migran como volúmenes individuales y, por tanto, consumirán más espacio en el sistema de archivos FSx para ONTAP de destino. Considera eliminar los clones antes de la transición para evitar un aumento de capacidad en el destino.
-* *Volúmenes de caché*: Para ONTAP FlexCache 9.17.x o versiones inferiores. Las máquinas virtuales de almacenamiento de origen que contienen volúmenes de caché no son compatibles con la transición. Elimina la relación de ONTAP FlexCache antes de la transición para evitar fallos en la migración.
+* *Volúmenes de caché*: las VM de almacenamiento de origen que contienen volúmenes de caché no se admiten para la transición. Elimina la relación de ONTAP FlexCache antes de la transición para evitar errores de migración.
 * *Puntos de acceso S3 de AWS*: La replicación de transición para casos de uso de migración no es compatible con volúmenes con puntos de acceso S3. Elimina los puntos de acceso S3 del volumen de origen para evitar fallos en la migración.
 * *Configuraciones de ONTAP S3*: La replicación de transición para casos de uso de migración no es compatible con vservers con configuraciones de ONTAP S3. Elimina las configuraciones de ONTAP S3, incluyendo object-store-server, buckets, usuarios, grupos o políticas en el vserver, para evitar fallos de migración.
 * *Números de serie de LUN y IQN de destino iSCSI*: los números de serie de LUN y el IQN de destino iSCSI cambian durante la transición.
