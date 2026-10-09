@@ -3186,4 +3186,5 @@
   <block id="cdda19a64421ad2d94977547c50a1983" category="paragraph"><block ref="cdda19a64421ad2d94977547c50a1983" category="inline-link-macro-rx"></block></block>
   <block id="56643767ee547abedda1d643567a4c85" category="paragraph">Toda la documentación sobre enlaces se incluye ahora en la documentación de configuración y administración de Workload Factory. Aun así, puedes consultar la <block ref="08c564abbdedd12846cfb2f0de43f628" category="inline-link-macro-rx"></block> de la documentación de Workload Factory FSx for ONTAP y encontrar enlaces a las páginas pertinentes en la documentación de configuración y administración.</block>
   <block id="ec39403359b5b677efc5171e16b20cdb" category="paragraph"><block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>. Después de que se asocie el enlace, vuelve a esta operación.</block>
+  <block id="9a90fd93ba397d5f48de07251acc1808" category="list-text">Desglose por componentes de los eventos de latencia</block>
 </blocks>
