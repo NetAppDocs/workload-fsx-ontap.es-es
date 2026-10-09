@@ -203,7 +203,7 @@ El exceso de capacidad de SSD supone un coste innecesario. Reduce el nivel de SS
 
 * *Volúmenes NAS inactivos*
 +
-El análisis de configuración identifica los volúmenes NAS que no se utilizan de forma activa y sugiere eliminarlos o archivarlos para reducir los costos.
+Si un volumen NAS no se usa durante 31 días, archívalo o elimínalo para reducir costes.
 
 
 
