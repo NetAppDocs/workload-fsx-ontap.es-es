@@ -192,6 +192,12 @@ Puedes crear un clon de un dispositivo de bloque existente en cualquier momento.
 
 Los dispositivos de bloque que ya no están asignados a un cliente o que no se han utilizado durante siete días consecutivos se clasifican como dispositivos de bloque inactivos. Puedes archivar los datos de un dispositivo de bloque inactivo en el nivel del grupo de capacidad para recuperar capacidad SSD.
 
+
+NOTE: No puedes eliminar un volumen con clones secundarios hasta que todos los clones secundarios se eliminen o se separen en volúmenes independientes.
+
+.Antes de empezar
+Asegúrate de que todos los dispositivos de bloque (LUNs) estén inactivos en el mismo volumen antes de archivar los datos.
+
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
@@ -215,7 +221,7 @@ Los dispositivos de bloque que no se asignan a un cliente o que no se usan duran
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
 . Desde *FSx for ONTAP*, seleccione la pestaña *Dispositivos de bloque*.
 . En Dispositivos huérfanos, seleccione *Ver y recuperar capacidad*.
-. En la pantalla Recuperar espacio para dispositivos de bloque no utilizados, seleccione uno o más dispositivos de bloque para archivar los datos y recuperar la capacidad.
+. En la pantalla «Recuperar espacio de dispositivos de bloque no utilizados», selecciona uno o varios dispositivos de bloque para recuperar la capacidad.
 . Seleccione *Eliminar*.
 
 
