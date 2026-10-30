@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-file-system-settings.html 
 keywords: create fsx tags, create tags, edit fsx tags, fsx tags, reset fsx admin password 
-summary: Agregue, actualice o elimine etiquetas del sistema de archivos FSx for ONTAP para un sistema de archivos en cualquier momento. 
+summary: Gestiona la configuración del sistema de archivos FSx para ONTAP en NetApp Workload Factory, incluidas las etiquetas, las credenciales de ONTAP, la contraseña de fsxadmin y la capacidad de throughput. 
 ---
 = Gestiona la configuración del sistema de archivos FSx for ONTAP en NetApp Workload Factory
 :allow-uri-read: 
@@ -51,7 +51,7 @@ Workload Factory permite cambiar entre el servicio de credenciales de Workload F
 
 Workload Factory gestiona las credenciales restringidas de la siguiente manera:
 
-* Si no has proporcionado credenciales restringidas para un sistema de archivos y luego creas reglas personalizadas o paneles de control, o haces preguntas a Ask Me, Workload Factory crea credenciales de solo lectura de ONTAP para usarlas como el conjunto de credenciales restringidas.
+* Si no has proporcionado credenciales restringidas para un sistema de archivos y luego creas reglas personalizadas o paneles de control, o envías preguntas a Ask Me, Workload Factory crea credenciales de solo lectura de ONTAP para usarlas como conjunto de credenciales restringidas.
 * Si ya has facilitado credenciales restringidas para un sistema de archivos, esas credenciales se usan para AIOps.
 
 

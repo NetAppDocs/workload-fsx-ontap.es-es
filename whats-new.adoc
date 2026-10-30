@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes, new features, Workload Factory, amazon fsx for netapp ontap, fsx for ontap' 
-summary: Descubra las novedades de Amazon FSx para NetApp ONTAP. 
+summary: Consulta las nuevas funciones, mejoras y correcciones de Amazon FSx for NetApp ONTAP en NetApp Workload Factory, ordenadas por fecha de lanzamiento. 
 ---
-= Novedades de Amazon FSX para ONTAP de NetApp
+= Novedades en Amazon FSx for NetApp ONTAP en NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Descubra las novedades de Amazon FSx para NetApp ONTAP.
+Consulta las nuevas funciones y mejoras de Amazon FSx for NetApp ONTAP en NetApp Workload Factory, organizadas por fecha de lanzamiento.
 
 
 

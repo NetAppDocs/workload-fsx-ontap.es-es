@@ -11,7 +11,7 @@ summary: Consulta los detalles de los puntos de acceso S3 para un volumen en Net
 
 
 [role="lead"]
-Ver detalles del punto de acceso S3 como el alias, ARN y S3 URI. Con las tablas de inventario y registro en diario habilitadas, puedes ver metadatos y registros de auditoría de eventos de acceso de usuarios y operaciones de objetos a través de puntos de acceso S3.
+Consulta los detalles de los puntos de acceso de S3, como el alias, el ARN y el URI de S3. Cuando las tablas de inventario y de registro están habilitadas, puedes consultar los metadatos y los registros de auditoría de los eventos de acceso de los usuarios y las operaciones con objetos en todos los puntos de acceso de S3.
 
 .Acerca de esta tarea
 Cuando la tabla de inventario está habilitada en el volumen, puedes ver los detalles del punto de acceso, la tabla de inventario y el bucket de tabla de los puntos de acceso S3 existentes adjuntos al volumen. El sistema también proporciona un enlace a la tabla de inventario en la AWS Management Console.

@@ -23,7 +23,7 @@ Activa el seguimiento para supervisar los retrasos en la replicación en toda tu
 . En el cuadro de diálogo Activar historial de retraso de replicación, selecciona *Activar*.
 . De nuevo en el mosaico Historial de retrasos de replicación, selecciona *Personalizar umbral* para establecer el umbral que prefieras.
 . En el cuadro de diálogo Personalizar umbral de tiempo de retardo, introduce el umbral en horas y minutos.
-. Opcionalmente, selecciona *Habilitar notificaciones de tiempo de retardo* para recibir notificaciones cuando los retardos de replicación superen el umbral.
+. Si lo deseas, selecciona *Activar notificaciones de retraso* para recibir notificaciones cuando el retraso en la replicación supere el umbral.
 +
 Las notificaciones llegan por correo electrónico e incluyen:
 

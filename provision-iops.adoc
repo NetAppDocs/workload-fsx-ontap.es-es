@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: provision-iops.html 
 keywords: iops, SSD, provision, allocate 
-summary: Aprovisiona automáticamente o aprovisiona manualmente las IOPS de SSD para un sistema de archivos FSx para ONTAP. 
+summary: Activa el aprovisionamiento automático de IOPS de SSD o establece un valor de IOPS aprovisionado por el usuario para un sistema de archivos FSx for ONTAP en Workload Factory. 
 ---
 = Aprovisione las IOPS de SSD para un sistema de archivos FSx para ONTAP
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: Aprovisiona automáticamente o aprovisiona manualmente las IOPS de SSD 
 
 
 [role="lead"]
-Aprovisione automática o manualmente IOPS de SSD para un sistema de archivos FSx para ONTAP en NetApp Workload Factory.
+Aprovisiona de forma automática o manual las SSD IOPS para un sistema de archivos FSx for ONTAP en NetApp Workload Factory para controlar el rendimiento disponible para tus cargas de trabajo.
 
 .Acerca de esta tarea
-Puede habilitar el aprovisionamiento automático de IOPS de SSD para un sistema de archivos FSx o aprovisionar IOPS manualmente.
+Puedes habilitar el aprovisionamiento automático de IOPS de SSD para un sistema de archivos FSx for ONTAP o aprovisionar las IOPS manualmente.
 
 Las IOPS aprovisionadas automáticamente se calculan en tres IOPS por GiB.
 

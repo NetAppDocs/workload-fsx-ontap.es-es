@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-snapshots.html 
 keywords: snapshot, snapshots, manage snapshots, edit snapshots, access snapshots, delete snapshots, remove snapshots 
-summary: Edite la configuración de instantáneas, habilite el acceso al directorio y elimine instantáneas para administrar sus instantáneas y la protección de datos en Workload Factory. 
+summary: Edita los nombres, las etiquetas y los períodos de retención de las instantáneas, haz que las instantáneas sean inmutables, habilita el acceso al directorio de instantáneas y elimina instantáneas de volúmenes de FSx for ONTAP. 
 ---
 = Administrar instantáneas de un volumen FSx for ONTAP
 :allow-uri-read: 
@@ -27,7 +27,7 @@ Editar el nombre, la etiqueta y el período de retención de una instantánea.  
 . Selecciona el menú de acciones del volumen con la instantánea que deseas editar.
 . Seleccione *Acciones de protección de datos* y luego *Administrar instantáneas*.
 . Desde la página Administrar instantáneas, seleccione el menú de acciones para la instantánea que desea editar y luego seleccione *Editar*.
-. En el cuadro de diálogo Editar una instantánea, puede editar lo siguiente:
+. En el cuadro de diálogo «Editar una instantánea», modifica los siguientes ajustes:
 +
 .. Cambiar el nombre.
 .. Cambiar la etiqueta.
@@ -49,7 +49,7 @@ Acepte la declaración sobre instantáneas inmutables.
 [[access-a-snapshot]]
 == Acceder a una instantánea
 
-Habilite el acceso al directorio de instantáneas para brindarles a los usuarios la posibilidad de acceder a las instantáneas de forma autónoma.
+Habilita el acceso al directorio de instantáneas para que los usuarios puedan acceder a ellas de forma autónoma.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -58,7 +58,7 @@ Habilite el acceso al directorio de instantáneas para brindarles a los usuarios
 . Selecciona el menú de acciones del volumen con la instantánea a la que deseas acceder.
 . Seleccione *Acciones de protección de datos* y luego *Administrar instantáneas*.
 . Desde la página Administrar instantáneas, seleccione el menú de acciones para la instantánea a la que desea acceder y luego seleccione *Acceso*.
-. En el cuadro de diálogo Acceder a instantánea, seleccione *Habilitar acceso al directorio de instantáneas* para acceder a esta instantánea de volumen y a todas las instantáneas del volumen.
+. En el cuadro de diálogo de instantáneas de Access, selecciona *Enable snapshot directory access* para acceder a esta instantánea de volumen y a todas las instantáneas del volumen.
 +
 ** Para volúmenes NFS: seleccione *Ruta de acceso NFS* para ver la ruta NFS de la instantánea.
 ** Para volúmenes SMB/CIFS: seleccione *Ruta de acceso SMB* para ver la ruta SMB de la instantánea.
@@ -73,7 +73,7 @@ Habilite el acceso al directorio de instantáneas para brindarles a los usuarios
 [[restore-data-from-a-snapshot]]
 == Restaurar datos desde una instantánea
 
-Tiene la opción de restaurar datos de una instantánea a un volumen existente o a un volumen nuevo.
+Puedes restaurar datos desde una instantánea a un volumen existente o a uno nuevo.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapshot.html["Restaurar un volumen a partir de una copia de Snapshot"]
 
@@ -84,7 +84,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapsh
 
 Eliminar una instantánea para liberar espacio.
 
-Las instantáneas inmutables no se pueden eliminar hasta que finalice el período de retención.
+No puedes eliminar instantáneas inmutables hasta que finalice el periodo de retención.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .

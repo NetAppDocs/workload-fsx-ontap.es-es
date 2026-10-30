@@ -11,7 +11,7 @@ summary: Analiza eventos dentro de NetApp Workload Factory for FSx for ONTAP.
 
 
 [role="lead"]
-Identifica y resuelve rápidamente los problemas del sistema de archivos FSx para ONTAP con el analizador de eventos inteligente en NetApp Workload Factory. El analizador de eventos extrae y analiza automáticamente los eventos EMS (sistema de gestión de eventos) y de latencia de FSx para ONTAP, aprovechando la IA de Agentic con integración de Amazon Bedrock.
+Identifica y resuelve rápidamente los problemas del sistema de archivos FSx for ONTAP con el analizador inteligente de eventos en NetApp Workload Factory. El analizador de eventos extrae y analiza automáticamente los eventos de Event Management System (EMS) y de latencia de FSx for ONTAP, con Agentic AI integrada con Amazon Bedrock.
 
 
 
@@ -53,7 +53,7 @@ NOTE: Si el administrador de tu cuenta ha desactivado las funciones de IA, apare
 Tu privacidad y seguridad de datos están protegidas a través de:
 
 * *Soberanía de datos*: todos los datos y agregaciones permanecen dentro de tu cuenta de AWS y se comunican a través de un punto de enlace privado de VPC (Amazon Bedrock), sin exposición pública a internet.
-* *Sin entrenamiento de IA*: Los datos de los clientes no se utilizan para entrenar o mejorar los modelos. Amazon Bedrock procesa eventos en tiempo real pero no entrena con tus datos. Los resultados se almacenan solo en tu entorno.
+* *Sin entrenamiento de IA*: los datos de los clientes no se utilizan para entrenar ni mejorar modelos. Amazon Bedrock procesa eventos en tiempo real, pero no realiza ningún entrenamiento con tus datos. Los resultados se almacenan únicamente en tu entorno.
 
 
 Para más detalles, consulta la link:https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html["Documentación de protección de datos de Amazon Bedrock"^].
@@ -63,13 +63,13 @@ Para más detalles, consulta la link:https://docs.aws.amazon.com/bedrock/latest/
 [[before-you-begin]]
 == Antes de empezar
 
-Para ver los eventos de latencia debes hacer lo siguiente:
+Para ver los eventos de latencia, debes hacer lo siguiente:
 
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["otorgar permisos de _visualización, planificación y análisis_"^] en tu cuenta de AWS.
 * link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Conéctate al sistema de archivos mediante un enlace"^].
 
 
-Para analizar los eventos de EMS y latencia y recibir información y recomendaciones basadas en IA, asegúrate de lo siguiente:
+Para analizar los eventos EMS y de latencia y recibir información y recomendaciones basadas en inteligencia artificial, comprueba lo siguiente:
 
 * Tienes link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_permisos de operaciones y remediación_"^] en tu cuenta de AWS.
 * Tienes link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["conectado al sistema de archivos mediante un enlace"^].
@@ -87,7 +87,7 @@ Modelo recomendado: `anthropic.claude-sonnet-4-20250514-v1:0`. Proporciona el AR
 
 * *Enlace de Workload Factory*
 +
-Crea y asocia un enlace con un sistema de archivos FSx for ONTAP para habilitar el análisis de eventos impulsado por IA. Un enlace establece una relación de confianza entre Workload Factory y uno o más sistemas de archivos FSx for ONTAP y aprovecha AWS Lambda.
+Crea y asocia un enlace con un sistema de archivos FSx for ONTAP para habilitar el análisis de eventos impulsado por IA. Un enlace establece una relación de confianza entre Workload Factory y uno o varios sistemas de archivos FSx for ONTAP y utiliza AWS Lambda.
 
 +
 link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Después de que se asocie el enlace, vuelve a esta operación.

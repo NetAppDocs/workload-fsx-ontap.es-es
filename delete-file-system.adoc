@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: delete-file-system.html 
 keywords: file system, delete file system, file system deletion 
-summary: Para eliminar un sistema de archivos en NetApp Workload Factory, primero debe eliminar todos los volúmenes, las máquinas virtuales de almacenamiento o las relaciones de replicación asociadas con el sistema de archivos. 
+summary: Elimina un sistema de archivos de FSx for ONTAP en NetApp Workload Factory después de quitar sus volúmenes, máquinas virtuales de almacenamiento y relaciones de replicación. 
 ---
 = Eliminar un sistema de archivos en NetApp Workload Factory
 :allow-uri-read: 

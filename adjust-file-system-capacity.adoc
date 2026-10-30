@@ -50,7 +50,7 @@ Para ajustar la capacidad de un sistema de archivos, primero tienes que link:man
 [[enable-automatic-capacity-and-inode-management]]
 == Habilita la gestión automática de la capacidad y los nodos de información
 
-Activa la gestión de capacidad y nodos de información para que NetApp Workload Factory añada automáticamente almacenamiento incremental y nodos de información (archivos) al sistema de archivos FSx for ONTAP y a un volumen, a medida que cambien las necesidades de capacidad con el tiempo. Estas funciones eliminan la necesidad de supervisar manualmente la capacidad y los nodos de información.
+Activa la gestión de la capacidad y de nodos de información para que NetApp Workload Factory añada automáticamente almacenamiento incremental a un sistema de archivos de FSx for ONTAP y nodos de información (archivos) a un volumen a medida que cambien las necesidades de capacidad con el tiempo. Estas funciones eliminan la necesidad de supervisar manualmente la capacidad y los nodos de información.
 
 Solo una cuenta puede gestionar estas funciones.
 
@@ -143,7 +143,7 @@ Considere lo siguiente antes de comenzar:
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
 . Desde *FSx para ONTAP*, seleccione el menú de acciones del sistema de archivos para habilitar la administración automática de inodos para.
 . Seleccione *gestionar*.
-. En Información, seleccione el icono del lápiz situado junto a *Gestión automática de inodos*.  El icono del lápiz aparece junto a la flecha desplegable cuando el ratón se sitúa sobre la fila *Gestión automática de inodos*.
+. En «Información», selecciona el icono del lápiz situado junto a *Gestión automática de nodos de información*. El icono del lápiz aparece junto a la flecha del menú desplegable al pasar el ratón por encima de la fila *Gestión automática de nodos de información*.
 . En el cuadro de diálogo *Administración automática de inodos*, proporcione lo siguiente:
 +
 .. *Credenciales*: Seleccione credenciales con permisos _Automate_ en el menú desplegable.

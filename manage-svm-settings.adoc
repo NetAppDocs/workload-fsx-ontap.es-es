@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-svm-settings.html 
 keywords: edit storage vm settings, vm tags, svm tags, storage vm settings, storage vm password, svm password 
-summary: Añada, actualice o quite etiquetas de máquinas virtuales de almacenamiento para una máquina virtual de almacenamiento en cualquier momento. 
+summary: Configura Active Directory, gestiona etiquetas y restablece la contraseña de una VM de almacenamiento en un sistema de archivos FSx for ONTAP. 
 ---
 = Gestiona la configuración de las máquinas virtuales de almacenamiento en NetApp Workload Factory
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Añada, actualice o quite etiquetas de máquinas virtuales de almacenam
 
 
 [role="lead"]
-Administra la configuración de una máquina virtual de almacenamiento en NetApp Workload Factory. Puedes configurar y actualizar Active Directory para una máquina virtual de almacenamiento, actualizar la contraseña de la máquina virtual y gestionar las etiquetas de la máquina virtual.
+Gestiona la configuración de una máquina virtual de almacenamiento en NetApp Workload Factory. Puedes configurar y actualizar Active Directory, restablecer la contraseña de la máquina virtual de almacenamiento y gestionar las etiquetas de la máquina virtual de almacenamiento.
 
 
 
@@ -33,13 +33,13 @@ Los mismos pasos se aplican para configurar y actualizar Active Directory para u
 +
 .. *Dominio de Active Directory para unirse*: Introduzca el nombre de dominio completo (FQDN) de su Active Directory.
 .. *Direcciones IP DNS*: Introduzca hasta tres direcciones IP separadas por comas.
-.. *Servidor SMB Nombre NetBIOS*: Introduzca el nombre NetBIOS del servidor SMB del objeto de equipo de Active Directory para crear para su VM de almacenamiento. Este es el nombre de esta máquina virtual de almacenamiento SVM en Active Directory.
+.. *Nombre NetBIOS del servidor SMB*: introduce el nombre NetBIOS del servidor SMB del objeto de equipo de Active Directory que se va a crear para tu máquina virtual de almacenamiento. Este es el nombre de la máquina virtual de almacenamiento en Active Directory.
 .. *Nombre de usuario*: Introduzca el nombre de usuario de la cuenta de servicio en su Active Directory existente.
 +
 No incluya un prefijo o sufijo de dominio. Para `EXAMPLE\ADMIN`, utilice `ADMIN`.
 
 .. *Contraseña*: Introduzca la contraseña de la cuenta de servicio.
-.. *Unidad de organización (OU)*: Ingrese la unidad de organización.
+.. *Unidad organizativa (OU)*: introduce la unidad organizativa.
 +
 La unidad organizativa es el nombre de ruta de acceso distinguida de la unidad organizativa a la que desea unirse al sistema de archivos.
 

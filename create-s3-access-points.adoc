@@ -11,7 +11,7 @@ summary: Crea puntos de acceso S3 para un volumen en NetApp Workload Factory.
 
 
 [role="lead"]
-Crea y adjunta puntos de acceso S3 para un volumen en NetApp Workload Factory.
+Crea y vincula puntos de acceso de S3 a un volumen de FSx for ONTAP en NetApp Workload Factory para que los servicios de AWS puedan acceder a los archivos del volumen como si estuvieran en un bucket de S3.
 
 .Acerca de esta tarea
 Amazon FSx for NetApp ONTAP permite que los sistemas de archivos NFS y SMB accedan a datos de S3 y se conecten a servicios de AWS como Amazon Bedrock, SageMaker, Athena, AWS Glue y más. Puedes conectar servicios de AWS a todos tus datos de almacenamiento de objetos.
@@ -41,7 +41,7 @@ Completa los siguientes requisitos antes de empezar.
 ** *Usuario*: Seleccione un usuario existente con acceso al volumen o cree un nuevo usuario.
 ** *Tipo de usuario*: seleccione *UNIX* o *Windows* como tipo de usuario.
 ** *Configuración de red*: selecciona *Internet* o *Virtual private cloud (VPC)*. El tipo de red que elijas determina si el punto de acceso es accesible desde internet o está restringido a una VPC específica. Para usar la función Journal table, debes seleccionar *Internet* como configuración de red.
-** *Tabla de inventario*: Opcional. Requiere el  `getObject` permiso. Habilita la tabla de inventario en el volumen para generar metadatos para todos los objetos accesibles al punto de acceso S3 e incurre en costes de solicitud de AWS S3. Consulta link:https://aws.amazon.com/s3/pricing/["Documentación de precios de Amazon S3"^] para más información. La tabla se actualiza cada 24 horas.
+** *Tabla de inventario*: opcional. Requiere el permiso `getObject`. Habilita la tabla de inventario en el volumen para generar metadatos de todos los objetos accesibles desde el punto de acceso S3, lo que conlleva costes por solicitudes de AWS S3. Consulta link:https://aws.amazon.com/s3/pricing/["Documentación de precios de Amazon S3"^] para obtener más información. La tabla se actualiza cada 24 horas.
 ** *Etiquetas de punto de acceso S3*: Opcionalmente, puedes añadir hasta 50 etiquetas o eliminar etiquetas.
 
 

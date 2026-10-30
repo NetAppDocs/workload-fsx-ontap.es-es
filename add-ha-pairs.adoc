@@ -14,31 +14,31 @@ summary: Agregue pares de alta disponibilidad a un sistema de archivos en NetApp
 Agregue pares de alta disponibilidad (HA) para escalar horizontalmente un sistema de archivos Single-AZ de segunda generación FSx para ONTAP en NetApp Workload Factory para aumentar el rendimiento y la capacidad.  Esta expansión le brinda mayor escalabilidad y flexibilidad de rendimiento que los sistemas de archivos de primera generación.
 
 .Acerca de esta tarea
-Los nuevos pares de alta disponibilidad se agregan con la misma SKU y la misma capacidad para pareja de alta disponibilidad.
+Los nuevos pares de alta disponibilidad (HA) utilizan el mismo SKU y la misma capacidad por par de HA.
 
 Los siguientes aspectos no se admite la adición de pares de alta disponibilidad:
 
 * Implementaciones de alta disponibilidad de varias zonas o FSX de primera generación para sistemas de archivos ONTAP
-* FSX para sistemas de archivos de ONTAP con más de 5 equipos virtuales de almacenamiento
+* Sistemas de archivos FSx for ONTAP con más de cinco máquinas virtuales de almacenamiento
 * FSX para sistemas de archivos ONTAP con LUN iSCSI
-* Configuraciones que tienen la capacidad máxima de SSD o que están cerca de ella o han alcanzado los límites de asignación de I/O.
+* Configuraciones que tienen una capacidad de SSD máxima o cercana a la máxima o que han alcanzado los límites de asignación de E/S
 
 
 Considere lo siguiente acerca de la adición de pares de alta disponibilidad:
 
-* Eliminación de la pareja DE ALTA DISPONIBILIDAD: Las parejas DE ALTA disponibilidad no se pueden quitar una vez añadidas al sistema de archivos.
-* Tiempo y limitaciones de funcionamiento: La adición de pares de alta disponibilidad puede tardar aproximadamente 30 minutos. Considere la posibilidad de agregar pares de alta disponibilidad durante un periodo de mantenimiento o durante periodos de baja actividad. Además, añadir pares de alta disponibilidad limita otras operaciones, como añadir más pares de alta disponibilidad, aprovisionar IOPS, aumentar la capacidad de SSD y actualizar la capacidad de rendimiento.
-* Asignación de I/O: La asignación de I/O automática depende de la capacidad de almacenamiento total. La asignación de I/O configurada por el usuario se multiplica por la cantidad de pares de alta disponibilidad añadidos.
-* NVMe cache: Al añadir parejas de alta disponibilidad, se habilita la caché NVMe de forma predeterminada. Recomendamos desactivar la memoria caché NVMe para cargas de trabajo pesadas.
+* Eliminación de pares de HA: no puedes eliminar pares de HA después de añadirlos al sistema de archivos.
+* Tiempo de ejecución y limitaciones: la incorporación de pares de HA puede tardar aproximadamente 30 minutos. Considera incorporar los pares de HA durante una ventana de mantenimiento o en períodos de baja actividad. Además, la incorporación de pares de HA limita otras operaciones, como añadir más pares de HA, aprovisionar IOPS, aumentar la capacidad de los SSD y actualizar la capacidad de rendimiento.
+* Asignación de E/S: la asignación automática de E/S depende de la capacidad de almacenamiento total. La asignación de E/S configurada por el usuario se multiplica por el número de pares de HA añadidos.
+* Caché NVMe: al añadir pares de alta disponibilidad (HA), la caché NVMe se activa de forma predeterminada. Recomendamos desactivar la caché NVMe para cargas de trabajo intensas.
 * Número de pares de alta disponibilidad: Se recomienda ampliar su sistema de archivos a un número par de pares de alta disponibilidad para una distribución de datos equilibrada en pares de alta disponibilidad.
-* Creación de LUN: La creación de LUN es posible en un sistema de archivos Single-AZ de segunda generación si aún no existen LUN en el sistema de archivos al agregar pares de alta disponibilidad. La creación de LUN solo se admite en un sistema de archivos con 6 pares de alta disponibilidad o menos.
+* Creación de LUN: la creación de LUN solo es posible en un sistema de archivos Single-AZ de segunda generación si todavía no existen LUN en el sistema de archivos al añadir pares de HA. La creación de LUN solo se admite en un sistema de archivos con seis pares de HA o menos.
 
 
 .Antes de empezar
 Haga lo siguiente antes de agregar parejas de alta disponibilidad a un sistema de archivos:
 
 * Elimine todos los LUN iSCSI para escalar horizontalmente el sistema de archivos.
-* Asegúrese de que el sistema de archivos no tenga más de 5 máquinas virtuales de almacenamiento.
+* Asegúrate de que el sistema de archivos no tenga más de cinco máquinas virtuales de almacenamiento.
 
 
 .Pasos

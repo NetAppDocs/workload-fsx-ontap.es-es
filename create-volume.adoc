@@ -20,7 +20,7 @@ Después de configurar su sistema de archivos FSx para ONTAP , cree volúmenes F
 
 Los volúmenes de FSx para ONTAP agrupan datos de manera virtual, determinan cómo se almacenan los datos y determinan el tipo de acceso a ellos. Los volúmenes no consumen capacidad de almacenamiento del sistema de archivos. Los datos que se almacenan en un volumen consumen principalmente almacenamiento SSD. Según la política de organización en niveles del volumen, los datos también pueden consumir almacenamiento en el pool de capacidad. Se establece el tamaño de un volumen al crearlo y se puede cambiar su tamaño más adelante.
 
-Los siguientes protocolos pueden usarse para los volúmenes:
+Puedes utilizar los siguientes protocolos para tus volúmenes:
 
 * SMB/CIFS: protocolo de almacenamiento de archivos para sistemas operativos Windows
 * NFS: Protocolo de almacenamiento de ficheros para sistemas operativos Unix
@@ -39,7 +39,7 @@ Esta función, también conocida como SnapLock, está deshabilitada de forma pre
 
 * *Modos de retención*: Puede seleccionar entre dos modos de retención: _Empresa_ o _Cumplimiento_.
 +
-** En el modo _Enterprise_, un archivo inmutable o SnapLock, el administrador puede eliminar un archivo durante su período de retención.
+** En el modo _Enterprise_, un administrador de SnapLock puede eliminar un archivo durante su período de retención.
 ** En el modo _Compliance_, no se puede eliminar un archivo WORM antes de que caduque su período de retención. De igual modo, el volumen inmutable no se puede eliminar hasta que caduquen los períodos de retención de todos los archivos en el volumen.
 
 
@@ -48,9 +48,9 @@ Esta función, también conocida como SnapLock, está deshabilitada de forma pre
 
 NOTE: Incluso después de que caduque el período de retención, no es posible modificar un ARCHIVO WORM. Solo puede eliminarlo o establecer un nuevo período de retención para volver a activar la protección WORM.
 
-* *Confirmación automática*: Tendrás la opción de habilitar la función de confirmación automática.  La función de confirmación automática confirma un archivo al estado WORM en un volumen SnapLock si el archivo no cambió durante el período de confirmación automática.  La función de confirmación automática está deshabilitada de forma predeterminada.  Debe asegurarse de que los archivos que desea confirmar automáticamente residan en un volumen SnapLock .
+* *Autocommit*: puedes habilitar la función de autocommit. La función de autocommit pasa un archivo al estado WORM en un volumen SnapLock si el archivo no cambia durante la duración del periodo de autocommit. La función de autocommit está desactivada de forma predeterminada. Debes asegurarte de que los archivos que quieres confirmar automáticamente estén en un volumen SnapLock.
 * *Eliminación privilegiada*: un administrador de SnapLock puede activar la eliminación privilegiada en un volumen de SnapLock Enterprise para permitir que se elimine un archivo antes de que expire el período de retención del archivo.  Esta función está deshabilitada de forma predeterminada.
-* *Modo de anexión de volumen*: no se pueden modificar datos existentes en un archivo protegido con WORM.  Sin embargo, los archivos inmutables le permiten mantener la protección de los datos existentes utilizando archivos anexables mediante WORM.  Por ejemplo, puede generar archivos de registro o conservar datos de transmisión de audio o video mientras escribe datos en ellos de forma incremental. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["Obtenga más información sobre el modo de adición de volúmenes"^] en la documentación de Amazon FSx for NetApp ONTAP .
+* *Modo de anexado de volumen*: no puedes modificar los datos existentes en un archivo protegido con WORM. Sin embargo, los archivos inmutables te permiten mantener la protección de los datos existentes mediante archivos WORM con capacidad de anexado. Por ejemplo, puedes generar archivos de registro o conservar datos de streaming de audio o vídeo mientras escribes datos en ellos de forma incremental. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["Obtenga más información sobre el modo de adición de volúmenes"^] en la documentación de Amazon FSx for NetApp ONTAP.
 
 
 
@@ -105,7 +105,7 @@ Opcionalmente, habilite el crecimiento automático de volúmenes. Esta opción e
 
 .. *Aumento automático del volumen*: Opcionalmente, active el aumento automático del volumen para ampliar automáticamente la capacidad del volumen hasta alcanzar el tamaño máximo. Esta función se adapta al aumento del uso de datos, garantizando así operaciones ininterrumpidas.
 +
-Especifique el tamaño máximo de crecimiento del volumen y la unidad. No se puede establecer un tamaño de crecimiento máximo menor que el tamaño del volumen actual
+Especifica el tamaño máximo de crecimiento del volumen y la unidad. No puedes establecer un tamaño máximo de crecimiento inferior al tamaño actual del volumen.
 
 .. *Etiquetas*: Opcionalmente, puedes añadir hasta 50 etiquetas.
 
@@ -120,7 +120,7 @@ Complete los siguientes campos para configurar el acceso a archivos al volumen.
 
 
 
-.. *Política de exportación NFS*: Proporcione los siguientes detalles para proporcionar acceso NFS:
+.. *Política de exportación de NFS*: facilita los siguientes datos para configurar el acceso a NFS:
 +
 ... *Control de acceso*: Selecciona una *Política de exportación personalizada*, *Política de exportación existente* o *Sin acceso al volumen* en el menú desplegable.
 ... *Nombre de la política de exportación*:
@@ -158,7 +158,7 @@ Complete los siguientes campos para configurar el acceso en bloque al volumen.
 
 
 
-.. *Punto de acceso S3*: de manera opcional, adjunte un punto de acceso S3 para acceder a los datos del sistema de archivos FSx for ONTAP que residen en volúmenes NFS o SMB/CIFS a través de las API de AWS S3. Sólo se admite el tipo de acceso a archivos. Proporcionando los siguientes detalles:
+.. *Punto de acceso S3*: opcionalmente, adjunta un punto de acceso S3 para acceder a los datos del sistema de archivos FSx for ONTAP que residen en volúmenes NFS o SMB/CIFS a través de las API de AWS S3. Solo se admite el tipo de acceso a archivos. Indica los siguientes datos:
 +
 *** *Nombre del punto de acceso S3*: Ingrese el nombre del punto de acceso S3.
 *** *Usuario*: Seleccione un usuario existente con acceso al volumen o cree un nuevo usuario.
@@ -231,7 +231,7 @@ _Equilibrado (automático)_ es la política de niveles predeterminada al crear u
 
 .. *ARP/AI*: La protección autónoma contra ransomware con IA (ARP/AI) de NetApp está habilitada de forma predeterminada cuando un vínculo está asociado con el sistema de archivos. link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html["Obtenga más información sobre ARP/AI"]. Acepte la sentencia para continuar.
 +
-Si la función no está disponible, se debe a una de las siguientes razones:
+Es posible que la función no esté disponible por alguna de las siguientes razones:
 
 +
 *** Un enlace no está asociado al sistema de archivos. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Después de que el enlace se asocie, vuelve a esta operación.

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-volume-settings.html 
 keywords: volume tags, edit volume tags, edit tags, enable immutable files, disable immutable files, lock files, unlock files, storage efficiency change, update storage efficiency 
-summary: Las etiquetas pueden ayudarte a categorizar tus recursos. Puedes añadir, editar y quitar etiquetas de volúmenes en cualquier momento con FSx para volúmenes de ONTAP. 
+summary: Modificar las cargas de trabajo de los volúmenes, editar las etiquetas de los volúmenes, actualizar la eficiencia del almacenamiento y gestionar la configuración de los archivos inmutables para los volúmenes de FSx for ONTAP en NetApp Workload Factory. 
 ---
 = Gestiona la configuración de volúmenes en NetApp Workload Factory
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Las etiquetas pueden ayudarte a categorizar tus recursos. Puedes añadi
 
 
 [role="lead"]
-Personaliza la configuración de volúmenes de FSx para ONTAP en NetApp Workload Factory para adaptarla a las necesidades de tu organización. Puedes gestionar las etiquetas de los volúmenes para clasificar recursos, como configurar cargas de trabajo de volumen, actualizar la configuración de eficiencia del almacenamiento para optimizar el espacio y ahorrar costes, y gestionar la configuración de archivos inmutables para controlar la retención de datos y protegerlos frente a cambios no autorizados.
+Personaliza la configuración de volúmenes de FSx for ONTAP en NetApp Workload Factory para adaptarla a las necesidades de tu organización. Puedes definir cargas de trabajo y etiquetas de volúmenes para clasificar los recursos, actualizar la configuración de eficiencia del almacenamiento para optimizar el espacio y el ahorro de costes, y gestionar la configuración de archivos inmutables para controlar la retención de datos y protegerlos frente a cambios no autorizados.
 
 
 
@@ -80,7 +80,7 @@ Los volúmenes utilizan thin provisioning tanto si se habilita como si se deshab
 
 Es posible actualizar ciertos ajustes de archivos inmutables de un volumen cuando la función está habilitada, como la política de retención y los períodos, el período de compromiso automático y el modo de adición de volúmenes.
 
-Tenga en cuenta que la activación de archivos inmutables solo es posible durante link:create-volume.html["creación de volúmenes"].
+Solo puedes habilitar los archivos inmutables durante link:create-volume.html["creación de volúmenes"].
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -92,7 +92,7 @@ Tenga en cuenta que la activación de archivos inmutables solo es posible durant
 +
 ** *Período de retención*: Selecciona *Sin especificar* o *Especificar periodo*.
 +
-*** *No especificado*: El período mínimo predeterminado es “0” años y el período máximo predeterminado es “30 años”.
+*** *Sin especificar*: el plazo mínimo por defecto es de 0 años y el plazo máximo por defecto es de 30 años.
 *** *Especificar periodo*: Opción para definir la política de retención, los periodos mínimos y máximos, la función de autoconfirmación y la función de modo de adición de volumen. Proporcione los siguientes detalles:
 +
 **** *Política de retención*: Este período debe ser mayor o igual que el período de retención mínimo y menor o igual que el período de retención máximo.
@@ -103,10 +103,10 @@ Tenga en cuenta que la activación de archivos inmutables solo es posible durant
 
 ** *Autocommit*: Habilita o deshabilita la función para confirmar automáticamente archivos A WORM que no se hayan modificado durante el período de autocommit.
 ** *Eliminación privilegiada*: habilita o deshabilita la función.  Al habilitar esta función, un administrador de SnapLock puede eliminar un volumen WORM no vencido.  Esta función solo es compatible con el modo de retención empresarial.
-** *Modo de adición de volumen*: Activa o desactiva la función. Al habilitar el modo de adición de volúmenes, es posible añadir nuevo contenido a los archivos WORM.
+** *Modo de adición de volumen*: activa o desactiva la función. Al activar el modo de adición de volumen, podrás añadir contenido nuevo a los archivos WORM.
 
 
-. Haga clic en *aplicar*.
+. Seleccione *aplicar*.
 
 
 

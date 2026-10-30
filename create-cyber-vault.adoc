@@ -11,14 +11,14 @@ summary: Obtenga información sobre las bóvedas cibernéticas de NetApp y cómo
 
 
 [role="lead"]
-Un volumen de bóveda cibernética es una ubicación de almacenamiento aislada y segura que se utiliza para almacenar copias de seguridad de sus datos, protegiéndolos de ataques de ransomware y otras amenazas cibernéticas.  Como parte de la creación del almacén, creará un volumen de almacén cibernético, deshabilitará todos los protocolos de cliente, establecerá una relación de replicación entre el volumen de origen y el volumen del almacén cibernético y creará instantáneas inmutables en el volumen del almacén cibernético.
+Un volumen de cyber vault es una ubicación de almacenamiento aislada y segura que almacena copias de seguridad de tus datos y los protege frente a ataques de ransomware y otras amenazas cibernéticas. Para crear una bóveda, crea un volumen de cyber vault, desactiva todos los protocolos de cliente, configura una relación de replicación entre el volumen de origen y el volumen de cyber vault, y crea instantáneas inmutables en el volumen de cyber vault.
 
 .¿Qué es una bóveda cibernética?
 Una bóveda cibernética es una técnica específica de protección de datos que implica almacenar datos críticos en un entorno aislado, separado de la infraestructura de TI principal.
 
 La bóveda cibernética es un repositorio de datos "aislado de la red", inmutable e indeleble, inmune a las amenazas que afectan a la red principal, como el malware, el ransomware o incluso las amenazas internas.  Una bóveda cibernética se puede lograr con instantáneas inmutables e indelebles.
 
-Las copias de seguridad con espacio de aire que utilizan métodos tradicionales implican la creación de espacio y la separación física de los medios primarios y secundarios. Al trasladar los medios fuera del sitio y/o cortar la conectividad, los actores maliciosos no tienen acceso a los datos. Esto protege los datos pero puede generar tiempos de recuperación más lentos.
+Las copias de seguridad con aislamiento físico (air-gap) que utilizan métodos tradicionales consisten en crear un espacio y separar físicamente los soportes primario y secundario. Al trasladar los soportes fuera de las instalaciones o interrumpir la conectividad, los atacantes no tienen acceso a los datos. Esto protege los datos, pero puede provocar tiempos de recuperación más largos.
 
 .FSx para bóvedas cibernéticas ONTAP
 Amazon FSx for NetApp ONTAP es compatible como origen y destino de la bóveda cibernética.

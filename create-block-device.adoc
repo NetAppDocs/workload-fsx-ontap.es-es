@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-block-device.html 
 keywords: create block device, create lun, iscsi protocol 
-summary: 'Cree dispositivos de bloque para respaldar los requisitos de su aplicación de línea de negocio (LOB).' 
+summary: Crear dispositivos de bloque iSCSI en un volumen existente o nuevo, configurar el acceso de los grupos de iniciadores y establecer las opciones de eficiencia de almacenamiento y protección para FSx for ONTAP. 
 ---
 = Cree un dispositivo de bloque para un sistema de archivos en NetApp Workload Factory
 :allow-uri-read: 
@@ -91,7 +91,7 @@ NOTE: Las horas de las instantáneas se basan en la zona horaria del sistema de 
 
 .. *Política de niveles*: Seleccione la política de organización en niveles para los datos almacenados en el volumen.
 +
-_Equilibrado (automático)_ es la política de niveles predeterminada al crear un volumen mediante la consola de Workload Factory. Para obtener más información sobre las políticas de niveles de volumen, consulte link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^] en la documentación de AWS FSx para NetApp ONTAP . Tenga en cuenta que Workload Factory utiliza nombres basados ​​en casos de uso en la consola de Workload Factory para las políticas de niveles e incluye los nombres de políticas de niveles de FSx para ONTAP entre paréntesis.
+_Balanced (Auto)_ es la política de organización en niveles predeterminada al crear un volumen mediante la consola de Workload Factory. Para obtener más información sobre las políticas de organización en niveles de volúmenes, consulta link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^] en la documentación de AWS FSx for NetApp ONTAP. Workload Factory utiliza nombres basados en casos de uso en la consola de Workload Factory para las políticas de organización en niveles e incluye los nombres de las políticas de organización en niveles de FSx for ONTAP entre paréntesis.
 
 .. *ARP/AI*: La protección autónoma contra ransomware con IA (ARP/AI) de NetApp está habilitada de forma predeterminada cuando un vínculo está asociado con el sistema de archivos. link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html["Obtenga más información sobre ARP/AI"]. Acepte la sentencia para continuar.
 +

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: ransomware-protection.html 
 keywords: ransomware, arp, autonomous protection, protect, security, detect, detection, restore, recover, threat, attack, suspect, anti-ransomware, entropy, abnormal volume activity, anti-ransomware, extension conformity, ransomware protection strategy 
-summary: 'NetApp Autonomous Ransomware Protection con IA (ARP/AI) utiliza el análisis de cargas de trabajo en entornos NAS y SAN para detectar y alertar sobre actividad anómala que podría ser un ataque de ransomware.' 
+summary: Activa NetApp Autonomous Ransomware Protection with AI para detectar actividad anómala en los volúmenes, validar posibles ataques y recuperar datos a partir de snapshots. 
 ---
-= Protege tus datos de FSx para ONTAP con NetApp Autonomous Ransomware Protection con IA
+= Protege los datos de FSx for ONTAP con NetApp Autonomous Ransomware Protection with AI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -45,7 +45,7 @@ Si el sistema señala una extensión de archivo como inusual, revisa la alerta. 
 
 Cuando marcas una alerta como falso positivo, el sistema actualiza su configuración de alertas. Por ejemplo, si una nueva extensión de archivo activa una alerta y la marcas como falso positivo, no recibirás una alerta la próxima vez que el sistema vea esa extensión de archivo.
 
-Configuraciones no admitidas:: Las siguientes configuraciones no admiten el uso de ARP/AI.
+Configuraciones no admitidas:: ARP/AI no admite estas configuraciones.
 +
 --
 * Volúmenes de NVMe
@@ -65,7 +65,7 @@ Al activar ARP/AI para un sistema de archivos, se protegen automáticamente todo
 Si ARP/AI detecta un ataque real tras su activación, Workload Factory crea automáticamente una política de instantáneas. Esta política puede crear hasta seis instantáneas cada cuatro horas. Cada instantánea permanece bloqueada entre 2 y 5 días.
 
 .Antes de empezar
-Para habilitar ARP/AI en un sistema de archivos o un volumen, debes asociar un enlace. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Una vez asociado el enlace, vuelve a esta operación.
+Para habilitar ARP/AI en un sistema de archivos o un volumen, debes asociar un enlace. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Después de asociar el enlace, vuelve a esta operación.
 
 [role="tabbed-block"]
 ====
@@ -124,7 +124,7 @@ Determina si un ataque es una falsa alarma o un incidente de ransomware genuino.
 . Desde la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
 . Seleccione *Analizar ataques* desde el mosaico de Protección contra ransomware autónoma.
 . Descargue el informe de eventos de ataque para revisar si algún archivo o carpeta se vio comprometido y luego decidir si se ha producido un ataque.
-. Si no se produjo ningún ataque, seleccione *Falsa alarma* para el volumen de la tabla y luego seleccione *Cerrar*
+. Si no se ha producido ningún ataque, selecciona *Falsa alarma* para el volumen en la tabla y a continuación selecciona *Cerrar*.
 . Si se ha producido un ataque, selecciona *Ataque real* para el volumen de la tabla. Se abre el cuadro de diálogo Restore compromised volume data. Puede proceder a <<Recupere los datos después de un ataque de ransomware,recupere sus datos>> inmediatamente o seleccionar *Cerrar* y volver a completar el proceso de recuperación más tarde.
 
 

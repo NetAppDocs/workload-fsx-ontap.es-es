@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-snapshot-policy.html 
 keywords: manage snapshot policy, change snapshot policy, assign snapshot policy, remove snapshot policy, snapshot policies, snapshot schedule, update, snapshot long-term retention, enable long-term retention 
-summary: Administre políticas de instantáneas para FSx para volúmenes ONTAP en Workload Factory.  Una política de instantáneas define cómo el sistema crea instantáneas para un volumen. 
+summary: Asigna, cambia, quita y elimina políticas de snapshots, y habilita snapshots inmutables y retención a largo plazo para volúmenes de FSx for ONTAP en Workload Factory. 
 ---
 = Gestiona las políticas de snapshots para volúmenes en NetApp Workload Factory
 :allow-uri-read: 
@@ -38,7 +38,7 @@ Debes asociar un enlace para asignar una política de snapshot. link:https://doc
 . En la página de administración de políticas de instantáneas, seleccione el menú de acciones de la política de instantáneas y luego seleccione *Asignar política al volumen*.
 . En el cuadro de diálogo Assign snapshot policy, seleccione una política de Snapshot para asignar al volumen y revise la programación de políticas.
 +
-Si la política contiene instantáneas inmutables y desea utilizarlas, acepte la declaración.
+Si la política contiene instantáneas inmutables y quieres utilizarla, acepta la declaración.
 
 . Selecciona *Asignar*.
 
@@ -51,10 +51,10 @@ La política de Snapshot está asignada al volumen.
 [[change-a-snapshot-policy]]
 == Cambiar una política de Snapshot
 
-Es posible cambiar el nombre de la política de snapshots, la programación y la cantidad de copias para conservar, y habilitar o deshabilitar snapshots inmutables. No es posible habilitar o deshabilitar el uso compartido de políticas en los equipos virtuales de almacenamiento. Esta opción solo está disponible durante la creación de políticas de Snapshot.
+Puedes cambiar el nombre de la política de snapshots, la programación y el número de copias que se deben conservar, así como activar o desactivar las snapshots inmutables. No puedes activar ni desactivar el uso compartido de políticas entre máquinas virtuales de almacenamiento. Solo puedes configurar esta opción al crear una política de snapshots.
 
 .Antes de empezar
-Para mostrar las políticas de snapshot existentes, debes asociar un enlace. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Después de asociar el enlace, regresa a esta operación.
+Para mostrar las políticas de snapshot existentes, debes asociar un enlace. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Después de asociar el enlace, vuelve a esta operación.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -78,14 +78,14 @@ Se actualiza la política de instantáneas.
 Bloquee las snapshots para evitar que se eliminen durante el período de retención.
 
 .Antes de empezar
-Debes asociar un enlace para habilitar las instantáneas inmutables. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Una vez asociado el enlace, vuelve a esta operación.
+Debes asociar un enlace para habilitar las instantáneas inmutables. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Después de asociar el enlace, vuelve a esta operación.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
 . Seleccione el menú image:workloads-menu-icon.png["El ícono del menú de hamburguesa se utiliza para navegar a cargas de trabajo como almacenamiento, eda, ai, bases de datos, vmware y administración."] y luego seleccione *Almacenamiento*.
 . En la pestaña *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos que contiene el volumen para el cual desea bloquear instantáneas y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, seleccione la pestaña *Volúmenes*.
-. Desde la pestaña *Volúmenes*, seleccione la sección de acciones para el volumen que desee proteger.
+. En la pestaña *Volúmenes*, selecciona el menú de acciones del volumen que deseas proteger.
 . Selecciona *Acciones de protección de datos*, *Snapshots*, luego *Hacer una instantánea inmutable*.
 . En el cuadro de diálogo Make a snapshot immutable, haga lo siguiente:
 +

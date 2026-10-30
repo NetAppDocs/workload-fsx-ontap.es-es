@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: replicate-svm-to-file-system.html 
 keywords:  
-summary: Replicar una máquina virtual de almacenamiento a otro sistema de archivos FSx para ONTAP proporciona una capa protectora de acceso a los datos en caso de pérdida de datos. 
+summary: Replicar una máquina virtual de almacenamiento en otro sistema de archivos FSx for ONTAP para proporcionar una capa de protección del acceso a los datos en caso de pérdida de datos. 
 ---
 = Replicar una máquina virtual de almacenamiento en otro sistema de archivos FSx para ONTAP
 :allow-uri-read: 
@@ -14,7 +14,7 @@ summary: Replicar una máquina virtual de almacenamiento a otro sistema de archi
 La replicación de una máquina virtual de almacenamiento a otro sistema de archivos FSx para ONTAP en NetApp Workload Factory proporciona una capa protectora de acceso a datos en caso de pérdida de datos.  Esta operación replica todos los volúmenes de una máquina virtual de almacenamiento a otro sistema de archivos FSx para ONTAP .
 
 .Antes de empezar
-Para replicar una máquina virtual de almacenamiento en otro sistema de archivos FSx for ONTAP, debes asociar un enlace. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Una vez asociado el enlace, vuelve a esta operación.
+Para replicar una máquina virtual de almacenamiento en otro sistema de archivos FSx for ONTAP, debes asociar un enlace. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["Aprenda a asociar un enlace existente o a crear y asociar un nuevo enlace"^]. Después de asociar el enlace, vuelve a esta operación.
 
 .Pasos
 . Inicie sesión con uno de los link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["experiencias de consola"^]botones .
@@ -22,28 +22,28 @@ Para replicar una máquina virtual de almacenamiento en otro sistema de archivos
 . En el menú Almacenamiento, seleccione *FSx para ONTAP*.
 . Desde *FSx for ONTAP*, seleccione el menú de acciones del sistema de archivos con la VM de almacenamiento que desea replicar y luego seleccione *Administrar*.
 . En la descripción general del sistema de archivos, en Máquinas virtuales de almacenamiento, seleccione *Administrar*.
-. En la pantalla Administrar máquinas virtuales de almacenamiento, seleccione el menú de acciones de la máquina virtual de almacenamiento para la cual desea replicar una SVM y, luego, seleccione *Acciones avanzadas* > *Replicar máquina virtual de almacenamiento*.
+. En la pantalla «Gestionar máquinas virtuales de almacenamiento», selecciona el menú de acciones de la máquina virtual de almacenamiento que deseas replicar y, a continuación, selecciona *Acciones avanzadas* > *Replicar máquina virtual de almacenamiento*.
 . En la página Replicar datos, en Destino de replicación, proporcione lo siguiente:
 +
 .. *FSX para el sistema de archivos ONTAP*: Seleccione credenciales, región y FSX para el nombre del sistema de archivos ONTAP para el sistema de archivos FSX para ONTAP de destino.
 .. *Nombre de VM de almacenamiento*: Seleccione la VM de almacenamiento en el menú desplegable.
-.. *Nombre del volumen*: El nombre del volumen de destino se genera automáticamente con el siguiente formato `{OriginalVolumeName}_copy`.
+.. *Nombre del volumen*: el nombre del volumen de destino se genera automáticamente con el formato `{OriginalVolumeName}_copy`.
 .. *Política de niveles*: Seleccione la política de organización en niveles para los datos almacenados en el volumen de destino.
 +
-_Auto_ es la política de niveles predeterminada al crear un volumen mediante la interfaz de usuario de Workload Factory FSx for ONTAP .  Para obtener más información sobre las políticas de niveles de volumen, consultelink:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^] en la documentación de AWS FSx para NetApp ONTAP .
+_Auto_ es la política de organización en niveles predeterminada cuando creas un volumen en la consola de Workload Factory. Para obtener más información sobre las políticas de organización en niveles de volúmenes, consulta link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Capacidad de almacenamiento del volumen"^] en la documentación de Amazon FSx for NetApp ONTAP.
 
-.. *Tasa de transferencia máxima*: Selecciona *Limited* e introduce el límite máximo de transferencia en MB/s.. Alternativamente, selecciona *Ilimitado*.
+.. *Tasa de transferencia máxima*: selecciona *Limitada* e introduce el límite máximo de transferencia en MB/s. También puedes seleccionar *Ilimitada*.
 +
-Sin un límite, el rendimiento de la red y de las aplicaciones puede disminuir. También recomendamos una tasa de transferencia ilimitada para los sistemas de archivos de FSx for ONTAP para cargas de trabajo cruciales; por ejemplo, aquellas que se usan principalmente para la recuperación ante desastres.
+Sin un límite, el rendimiento de la red y de las aplicaciones podría reducirse. No obstante, recomendamos una tasa de transferencia ilimitada para los sistemas de archivos FSx for ONTAP en el caso de cargas de trabajo críticas, como, por ejemplo, aquellas que se utilizan principalmente para la recuperación ante desastres.
 
 
 
 . En Configuración de replicación, proporcione lo siguiente:
 +
-.. *Intervalo de replicación*: Seleccione la frecuencia con la que se transfieren las instantáneas del volumen de origen al volumen de destino.
+.. *Intervalo de replicación*: selecciona la frecuencia con la que se transfieren las instantáneas del volumen de origen al volumen de destino.
 .. *Retención a largo plazo*: Opcionalmente, habilita instantáneas para la retención a largo plazo.
 +
-Si habilita la retención a largo plazo, seleccione una política existente o cree una nueva política para definir las snapshots que se replicarán y el número que se retendrá.
+Si activas la retención a largo plazo, selecciona una política existente o crea una nueva para definir las instantáneas que se replicarán y la cantidad que se conservará.
 
 +
 ... Para *Elige una política existente*, selecciona una política existente en el menú desplegable.
