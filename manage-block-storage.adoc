@@ -11,13 +11,14 @@ summary: Administra el almacenamiento de bloques para un sistema de archivos FSx
 
 
 [role="lead"]
-Usa NetApp Workload Factory para simplificar la gestión de tus recursos de almacenamiento en bloque, incluidos los igroups y los dispositivos de bloque, y controlar el acceso de los clientes a los dispositivos de bloque de FSx for ONTAP para ofrecer un rendimiento óptimo y minimizar los costos.
+Utiliza NetApp Workload Factory para simplificar la gestión de tus recursos de almacenamiento en bloques, incluidos los igroups y los dispositivos de bloques, y controla el acceso de los clientes a los dispositivos de bloques de FSx for ONTAP para ofrecer un rendimiento óptimo y minimizar los costes. Consulta el diagrama de igroup de dispositivos de bloques para optimizar las conexiones de los clientes y resolver problemas rápidamente.
 
 .Acerca de esta tarea
 Desde la consola de Workload Factory, puedes gestionar grupos de iniciadores (igroups) para controlar el acceso de los clientes a los dispositivos de bloque. También puedes ver los detalles de los dispositivos de bloque, aumentar la capacidad, hacer clones, gestionar el acceso de los clientes, archivar datos de dispositivos de bloque inactivos y eliminar dispositivos de bloque.
 
 Utiliza el diagrama de almacenamiento en bloques para comprobar lo siguiente:
 
+* Detalles del host, incluidos el nombre de host, el ID de la instancia, el tipo de carga de trabajo, la región y el nombre calificado de iSCSI (IQN)
 * Conexiones de clientes
 * Estado del block device
 * Relación nodo-cliente

@@ -32,7 +32,7 @@ Un enlace establece una relación de confianza entre Workload Factory y uno o va
 * Gestión de credenciales de ONTAP
 
 
-link:learn-about-links.html["Más información sobre los enlaces"].
+link:links-overview.html["Más información sobre los enlaces"].
 
 .¿Qué ocurre si no asocio un enlace con mi sistema de archivos?
 Las funciones que dependen de un enlace pueden no estar disponibles. Por ejemplo, ARP/AI no está disponible sin un enlace, no puedes mostrar las políticas de Snapshot existentes al crear un volumen y no puedes detectar relaciones de caché. Sin un enlace, el análisis de configuración no puede examinar los ajustes de protección de datos y rendimiento, por lo que el análisis es incompleto. Aun así, puedes ver eventos de latencia sin un enlace, pero necesitas un enlace para ver y analizar eventos de EMS y para analizar eventos de latencia.

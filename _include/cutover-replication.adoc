@@ -6,5 +6,9 @@
 . En *FSx for ONTAP*, selecciona el sistema de archivos que contiene el o los volúmenes que quieres replicar.
 . Selecciona la pestaña *Relaciones de réplica*.
 . En la tabla de relaciones de replicación, selecciona la relación de replicación para hacer la transición y luego selecciona *Transición de replicación*.
-. Revisa la información en el cuadro de diálogo de transición de replicación y luego escribe _cut over_ para confirmar.
+. Sigue los pasos para probar la transición y a continuación lleva a cabo la transición definitiva.
++
+Si cierras el cuadro de diálogo durante el proceso, puedes consultar el *estado de la migración de SVM* en la pestaña *Relaciones de replicación* y continuar con la operación de transición cuando estés listo.
+
+. Revisa la información del cuadro de diálogo Cut over replication y luego escribe _cut over_ para completar el proceso.
 
