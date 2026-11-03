@@ -106,6 +106,22 @@ Las etiquetas de la política de instantáneas del volumen de origen y las etiqu
 +
 Aumenta el umbral de capacidad de archivos para evitar alcanzar el límite de capacidad del volumen. Una capacidad de archivos insuficiente (nodos de información) impide escribir datos adicionales en el volumen. Workload Factory recomienda mantener el uso de la capacidad de archivos por debajo del 80 % para permitir la creación de nuevos archivos.
 
+* *Conecta el host al nodo de conmutación por error*
++
+Workload Factory recomienda conectar los hosts al nodo de conmutación por error para mantener la conectividad y evitar interrupciones durante los procesos de conmutación por error.
+
+* *Política de snapshots de SAP HANA*
++
+Configura la política de snapshot en "None" para los volúmenes de SAP HANA a fin de reducir los costes de almacenamiento y mejorar el rendimiento de los datos activos de la base de datos.
+
+* *política de snapshots de MySQL*
++
+Configura la política de snapshots en "None" para los volúmenes de MySQL para reducir los costes de almacenamiento y mejorar el rendimiento de los datos activos de la base de datos.
+
+* *Política de snapshot de PostgreSQL*
++
+Configura la política de snapshots en "None" para los volúmenes de PostgreSQL a fin de reducir los costes de almacenamiento y mejorar el rendimiento de los datos activos de la base de datos.
+
 
 
 
@@ -122,6 +138,18 @@ NetApp Autonomous Ransomware Protection with AI (ARP/AI) te ayuda a proteger tus
 * *Acceso no autorizado a un volumen iSCSI*
 +
 Los volúmenes que sirven datos de aplicaciones mediante iSCSI no deben permitir el acceso NAS al mismo tiempo. Workload Factory recomienda restringir el uso de cualquier otro protocolo en los volúmenes iSCSI.
+
+* *Brecha en la detección de varios dispositivos con ARP/AI*
++
+ARP/AI ofrece una cobertura de protección completa cuando un volumen solo tiene un dispositivo de bloque asociado. Si un volumen tiene varios dispositivos de bloque asociados, Workload Factory traslada esos dispositivos a volúmenes nuevos para que cada volumen tenga solo un dispositivo de bloque.
+
+* *CHAP bidireccional para backends iSCSI de Kubernetes*
++
+Utiliza la autenticación CHAP bidireccional para los backends iSCSI de Trident con el fin de garantizar que el iniciador y el destino iSCSI se autentiquen mutuamente. De este modo se evita que hosts no autorizados establezcan sesiones iSCSI con la máquina virtual de almacenamiento.
+
+* *Desactiva `showmount` en la máquina virtual de almacenamiento de la aplicación*
++
+Desactiva `showmount` en la máquina virtual de almacenamiento de la aplicación para evitar que los clientes muestren en la lista las exportaciones a las que no pueden acceder.
 
 
 
@@ -168,6 +196,14 @@ Configura el Thin-Provisioning para los volúmenes de FSx for ONTAP que alojan i
 +
 Configura los sistemas de archivos FSx for ONTAP con la conectividad de AWS Transform MGN (MGN) y la configuración de autenticación de la API necesarias antes de usarlos con AWS MGN.
 
+* *máquina virtual de almacenamiento dedicada para Kubernetes*
++
+Utiliza una máquina virtual de almacenamiento dedicada para las cargas de trabajo de Kubernetes. Mantener el almacenamiento de Kubernetes separado facilita su gestión, simplifica la configuración de políticas y ayuda a garantizar que los ajustes de almacenamiento sean coherentes.
+
+* *Haz coincidir el SO del igroup con el del host*
++
+Asegúrate de que el sistema operativo del grupo iniciador (igroup) coincida con el del host para evitar problemas de E/S o de rendimiento.
+
 
 
 
@@ -204,6 +240,10 @@ El exceso de capacidad de SSD supone un coste innecesario. Reduce el nivel de SS
 * *Volúmenes NAS inactivos*
 +
 Si un volumen NAS no se usa durante 31 días, archívalo o elimínalo para reducir costes.
+
+* *Limpieza de clones*
++
+Elimina cualquier clon de volumen que tenga más de 30 días para optimizar el uso del almacenamiento y reducir los costes.
 
 
 
