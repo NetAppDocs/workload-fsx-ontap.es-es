@@ -26,7 +26,7 @@ Amazon FSx for NetApp ONTAP es compatible como origen y destino de la bóveda ci
 .Implementación
 Workload Factory ofrece asistencia en la creación de una arquitectura de bóveda cibernética.  Después de que usted se ponga en contacto con NetApp para expresar su interés en implementar una bóveda cibernética, un especialista de NetApp se pondrá en contacto con usted para analizar sus requisitos.
 
-Envía un correo electrónico a ng-FSx-CyberVault@netapp.com para comenzar.
+Envía un correo electrónico a ng-CyberVault@netapp.com para empezar.
 
 .Información relacionada
 Para obtener más información sobre las bóvedas cibernéticas y cómo configurar esta arquitectura, consulte el link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["Documentación de la bóveda cibernética de ONTAP"^].
